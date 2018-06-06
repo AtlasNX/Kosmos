@@ -21,5 +21,6 @@ This handy All-in-One package includes everything you need for running hekate an
 * [Switch Homebrew Menu](https://github.com/switchbrew/nx-hbmenu)
 * [Switch Homebrew Loader](https://github.com/switchbrew/nx-hbloader)
 * [nx-dreport](https://github.com/Thog/nx-dreport)
+* [Gag-Order](https://github.com/Adubbz/Gag-Order)
 * [AppstoreNX](https://github.com/vgmoose/appstorenx)
 * [EdiZon](https://github.com/thomasnet-mc/EdiZon)
