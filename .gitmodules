@@ -19,3 +19,6 @@
 [submodule "EdiZon_SE"]
 	path = EdiZon_SE
 	url = https://github.com/thomasnet-mc/EdiZon.git
+[submodule "LibNX"]
+	path = LibNX
+	url = https://github.com/switchbrew/libnx.git
