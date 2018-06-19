@@ -8,3 +8,4 @@ Licenses
 * Gag-Order is licensed under [GPLv2](https://github.com/Adubbz/Gag-Order/blob/master/LICENSE)
 * AppstoreNX is licensed under [GPLv3](https://github.com/vgmoose/appstorenx/blob/master/LICENSE)
 * EdiZon is licensed under [MIT](https://github.com/thomasnet-mc/EdiZon/blob/master/LICENSE)
+* LayeredFS KernelPatch Hekate fork is licensed under [GLPv2](https://github.com/TheDgtl/hekate/blob/master/LICENSE)
