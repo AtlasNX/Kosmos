@@ -22,3 +22,6 @@
 [submodule "LibNX"]
 	path = LibNX
 	url = https://github.com/switchbrew/libnx.git
+[submodule "Hekate-LayeredFS"]
+	path = Hekate-LayeredFS
+	url = https://github.com/TheDgtl/hekate.git
