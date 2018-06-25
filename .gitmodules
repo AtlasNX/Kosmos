@@ -25,3 +25,6 @@
 [submodule "Hekate-LayeredFS"]
 	path = Hekate-LayeredFS
 	url = https://github.com/TheDgtl/hekate.git
+[submodule "LayeredFS-Hekate"]
+	path = LayeredFS-Hekate
+	url = https://github.com/tumGER/LayeredFS-Hekate.git
