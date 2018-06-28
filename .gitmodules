@@ -27,4 +27,7 @@
 	url = https://github.com/TheDgtl/hekate.git
 [submodule "SDFileUpdater"]
 	path = SDFileUpdater
-	url = https://github.com/StevenMattera/SDFileUpdater
+	url = https://github.com/StevenMattera/SDFileUpdater.git
+[submodule "SDFilesUpdater"]
+	path = SDFilesUpdater
+	url = https://github.com/StevenMattera/SDFileUpdater.git
