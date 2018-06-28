@@ -27,3 +27,4 @@ This handy All-in-One package includes everything you need for running hekate, S
 * [AppstoreNX](https://github.com/vgmoose/appstorenx)
 * [EdiZon](https://github.com/thomasnet-mc/EdiZon)
 * [LayeredFS Hekate](https://github.com/TheDgtl/hekate/tree/fusee_patch)
+* [SDFileUpdater](https://github.com/StevenMattera/SDFileUpdater)
