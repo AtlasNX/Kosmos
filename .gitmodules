@@ -25,3 +25,6 @@
 [submodule "Hekate-LayeredFS"]
 	path = Hekate-LayeredFS
 	url = https://github.com/TheDgtl/hekate.git
+[submodule "SDFileUpdater"]
+	path = SDFileUpdater
+	url = https://github.com/StevenMattera/SDFileUpdater
