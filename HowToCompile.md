@@ -109,9 +109,10 @@ Here comes the easy part :) Updating all other submodules is really really easy 
 
 # SwitchBlade (and Hekate) Splash Screen
 
-![Example](/resources/Steins;Splash.png)
-![Example 2](/resources/Splash-tomNX.png)
-![Example 3](/resources/splash.png)
+![Example](/resources/Splash/Steins;Splash.png)
+![Example 2](/resources/Splash/Splash-tomNX.png)
+![Example 3](/resources/Splash/splash.png)
+![Example 4 by @jpe230](/resources/Splash/Splash-jpe230.png)
 
 So here is the part where you can get creative and my most favorite part nowadays ("Graphic Design Is My Passion")
 
