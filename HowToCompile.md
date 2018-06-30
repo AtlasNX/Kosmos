@@ -100,7 +100,9 @@ Here comes the easy part :) Updating all other submodules is really really easy 
 1. Start [NRO Asset Editor](https://github.com/vgmoose/nro-asset-editor/releases)
 2. Choose your newly compiled Gag Order build
 3. Choose the icon to be the one located at "SDFilesSwitch\resources" called GagOrder.png
+
 ![The Icon](/resources/GagOrder.png)
+
 4. Save you changes
 5. Replace the old one in Hekate's, LayeredFS's and SwitchBlade's compiled folder
 
@@ -115,12 +117,13 @@ So here is the part where you can get creative and my most favorite part nowaday
 - Start your photo editor of choice (I use GIMP because I'm poor and actually kinda like GIMP more currently)
 A. Open one of the three .xcf files and change the version number to the number of the release you want to make
 B. Create your own one
-    - I like theming them after the release name so if you call the release "Pikachu", make on that is themed after Pikachu
-    1. Create a new 1280 x 720 canvas
-    2. Use your graphic design passion
-        - If you want to update the repo, make sure to include Credits, a link to the Repo, version number and all the other stuff you also see on my splash screens 
-    3. Export it as a .png
-    4. Use the [Image Converter](https://github.com/StevenMattera/SwitchBlade-ImageConverter/releases) to convert it to the .bin for SwitchBlade
-    5. Put it on the root of your SD / root of "SDFilesSwitch/Compiled/SwitchBlade"
+
+1. I like theming them after the release name so if you call the release "Pikachu", make on that is themed after Pikachu
+2. Create a new 1280 x 720 canvas
+3. Use your graphic design passion
+    - If you want to update the repo, make sure to include Credits, a link to the Repo, version number and all the other stuff you also see on my splash screens 
+4. Export it as a .png
+5. Use the [Image Converter](https://github.com/StevenMattera/SwitchBlade-ImageConverter/releases) to convert it to the .bin for SwitchBlade
+6. Put it on the root of your SD / root of "SDFilesSwitch/Compiled/SwitchBlade"
 
     
