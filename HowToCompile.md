@@ -65,6 +65,7 @@ located ~ at line 72
     }
 ```
 located ~ at line 67
+
 7. Go back into the root of the AtmosphereCFW submodule ("SDFilesSwitch\AtmosphereCFW")
 8. Type "make"
 9. Wait a bit, this will take some time
