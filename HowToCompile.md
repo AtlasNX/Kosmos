@@ -48,7 +48,8 @@ Atmosphere needs some custom changes to it to work with current hekate and also 
         }
     ```
 located ~ at line 72
-    - This removes the Exosphere API Check from teh Loader
+    - This removes the Exosphere API Check from the Loader
+    
 5. Go into "SDFilesSwitch\AtmosphereCFW\stratosphere\fs_mitm" and find "fsmitm_main.cpp"
 6. Remove
 ```cpp
