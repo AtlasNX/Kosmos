@@ -1,3 +1,5 @@
+# Will be updated soon to reflect v5 changes
+
 This little guide will help you to compile everything that is included in this pack. Let us start simple:
 
 # Dependencies
