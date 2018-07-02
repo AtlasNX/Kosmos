@@ -10,6 +10,7 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * Starting games after launching the Homebrew Menu works
 * Splash Screens and instant launch
 * Game Mods
+* A background FTP-Server
 * Atmosphere
 
 ## How to use
@@ -27,4 +28,5 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * [Gag-Order](https://github.com/Adubbz/Gag-Order)
 * [AppstoreNX](https://github.com/vgmoose/appstorenx)
 * [EdiZon](https://github.com/thomasnet-mc/EdiZon)
-* [SDFileUpdater](https://github.com/StevenMattera/SDFileUpdater)
+* [SDFilesUpdater](https://github.com/StevenMattera/SDFilesUpdater)
+* [Sys-FTPD](https://github.com/jakibaki/sys-ftpd)
