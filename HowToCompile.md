@@ -4,17 +4,13 @@ This little guide will help you to compile everything that is included in this p
 
 - Install DevkitPro with Switch support
 - Install needed packages:
-    - **Linux:** ```sudo dkp-pacman -S devkitA64 libnx switch-tools switch-curl switch-bzip2 switch-curl switch-freetype switch-libjpeg-turbo switch-sdl2 switch-sdl2_gfx switch-sdl2_image switch-sdl2_ttf switch-zlib switch-libpng```
+    - **Linux:** ```sudo dkp-pacman -S devkitA64 switch-tools switch-curl switch-bzip2 switch-curl switch-freetype switch-libjpeg-turbo switch-sdl2 switch-sdl2_gfx switch-sdl2_image switch-sdl2_ttf switch-zlib switch-libpng```
     - **Windows** ```pacman -S devkitA64 switch-tools switch-curl switch-bzip2 switch-curl switch-freetype switch-libjpeg-turbo switch-sdl2 switch-sdl2_gfx switch-sdl2_image switch-sdl2_ttf switch-zlib switch-libpng```
         - You may have to run this command through Msys2 if it doesn't work
 - A clean clone of the repo
     - For that simply ```git clone https://github.com/tumGER/SDFilesSwitch.git``` to your desired location
         - There are some weird issues on Windows if you have spaces somewhere in the path to your location so make sure to clone it somewhere where the Path doesn't include spaces
-- LibNX:
-    1. Go into the LibNX submodule folder
-    2. Type ```make```
-    3. Wait till it finished compiling
-    4. Type ```make install```
+- [LibNX](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) 
 
 # Updating Dependencies
 
@@ -22,9 +18,25 @@ This little guide will help you to compile everything that is included in this p
 2. Type ```git submodule update --remote --force``` to update the submodules
 3. Success, the submodules should now be updated to the latest commit of their origin
 
+Please repeat
+
+# LibNX
+
+**Make sure to [Update Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies) before before updating LibNX**
+
+1. Go into the LibNX submodule folder
+2. Type ```make```
+3. Wait till it finished compiling
+4. Type ```make install```
+
+
 # Updating Atmosphere's Loader, SM and LayeredFS with Patches
 
 **Atmosphere sometimes even uses features that aren't even in LibNX yet, in that case follow the previous steps but use the [Atmosphere LibNX fork](https://github.com/Atmosphere-NX/libnx/tree/for-atmosphere) by typing ```git clone https://github.com/Atmosphere-NX/libnx.git -b for-atmosphere``` into your desired location**
+
+**Make sure to [Update Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies) before before compiling Atmosphere**
+
+**Make sure to [Update LibNX](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) before before compiling Atmosphere**
 
 Atmosphere needs some custom changes to it to work with current hekate and also to compile. While we don't need to compile Atmosphere completely, we will in this tutorial because it's easier and breaks much less (in my experience)
 
@@ -80,12 +92,22 @@ located ~ at line 67
 
 # Updating Atmosphere
 
+**Make sure to [Update Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies) before before compiling Atmosphere**
+
+**Make sure to [Update LibNX](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) before before compiling Atmosphere**
+
+**Atmosphere sometimes even uses features that aren't even in LibNX yet, in that case follow [the previous steps](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) but use the [Atmosphere LibNX fork](https://github.com/Atmosphere-NX/libnx/tree/for-atmosphere) by typing ```git clone https://github.com/Atmosphere-NX/libnx.git -b for-atmosphere``` into your desired location**
+
 1. Go into "Atmosphere\fusee\fusee-primary\src" and find "main.c"
 2. Type ```#define I_KNOW_WHAT_I_AM_DOING``` into line 14 (or similar)
 3. Type make on the root of the Atmosphere submodule
 4. Copy "sm.kip" from "Atmosphere\stratosphere\sm", "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm", "loader.kip" from "Atmosphere\stratosphere\loader" and "exosphere.bin" from "Atmosphere/exosphere" into "Compiled/modules/atmosphere"
 
 # Updating other submodules
+
+**Make sure to [Update Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies) before before compiling submodules**
+
+**Make sure to [Update LibNX](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) before before updating before compiling submodules**
 
 Here comes the easy part :) Updating all other submodules is really really easy and all follow nearly the same steps:
 
@@ -103,14 +125,14 @@ Here comes the easy part :) Updating all other submodules is really really easy 
 2. Choose your newly compiled Gag Order build
 3. Choose the icon to be the one located at "SDFilesSwitch\resources\icons" called GagOrder.png
 
-![The Icon](/resources/Icons/GagOrder.png)
+![The Icon](/Resources/Icons/GagOrder.png)
 
 4. Save you changes
 5. Replace the old one in the compiled folder
 
 # Hekate Bootlogo
 
-![By @jpe230](/resources/Bootimages/Splash-jpe230.png)
+![By @jpe230](/Resources/Bootimages/Splash-jpe230.png)
 
 - Start your photo editor of choice (I use GIMP because I'm poor and actually kinda like GIMP)
 A. Open one of the three .xcf files and change the version number to the number of the release you want to make
