@@ -5,7 +5,7 @@ These are all parts of [the "Compiled" folder](https://github.com/tumGER/SDFiles
 # Structure:
 
 Folder Name | Function
-----------------------
+------------|---------
 sys-ftpd | Background FTP-Server
 nx-dreport | Clears the Logs
 oldlayered | LayeredFS running on older commit
