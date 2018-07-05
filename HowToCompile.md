@@ -1,3 +1,6 @@
+# All submodules have been outsourced to ~~China~~ [SDFilesCompiler](https://github.com/tumGER/SDFilesCompiler) as I'm working on creating a easy to use compiler for the SDFiles pack!
+# This guide will be changed to reflect those changes once I'm done creating the program!
+
 This little guide will help you to compile everything that is included in this pack. Let us start simple:
 
 # Dependencies
