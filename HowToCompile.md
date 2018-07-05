@@ -22,7 +22,7 @@ Please repeat
 
 # LibNX
 
-**Make sure to [Update Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies) before before updating LibNX**
+**Make sure to [Update Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies) before updating LibNX**
 
 1. Go into the LibNX submodule folder
 2. Type ```make```
@@ -34,9 +34,9 @@ Please repeat
 
 **Atmosphere sometimes even uses features that aren't even in LibNX yet, in that case follow the previous steps but use the [Atmosphere LibNX fork](https://github.com/Atmosphere-NX/libnx/tree/for-atmosphere) by typing ```git clone https://github.com/Atmosphere-NX/libnx.git -b for-atmosphere``` into your desired location**
 
-**Make sure to [Update Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies) before before compiling Atmosphere**
+**Make sure to [Update Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies) before compiling Atmosphere**
 
-**Make sure to [Update LibNX](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) before before compiling Atmosphere**
+**Make sure to [Update LibNX](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) before compiling Atmosphere**
 
 Atmosphere needs some custom changes to it to work with current hekate and also to compile. While we don't need to compile Atmosphere completely, we will in this tutorial because it's easier and breaks much less (in my experience)
 
@@ -92,9 +92,9 @@ located ~ at line 67
 
 # Updating Atmosphere
 
-**Make sure to [Update Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies) before before compiling Atmosphere**
+**Make sure to [Update Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies) before compiling Atmosphere**
 
-**Make sure to [Update LibNX](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) before before compiling Atmosphere**
+**Make sure to [Update LibNX](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) before compiling Atmosphere**
 
 **Atmosphere sometimes even uses features that aren't even in LibNX yet, in that case follow [the previous steps](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) but use the [Atmosphere LibNX fork](https://github.com/Atmosphere-NX/libnx/tree/for-atmosphere) by typing ```git clone https://github.com/Atmosphere-NX/libnx.git -b for-atmosphere``` into your desired location**
 
@@ -105,9 +105,9 @@ located ~ at line 67
 
 # Updating other submodules
 
-**Make sure to [Update Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies) before before compiling submodules**
+**Make sure to [Update Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies) before compiling submodules**
 
-**Make sure to [Update LibNX](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) before before updating before compiling submodules**
+**Make sure to [Update LibNX](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) before compiling submodules**
 
 Here comes the easy part :) Updating all other submodules is really really easy and all follow nearly the same steps:
 
