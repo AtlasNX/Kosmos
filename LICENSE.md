@@ -8,4 +8,5 @@ Licenses
 * Gag-Order is licensed under [GPLv2](https://github.com/Adubbz/Gag-Order/blob/master/LICENSE)
 * AppstoreNX is licensed under [GPLv3](https://github.com/vgmoose/appstorenx/blob/master/LICENSE)
 * EdiZon is licensed under [MIT](https://github.com/thomasnet-mc/EdiZon/blob/master/LICENSE)
-* SDFileUpdater is licensed under [GPLv2](https://github.com/StevenMattera/SDFileUpdater/blob/master/LICENSE)
+* SDFilesUpdater is licensed under [GPLv2](https://github.com/StevenMattera/SDFilesUpdater/blob/master/LICENSE)
+* Sys-FTPD is licensed under [GPLv3](https://github.com/jakibaki/sys-ftpd/blob/master/LICENSE)
