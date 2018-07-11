@@ -2,6 +2,21 @@ How To Compile SDFiles for Hekate
 =================================================================================
 The unoffical offical guide by @tumGER
 
+Subject | Topic
+--------|--------
+**Preparations** | [Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#dependencies)
+. | [Updating Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies)
+. | [Installing/Updating LibNX](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx)
+. | .
+**Atmosphere** | [Atmosphere with Patches](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-atmospheres-loader-sm-and-layeredfs-with-patches)
+. | [Atmopshere without Patches ("Complete Atmosphere")](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-atmosphere-complete)
+. | .
+**Homebrew and Module** | [General](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-homebrew-and-modules)
+. | [Homebrew Loader](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#homebrew-loader)
+. | [Adding custom Icons (GagOrder)](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#gag-order-icon)
+. | .
+**Extra** | [Bootlogos](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#hekate-bootlogo)
+
 # Dependencies
 
 - Install [DevkitPro](https://github.com/devkitPro/installer) with Switch support
