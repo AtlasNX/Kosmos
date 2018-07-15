@@ -21,7 +21,7 @@ Subject | Topic
     - **Linux:** ```sudo dkp-pacman -S devkitA64 switch-tools switch-curl switch-bzip2 switch-curl switch-freetype switch-libjpeg-turbo switch-sdl2 switch-sdl2_gfx switch-sdl2_image switch-sdl2_ttf switch-zlib switch-libpng```
     - **Windows** ```pacman -S devkitA64 switch-tools switch-curl switch-bzip2 switch-curl switch-freetype switch-libjpeg-turbo switch-sdl2 switch-sdl2_gfx switch-sdl2_image switch-sdl2_ttf switch-zlib switch-libpng```
         - You may have to run this command through Msys2 if it doesn't work
-- A clean clone of the compiler repo
+- A clean clone of the compiler repo - **This repo holds all submodules mentioned in this guide!**
     - For that simply ```git clone https://github.com/tumGER/SDFilesCompiler.git``` to your desired location
         - There are some weird issues on Windows if you have spaces somewhere in the path to your location so make sure to clone it somewhere where the Path doesn't include spaces
 - [LibNX](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx)
