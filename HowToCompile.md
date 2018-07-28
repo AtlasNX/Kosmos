@@ -56,9 +56,8 @@ Subject | Topic
 
 Atmosphere needs some custom changes to it to work with current hekate and also to compile. While we don't need to compile Atmosphere completely, we will in this tutorial because it's easier and breaks much less (in my experience)
 
-1. Go into "Atmosphere\fusee\fusee-primary\src" and find "main.c"
-2. Go into "Atmosphere\stratosphere\loader\source" and find "ldr_main.cpp"
-3. Remove
+1. Go into "Atmosphere\stratosphere\loader\source" and find "ldr_main.cpp"
+2. Remove
     ```cpp 
         /* Check for exosphere API compatibility. */
         u64 exosphere_cfg;
@@ -70,8 +69,8 @@ Atmosphere needs some custom changes to it to work with current hekate and also 
 located ~ at line 72
     - This removes the Exosphere API Check from the Loader
     
-4. Go into "Atmosphere\stratosphere\fs_mitm" and find "fsmitm_main.cpp"
-5. Remove
+3. Go into "Atmosphere\stratosphere\fs_mitm" and find "fsmitm_main.cpp"
+4. Remove
 ```cpp
     /* Check for exosphere API compatibility. */
     u64 exosphere_cfg;
@@ -87,19 +86,19 @@ located ~ at line 72
 ```
 located ~ at line 67
 
-6. Go back into the root of the Atmosphere submodule
-7. Type "make"
-8. Wait a bit, this will take some time
-9. Go back into "Atmosphere\stratosphere\fs_mitm"
-10. Type "make"
-11. Wait a bit, this will take some time
-12. Copy "loader.kip" from "Atmosphere\stratosphere\loader" into:
+5. Go back into the root of the Atmosphere submodule
+6. Type "make"
+7. Wait a bit, this will take some time
+8. Go back into "Atmosphere\stratosphere\fs_mitm"
+9. Type "make"
+10. Wait a bit, this will take some time
+11. Copy "loader.kip" from "Atmosphere\stratosphere\loader" into:
     - "SDFilesSwitch/Compiled/modules/newfirm/"
-13. Copy "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm" into:    
+12. Copy "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm" into:    
     - "SDFilesSwitch/Compiled/modules/newfirm/"
-14. Copy "sm.kip" from "Atmosphere\stratosphere\sm" into:
+13. Copy "sm.kip" from "Atmosphere\stratosphere\sm" into:
     - "SDFilesSwitch/Compiled/modules/newfirm/"
-15. Copy the updated files to your SD and test them on your Switch
+14. Copy the updated files to your SD and test them on your Switch
     - If everything worked, congrats! You compiled Atmosphere's patched Loader, SM and LayeredFS :)
     - If it didn't, you either messed something up or Atmosphere had some change to its code in the time I wrote this till now - In that case I'd guess contacting me over Twitter (@_tomGER [Or @tumGER since I check that more often]) is your best bet if I'm gone - If you're here because you just wanted to compile it yourself than contact me over tomGER
     \#7462 on Discord.
