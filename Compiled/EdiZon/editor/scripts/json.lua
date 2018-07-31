@@ -25,7 +25,8 @@ saveFileBuffer = json.decode(convertToString(edizon.getSaveFileBuffer()))
 
 function getValueFromSaveFile()
 	strArgs = edizon.getStrArgs()
-	
+	intArgs = edizon.getIntArgs()
+
 	item = saveFileBuffer
 	
 	for i, tag in pairs(strArgs) do
@@ -34,18 +35,27 @@ function getValueFromSaveFile()
 		item = item[tag]
 	end
 	
-	return item
+	if intArgs[1] == 0 then
+		return item
+	else
+		return item and 1 or 0
+	end
 end
 
 function setValueInSaveFile(value)
 	local items = saveFileBuffer
 	strArgs = edizon.getStrArgs()
+	intArgs = edizon.getIntArgs()
 	
 	local ref = items
 	
 	for i, arg in ipairs(strArgs) do
 		if i == #strArgs then
-			ref[arg] = value
+			if intArgs[1] == 0 then
+				ref[arg] = value
+			else
+				ref[arg] = (value == 1)
+			end
 		else 
 			ref = ref[arg]
 		end

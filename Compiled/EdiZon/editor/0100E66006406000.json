@@ -1,0 +1,293 @@
+{
+	"saveFilePaths" : [ "/" ],
+	"files" : "KSSaveData\\d",
+	"filetype": "octp",
+	"items": [
+	{
+		"name" : "PlaySecond",
+		"category" : "1. General",
+		"intArgs" : [ 2, 2 ],
+		"strArgs" : [ "100000", "0024", "PlaySecond" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 10800
+		}
+	},
+	{
+		"name" : "Gold",
+		"category" : "1. General",
+		"intArgs" : [ 2, 4 ],
+		"strArgs" : [ "0000", "0042", "Money_" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 9999999
+		}
+	},
+	{
+		"name" : "Level",
+		"category" : "2. Olberic",
+		"intArgs" : [ 2, 2, 1 ],
+		"strArgs" : [ "F0000", "0092", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 1,
+			"maxValue" : 99
+		}
+	},
+	{
+		"name" : "Exp",
+		"category" : "2. Olberic",
+		"intArgs" : [ 2, 4, 1 ],
+		"strArgs" : [ "F0000", "00DB", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 99999
+		}
+	},
+	{
+		"name" : "Job Point",
+		"category" : "2. Olberic",
+		"intArgs" : [ 2, 4, 1 ],
+		"strArgs" : [ "F0000", "02C5", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 50000
+		}
+	},
+	{
+		"name" : "Level",
+		"category" : "3. Tressa",
+		"intArgs" : [ 2, 2, 2 ],
+		"strArgs" : [ "F0000", "0092", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 1,
+			"maxValue" : 99
+		}
+	},
+	{
+		"name" : "Exp",
+		"category" : "3. Tressa",
+		"intArgs" : [ 2, 4, 2 ],
+		"strArgs" : [ "F0000", "00DB", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 99999
+		}
+	},
+	{
+		"name" : "Job Point",
+		"category" : "3. Tressa",
+		"intArgs" : [ 2, 4, 2 ],
+		"strArgs" : [ "F0000", "02C5", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 50000
+		}
+	},
+	{
+		"name" : "Level",
+		"category" : "4. Cyrus",
+		"intArgs" : [ 2, 2, 3 ],
+		"strArgs" : [ "F0000", "0092", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 1,
+			"maxValue" : 99
+		}
+	},
+	{
+		"name" : "Exp",
+		"category" : "4. Cyrus",
+		"intArgs" : [ 2, 4, 3 ],
+		"strArgs" : [ "F0000", "00DB", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 99999
+		}
+	},
+	{
+		"name" : "Job Point",
+		"category" : "4. Cyrus",
+		"intArgs" : [ 2, 4, 3 ],
+		"strArgs" : [ "F0000", "02C5", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 50000
+		}
+	},
+	{
+		"name" : "Level",
+		"category" : "5. Primrose",
+		"intArgs" : [ 2, 2, 4 ],
+		"strArgs" : [ "F0000", "0092", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 1,
+			"maxValue" : 99
+		}
+	},
+	{
+		"name" : "Exp",
+		"category" : "5. Primrose",
+		"intArgs" : [ 2, 4, 4 ],
+		"strArgs" : [ "F0000", "00DB", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 99999
+		}
+	},
+	{
+		"name" : "Job Point",
+		"category" : "5. Primrose",
+		"intArgs" : [ 2, 4, 4 ],
+		"strArgs" : [ "F0000", "02C5", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 50000
+		}
+	},
+	{
+		"name" : "Level",
+		"category" : "6. H'annit",
+		"intArgs" : [ 2, 2, 5 ],
+		"strArgs" : [ "F0000", "0092", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 1,
+			"maxValue" : 99
+		}
+	},
+	{
+		"name" : "Exp",
+		"category" : "6. H'annit",
+		"intArgs" : [ 2, 4, 5 ],
+		"strArgs" : [ "F0000", "00DB", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 99999
+		}
+	},
+	{
+		"name" : "Job Point",
+		"category" : "6. H'annit",
+		"intArgs" : [ 2, 4, 5 ],
+		"strArgs" : [ "F0000", "02C5", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 50000
+		}
+	},
+	{
+		"name" : "Level",
+		"category" : "7. Therion",
+		"intArgs" : [ 2, 2, 6 ],
+		"strArgs" : [ "F0000", "0092", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 1,
+			"maxValue" : 99
+		}
+	},
+	{
+		"name" : "Exp",
+		"category" : "7. Therion",
+		"intArgs" : [ 2, 4, 6 ],
+		"strArgs" : [ "F0000", "00DB", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 99999
+		}
+	},
+	{
+		"name" : "Job Point",
+		"category" : "7. Therion",
+		"intArgs" : [ 2, 4, 6 ],
+		"strArgs" : [ "F0000", "02C5", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 50000
+		}
+	},
+	{
+		"name" : "Level",
+		"category" : "8. Ophilia",
+		"intArgs" : [ 2, 2, 7 ],
+		"strArgs" : [ "F0000", "0092", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 1,
+			"maxValue" : 99
+		}
+	},
+	{
+		"name" : "Exp",
+		"category" : "8. Ophilia",
+		"intArgs" : [ 2, 4, 7 ],
+		"strArgs" : [ "F0000", "00DB", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 99999
+		}
+	},
+	{
+		"name" : "Job Point",
+		"category" : "8. Ophilia",
+		"intArgs" : [ 2, 4, 7 ],
+		"strArgs" : [ "F0000", "02C5", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 50000
+		}
+	},
+	{
+		"name" : "Level",
+		"category" : "9. Alfyn",
+		"intArgs" : [ 2, 2, 8 ],
+		"strArgs" : [ "F0000", "0092", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 1,
+			"maxValue" : 99
+		}
+	},
+	{
+		"name" : "Exp",
+		"category" : "9. Alfyn",
+		"intArgs" : [ 2, 4, 8 ],
+		"strArgs" : [ "F0000", "00DB", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 99999
+		}
+	},
+	{
+		"name" : "Job Point",
+		"category" : "9. Alfyn",
+		"intArgs" : [ 2, 4, 8 ],
+		"strArgs" : [ "F0000", "02C5", "CharacterID" ],
+		"widget" : {
+			"type" : "int",
+			"minValue" : 0,
+			"maxValue" : 50000
+		}
+	}
+	]
+}
