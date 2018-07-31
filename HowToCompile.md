@@ -18,8 +18,8 @@ Subject | Topic
 
 - Install [DevkitPro](https://github.com/devkitPro/installer) with Switch support
 - Install needed packages:
-    - **Linux:** ```sudo dkp-pacman -S devkitA64 switch-tools switch-curl switch-bzip2 switch-curl switch-freetype switch-libjpeg-turbo switch-sdl2 switch-sdl2_gfx switch-sdl2_image switch-sdl2_ttf switch-zlib switch-libpng```
-    - **Windows** ```pacman -S devkitA64 switch-tools switch-curl switch-bzip2 switch-curl switch-freetype switch-libjpeg-turbo switch-sdl2 switch-sdl2_gfx switch-sdl2_image switch-sdl2_ttf switch-zlib switch-libpng```
+    - **Linux:** ```sudo dkp-pacman -S devkitA64 switch-tools switch-curl switch-bzip2 switch-freetype switch-libjpeg-turbo switch-sdl2 switch-sdl2_gfx switch-sdl2_image switch-sdl2_ttf switch-zlib switch-libpng```
+    - **Windows** ```pacman -S devkitA64 switch-tools switch-curl switch-bzip2 switch-freetype switch-libjpeg-turbo switch-sdl2 switch-sdl2_gfx switch-sdl2_image switch-sdl2_ttf switch-zlib switch-libpng```
         - You may have to run this command through Msys2 if it doesn't work
 - A clean clone of the compiler repo - **This repo holds all submodules mentioned in this guide!**
     - For that simply ```git clone https://github.com/tumGER/SDFilesCompiler.git``` to your desired location
@@ -56,11 +56,8 @@ Subject | Topic
 
 Atmosphere needs some custom changes to it to work with current hekate and also to compile. While we don't need to compile Atmosphere completely, we will in this tutorial because it's easier and breaks much less (in my experience)
 
-1. Go into "Atmosphere\fusee\fusee-primary\src" and find "main.c"
-2. Type ```#define I_KNOW_WHAT_I_AM_DOING``` into line 14 (or similar)
-    - This is needed to make it actually compile - It's basically a small warning that will hopefully be removed some day
-3. Go into "Atmosphere\stratosphere\loader\source" and find "ldr_main.cpp"
-4. Remove
+1. Go into "Atmosphere\stratosphere\loader\source" and find "ldr_main.cpp"
+2. Remove
     ```cpp 
         /* Check for exosphere API compatibility. */
         u64 exosphere_cfg;
@@ -72,8 +69,8 @@ Atmosphere needs some custom changes to it to work with current hekate and also 
 located ~ at line 72
     - This removes the Exosphere API Check from the Loader
     
-5. Go into "Atmosphere\stratosphere\fs_mitm" and find "fsmitm_main.cpp"
-6. Remove
+3. Go into "Atmosphere\stratosphere\fs_mitm" and find "fsmitm_main.cpp"
+4. Remove
 ```cpp
     /* Check for exosphere API compatibility. */
     u64 exosphere_cfg;
@@ -89,19 +86,19 @@ located ~ at line 72
 ```
 located ~ at line 67
 
-7. Go back into the root of the Atmosphere submodule
-8. Type "make"
-9. Wait a bit, this will take some time
-10. Go back into "Atmosphere\stratosphere\fs_mitm"
-11. Type "make"
-12. Wait a bit, this will take some time
-13. Copy "loader.kip" from "Atmosphere\stratosphere\loader" into:
+5. Go back into the root of the Atmosphere submodule
+6. Type "make"
+7. Wait a bit, this will take some time
+8. Go back into "Atmosphere\stratosphere\fs_mitm"
+9. Type "make"
+10. Wait a bit, this will take some time
+11. Copy "loader.kip" from "Atmosphere\stratosphere\loader" into:
     - "SDFilesSwitch/Compiled/modules/newfirm/"
-14. Copy "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm" into:    
+12. Copy "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm" into:    
     - "SDFilesSwitch/Compiled/modules/newfirm/"
-15. Copy "sm.kip" from "Atmosphere\stratosphere\sm" into:
+13. Copy "sm.kip" from "Atmosphere\stratosphere\sm" into:
     - "SDFilesSwitch/Compiled/modules/newfirm/"
-16. Copy the updated files to your SD and test them on your Switch
+14. Copy the updated files to your SD and test them on your Switch
     - If everything worked, congrats! You compiled Atmosphere's patched Loader, SM and LayeredFS :)
     - If it didn't, you either messed something up or Atmosphere had some change to its code in the time I wrote this till now - In that case I'd guess contacting me over Twitter (@_tomGER [Or @tumGER since I check that more often]) is your best bet if I'm gone - If you're here because you just wanted to compile it yourself than contact me over tomGER
     \#7462 on Discord.
@@ -115,9 +112,8 @@ located ~ at line 67
 **Atmosphere sometimes even uses features that aren't even in LibNX yet, in that case follow [the previous steps](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) but use the [Atmosphere LibNX fork](https://github.com/Atmosphere-NX/libnx/tree/for-atmosphere) by typing ```git clone https://github.com/Atmosphere-NX/libnx.git -b for-atmosphere``` into your desired location**
 
 1. Go into "Atmosphere\fusee\fusee-primary\src" and find "main.c"
-2. Type ```#define I_KNOW_WHAT_I_AM_DOING``` into line 14 (or similar)
-3. Type make on the root of the Atmosphere submodule
-4. Copy "sm.kip" from "Atmosphere\stratosphere\sm", "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm", "loader.kip" from "Atmosphere\stratosphere\loader" and "exosphere.bin" from "Atmosphere/exosphere" into "Compiled/modules/atmosphere"
+2. Type make on the root of the Atmosphere submodule
+3. Copy "sm.kip" from "Atmosphere\stratosphere\sm", "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm", "loader.kip" from "Atmosphere\stratosphere\loader" and "exosphere.bin" from "Atmosphere/exosphere" into "Compiled/modules/atmosphere"
 
 # Updating Homebrew and Modules
 
