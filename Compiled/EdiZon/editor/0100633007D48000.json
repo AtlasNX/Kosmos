@@ -1,5 +1,5 @@
 {
-	"saveFilePaths" : [ "/" ],
+	"saveFilePaths" : [ "" ],
 	"files" : "user\\d\\.dat",
 	"filetype": "json",
 	"items": [
