@@ -11,6 +11,7 @@ Subject | Topic
 . | [Atmopshere without Patches ("Complete Atmosphere")](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-atmosphere-complete)
 **Homebrew and Module** | [General](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-homebrew-and-modules)
 . | [Homebrew Loader](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#homebrew-loader)
+. | [Creport](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#creport)
 . | [Adding custom Icons (GagOrder)](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#gag-order-icon)
 **Extra** | [Bootlogos](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#hekate-bootlogo)
 
@@ -149,6 +150,14 @@ sys-ftpd | Replace the .kip in compiled/modules
 1. Go into the Homebrew Loader folder (hbl) and type ```make```
 2. Copy hbl.nsp to "compiled/atmosphere/titles/010000000000100D/exefs/" and rename it to main (No extension, just main)
 3. Copy hbl.npdm to "compiled/atmosphere/titles/010000000000100D/exefs/" and rename it to main.npdm
+
+## **Creport**
+
+1. Go into atmosphere/stratosphere/creport
+2. Type ```make```
+3. Copy creport.nso to "Compiled\atmosphere\titles\0100000000000036\exefs" and rename it to main (No extension, just main)
+4. Go into "devkitPro\tools\bin" and type ```npdmtool.exe Location_Where_creport.json_is_stored main.npdm```
+5. Copy the main.npdm from that folder into "Compiled\atmosphere\titles\0100000000000036\exefs"
 
 
 ## **Gag Order Icon:**
