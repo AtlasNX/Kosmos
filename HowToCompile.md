@@ -69,9 +69,106 @@ Atmosphere needs some custom changes to it to work with current hekate and also 
     ```
 located ~ at line 72
     - This removes the Exosphere API Check from the Loader
-    
-3. Go into "Atmosphere\stratosphere\fs_mitm" and find "fsmitm_main.cpp"
-4. Remove
+
+4. In the same directory, find "ldr_npdm.cpp"
+5. Find this function:
+   ```
+      FILE *NpdmUtils::OpenNpdm(u64 title_id) {
+      FILE *f_out = OpenNpdmFromSdCard(title_id);
+      if (f_out != NULL) {
+          return f_out;
+      }
+      return OpenNpdmFromExeFS();
+
+      }
+    ```
+  and replace it by this one:
+   ```
+      FILE *NpdmUtils::OpenNpdm(u64 title_id) {
+    if (title_id == 0x010000000000100D) {
+        Result rc;
+        rc = hidInitialize();
+        if (R_FAILED(rc)){
+            fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
+        }
+        hidScanInput();
+        u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
+        if(kDown & KEY_R) {
+          hidExit();
+          FILE *f_out = OpenNpdmFromSdCard(title_id);
+          if (f_out != NULL) {
+           return f_out;
+        }
+          return OpenNpdmFromExeFS();
+        }
+        else {
+         hidExit();
+         return OpenNpdmFromExeFS();
+        }
+    }
+    else {
+    FILE *f_out = OpenNpdmFromSdCard(title_id);
+    if (f_out != NULL) {
+        return f_out;
+    }
+    return OpenNpdmFromExeFS();
+    }
+}
+   ```
+6. In the same directory, find "ldr_nso.cpp"
+7. Find this function:
+``` 
+FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
+    FILE *f_out = OpenNsoFromSdCard(index, title_id);
+    if (f_out != NULL) {
+        return f_out;
+    } else if (CheckNsoStubbed(index, title_id)) {
+        return NULL;
+    } else {
+        return OpenNsoFromExeFS(index);
+    }
+}
+```
+and replace it by this one:
+```
+FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
+    if (title_id == 0x010000000000100D) {
+        Result rc;
+        rc = hidInitialize();
+        if (R_FAILED(rc)){
+            fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
+        }
+        hidScanInput();
+        u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
+        if(kDown & KEY_R) {
+              hidExit();
+              FILE *f_out = OpenNsoFromSdCard(index, title_id);
+              if (f_out != NULL) {
+                return f_out;
+              } else if (CheckNsoStubbed(index, title_id)) {
+               return NULL;
+              } else {
+               return OpenNsoFromExeFS(index);
+              }
+        }
+        else { 
+            hidExit();
+            return OpenNsoFromExeFS(index); }
+    }
+     else {        
+    FILE *f_out = OpenNsoFromSdCard(index, title_id);
+    if (f_out != NULL) {
+        return f_out;
+    } else if (CheckNsoStubbed(index, title_id)) {
+        return NULL;
+    } else {
+        return OpenNsoFromExeFS(index);
+    }
+    }
+}
+```
+8. Go into "Atmosphere\stratosphere\fs_mitm" and find "fsmitm_main.cpp"
+9. Remove
 ```cpp
     /* Check for exosphere API compatibility. */
     u64 exosphere_cfg;
@@ -87,19 +184,19 @@ located ~ at line 72
 ```
 located ~ at line 67
 
-5. Go back into the root of the Atmosphere submodule
-6. Type "make"
-7. Wait a bit, this will take some time
-8. Go back into "Atmosphere\stratosphere\fs_mitm"
-9. Type "make"
-10. Wait a bit, this will take some time
-11. Copy "loader.kip" from "Atmosphere\stratosphere\loader" into:
+9. Go back into the root of the Atmosphere submodule
+10. Type "make"
+11. Wait a bit, this will take some time
+12. Go back into "Atmosphere\stratosphere\fs_mitm"
+13. Type "make"
+14. Wait a bit, this will take some time
+15. Copy "loader.kip" from "Atmosphere\stratosphere\loader" into:
     - "SDFilesSwitch/Compiled/modules/newfirm/"
-12. Copy "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm" into:    
+16. Copy "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm" into:    
     - "SDFilesSwitch/Compiled/modules/newfirm/"
-13. Copy "sm.kip" from "Atmosphere\stratosphere\sm" into:
+17. Copy "sm.kip" from "Atmosphere\stratosphere\sm" into:
     - "SDFilesSwitch/Compiled/modules/newfirm/"
-14. Copy the updated files to your SD and test them on your Switch
+18. Copy the updated files to your SD and test them on your Switch
     - If everything worked, congrats! You compiled Atmosphere's patched Loader, SM and LayeredFS :)
     - If it didn't, you either messed something up or Atmosphere had some change to its code in the time I wrote this till now - In that case I'd guess contacting me over Twitter (@_tomGER [Or @tumGER since I check that more often]) is your best bet if I'm gone - If you're here because you just wanted to compile it yourself than contact me over tomGER
     \#7462 on Discord.
@@ -112,9 +209,9 @@ located ~ at line 67
 
 **Atmosphere sometimes even uses features that aren't even in LibNX yet, in that case follow [the previous steps](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) but use the [Atmosphere LibNX fork](https://github.com/Atmosphere-NX/libnx/tree/for-atmosphere) by typing ```git clone https://github.com/Atmosphere-NX/libnx.git -b for-atmosphere``` into your desired location**
 
-1. Go into "Atmosphere\fusee\fusee-primary\src" and find "main.c"
-2. Type make on the root of the Atmosphere submodule
-3. Copy "sm.kip" from "Atmosphere\stratosphere\sm", "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm", "loader.kip" from "Atmosphere\stratosphere\loader" and "exosphere.bin" from "Atmosphere/exosphere" into "Compiled/modules/atmosphere"
+1. Apply steps 4-7 from [Updating Atmosphere](https://github.com/mariogamer2/SDFilesSwitch/blob/master/HowToCompile.md#updating-atmospheres-loader-sm-and-layeredfs-with-patches)
+1. Type make on the root of the Atmosphere submodule
+2. Copy "sm.kip" from "Atmosphere\stratosphere\sm", "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm", "loader.kip" from "Atmosphere\stratosphere\loader" and "exosphere.bin" from "Atmosphere/exosphere" into "Compiled/modules/atmosphere"
 
 # Updating Homebrew and Modules
 
