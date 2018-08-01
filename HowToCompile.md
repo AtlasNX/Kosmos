@@ -71,7 +71,7 @@ located ~ at line 72
     - This removes the Exosphere API Check from the Loader
 
 4. In the same directory, find "ldr_npdm.cpp"
-5. Find and replace this function:
+5. Find this function:
    ```
       FILE *NpdmUtils::OpenNpdm(u64 title_id) {
       FILE *f_out = OpenNpdmFromSdCard(title_id);
