@@ -115,9 +115,58 @@ located ~ at line 72
     }
 }
    ```
-6. In the same directory, find "ldr_npdm.cpp"
-7. Find and replace this function:
-
+6. In the same directory, find "ldr_nso.cpp"
+7. Find this function:
+``` 
+FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
+    FILE *f_out = OpenNsoFromSdCard(index, title_id);
+    if (f_out != NULL) {
+        return f_out;
+    } else if (CheckNsoStubbed(index, title_id)) {
+        return NULL;
+    } else {
+        return OpenNsoFromExeFS(index);
+    }
+}
+```
+and replace it by this one:
+```
+FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
+    if (title_id == 0x010000000000100D) {
+        Result rc;
+        rc = hidInitialize();
+        if (R_FAILED(rc)){
+            fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
+        }
+        hidScanInput();
+        u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
+        if(kDown & KEY_R) {
+              hidExit();
+              FILE *f_out = OpenNsoFromSdCard(index, title_id);
+              if (f_out != NULL) {
+                return f_out;
+              } else if (CheckNsoStubbed(index, title_id)) {
+               return NULL;
+              } else {
+               return OpenNsoFromExeFS(index);
+              }
+        }
+        else { 
+            hidExit();
+            return OpenNsoFromExeFS(index); }
+    }
+     else {        
+    FILE *f_out = OpenNsoFromSdCard(index, title_id);
+    if (f_out != NULL) {
+        return f_out;
+    } else if (CheckNsoStubbed(index, title_id)) {
+        return NULL;
+    } else {
+        return OpenNsoFromExeFS(index);
+    }
+    }
+}
+```
 8. Go into "Atmosphere\stratosphere\fs_mitm" and find "fsmitm_main.cpp"
 9. Remove
 ```cpp
@@ -160,6 +209,7 @@ located ~ at line 67
 
 **Atmosphere sometimes even uses features that aren't even in LibNX yet, in that case follow [the previous steps](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) but use the [Atmosphere LibNX fork](https://github.com/Atmosphere-NX/libnx/tree/for-atmosphere) by typing ```git clone https://github.com/Atmosphere-NX/libnx.git -b for-atmosphere``` into your desired location**
 
+1. Apply steps 4-7 from Atmosphere
 1. Type make on the root of the Atmosphere submodule
 2. Copy "sm.kip" from "Atmosphere\stratosphere\sm", "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm", "loader.kip" from "Atmosphere\stratosphere\loader" and "exosphere.bin" from "Atmosphere/exosphere" into "Compiled/modules/atmosphere"
 
