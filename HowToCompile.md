@@ -209,9 +209,9 @@ located ~ at line 67
 
 **Atmosphere sometimes even uses features that aren't even in LibNX yet, in that case follow [the previous steps](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#libnx) but use the [Atmosphere LibNX fork](https://github.com/Atmosphere-NX/libnx/tree/for-atmosphere) by typing ```git clone https://github.com/Atmosphere-NX/libnx.git -b for-atmosphere``` into your desired location**
 
-1. Apply steps 4-7 from [Updating Atmosphere](https://github.com/mariogamer2/SDFilesSwitch/blob/master/HowToCompile.md#updating-atmospheres-loader-sm-and-layeredfs-with-patches)
-1. Type make on the root of the Atmosphere submodule
-2. Copy "sm.kip" from "Atmosphere\stratosphere\sm", "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm", "loader.kip" from "Atmosphere\stratosphere\loader" and "exosphere.bin" from "Atmosphere/exosphere" into "Compiled/modules/atmosphere"
+1. Apply steps 4-7 from [Updating Atmosphere](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-atmospheres-loader-sm-and-layeredfs-with-patches)
+2. Type make on the root of the Atmosphere submodule
+3. Copy "sm.kip" from "Atmosphere\stratosphere\sm", "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm", "loader.kip" from "Atmosphere\stratosphere\loader" and "exosphere.bin" from "Atmosphere/exosphere" into "Compiled/modules/atmosphere"
 
 # Updating Homebrew and Modules
 
