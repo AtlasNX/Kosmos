@@ -223,7 +223,6 @@ Here comes the easy part :) Updating all other submodules is really really easy 
 
 1. Go into each submodule folder
 2. Type "make"
-    - You need to type "make nx" for **hbmenu**
 3. It should now have compiled it - The location is often pretty easy to find:
     - You'll get a .nro for EdiZon, AppstoreNX, GagOrder, SDFilesUpdater and hbmenu
     - You'll get a .kip from dreport, sys-ftpd
