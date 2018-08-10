@@ -1,0 +1,18 @@
+{
+	"saveFilePaths" : [ "" ],
+	"files" : "File\\d+\\.bin",
+	"filetype": "bin",
+	"items": [
+	{
+	  "name" : "Coin Count",
+	  "category" : "Collectibles",
+	  "intArgs" : [ 2, 2 ], 
+	  "strArgs" : [ "001C", "0050" ],
+	  "widget" : {
+		"type" : "int",
+		"minValue" : 0,
+		"maxValue" : 9999
+	  }
+	}
+	]
+}

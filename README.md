@@ -1,8 +1,7 @@
-hekate All-in-One Package ("sdfiles.zip")
+All-in-One Package ("SDFiles.zip")
 ===========================
-**I DID NOT CREATE ANY OF THESE!**
 
-This handy All-in-One package includes everything you need to run Hekate / Atmosphere.
+This handy All-in-One package includes everything you need to run Hekate / Atmosphere / ReiNX with some extra patches to enhance your experience.
 
 ## Features
 * Up-to-date package
@@ -12,11 +11,16 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * Game Mods
 * A background FTP-Server
 * Atmosphere
+* ReiNX
+* Signature Patches
+* NSP Installation
+* Automatic Updating through your console
+* Launching the album by pressing R
 
 ## How to use
-1. Download [Hekate](https://github.com/CTCaer/hekate/releases)
-2. Download the [latest release](https://github.com/tumGER/SDFilesSwitch/releases) and extract it to the root of your Switch SD card
-3. Start hekate through e.g. [Fusée Gelée](https://github.com/reswitched/fusee-launcher), [TegraRcmSmash](https://switchtools.sshnuke.net/) or [WebCFWLoader](https://elijahzawesome.github.io/web-cfw-loader/)
+1. Download [Hekate](https://github.com/CTCaer/hekate/releases) or use the payload that comes with the package
+2. Download the [latest release](https://github.com/tumGER/SDFilesSwitch/releases) of your designated CFW and extract it to the root of your Switch SD card
+3. Start hekate or ReiNX through e.g. [Fusée Gelée](https://github.com/reswitched/fusee-launcher), [TegraRcmSmash](https://switchtools.sshnuke.net/) or [WebCFWLoader](https://elijahzawesome.github.io/web-cfw-loader/)
 4. ???
 5. Profit!
 
@@ -25,8 +29,16 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * [Switch Homebrew Menu](https://github.com/switchbrew/nx-hbmenu)
 * [Switch Homebrew Loader](https://github.com/switchbrew/nx-hbloader)
 * [nx-dreport](https://github.com/Thog/nx-dreport)
-* [Gag-Order](https://github.com/Adubbz/Gag-Order)
 * [AppstoreNX](https://github.com/vgmoose/appstorenx)
 * [EdiZon](https://github.com/thomasnet-mc/EdiZon)
 * [SDFilesUpdater](https://github.com/StevenMattera/SDFilesUpdater)
 * [Sys-FTPD](https://github.com/jakibaki/sys-ftpd)
+* [Tinfoil](https://github.com/Adubbz/Tinfoil)
+* [ReiNX](https://github.com/Reisyukaku/ReiNX)
+
+## Useful Links
+* [The GBATemp Thread](https://gbatemp.net/threads/newest-hekate-sdfiles-zip.506280/)
+* [Twitter](https://twitter.com/_tomGER)
+* [ReSwitched Discord](https://discordapp.com/invite/ZdqEhed)
+* [ReiSwitched Discord](https://discord.gg/jgNEsZe)
+* [EdiZon Discord](https://discord.gg/qyA38T8)
