@@ -1,3 +1,5 @@
+# Will be updated for v7 sys-ftpd, reinx, pm and more soon - I'm just exhausted right now :)
+
 How To Compile SDFiles for Hekate
 =================================================================================
 The unoffical offical guide by @tumGER
