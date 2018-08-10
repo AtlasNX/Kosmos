@@ -93,7 +93,7 @@ located ~ at line 72
         }
         hidScanInput();
         u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
-        if(kDown & KEY_R) {
+        if((kDown & KEY_R) == 0) {
           hidExit();
           FILE *f_out = OpenNpdmFromSdCard(title_id);
           if (f_out != NULL) {
@@ -140,7 +140,7 @@ FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
         }
         hidScanInput();
         u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
-        if(kDown & KEY_R) {
+        if((kDown & KEY_R) == 0) {
               hidExit();
               FILE *f_out = OpenNsoFromSdCard(index, title_id);
               if (f_out != NULL) {
