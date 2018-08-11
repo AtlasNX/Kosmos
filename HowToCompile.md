@@ -12,7 +12,6 @@ Subject | Topic
 **Homebrew and Module** | [General](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-homebrew-and-modules)
 . | [Homebrew Loader](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#homebrew-loader)
 . | [Creport](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#creport)
-. | [Adding custom Icons (GagOrder)](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#gag-order-icon)
 **Extra** | [Bootlogos](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#hekate-bootlogo)
 
 # Dependencies
@@ -73,18 +72,18 @@ located ~ at line 72
 4. In the same directory, find "ldr_npdm.cpp"
 5. Find this function:
    ```
-      FILE *NpdmUtils::OpenNpdm(u64 title_id) {
-      FILE *f_out = OpenNpdmFromSdCard(title_id);
-      if (f_out != NULL) {
-          return f_out;
-      }
-      return OpenNpdmFromExeFS();
+FILE *NpdmUtils::OpenNpdm(u64 title_id) {
+    FILE *f_out = OpenNpdmFromSdCard(title_id);
+    if (f_out != NULL) {
+        return f_out;
+    }
+    return OpenNpdmFromExeFS();
 
-      }
+    }
     ```
   and replace it by this one:
    ```
-      FILE *NpdmUtils::OpenNpdm(u64 title_id) {
+FILE *NpdmUtils::OpenNpdm(u64 title_id) {
     if (title_id == 0x010000000000100D) {
         Result rc;
         rc = hidInitialize();
@@ -196,7 +195,9 @@ located ~ at line 67
     - "SDFilesSwitch/Hekate/modules/newfirm/"
 17. Copy "sm.kip" from "Atmosphere\stratosphere\sm" into:
     - "SDFilesSwitch/Hekate/modules/newfirm/"
-18. Copy the updated files to your SD and test them on your Switch
+18. Copy "pm.kip" from "Atmosphere\stratosphere\pm" into:
+    - "SDFilesSwitch/Hekate/modules/newfirm/"
+19. Copy the updated files to your SD and test them on your Switch
     - If everything worked, congrats! You compiled Atmosphere's patched Loader, SM and LayeredFS :)
     - If it didn't, you either messed something up or Atmosphere had some change to its code in the time I wrote this till now - In that case I'd guess contacting me over Twitter (@_tomGER [Or @tumGER since I check that more often]) is your best bet if I'm gone - If you're here because you just wanted to compile it yourself than contact me over tomGER
     \#7462 on Discord.
@@ -211,7 +212,7 @@ located ~ at line 67
 
 1. Apply steps 4-7 from [Updating Atmosphere](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-atmospheres-loader-sm-and-layeredfs-with-patches)
 2. Type make on the root of the Atmosphere submodule
-3. Copy "sm.kip" from "Atmosphere\stratosphere\sm", "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm", "loader.kip" from "Atmosphere\stratosphere\loader" and "exosphere.bin" from "Atmosphere/exosphere" into "Hekate/modules/atmosphere"
+3. Copy "sm.kip" from "Atmosphere\stratosphere\sm", "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm", "pm.kip" from "Atmosphere\stratosphere\pm", "loader.kip" from "Atmosphere\stratosphere\loader" and "exosphere.bin" from "Atmosphere/exosphere" into "Hekate/modules/atmosphere"
 
 # Updating Homebrew and Modules
 
@@ -225,8 +226,8 @@ Here comes the easy part :) Updating all other submodules is really really easy 
 2. Type "make"
     - You need to type "make nx" for **hbmenu**
 3. It should now have compiled it - The location is often pretty easy to find:
-    - You'll get a .nro for EdiZon, AppstoreNX, GagOrder, SDFilesUpdater and hbmenu
-    - You'll get a .kip from dreport, sys-ftpd
+    - You'll get a .nro for EdiZon, AppstoreNX, SDFilesUpdater and hbmenu
+    - You'll get a .kip from sys-ftpd
 4. Replace the old one in the Hekate folder
 
 **Some files are called slightly different in the compiled folder - Please rename your newly compiled files in that case!**
@@ -235,10 +236,8 @@ Submodule | Folder it has to go to
 ----------|-----------------------
 EdiZon | Replace the .nacp and .nro in Hekate/switch/edizon
 AppstoreNX | Replace the .nro in Hekate/switch/appstore
-GagOrder | Replace the .nro in Hekate/switch
 SDFilesUpdater | Replace the .nro in Hekate/switch/SDFilesUpdater
 hbmenu | Replace the .nro on root
-dreport | Replace the .kip in Hekate/modules
 sys-ftpd | Replace the .kip in Hekate/modules
 
 
@@ -253,20 +252,7 @@ sys-ftpd | Replace the .kip in Hekate/modules
 1. Go into atmosphere/stratosphere/creport
 2. Type ```make```
 3. Copy creport.nso to "Hekate\atmosphere\titles\0100000000000036\exefs" and rename it to main (No extension, just main)
-4. Go into "devkitPro\tools\bin" and type ```npdmtool.exe Location_Where_creport.json_is_stored main.npdm```
-5. Copy the main.npdm from that folder into "Hekate\atmosphere\titles\0100000000000036\exefs"
-
-
-## **Gag Order Icon:**
-
-1. Start [NRO Asset Editor](https://github.com/vgmoose/nro-asset-editor/releases)
-2. Choose your newly compiled Gag Order build
-3. Choose the icon to be the one located at "SDFilesSwitch\resources\icons" called GagOrder.png
-
-![The Icon](/Resources/Icons/GagOrder.png)
-
-4. Save you changes
-5. Replace the old one in the Hekate folder
+4. Copy creport.npdm to "Hekate\atmosphere\titles\0100000000000036\exefs" and rename it to main.npdm
 
 # Hekate Bootlogo
 
