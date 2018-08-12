@@ -226,7 +226,7 @@ Here comes the easy part :) Updating all other submodules is really really easy 
     - You need to type "make nx" for **hbmenu**
 3. It should now have compiled it - The location is often pretty easy to find:
     - You'll get a .nro for EdiZon, AppstoreNX, GagOrder, SDFilesUpdater and hbmenu
-    - You'll get a .kip from dreport, sys-ftpd
+    - You'll get a .kip from sys-ftpd
 4. Replace the old one in the Hekate folder
 
 **Some files are called slightly different in the compiled folder - Please rename your newly compiled files in that case!**
@@ -238,7 +238,6 @@ AppstoreNX | Replace the .nro in Hekate/switch/appstore
 GagOrder | Replace the .nro in Hekate/switch
 SDFilesUpdater | Replace the .nro in Hekate/switch/SDFilesUpdater
 hbmenu | Replace the .nro on root
-dreport | Replace the .kip in Hekate/modules
 sys-ftpd | Replace the .kip in Hekate/modules
 
 
@@ -253,8 +252,7 @@ sys-ftpd | Replace the .kip in Hekate/modules
 1. Go into atmosphere/stratosphere/creport
 2. Type ```make```
 3. Copy creport.nso to "Hekate\atmosphere\titles\0100000000000036\exefs" and rename it to main (No extension, just main)
-4. Go into "devkitPro\tools\bin" and type ```npdmtool.exe Location_Where_creport.json_is_stored main.npdm```
-5. Copy the main.npdm from that folder into "Hekate\atmosphere\titles\0100000000000036\exefs"
+4. Copy the main.npdm from that folder into "Hekate\atmosphere\titles\0100000000000036\exefs"
 
 
 ## **Gag Order Icon:**
