@@ -1,5 +1,5 @@
 {
-	"saveFilePaths" : [ "/" ],
+	"saveFilePaths" : [ "" ],
 	"files" : "File\\d+\\.bin",
 	"filetype": "bin",
 	"items": [
