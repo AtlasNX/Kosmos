@@ -252,8 +252,7 @@ sys-ftpd | Replace the .kip in Hekate/modules
 1. Go into atmosphere/stratosphere/creport
 2. Type ```make```
 3. Copy creport.nso to "Hekate\atmosphere\titles\0100000000000036\exefs" and rename it to main (No extension, just main)
-4. Copy creport.npdm to "Hekate\atmosphere\titles\0100000000000036\exefs"
-
+4. Copy creport.npdm to "Hekate\atmosphere\titles\0100000000000036\exefs" and rename it to main.npdm
 
 ## **Gag Order Icon:**
 
