@@ -244,7 +244,7 @@ sys-ftpd | Replace the .kip in Hekate/modules
 ## **Homebrew Loader**
 
 1. Go into the Homebrew Loader folder (hbl) and type ```make```
-2. Copy hbl.nsp to "Hekate/atmosphere/titles/010000000000100D/exefs/" and rename it to main (No extension, just main)
+2. Copy hbl.nso to "Hekate/atmosphere/titles/010000000000100D/exefs/" and rename it to main (No extension, just main)
 3. Copy hbl.npdm to "Hekate/atmosphere/titles/010000000000100D/exefs/" and rename it to main.npdm
 
 ## **Creport**
