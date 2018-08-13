@@ -1,0 +1,171 @@
+diff -crB -x .git Atmosphere/stratosphere/fs_mitm/source/fsmitm_main.cpp AtmPatched/stratosphere/fs_mitm/source/fsmitm_main.cpp
+*** Atmosphere/stratosphere/fs_mitm/source/fsmitm_main.cpp	2018-08-15 13:55:05.225332330 +0300
+--- AtmPatched/stratosphere/fs_mitm/source/fsmitm_main.cpp	2018-08-15 14:10:31.870639539 +0300
+***************
+*** 65,83 ****
+      if (R_FAILED(rc))  {
+          fatalSimple(0xCAFE << 4 | 3);
+      }
+!     
+!     /* Check for exosphere API compatibility. */
+!     u64 exosphere_cfg;
+!     if (R_SUCCEEDED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
+!         /* MitM requires Atmosphere API 0.1. */
+!         u16 api_version = (exosphere_cfg >> 16) & 0xFFFF;
+!         if (api_version < 0x0001) {
+!             fatalSimple(0xCAFE << 4 | 0xFE);
+!         }
+!     } else {
+!         fatalSimple(0xCAFE << 4 | 0xFF);
+!     }
+!     
+      //splExit();
+  }
+  
+--- 65,71 ----
+      if (R_FAILED(rc))  {
+          fatalSimple(0xCAFE << 4 | 3);
+      }
+! 
+      //splExit();
+  }
+  
+diff -crB -x .git Atmosphere/stratosphere/loader/source/ldr_main.cpp AtmPatched/stratosphere/loader/source/ldr_main.cpp
+*** Atmosphere/stratosphere/loader/source/ldr_main.cpp	2018-08-15 13:55:05.225332330 +0300
+--- AtmPatched/stratosphere/loader/source/ldr_main.cpp	2018-08-15 14:10:31.870639539 +0300
+***************
+*** 68,81 ****
+      if (R_FAILED(rc))  {
+          fatalSimple(0xCAFE << 4 | 3);
+      }
+!     
+!     /* Check for exosphere API compatibility. */
+!     u64 exosphere_cfg;
+!     if (R_FAILED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
+!         //fatalSimple(0xCAFE << 4 | 0xFF);
+!         /* TODO: Does Loader need to know about target firmware/master key revision? If so, extract from exosphere_cfg. */
+!     }
+!     
+      //splExit();
+  }
+  
+--- 68,74 ----
+      if (R_FAILED(rc))  {
+          fatalSimple(0xCAFE << 4 | 3);
+      }
+! 
+      //splExit();
+  }
+  
+diff -crB -x .git Atmosphere/stratosphere/loader/source/ldr_npdm.cpp AtmPatched/stratosphere/loader/source/ldr_npdm.cpp
+*** Atmosphere/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 13:55:05.225332330 +0300
+--- AtmPatched/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 14:10:31.870639539 +0300
+***************
+*** 27,39 ****
+      return fopen(g_npdm_path, "rb");
+  }
+  
+- 
+  FILE *NpdmUtils::OpenNpdm(u64 title_id) {
+      FILE *f_out = OpenNpdmFromSdCard(title_id);
+      if (f_out != NULL) {
+          return f_out;
+      }
+      return OpenNpdmFromExeFS();
+  }
+  
+  Result NpdmUtils::LoadNpdm(u64 tid, NpdmInfo *out) {
+--- 27,61 ----
+      return fopen(g_npdm_path, "rb");
+  }
+  
+  FILE *NpdmUtils::OpenNpdm(u64 title_id) {
++     if (title_id == 0x010000000000100D) {
++         Result rc;
++         rc = hidInitialize();
++         if (R_FAILED(rc)){
++             fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
++         }
++         hidScanInput();
++         u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
++         if((kDown & KEY_R) == 0) {
++           hidExit();
++           FILE *f_out = OpenNpdmFromSdCard(title_id);
++           if (f_out != NULL) {
++            return f_out;
++         }
++           return OpenNpdmFromExeFS();
++         }
++         else {
++          hidExit();
++          return OpenNpdmFromExeFS();
++         }
++     }
++     else {
+      FILE *f_out = OpenNpdmFromSdCard(title_id);
+      if (f_out != NULL) {
+          return f_out;
+      }
+      return OpenNpdmFromExeFS();
++     }
+  }
+  
+  Result NpdmUtils::LoadNpdm(u64 tid, NpdmInfo *out) {
+***************
+*** 421,424 ****
+          }
+      }
+      return application_type;
+! }
+\ No newline at end of file
+--- 443,446 ----
+          }
+      }
+      return application_type;
+! }
+diff -crB -x .git Atmosphere/stratosphere/loader/source/ldr_nso.cpp AtmPatched/stratosphere/loader/source/ldr_nso.cpp
+*** Atmosphere/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 13:55:05.225332330 +0300
+--- AtmPatched/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 14:10:31.870639539 +0300
+***************
+*** 38,43 ****
+--- 38,67 ----
+  }
+  
+  FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
++     if (title_id == 0x010000000000100D) {
++         Result rc;
++         rc = hidInitialize();
++         if (R_FAILED(rc)){
++             fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
++         }
++         hidScanInput();
++         u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
++         if((kDown & KEY_R) == 0) {
++               hidExit();
++               FILE *f_out = OpenNsoFromSdCard(index, title_id);
++               if (f_out != NULL) {
++                 return f_out;
++               } else if (CheckNsoStubbed(index, title_id)) {
++                return NULL;
++               } else {
++                return OpenNsoFromExeFS(index);
++               }
++         }
++         else {
++             hidExit();
++             return OpenNsoFromExeFS(index); }
++     }
++     else {
+      FILE *f_out = OpenNsoFromSdCard(index, title_id);
+      if (f_out != NULL) {
+          return f_out;
+***************
+*** 46,51 ****
+--- 70,76 ----
+      } else {
+          return OpenNsoFromExeFS(index);
+      }
++     }
+  }
+  
+  bool NsoUtils::IsNsoPresent(unsigned int index) {
