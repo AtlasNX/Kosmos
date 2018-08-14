@@ -56,6 +56,13 @@ Subject | Topic
 
 Atmosphere needs some custom changes to it to work with current hekate and also to compile. While we don't need to compile Atmosphere completely, we will in this tutorial because it's easier and breaks much less (in my experience)
 
+**A. Use the patch**
+1. Copy the atmosphere.patch from "Resources\Patches"
+2. Cd into the Atmosphere submodule
+3. Paste the script onto the root of that folder
+4. Type ```git apply atmosphere.patch```
+
+**B. Do it manually**
 1. Go into "Atmosphere\stratosphere\loader\source" and find "ldr_main.cpp"
 2. Remove
     ```cpp 
