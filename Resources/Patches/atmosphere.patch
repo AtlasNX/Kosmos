@@ -1,132 +1,277 @@
-diff --git a/stratosphere/fs_mitm/source/fsmitm_main.cpp b/stratosphere/fs_mitm/source/fsmitm_main.cpp
-index c5cb5cb..ba69e85 100644
---- a/stratosphere/fs_mitm/source/fsmitm_main.cpp
-+++ b/stratosphere/fs_mitm/source/fsmitm_main.cpp
-@@ -66,18 +66,6 @@ void __appInit(void) {
-         fatalSimple(0xCAFE << 4 | 3);
-     }
-
--    /* Check for exosphere API compatibility. */
--    u64 exosphere_cfg;
--    if (R_SUCCEEDED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
--        /* MitM requires Atmosphere API 0.1. */
--        u16 api_version = (exosphere_cfg >> 16) & 0xFFFF;
--        if (api_version < 0x0001) {
--            fatalSimple(0xCAFE << 4 | 0xFE);
--        }
--    } else {
--        fatalSimple(0xCAFE << 4 | 0xFF);
--    }
--    
-     //splExit();
- }
- 
-diff --git a/stratosphere/loader/source/ldr_main.cpp b/stratosphere/loader/source/ldr_main.cpp
-index 94a52fc..16d907b 100644
---- a/stratosphere/loader/source/ldr_main.cpp
-+++ b/stratosphere/loader/source/ldr_main.cpp
-@@ -69,13 +69,6 @@ void __appInit(void) {
-         fatalSimple(0xCAFE << 4 | 3);
-     }
-
--    /* Check for exosphere API compatibility. */
--    u64 exosphere_cfg;
--    if (R_FAILED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
--        //fatalSimple(0xCAFE << 4 | 0xFF);
--        /* TODO: Does Loader need to know about target firmware/master key revision? If so, extract from exosphere_cfg. */
--    }
--    
-     //splExit();
- }
- 
-diff --git a/stratosphere/loader/source/ldr_npdm.cpp b/stratosphere/loader/source/ldr_npdm.cpp
-index f7c7172..f274058 100644
---- a/stratosphere/loader/source/ldr_npdm.cpp
-+++ b/stratosphere/loader/source/ldr_npdm.cpp
-@@ -27,13 +27,35 @@ FILE *NpdmUtils::OpenNpdmFromSdCard(u64 title_id) {
-     return fopen(g_npdm_path, "rb");
- }
- 
--
- FILE *NpdmUtils::OpenNpdm(u64 title_id) {
-+    if (title_id == 0x010000000000100D) {
-+        Result rc;
-+        rc = hidInitialize();
-+        if (R_FAILED(rc)){
-+            fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
-+        }
-+        hidScanInput();
-+        u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
-+        if((kDown & KEY_R) == 0) {
+Only in Atmosphere/.git: FETCH_HEAD
+Binary files Atmosphere/.git/index and AtmPatched/.git/index differ
+diff -crB Atmosphere/.git/logs/HEAD AtmPatched/.git/logs/HEAD
+*** Atmosphere/.git/logs/HEAD	2018-08-15 13:55:05.228665707 +0300
+--- AtmPatched/.git/logs/HEAD	2018-08-15 14:10:14.637084359 +0300
+***************
+*** 1,9 ****
+! 0000000000000000000000000000000000000000 4b8455baf91d8699a663341c135c91c34f0a7816 Ave O <ave@ave.zone> 1533069356 +0300	clone: from https://github.com/Atmosphere-NX/Atmosphere.git
+! 4b8455baf91d8699a663341c135c91c34f0a7816 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534115282 +0300	pull: Fast-forward
+! de49cfefac15fb83d9f30e1bcdfef9685cb95425 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534328677 +0300	reset: moving to HEAD
+! de49cfefac15fb83d9f30e1bcdfef9685cb95425 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534329614 +0300	reset: moving to HEAD
+! de49cfefac15fb83d9f30e1bcdfef9685cb95425 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534329689 +0300	reset: moving to HEAD
+! de49cfefac15fb83d9f30e1bcdfef9685cb95425 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534329747 +0300	reset: moving to HEAD
+! de49cfefac15fb83d9f30e1bcdfef9685cb95425 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534329799 +0300	reset: moving to HEAD
+! de49cfefac15fb83d9f30e1bcdfef9685cb95425 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534330356 +0300	reset: moving to HEAD
+! de49cfefac15fb83d9f30e1bcdfef9685cb95425 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534330505 +0300	reset: moving to HEAD
+--- 1 ----
+! 0000000000000000000000000000000000000000 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534331414 +0300	clone: from https://github.com/Atmosphere-NX/Atmosphere.git
+diff -crB Atmosphere/.git/logs/refs/heads/master AtmPatched/.git/logs/refs/heads/master
+*** Atmosphere/.git/logs/refs/heads/master	2018-08-13 02:08:02.643222969 +0300
+--- AtmPatched/.git/logs/refs/heads/master	2018-08-15 14:10:14.640417735 +0300
+***************
+*** 1,2 ****
+! 0000000000000000000000000000000000000000 4b8455baf91d8699a663341c135c91c34f0a7816 Ave O <ave@ave.zone> 1533069356 +0300	clone: from https://github.com/Atmosphere-NX/Atmosphere.git
+! 4b8455baf91d8699a663341c135c91c34f0a7816 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534115282 +0300	pull: Fast-forward
+--- 1 ----
+! 0000000000000000000000000000000000000000 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534331414 +0300	clone: from https://github.com/Atmosphere-NX/Atmosphere.git
+diff -crB Atmosphere/.git/logs/refs/remotes/origin/HEAD AtmPatched/.git/logs/refs/remotes/origin/HEAD
+*** Atmosphere/.git/logs/refs/remotes/origin/HEAD	2018-07-31 23:35:56.614423744 +0300
+--- AtmPatched/.git/logs/refs/remotes/origin/HEAD	2018-08-15 14:10:14.637084359 +0300
+***************
+*** 1 ****
+! 0000000000000000000000000000000000000000 4b8455baf91d8699a663341c135c91c34f0a7816 Ave O <ave@ave.zone> 1533069356 +0300	clone: from https://github.com/Atmosphere-NX/Atmosphere.git
+--- 1 ----
+! 0000000000000000000000000000000000000000 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534331414 +0300	clone: from https://github.com/Atmosphere-NX/Atmosphere.git
+Only in Atmosphere/.git/logs/refs/remotes/origin: master
+Only in Atmosphere/.git/objects: 00
+Only in Atmosphere/.git/objects: 01
+Only in Atmosphere/.git/objects: 10
+Only in Atmosphere/.git/objects: 1c
+Only in Atmosphere/.git/objects: 1e
+Only in Atmosphere/.git/objects: 1f
+Only in Atmosphere/.git/objects: 29
+Only in Atmosphere/.git/objects: 30
+Only in Atmosphere/.git/objects: 32
+Only in Atmosphere/.git/objects: 38
+Only in Atmosphere/.git/objects: 41
+Only in Atmosphere/.git/objects: 44
+Only in Atmosphere/.git/objects: 45
+Only in Atmosphere/.git/objects: 4a
+Only in Atmosphere/.git/objects: 56
+Only in Atmosphere/.git/objects: 61
+Only in Atmosphere/.git/objects: 63
+Only in Atmosphere/.git/objects: 65
+Only in Atmosphere/.git/objects: 67
+Only in Atmosphere/.git/objects: 68
+Only in Atmosphere/.git/objects: 6b
+Only in Atmosphere/.git/objects: 6c
+Only in Atmosphere/.git/objects: 6e
+Only in Atmosphere/.git/objects: 70
+Only in Atmosphere/.git/objects: 71
+Only in Atmosphere/.git/objects: 72
+Only in Atmosphere/.git/objects: 76
+Only in Atmosphere/.git/objects: 7e
+Only in Atmosphere/.git/objects: 83
+Only in Atmosphere/.git/objects: 8d
+Only in Atmosphere/.git/objects: 8e
+Only in Atmosphere/.git/objects: 90
+Only in Atmosphere/.git/objects: 91
+Only in Atmosphere/.git/objects: 9a
+Only in Atmosphere/.git/objects: a3
+Only in Atmosphere/.git/objects: ad
+Only in Atmosphere/.git/objects: b4
+Only in Atmosphere/.git/objects: b9
+Only in Atmosphere/.git/objects: ba
+Only in Atmosphere/.git/objects: c1
+Only in Atmosphere/.git/objects: c9
+Only in Atmosphere/.git/objects: d7
+Only in Atmosphere/.git/objects: d9
+Only in Atmosphere/.git/objects: de
+Only in Atmosphere/.git/objects: e3
+Only in Atmosphere/.git/objects: e7
+Only in Atmosphere/.git/objects: e9
+Only in Atmosphere/.git/objects: f1
+Only in Atmosphere/.git/objects: f8
+Only in Atmosphere/.git/objects: fa
+Only in AtmPatched/.git/objects/pack: pack-1dad0e66f8f7d87b569d469e1fc3724a82fe3443.idx
+Only in AtmPatched/.git/objects/pack: pack-1dad0e66f8f7d87b569d469e1fc3724a82fe3443.pack
+Only in Atmosphere/.git/objects/pack: pack-32847277c700f3a4bed1fe77b4322e6a88d1de6c.idx
+Only in Atmosphere/.git/objects/pack: pack-32847277c700f3a4bed1fe77b4322e6a88d1de6c.pack
+Only in Atmosphere/.git: ORIG_HEAD
+diff -crB Atmosphere/.git/packed-refs AtmPatched/.git/packed-refs
+*** Atmosphere/.git/packed-refs	2018-07-31 23:35:56.614423744 +0300
+--- AtmPatched/.git/packed-refs	2018-08-15 14:10:14.637084359 +0300
+***************
+*** 1,4 ****
+  # pack-refs with: peeled fully-peeled sorted 
+  cab650f8ce8c73d8b33cc550758a0c9ffff3a58b refs/remotes/origin/loader_sd_card
+! 4b8455baf91d8699a663341c135c91c34f0a7816 refs/remotes/origin/master
+  222c7818573ec0a621f0c44438f15585d013e03f refs/remotes/origin/with_fast_sd
+--- 1,4 ----
+  # pack-refs with: peeled fully-peeled sorted 
+  cab650f8ce8c73d8b33cc550758a0c9ffff3a58b refs/remotes/origin/loader_sd_card
+! de49cfefac15fb83d9f30e1bcdfef9685cb95425 refs/remotes/origin/master
+  222c7818573ec0a621f0c44438f15585d013e03f refs/remotes/origin/with_fast_sd
+Only in Atmosphere/.git/refs/remotes/origin: master
+diff -crB Atmosphere/stratosphere/fs_mitm/source/fsmitm_main.cpp AtmPatched/stratosphere/fs_mitm/source/fsmitm_main.cpp
+*** Atmosphere/stratosphere/fs_mitm/source/fsmitm_main.cpp	2018-08-15 13:55:05.225332330 +0300
+--- AtmPatched/stratosphere/fs_mitm/source/fsmitm_main.cpp	2018-08-15 14:10:31.870639539 +0300
+***************
+*** 65,83 ****
+      if (R_FAILED(rc))  {
+          fatalSimple(0xCAFE << 4 | 3);
+      }
+!     
+!     /* Check for exosphere API compatibility. */
+!     u64 exosphere_cfg;
+!     if (R_SUCCEEDED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
+!         /* MitM requires Atmosphere API 0.1. */
+!         u16 api_version = (exosphere_cfg >> 16) & 0xFFFF;
+!         if (api_version < 0x0001) {
+!             fatalSimple(0xCAFE << 4 | 0xFE);
+!         }
+!     } else {
+!         fatalSimple(0xCAFE << 4 | 0xFF);
+!     }
+!     
+      //splExit();
+  }
+  
+--- 65,71 ----
+      if (R_FAILED(rc))  {
+          fatalSimple(0xCAFE << 4 | 3);
+      }
+! 
+      //splExit();
+  }
+  
+diff -crB Atmosphere/stratosphere/loader/source/ldr_main.cpp AtmPatched/stratosphere/loader/source/ldr_main.cpp
+*** Atmosphere/stratosphere/loader/source/ldr_main.cpp	2018-08-15 13:55:05.225332330 +0300
+--- AtmPatched/stratosphere/loader/source/ldr_main.cpp	2018-08-15 14:10:31.870639539 +0300
+***************
+*** 68,81 ****
+      if (R_FAILED(rc))  {
+          fatalSimple(0xCAFE << 4 | 3);
+      }
+!     
+!     /* Check for exosphere API compatibility. */
+!     u64 exosphere_cfg;
+!     if (R_FAILED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
+!         //fatalSimple(0xCAFE << 4 | 0xFF);
+!         /* TODO: Does Loader need to know about target firmware/master key revision? If so, extract from exosphere_cfg. */
+!     }
+!     
+      //splExit();
+  }
+  
+--- 68,74 ----
+      if (R_FAILED(rc))  {
+          fatalSimple(0xCAFE << 4 | 3);
+      }
+! 
+      //splExit();
+  }
+  
+diff -crB Atmosphere/stratosphere/loader/source/ldr_npdm.cpp AtmPatched/stratosphere/loader/source/ldr_npdm.cpp
+*** Atmosphere/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 13:55:05.225332330 +0300
+--- AtmPatched/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 14:10:31.870639539 +0300
+***************
+*** 27,39 ****
+      return fopen(g_npdm_path, "rb");
+  }
+  
+- 
+  FILE *NpdmUtils::OpenNpdm(u64 title_id) {
+      FILE *f_out = OpenNpdmFromSdCard(title_id);
+      if (f_out != NULL) {
+          return f_out;
+      }
+      return OpenNpdmFromExeFS();
+  }
+  
+  Result NpdmUtils::LoadNpdm(u64 tid, NpdmInfo *out) {
+--- 27,61 ----
+      return fopen(g_npdm_path, "rb");
+  }
+  
+  FILE *NpdmUtils::OpenNpdm(u64 title_id) {
++     if (title_id == 0x010000000000100D) {
++         Result rc;
++         rc = hidInitialize();
++         if (R_FAILED(rc)){
++             fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
++         }
++         hidScanInput();
++         u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
++         if((kDown & KEY_R) == 0) {
++           hidExit();
++           FILE *f_out = OpenNpdmFromSdCard(title_id);
++           if (f_out != NULL) {
++            return f_out;
++         }
++           return OpenNpdmFromExeFS();
++         }
++         else {
 +          hidExit();
-+          FILE *f_out = OpenNpdmFromSdCard(title_id);
-+          if (f_out != NULL) {
-+           return f_out;
-+        }
 +          return OpenNpdmFromExeFS();
-+        }
-+        else {
-+         hidExit();
-+         return OpenNpdmFromExeFS();
-+        }
-+    }
-+    else {
-     FILE *f_out = OpenNpdmFromSdCard(title_id);
-     if (f_out != NULL) {
-         return f_out;
-     }
-     return OpenNpdmFromExeFS();
-+    }
- }
- 
- Result NpdmUtils::LoadNpdm(u64 tid, NpdmInfo *out) {
-@@ -421,4 +443,4 @@ u32 NpdmUtils::GetApplicationType(u32 *caps, size_t num_caps) {
-         }
-     }
-     return application_type;
--}
++         }
++     }
++     else {
+      FILE *f_out = OpenNpdmFromSdCard(title_id);
+      if (f_out != NULL) {
+          return f_out;
+      }
+      return OpenNpdmFromExeFS();
++     }
+  }
+  
+  Result NpdmUtils::LoadNpdm(u64 tid, NpdmInfo *out) {
+***************
+*** 421,424 ****
+          }
+      }
+      return application_type;
+! }
 \ No newline at end of file
-+}
-diff --git a/stratosphere/loader/source/ldr_nso.cpp b/stratosphere/loader/source/ldr_nso.cpp
-index 26e2656..502dce5 100644
---- a/stratosphere/loader/source/ldr_nso.cpp
-+++ b/stratosphere/loader/source/ldr_nso.cpp
-@@ -38,6 +38,30 @@ bool NsoUtils::CheckNsoStubbed(unsigned int index, u64 title_id) {
- }
- 
- FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
-+    if (title_id == 0x010000000000100D) {
-+        Result rc;
-+        rc = hidInitialize();
-+        if (R_FAILED(rc)){
-+            fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
-+        }
-+        hidScanInput();
-+        u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
-+        if((kDown & KEY_R) == 0) {
-+              hidExit();
-+              FILE *f_out = OpenNsoFromSdCard(index, title_id);
-+              if (f_out != NULL) {
-+                return f_out;
-+              } else if (CheckNsoStubbed(index, title_id)) {
-+               return NULL;
-+              } else {
-+               return OpenNsoFromExeFS(index);
-+              }
-+        }
-+        else {
-+            hidExit();
-+            return OpenNsoFromExeFS(index); }
-+    }
-+    else { 
-     FILE *f_out = OpenNsoFromSdCard(index, title_id);
-     if (f_out != NULL) {
-         return f_out;
-@@ -46,6 +70,7 @@ FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
-     } else {
-         return OpenNsoFromExeFS(index);
-     }
-+    }
- }
- 
- bool NsoUtils::IsNsoPresent(unsigned int index) {
+--- 443,446 ----
+          }
+      }
+      return application_type;
+! }
+diff -crB Atmosphere/stratosphere/loader/source/ldr_nso.cpp AtmPatched/stratosphere/loader/source/ldr_nso.cpp
+*** Atmosphere/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 13:55:05.225332330 +0300
+--- AtmPatched/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 14:10:31.870639539 +0300
+***************
+*** 38,43 ****
+--- 38,67 ----
+  }
+  
+  FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
++     if (title_id == 0x010000000000100D) {
++         Result rc;
++         rc = hidInitialize();
++         if (R_FAILED(rc)){
++             fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
++         }
++         hidScanInput();
++         u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
++         if((kDown & KEY_R) == 0) {
++               hidExit();
++               FILE *f_out = OpenNsoFromSdCard(index, title_id);
++               if (f_out != NULL) {
++                 return f_out;
++               } else if (CheckNsoStubbed(index, title_id)) {
++                return NULL;
++               } else {
++                return OpenNsoFromExeFS(index);
++               }
++         }
++         else {
++             hidExit();
++             return OpenNsoFromExeFS(index); }
++     }
++     else {
+      FILE *f_out = OpenNsoFromSdCard(index, title_id);
+      if (f_out != NULL) {
+          return f_out;
+***************
+*** 46,51 ****
+--- 70,76 ----
+      } else {
+          return OpenNsoFromExeFS(index);
+      }
++     }
+  }
+  
+  bool NsoUtils::IsNsoPresent(unsigned int index) {
