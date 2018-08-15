@@ -1,7 +1,8 @@
-How To Compile SDFiles for Hekate
-=================================================================================
-The unoffical offical guide by @tumGER
+# How To Compile SDFiles for Hekate
+## The Automated Way™
+Use [this](https://github.com/ThatNerdyPikachu/LaunchpadNX/releases/latest)!
 
+## The Manual Way
 Subject | Topic
 --------|--------
 **Preparations** | [Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#dependencies)
@@ -65,7 +66,8 @@ Atmosphere needs some custom changes to it to work with current hekate and also 
 **B. Do it manually**
 1. Go into "Atmosphere\stratosphere\loader\source" and find "ldr_main.cpp"
 2. Remove
-    ```cpp
+    ```
+    cpp
         /* Check for exosphere API compatibility. */
         u64 exosphere_cfg;
         if (R_FAILED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
@@ -73,12 +75,12 @@ Atmosphere needs some custom changes to it to work with current hekate and also 
             /* TODO: Does Loader need to know about target firmware/master key revision? If so, extract from exosphere_cfg. */
         }
     ```
-located ~ at line 72
     - This removes the Exosphere API Check from the Loader
 
 4. In the same directory, find "ldr_npdm.cpp"
 5. Find this function:
-```cpp
+```
+cpp
 FILE *NpdmUtils::OpenNpdm(u64 title_id) {
     FILE *f_out = OpenNpdmFromSdCard(title_id);
     if (f_out != NULL) {
@@ -89,7 +91,8 @@ FILE *NpdmUtils::OpenNpdm(u64 title_id) {
     }
 ```
   and replace it by this one:
-```cpp
+```
+cpp
 FILE *NpdmUtils::OpenNpdm(u64 title_id) {
     if (title_id == 0x010000000000100D) {
         Result rc;
@@ -123,7 +126,8 @@ FILE *NpdmUtils::OpenNpdm(u64 title_id) {
 ```
 6. In the same directory, find "ldr_nso.cpp"
 7. Find this function:
-```cpp
+```
+cpp
 FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
     FILE *f_out = OpenNsoFromSdCard(index, title_id);
     if (f_out != NULL) {
@@ -136,7 +140,8 @@ FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
 }
 ```
 and replace it by this one:
-```cpp
+```
+cpp
 FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
     if (title_id == 0x010000000000100D) {
         Result rc;
@@ -175,7 +180,8 @@ FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
 ```
 8. Go into "Atmosphere\stratosphere\fs_mitm\source" and find "fsmitm_main.cpp"
 9. Remove
-```cpp
+```
+cpp
     /* Check for exosphere API compatibility. */
     u64 exosphere_cfg;
     if (R_SUCCEEDED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
@@ -188,7 +194,16 @@ FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
         fatalSimple(0xCAFE << 4 | 0xFF);
     }
 ```
-located ~ at line 67
+10. Go into"Atmosphere\stratosphere\pm\source" and find "pm_main.cpp"
+11. Remove
+```
+/* Check for exosphere API compatibility. */
+u64 exosphere_cfg;
+if (R_FAILED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
+    fatalSimple(0xCAFE << 4 | 0xFF);
+    /* TODO: Does PM need to know about target firmware/master key revision? If so, extract from exosphere_cfg. */
+}
+```
 
 9. Go back into the root of the Atmosphere submodule
 10. Type "make"

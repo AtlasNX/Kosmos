@@ -18,6 +18,13 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * NSP Installation
 * Automatic Updating through your console
 * Launching the album by pressing R
+* Full Atmosphere
+* Completely modular
+* Drag and drop
+* Background audio-player
+* Background netcheat system (like Cheat Engine)
+* Discord Rich Presence integration
+* Featured Homebrew
 
 ## How to use
 1. Download [Hekate](https://github.com/CTCaer/hekate/releases) or use the payload that comes with the package

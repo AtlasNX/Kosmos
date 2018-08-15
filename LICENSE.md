@@ -15,5 +15,6 @@ Licenses
 * Switchrichpresence is licensed under [GPLv2](https://github.com/Random0666/SwitchPresence/blob/master/LICENSE)
 * Sys-play is licensed under [MIT](https://github.com/XorTroll/sys-play/blob/master/LICENSE)
 * Hekate is licensed under [GPLv2](https://github.com/CTCaer/hekate/blob/master/LICENSE)
+* Checkpoint is licensed under [GPLv3](https://github.com/BernardoGiordano/Checkpoint/blob/master/LICENSE)
 
 All patches made to the original software respect their original license
