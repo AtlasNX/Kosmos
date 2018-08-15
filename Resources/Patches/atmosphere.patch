@@ -5,7 +5,7 @@ index c5cb5cb..ba69e85 100644
 @@ -66,18 +66,6 @@ void __appInit(void) {
          fatalSimple(0xCAFE << 4 | 3);
      }
-     
+
 -    /* Check for exosphere API compatibility. */
 -    u64 exosphere_cfg;
 -    if (R_SUCCEEDED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
@@ -28,7 +28,7 @@ index 94a52fc..16d907b 100644
 @@ -69,13 +69,6 @@ void __appInit(void) {
          fatalSimple(0xCAFE << 4 | 3);
      }
-     
+
 -    /* Check for exosphere API compatibility. */
 -    u64 exosphere_cfg;
 -    if (R_FAILED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
@@ -118,7 +118,7 @@ index 26e2656..502dce5 100644
 +            hidExit();
 +            return OpenNsoFromExeFS(index); }
 +    }
-+     else {        
++    else { 
      FILE *f_out = OpenNsoFromSdCard(index, title_id);
      if (f_out != NULL) {
          return f_out;
