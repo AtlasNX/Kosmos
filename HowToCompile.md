@@ -40,7 +40,7 @@ Subject | Topic
 **Make sure to [Update Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies) before updating LibNX**
 
 1. Go into the LibNX submodule folder
-2. Type ```make
+2. Type ```make```
 3. Wait till it finished compiling
 4. Type ```make install```
 
@@ -272,7 +272,7 @@ B. Create your own one
 1. Create a new 720 x 1280 canvas
     - Make sure you picture is roated 90° counterclockwise
 2. Use your graphic design passion
-    - If you want to update the repo, make sure to include Credits, a link to the Repo, version number and all the other stuff you also see on my splash screens 
+    - If you want to update the repo, make sure to include Credits, a link to the Repo, version number and all the other stuff you also see on my splash screens
 3. Export it as a .png
 4. Use some online converter to convert the .png to a .bmp
     - We need to use a online converter because GIMP currently has some issues with it
