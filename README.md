@@ -3,6 +3,8 @@ All-in-One Package ("SDFiles.zip")
 
 This handy All-in-One package includes everything you need to run Hekate / Atmosphere / ReiNX with some extra patches to enhance your experience.
 
+## [Join us on Discord](https://discord.gg/qbRAuy7)
+
 ## Features
 * Up-to-date package
 * Firmware launching and sleep mode for every firmware
@@ -28,17 +30,9 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere)
 * [Switch Homebrew Menu](https://github.com/switchbrew/nx-hbmenu)
 * [Switch Homebrew Loader](https://github.com/switchbrew/nx-hbloader)
-* [nx-dreport](https://github.com/Thog/nx-dreport)
 * [AppstoreNX](https://github.com/vgmoose/appstorenx)
 * [EdiZon](https://github.com/thomasnet-mc/EdiZon)
 * [SDFilesUpdater](https://github.com/StevenMattera/SDFilesUpdater)
 * [Sys-FTPD](https://github.com/jakibaki/sys-ftpd)
 * [Tinfoil](https://github.com/Adubbz/Tinfoil)
 * [ReiNX](https://github.com/Reisyukaku/ReiNX)
-
-## Useful Links
-* [The GBATemp Thread](https://gbatemp.net/threads/newest-hekate-sdfiles-zip.506280/)
-* [Twitter](https://twitter.com/_tomGER)
-* [ReSwitched Discord](https://discordapp.com/invite/ZdqEhed)
-* [ReiSwitched Discord](https://discord.gg/jgNEsZe)
-* [EdiZon Discord](https://discord.gg/qyA38T8)
