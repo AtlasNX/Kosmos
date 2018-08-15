@@ -58,15 +58,14 @@ Atmosphere needs some custom changes to it to work with current hekate and also 
 
 **A. Use the patch**
 1. Copy the atmosphere.patch from "Resources\Patches"
-2. Cd into the Atmosphere submodule
+2. cd into the Atmosphere submodule
 3. Paste the script onto the root of that folder
 4. Type ```git apply atmosphere.patch```
 
 **B. Do it manually**
 1. Go into "Atmosphere\stratosphere\loader\source" and find "ldr_main.cpp"
 2. Remove
-    ```
-    cpp
+    ```cpp
         /* Check for exosphere API compatibility. */
         u64 exosphere_cfg;
         if (R_FAILED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
@@ -79,7 +78,7 @@ located ~ at line 72
 
 4. In the same directory, find "ldr_npdm.cpp"
 5. Find this function:
-```
+```cpp
 FILE *NpdmUtils::OpenNpdm(u64 title_id) {
     FILE *f_out = OpenNpdmFromSdCard(title_id);
     if (f_out != NULL) {
@@ -90,7 +89,7 @@ FILE *NpdmUtils::OpenNpdm(u64 title_id) {
     }
 ```
   and replace it by this one:
-```
+```cpp
 FILE *NpdmUtils::OpenNpdm(u64 title_id) {
     if (title_id == 0x010000000000100D) {
         Result rc;
@@ -124,7 +123,7 @@ FILE *NpdmUtils::OpenNpdm(u64 title_id) {
 ```
 6. In the same directory, find "ldr_nso.cpp"
 7. Find this function:
-```
+```cpp
 FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
     FILE *f_out = OpenNsoFromSdCard(index, title_id);
     if (f_out != NULL) {
@@ -137,7 +136,7 @@ FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
 }
 ```
 and replace it by this one:
-```
+```cpp
 FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
     if (title_id == 0x010000000000100D) {
         Result rc;
@@ -174,10 +173,9 @@ FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
     }
 }
 ```
-8. Go into "Atmosphere\stratosphere\fs_mitm" and find "fsmitm_main.cpp"
+8. Go into "Atmosphere\stratosphere\fs_mitm\source" and find "fsmitm_main.cpp"
 9. Remove
-```
-cpp
+```cpp
     /* Check for exosphere API compatibility. */
     u64 exosphere_cfg;
     if (R_SUCCEEDED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
@@ -195,18 +193,16 @@ located ~ at line 67
 9. Go back into the root of the Atmosphere submodule
 10. Type "make"
 11. Wait a bit, this will take some time
-12. Go back into "Atmosphere\stratosphere\fs_mitm"
-13. Type "make"
-14. Wait a bit, this will take some time
-15. Copy "loader.kip" from "Atmosphere\stratosphere\loader" into:
+12. Wait a bit, this will take some time
+13. Copy "loader.kip" from "Atmosphere\stratosphere\loader" into:
     - "SDFilesSwitch/Hekate/modules/newfirm/"
-16. Copy "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm" into:    
+14. Copy "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm" into:    
     - "SDFilesSwitch/Hekate/modules/newfirm/"
-17. Copy "sm.kip" from "Atmosphere\stratosphere\sm" into:
+15. Copy "sm.kip" from "Atmosphere\stratosphere\sm" into:
     - "SDFilesSwitch/Hekate/modules/newfirm/"
-18. Copy "pm.kip" from "Atmosphere\stratosphere\pm" into:
+16. Copy "pm.kip" from "Atmosphere\stratosphere\pm" into:
     - "SDFilesSwitch/Hekate/modules/newfirm/"
-19. Copy the updated files to your SD and test them on your Switch
+17. Copy the updated files to your SD and test them on your Switch
     - If everything worked, congrats! You compiled Atmosphere's patched Loader, SM and LayeredFS :)
     - If it didn't, you either messed something up or Atmosphere had some change to its code in the time I wrote this till now - In that case I'd guess contacting me over Twitter (@_tomGER [Or @tumGER since I check that more often]) is your best bet if I'm gone - If you're here because you just wanted to compile it yourself than contact me over tomGER
     \#7462 on Discord.
