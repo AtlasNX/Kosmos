@@ -193,16 +193,15 @@ located ~ at line 67
 9. Go back into the root of the Atmosphere submodule
 10. Type "make"
 11. Wait a bit, this will take some time
-12. Wait a bit, this will take some time
-13. Copy "loader.kip" from "Atmosphere\stratosphere\loader" into:
+12. Copy "loader.kip" from "Atmosphere\stratosphere\loader" into:
     - "SDFilesSwitch/Hekate/modules/newfirm/"
-14. Copy "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm" into:    
+13. Copy "fs_mitm.kip" from "Atmosphere\stratosphere\fs_mitm" into:    
     - "SDFilesSwitch/Hekate/modules/newfirm/"
-15. Copy "sm.kip" from "Atmosphere\stratosphere\sm" into:
+14. Copy "sm.kip" from "Atmosphere\stratosphere\sm" into:
     - "SDFilesSwitch/Hekate/modules/newfirm/"
-16. Copy "pm.kip" from "Atmosphere\stratosphere\pm" into:
+15. Copy "pm.kip" from "Atmosphere\stratosphere\pm" into:
     - "SDFilesSwitch/Hekate/modules/newfirm/"
-17. Copy the updated files to your SD and test them on your Switch
+16. Copy the updated files to your SD and test them on your Switch
     - If everything worked, congrats! You compiled Atmosphere's patched Loader, SM and LayeredFS :)
     - If it didn't, you either messed something up or Atmosphere had some change to its code in the time I wrote this till now - In that case I'd guess contacting me over Twitter (@_tomGER [Or @tumGER since I check that more often]) is your best bet if I'm gone - If you're here because you just wanted to compile it yourself than contact me over tomGER
     \#7462 on Discord.
