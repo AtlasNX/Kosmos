@@ -40,7 +40,7 @@ Subject | Topic
 **Make sure to [Update Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#updating-dependencies) before updating LibNX**
 
 1. Go into the LibNX submodule folder
-2. Type ```make```
+2. Type ```make
 3. Wait till it finished compiling
 4. Type ```make install```
 
@@ -65,7 +65,8 @@ Atmosphere needs some custom changes to it to work with current hekate and also 
 **B. Do it manually**
 1. Go into "Atmosphere\stratosphere\loader\source" and find "ldr_main.cpp"
 2. Remove
-    ```cpp 
+    ```
+    cpp
         /* Check for exosphere API compatibility. */
         u64 exosphere_cfg;
         if (R_FAILED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
@@ -78,7 +79,7 @@ located ~ at line 72
 
 4. In the same directory, find "ldr_npdm.cpp"
 5. Find this function:
-   ```
+```
 FILE *NpdmUtils::OpenNpdm(u64 title_id) {
     FILE *f_out = OpenNpdmFromSdCard(title_id);
     if (f_out != NULL) {
@@ -87,9 +88,9 @@ FILE *NpdmUtils::OpenNpdm(u64 title_id) {
     return OpenNpdmFromExeFS();
 
     }
-    ```
+```
   and replace it by this one:
-   ```
+```
 FILE *NpdmUtils::OpenNpdm(u64 title_id) {
     if (title_id == 0x010000000000100D) {
         Result rc;
@@ -120,10 +121,10 @@ FILE *NpdmUtils::OpenNpdm(u64 title_id) {
     return OpenNpdmFromExeFS();
     }
 }
-   ```
+```
 6. In the same directory, find "ldr_nso.cpp"
 7. Find this function:
-``` 
+```
 FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
     FILE *f_out = OpenNsoFromSdCard(index, title_id);
     if (f_out != NULL) {
@@ -157,7 +158,7 @@ FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
                return OpenNsoFromExeFS(index);
               }
         }
-        else { 
+        else {
             hidExit();
             return OpenNsoFromExeFS(index); }
     }
@@ -175,7 +176,8 @@ FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
 ```
 8. Go into "Atmosphere\stratosphere\fs_mitm" and find "fsmitm_main.cpp"
 9. Remove
-```cpp
+```
+cpp
     /* Check for exosphere API compatibility. */
     u64 exosphere_cfg;
     if (R_SUCCEEDED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
@@ -277,5 +279,3 @@ B. Create your own one
 5. Call it bootlogo.bmp if you want to use it as the standard one
     - You can also choose a specific bootlogo for each launch option by writting ```logopath=/Link/To/Bootimage.bmp``` into your hekate-ipl.ini ([Example](https://github.com/tumGER/SDFilesSwitch/blob/8653108d41096f60c43f5dab56b41024fa785c5d/Compiled/hekate_ipl.ini#L60))
 5. Put it on the root of your SD / root of "SDFilesSwitch/Hekate"
-
-    
