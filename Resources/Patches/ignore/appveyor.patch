@@ -1,6 +1,6 @@
 diff -crB -x .git PatchedC/stratosphere/loader/source/ldr_npdm.cpp Patched/stratosphere/loader/source/ldr_npdm.cpp
-*** PatchedC/stratosphere/loader/source/ldr_npdm.cpp	2018-08-14 19:14:38.953329000 -0700
---- Patched/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 15:00:41.912919900 -0700
+*** PatchedC/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 15:38:51.210012600 -0700
+--- Patched/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 15:41:10.336075600 -0700
 ***************
 *** 29,39 ****
 --- 29,62 ----
@@ -39,8 +39,8 @@ diff -crB -x .git PatchedC/stratosphere/loader/source/ldr_npdm.cpp Patched/strat
   
   Result NpdmUtils::LoadNpdm(u64 tid, NpdmInfo *out) {
 diff -crB -x .git PatchedC/stratosphere/loader/source/ldr_nso.cpp Patched/stratosphere/loader/source/ldr_nso.cpp
-*** PatchedC/stratosphere/loader/source/ldr_nso.cpp	2018-08-14 19:14:38.955329600 -0700
---- Patched/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 15:01:41.312673900 -0700
+*** PatchedC/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 15:38:51.227012500 -0700
+--- Patched/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 15:42:15.035502100 -0700
 ***************
 *** 38,43 ****
 --- 38,67 ----
