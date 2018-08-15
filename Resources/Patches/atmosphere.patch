@@ -1,110 +1,4 @@
-Only in Atmosphere/.git: FETCH_HEAD
-Binary files Atmosphere/.git/index and AtmPatched/.git/index differ
-diff -crB Atmosphere/.git/logs/HEAD AtmPatched/.git/logs/HEAD
-*** Atmosphere/.git/logs/HEAD	2018-08-15 13:55:05.228665707 +0300
---- AtmPatched/.git/logs/HEAD	2018-08-15 14:10:14.637084359 +0300
-***************
-*** 1,9 ****
-! 0000000000000000000000000000000000000000 4b8455baf91d8699a663341c135c91c34f0a7816 Ave O <ave@ave.zone> 1533069356 +0300	clone: from https://github.com/Atmosphere-NX/Atmosphere.git
-! 4b8455baf91d8699a663341c135c91c34f0a7816 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534115282 +0300	pull: Fast-forward
-! de49cfefac15fb83d9f30e1bcdfef9685cb95425 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534328677 +0300	reset: moving to HEAD
-! de49cfefac15fb83d9f30e1bcdfef9685cb95425 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534329614 +0300	reset: moving to HEAD
-! de49cfefac15fb83d9f30e1bcdfef9685cb95425 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534329689 +0300	reset: moving to HEAD
-! de49cfefac15fb83d9f30e1bcdfef9685cb95425 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534329747 +0300	reset: moving to HEAD
-! de49cfefac15fb83d9f30e1bcdfef9685cb95425 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534329799 +0300	reset: moving to HEAD
-! de49cfefac15fb83d9f30e1bcdfef9685cb95425 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534330356 +0300	reset: moving to HEAD
-! de49cfefac15fb83d9f30e1bcdfef9685cb95425 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534330505 +0300	reset: moving to HEAD
---- 1 ----
-! 0000000000000000000000000000000000000000 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534331414 +0300	clone: from https://github.com/Atmosphere-NX/Atmosphere.git
-diff -crB Atmosphere/.git/logs/refs/heads/master AtmPatched/.git/logs/refs/heads/master
-*** Atmosphere/.git/logs/refs/heads/master	2018-08-13 02:08:02.643222969 +0300
---- AtmPatched/.git/logs/refs/heads/master	2018-08-15 14:10:14.640417735 +0300
-***************
-*** 1,2 ****
-! 0000000000000000000000000000000000000000 4b8455baf91d8699a663341c135c91c34f0a7816 Ave O <ave@ave.zone> 1533069356 +0300	clone: from https://github.com/Atmosphere-NX/Atmosphere.git
-! 4b8455baf91d8699a663341c135c91c34f0a7816 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534115282 +0300	pull: Fast-forward
---- 1 ----
-! 0000000000000000000000000000000000000000 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534331414 +0300	clone: from https://github.com/Atmosphere-NX/Atmosphere.git
-diff -crB Atmosphere/.git/logs/refs/remotes/origin/HEAD AtmPatched/.git/logs/refs/remotes/origin/HEAD
-*** Atmosphere/.git/logs/refs/remotes/origin/HEAD	2018-07-31 23:35:56.614423744 +0300
---- AtmPatched/.git/logs/refs/remotes/origin/HEAD	2018-08-15 14:10:14.637084359 +0300
-***************
-*** 1 ****
-! 0000000000000000000000000000000000000000 4b8455baf91d8699a663341c135c91c34f0a7816 Ave O <ave@ave.zone> 1533069356 +0300	clone: from https://github.com/Atmosphere-NX/Atmosphere.git
---- 1 ----
-! 0000000000000000000000000000000000000000 de49cfefac15fb83d9f30e1bcdfef9685cb95425 Ave O <ave@ave.zone> 1534331414 +0300	clone: from https://github.com/Atmosphere-NX/Atmosphere.git
-Only in Atmosphere/.git/logs/refs/remotes/origin: master
-Only in Atmosphere/.git/objects: 00
-Only in Atmosphere/.git/objects: 01
-Only in Atmosphere/.git/objects: 10
-Only in Atmosphere/.git/objects: 1c
-Only in Atmosphere/.git/objects: 1e
-Only in Atmosphere/.git/objects: 1f
-Only in Atmosphere/.git/objects: 29
-Only in Atmosphere/.git/objects: 30
-Only in Atmosphere/.git/objects: 32
-Only in Atmosphere/.git/objects: 38
-Only in Atmosphere/.git/objects: 41
-Only in Atmosphere/.git/objects: 44
-Only in Atmosphere/.git/objects: 45
-Only in Atmosphere/.git/objects: 4a
-Only in Atmosphere/.git/objects: 56
-Only in Atmosphere/.git/objects: 61
-Only in Atmosphere/.git/objects: 63
-Only in Atmosphere/.git/objects: 65
-Only in Atmosphere/.git/objects: 67
-Only in Atmosphere/.git/objects: 68
-Only in Atmosphere/.git/objects: 6b
-Only in Atmosphere/.git/objects: 6c
-Only in Atmosphere/.git/objects: 6e
-Only in Atmosphere/.git/objects: 70
-Only in Atmosphere/.git/objects: 71
-Only in Atmosphere/.git/objects: 72
-Only in Atmosphere/.git/objects: 76
-Only in Atmosphere/.git/objects: 7e
-Only in Atmosphere/.git/objects: 83
-Only in Atmosphere/.git/objects: 8d
-Only in Atmosphere/.git/objects: 8e
-Only in Atmosphere/.git/objects: 90
-Only in Atmosphere/.git/objects: 91
-Only in Atmosphere/.git/objects: 9a
-Only in Atmosphere/.git/objects: a3
-Only in Atmosphere/.git/objects: ad
-Only in Atmosphere/.git/objects: b4
-Only in Atmosphere/.git/objects: b9
-Only in Atmosphere/.git/objects: ba
-Only in Atmosphere/.git/objects: c1
-Only in Atmosphere/.git/objects: c9
-Only in Atmosphere/.git/objects: d7
-Only in Atmosphere/.git/objects: d9
-Only in Atmosphere/.git/objects: de
-Only in Atmosphere/.git/objects: e3
-Only in Atmosphere/.git/objects: e7
-Only in Atmosphere/.git/objects: e9
-Only in Atmosphere/.git/objects: f1
-Only in Atmosphere/.git/objects: f8
-Only in Atmosphere/.git/objects: fa
-Only in AtmPatched/.git/objects/pack: pack-1dad0e66f8f7d87b569d469e1fc3724a82fe3443.idx
-Only in AtmPatched/.git/objects/pack: pack-1dad0e66f8f7d87b569d469e1fc3724a82fe3443.pack
-Only in Atmosphere/.git/objects/pack: pack-32847277c700f3a4bed1fe77b4322e6a88d1de6c.idx
-Only in Atmosphere/.git/objects/pack: pack-32847277c700f3a4bed1fe77b4322e6a88d1de6c.pack
-Only in Atmosphere/.git: ORIG_HEAD
-diff -crB Atmosphere/.git/packed-refs AtmPatched/.git/packed-refs
-*** Atmosphere/.git/packed-refs	2018-07-31 23:35:56.614423744 +0300
---- AtmPatched/.git/packed-refs	2018-08-15 14:10:14.637084359 +0300
-***************
-*** 1,4 ****
-  # pack-refs with: peeled fully-peeled sorted 
-  cab650f8ce8c73d8b33cc550758a0c9ffff3a58b refs/remotes/origin/loader_sd_card
-! 4b8455baf91d8699a663341c135c91c34f0a7816 refs/remotes/origin/master
-  222c7818573ec0a621f0c44438f15585d013e03f refs/remotes/origin/with_fast_sd
---- 1,4 ----
-  # pack-refs with: peeled fully-peeled sorted 
-  cab650f8ce8c73d8b33cc550758a0c9ffff3a58b refs/remotes/origin/loader_sd_card
-! de49cfefac15fb83d9f30e1bcdfef9685cb95425 refs/remotes/origin/master
-  222c7818573ec0a621f0c44438f15585d013e03f refs/remotes/origin/with_fast_sd
-Only in Atmosphere/.git/refs/remotes/origin: master
-diff -crB Atmosphere/stratosphere/fs_mitm/source/fsmitm_main.cpp AtmPatched/stratosphere/fs_mitm/source/fsmitm_main.cpp
+diff -crB -x .git Atmosphere/stratosphere/fs_mitm/source/fsmitm_main.cpp AtmPatched/stratosphere/fs_mitm/source/fsmitm_main.cpp
 *** Atmosphere/stratosphere/fs_mitm/source/fsmitm_main.cpp	2018-08-15 13:55:05.225332330 +0300
 --- AtmPatched/stratosphere/fs_mitm/source/fsmitm_main.cpp	2018-08-15 14:10:31.870639539 +0300
 ***************
@@ -136,7 +30,7 @@ diff -crB Atmosphere/stratosphere/fs_mitm/source/fsmitm_main.cpp AtmPatched/stra
       //splExit();
   }
   
-diff -crB Atmosphere/stratosphere/loader/source/ldr_main.cpp AtmPatched/stratosphere/loader/source/ldr_main.cpp
+diff -crB -x .git Atmosphere/stratosphere/loader/source/ldr_main.cpp AtmPatched/stratosphere/loader/source/ldr_main.cpp
 *** Atmosphere/stratosphere/loader/source/ldr_main.cpp	2018-08-15 13:55:05.225332330 +0300
 --- AtmPatched/stratosphere/loader/source/ldr_main.cpp	2018-08-15 14:10:31.870639539 +0300
 ***************
@@ -163,7 +57,7 @@ diff -crB Atmosphere/stratosphere/loader/source/ldr_main.cpp AtmPatched/stratosp
       //splExit();
   }
   
-diff -crB Atmosphere/stratosphere/loader/source/ldr_npdm.cpp AtmPatched/stratosphere/loader/source/ldr_npdm.cpp
+diff -crB -x .git Atmosphere/stratosphere/loader/source/ldr_npdm.cpp AtmPatched/stratosphere/loader/source/ldr_npdm.cpp
 *** Atmosphere/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 13:55:05.225332330 +0300
 --- AtmPatched/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 14:10:31.870639539 +0300
 ***************
@@ -229,7 +123,7 @@ diff -crB Atmosphere/stratosphere/loader/source/ldr_npdm.cpp AtmPatched/stratosp
       }
       return application_type;
 ! }
-diff -crB Atmosphere/stratosphere/loader/source/ldr_nso.cpp AtmPatched/stratosphere/loader/source/ldr_nso.cpp
+diff -crB -x .git Atmosphere/stratosphere/loader/source/ldr_nso.cpp AtmPatched/stratosphere/loader/source/ldr_nso.cpp
 *** Atmosphere/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 13:55:05.225332330 +0300
 --- AtmPatched/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 14:10:31.870639539 +0300
 ***************
