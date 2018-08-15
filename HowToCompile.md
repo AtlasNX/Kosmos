@@ -60,7 +60,7 @@ Atmosphere needs some custom changes to it to work with current hekate and also 
 1. Copy the atmosphere.patch from "Resources\Patches"
 2. cd into the Atmosphere submodule
 3. Paste the script onto the root of that folder
-4. Type ```git apply --whitespace=fix atmosphere.patch```
+4. Type ```patch -p1 < atmosphere.patch```
 
 **B. Do it manually**
 1. Go into "Atmosphere\stratosphere\loader\source" and find "ldr_main.cpp"
