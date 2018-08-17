@@ -1,7 +1,8 @@
-How To Compile SDFiles for Hekate
-=================================================================================
-The unoffical offical guide by @tumGER
+# How To Compile SDFiles for Hekate
+## The Automated Way™
+Use [this](https://github.com/ThatNerdyPikachu/LaunchpadNX/releases/latest)!
 
+## The Manual Way
 Subject | Topic
 --------|--------
 **Preparations** | [Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#dependencies)
