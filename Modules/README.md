@@ -10,3 +10,4 @@ sys-ftpd | FTPD sys-module by jakibaki
 sys-netcheat | netcheat sys-module by jakibaki
 xor.play | audio player sys-module by XorTroll
 hbm_music | Homebrew Menu that has background music
+reinx | ReiNX - The bootloader by Rei
