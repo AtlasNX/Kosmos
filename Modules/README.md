@@ -15,3 +15,4 @@ reinx | ReiNX - The bootloader by Rei
 old_layered | Older LayeredFS
 edizon | EdiZon
 appstore | AppstoreNX
+featured | The featured homebrew
