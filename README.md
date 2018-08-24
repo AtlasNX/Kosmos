@@ -45,4 +45,3 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * [ReiNX](https://github.com/Reisyukaku/ReiNX)
 * [SwitchPresence](https://github.com/Random0666/SwitchPresence)
 * [xor:play](https://github.com/XorTroll/ModuleMania/tree/master/xor.play)
-*
