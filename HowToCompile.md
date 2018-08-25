@@ -3,6 +3,9 @@
 Use [this](https://github.com/ThatNerdyPikachu/LaunchpadNX/releases/latest)!
 
 ## The Manual Way
+
+**This guide could be pretty outdated, I would honestly recommend just using the automated 'LaunchpadNX' way**
+
 Subject | Topic
 --------|--------
 **Preparations** | [Dependencies](https://github.com/tumGER/SDFilesSwitch/blob/master/HowToCompile.md#dependencies)
