@@ -2,17 +2,10 @@
 
 json = require("lib.json")
 
-function convertToTable(s)
-	t = {}
-	
-	for i = 1, #s do
-		t[i] = string.byte(s:sub(i, i))
-	end
-	
-	return t
-end
 
-saveFileBuffer = json.decode(edizon.getSaveFileString())
+saveFileString = edizon.getSaveFileString()
+saveFileString = saveFileString:gsub('{%s*}', '{"edizon":true}')
+saveFileBuffer = json.decode(saveFileString)
 
 function getValueFromSaveFile()
 	strArgs = edizon.getStrArgs()
@@ -64,8 +57,21 @@ function setValueInSaveFile(value)
 	end
 end
 
+local function convertToTable(s)
+	t = {}
+	
+	for i = 1, #s do
+		t[i] = string.byte(s:sub(i, i))
+	end
+	
+	return t
+end
+
 function getModifiedSaveFile()
 	encoded = json.encode(saveFileBuffer)
+	
+	encoded = encoded:gsub('{"edizon":true}', '{}')
+	
 	convertedTable = {}
 	convertedTable = convertToTable(encoded)
 				

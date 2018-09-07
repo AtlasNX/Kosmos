@@ -1,4 +1,5 @@
 {
+	"beta" : false,
 	"all" : {
 		"saveFilePaths": [ "" ],
 		"files": "KSSaveData\\d",
@@ -12,8 +13,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 3599999,
-				"stepSize": 600
+				"maxValue": 3599999
 			}
 		},
 		{
@@ -24,8 +24,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 9999999,
-				"stepSize": 5000
+				"maxValue": 9999999
 			}
 		},
 		{
@@ -36,8 +35,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 1,
-				"maxValue": 99,
-				"stepSize": 1
+				"maxValue": 99
 			}
 		},
 		{
@@ -48,8 +46,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 5505414,
-				"stepSize": 500
+				"maxValue": 5505414
 			}
 		},
 		{
@@ -60,8 +57,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 999999,
-				"stepSize": 500
+				"maxValue": 999999
 			}
 		},
 		{
@@ -72,8 +68,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -84,8 +79,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -96,8 +90,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -108,8 +101,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -120,8 +112,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -132,8 +123,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -144,8 +134,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -156,8 +145,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -168,8 +156,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -180,8 +167,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -192,8 +178,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 1,
-				"maxValue": 99,
-				"stepSize": 1
+				"maxValue": 99
 			}
 		},
 		{
@@ -204,8 +189,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 5505414,
-				"stepSize": 500
+				"maxValue": 5505414
 			}
 		},
 		{
@@ -216,8 +200,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 999999,
-				"stepSize": 500
+				"maxValue": 999999
 			}
 		},
 		{
@@ -228,8 +211,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -240,8 +222,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -252,8 +233,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -264,8 +244,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -276,8 +255,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -288,8 +266,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -300,8 +277,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -312,8 +288,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -324,8 +299,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -336,8 +310,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -348,8 +321,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 1,
-				"maxValue": 99,
-				"stepSize": 1
+				"maxValue": 99
 			}
 		},
 		{
@@ -360,8 +332,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 5505414,
-				"stepSize": 500
+				"maxValue": 5505414
 			}
 		},
 		{
@@ -372,8 +343,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 999999,
-				"stepSize": 500
+				"maxValue": 999999
 			}
 		},
 		{
@@ -384,8 +354,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -396,8 +365,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -408,8 +376,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -420,8 +387,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -432,8 +398,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -444,8 +409,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -456,8 +420,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -468,8 +431,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -480,8 +442,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -492,8 +453,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -504,8 +464,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 1,
-				"maxValue": 99,
-				"stepSize": 1
+				"maxValue": 99
 			}
 		},
 		{
@@ -516,8 +475,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 5505414,
-				"stepSize": 500
+				"maxValue": 5505414
 			}
 		},
 		{
@@ -528,8 +486,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 999999,
-				"stepSize": 500
+				"maxValue": 999999
 			}
 		},
 		{
@@ -540,8 +497,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -552,8 +508,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -564,8 +519,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -576,8 +530,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -588,8 +541,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -600,8 +552,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -612,8 +563,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -624,8 +574,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -636,8 +585,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -648,8 +596,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -660,8 +607,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 1,
-				"maxValue": 99,
-				"stepSize": 1
+				"maxValue": 99
 			}
 		},
 		{
@@ -672,8 +618,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 5505414,
-				"stepSize": 500
+				"maxValue": 5505414
 			}
 		},
 		{
@@ -684,8 +629,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 999999,
-				"stepSize": 500
+				"maxValue": 999999
 			}
 		},
 		{
@@ -696,8 +640,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -708,8 +651,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -720,8 +662,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -732,8 +673,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -744,8 +684,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -756,8 +695,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -768,8 +706,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -780,8 +717,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -792,8 +728,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -804,8 +739,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -816,8 +750,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 1,
-				"maxValue": 99,
-				"stepSize": 1
+				"maxValue": 99
 			}
 		},
 		{
@@ -828,8 +761,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 5505414,
-				"stepSize": 500
+				"maxValue": 5505414
 			}
 		},
 		{
@@ -840,8 +772,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 999999,
-				"stepSize": 500
+				"maxValue": 999999
 			}
 		},
 		{
@@ -852,8 +783,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -864,8 +794,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -876,8 +805,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -888,8 +816,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -900,8 +827,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -912,8 +838,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -924,8 +849,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -936,8 +860,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -948,8 +871,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -960,8 +882,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -972,8 +893,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 1,
-				"maxValue": 99,
-				"stepSize": 1
+				"maxValue": 99
 			}
 		},
 		{
@@ -984,8 +904,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 5505414,
-				"stepSize": 500
+				"maxValue": 5505414
 			}
 		},
 		{
@@ -996,8 +915,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 999999,
-				"stepSize": 500
+				"maxValue": 999999
 			}
 		},
 		{
@@ -1008,8 +926,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -1020,8 +937,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -1032,8 +948,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1044,8 +959,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1056,8 +970,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1068,8 +981,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1080,8 +992,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1092,8 +1003,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1104,8 +1014,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1116,8 +1025,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1128,8 +1036,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 1,
-				"maxValue": 99,
-				"stepSize": 1
+				"maxValue": 99
 			}
 		},
 		{
@@ -1140,8 +1047,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 5505414,
-				"stepSize": 500
+				"maxValue": 5505414
 			}
 		},
 		{
@@ -1152,8 +1058,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 999999,
-				"stepSize": 500
+				"maxValue": 999999
 			}
 		},
 		{
@@ -1164,8 +1069,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -1176,8 +1080,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 20000,
-				"stepSize": 50
+				"maxValue": 20000
 			}
 		},
 		{
@@ -1188,8 +1091,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1200,8 +1102,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1212,8 +1113,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1224,8 +1124,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1236,8 +1135,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1248,8 +1146,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1260,8 +1157,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		},
 		{
@@ -1272,8 +1168,7 @@
 			"widget": {
 				"type": "int",
 				"minValue": 0,
-				"maxValue": 2000,
-				"stepSize": 10
+				"maxValue": 2000
 			}
 		}
 		]
