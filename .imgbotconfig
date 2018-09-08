@@ -1,6 +1,6 @@
 {
     "ignoredFiles": [
-        "modules/appstore/*",
+        "Modules/appstore/*",
         "SDFiles/switch/*",
         "full-sdfiles/switch/*",
     ]
