@@ -1,85 +1,88 @@
 {
-	"saveFilePaths" : [ "3" ],
-	"files" : "game_data\\.sav",
-	"filetype": "bin",
-	"items": [
-	 {
-		"name" : "Rupee",
-		"category" : "Collectibles",
-		"intArgs" : [ 4, 4 ], 
-		"strArgs" : [ "0000", "EAF8" ],
-		"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 999999
-	   } 
-	 },
-	 {
-		"name" : "Mons",
-		"category" : "Collectibles",
-		"intArgs" : [ 4, 4 ],
-		"strArgs" : [ "0000", "D7FA8" ],
-		"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 999999
-	   }
-	 },
-	 {
-		"name" : "Gerudoo Relic uses remaining",
-		"category" : "Collectibles",
-		"intArgs" : [ 4, 4 ],
-		"strArgs" : [ "0000", "89968" ],
-		"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-	   }
-	 },
-	 {
-		"name" : "Goron Relic uses remaining",
-		"category" : "Collectibles",
-		"intArgs" : [ 4, 4 ],
-		"strArgs" : [ "0000", "E7BA0" ],
-		"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-	   }
-	 },
-	 {
-		"name" : "Rito Relic uses remaining.",
-		"category" : "Collectibles",
-		"intArgs" : [ 4, 4 ],
-		"strArgs" : [ "0000", "F9CC8" ],
-		"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-	   }
-	 }, 
-	 {
-		"name" : "Hearts",
-		"category" : "Stats",
-		"intArgs" : [ 4, 4 ],
-		"strArgs" : [ "0000", "10970" ],
-		"widget" : {
-			"type" : "list",
-			"listItemNames" : [ "1 Heart", "2 Hearts", "3 Hearts", "4 Hearts", "5 Hearts", "6 Hearts", "7 Hearts", "8 Hearts", "9 Hearts", "10 Hearts", "11 Hearts", "12 Hearts", "13 Hearts", "14 Hearts", "15 Hearts", "16 Hearts", "17 Hearts", "18 Hearts", "19 Hearts", "20 Hearts", "21 Hearts", "22 Hearts", "23 Hearts", "24 Hearts", "25 Hearts", "26 Hearts", "27 Hearts", "28 Hearts", "29 Hearts", "30 Hearts" ],
-			"listItemValues" : [ 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120 ]
-		
-	  }
-	 },
-	 {
-		"name" : "Stamina",
-		"category" : "Stats",
-		"intArgs" : [ 4, 4 ],
-		"strArgs" : [ "0000", "0503C8" ],
-		"widget" : {
-			"type" : "list",
-			"listItemNames" : [ "1 Wheel of Stamina", "1 & 1/5 Wheels of Stamina", "1 & 2/5 Wheels of Stamina", "1 & 3/5 Wheels of Stamina", "1 & 4/5 Wheels of Stamina", "2 Wheels of Stamina", "2 & 1/5 Wheels of Stamina", "2 & 2/5 Wheels of Stamina", "2 & 3/5 Wheels of Stamina", "2 & 4/5 Wheels of Stamina", "3 Wheels of Stamina" ],
-			"listItemValues" : [ 1148846080, 1150681088, 1152319488, 1153957888, 1155596288, 1157234688, 1158250496, 1159069696, 1159888896, 1160708096, 1161527296 ]
-	  }
-	 }
-	]
+	"beta" : false,
+	"1.5.0" : {
+		"saveFilePaths" : [ "\\d" ],
+		"files" : "game_data\\.sav",
+		"filetype": "bin",
+		"items": [
+		 {
+			"name" : "Rupee",
+			"category" : "Collectibles",
+			"intArgs" : [ 4, 4 ], 
+			"strArgs" : [ "0000", "EAF8" ],
+			"widget" : {
+				"type" : "int",
+				"minValue" : 0,
+				"maxValue" : 999999
+		   } 
+		 },
+		 {
+			"name" : "Mons",
+			"category" : "Collectibles",
+			"intArgs" : [ 4, 4 ],
+			"strArgs" : [ "0000", "D7FA8" ],
+			"widget" : {
+				"type" : "int",
+				"minValue" : 0,
+				"maxValue" : 999999
+		   }
+		 },
+		 {
+			"name" : "Gerudoo Relic uses remaining",
+			"category" : "Collectibles",
+			"intArgs" : [ 4, 4 ],
+			"strArgs" : [ "0000", "89968" ],
+			"widget" : {
+				"type" : "int",
+				"minValue" : 0,
+				"maxValue" : 99
+		   }
+		 },
+		 {
+			"name" : "Goron Relic uses remaining",
+			"category" : "Collectibles",
+			"intArgs" : [ 4, 4 ],
+			"strArgs" : [ "0000", "E7BA0" ],
+			"widget" : {
+				"type" : "int",
+				"minValue" : 0,
+				"maxValue" : 99
+		   }
+		 },
+		 {
+			"name" : "Rito Relic uses remaining.",
+			"category" : "Collectibles",
+			"intArgs" : [ 4, 4 ],
+			"strArgs" : [ "0000", "F9CC8" ],
+			"widget" : {
+				"type" : "int",
+				"minValue" : 0,
+				"maxValue" : 99
+		   }
+		 }, 
+		 {
+			"name" : "Hearts",
+			"category" : "Stats",
+			"intArgs" : [ 4, 4 ],
+			"strArgs" : [ "0000", "10970" ],
+			"widget" : {
+				"type" : "list",
+				"listItemNames" : [ "1 Heart", "2 Hearts", "3 Hearts", "4 Hearts", "5 Hearts", "6 Hearts", "7 Hearts", "8 Hearts", "9 Hearts", "10 Hearts", "11 Hearts", "12 Hearts", "13 Hearts", "14 Hearts", "15 Hearts", "16 Hearts", "17 Hearts", "18 Hearts", "19 Hearts", "20 Hearts", "21 Hearts", "22 Hearts", "23 Hearts", "24 Hearts", "25 Hearts", "26 Hearts", "27 Hearts", "28 Hearts", "29 Hearts", "30 Hearts" ],
+				"listItemValues" : [ 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120 ]
+			
+		  }
+		 },
+		 {
+			"name" : "Stamina",
+			"category" : "Stats",
+			"intArgs" : [ 4, 4 ],
+			"strArgs" : [ "0000", "0503C8" ],
+			"widget" : {
+				"type" : "list",
+				"listItemNames" : [ "1 Wheel of Stamina", "1 & 1/5 Wheels of Stamina", "1 & 2/5 Wheels of Stamina", "1 & 3/5 Wheels of Stamina", "1 & 4/5 Wheels of Stamina", "2 Wheels of Stamina", "2 & 1/5 Wheels of Stamina", "2 & 2/5 Wheels of Stamina", "2 & 3/5 Wheels of Stamina", "2 & 4/5 Wheels of Stamina", "3 Wheels of Stamina" ],
+				"listItemValues" : [ 1148846080, 1150681088, 1152319488, 1153957888, 1155596288, 1157234688, 1158250496, 1159069696, 1159888896, 1160708096, 1161527296 ]
+		  }
+		 }
+		]
+	}	
 }

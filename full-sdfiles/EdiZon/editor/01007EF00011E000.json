@@ -1,6 +1,7 @@
 {
-	"all" : {
-		"saveFilePaths" : [ "3" ],
+	"beta" : false,
+	"1.5.0" : {
+		"saveFilePaths" : [ "\\d" ],
 		"files" : "game_data\\.sav",
 		"filetype": "bin",
 		"items": [
