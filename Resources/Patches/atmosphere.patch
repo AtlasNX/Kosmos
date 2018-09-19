@@ -1,11 +1,12 @@
-diff -crB -x .git PatchedC/stratosphere/fs_mitm/source/fsmitm_main.cpp Patched/stratosphere/fs_mitm/source/fsmitm_main.cpp
-*** PatchedC/stratosphere/fs_mitm/source/fsmitm_main.cpp	2018-08-14 19:14:38.946329700 -0700
---- Patched/stratosphere/fs_mitm/source/fsmitm_main.cpp	2018-08-15 15:42:55.824299100 -0700
+diff -crB -x .git AtmosphereO/stratosphere/fs_mitm/source/fsmitm_main.cpp Atmosphere/stratosphere/fs_mitm/source/fsmitm_main.cpp
+*** AtmosphereO/stratosphere/fs_mitm/source/fsmitm_main.cpp	2018-09-21 18:56:22.363637200 -0700
+--- Atmosphere/stratosphere/fs_mitm/source/fsmitm_main.cpp	2018-09-21 18:57:02.634409900 -0700
 ***************
-*** 66,83 ****
+*** 81,99 ****
+      if (R_FAILED(rc))  {
           fatalSimple(0xCAFE << 4 | 3);
       }
-      
+-     
 -     /* Check for exosphere API compatibility. */
 -     u64 exosphere_cfg;
 -     if (R_SUCCEEDED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
@@ -21,15 +22,16 @@ diff -crB -x .git PatchedC/stratosphere/fs_mitm/source/fsmitm_main.cpp Patched/s
       //splExit();
   }
   
---- 66,71 ----
-diff -crB -x .git PatchedC/stratosphere/loader/source/ldr_main.cpp Patched/stratosphere/loader/source/ldr_main.cpp
-*** PatchedC/stratosphere/loader/source/ldr_main.cpp	2018-08-14 19:14:38.950335400 -0700
---- Patched/stratosphere/loader/source/ldr_main.cpp	2018-08-15 15:40:28.037450400 -0700
+--- 81,86 ----
+diff -crB -x .git AtmosphereO/stratosphere/loader/source/ldr_main.cpp Atmosphere/stratosphere/loader/source/ldr_main.cpp
+*** AtmosphereO/stratosphere/loader/source/ldr_main.cpp	2018-09-21 18:56:22.368637600 -0700
+--- Atmosphere/stratosphere/loader/source/ldr_main.cpp	2018-09-21 19:01:06.562688600 -0700
 ***************
-*** 69,81 ****
+*** 84,97 ****
+      if (R_FAILED(rc))  {
           fatalSimple(0xCAFE << 4 | 3);
       }
-      
+-     
 -     /* Check for exosphere API compatibility. */
 -     u64 exosphere_cfg;
 -     if (R_FAILED(splGetConfig((SplConfigItem)65000, &exosphere_cfg))) {
@@ -40,98 +42,12 @@ diff -crB -x .git PatchedC/stratosphere/loader/source/ldr_main.cpp Patched/strat
       //splExit();
   }
   
---- 69,74 ----
-diff -crB -x .git PatchedC/stratosphere/loader/source/ldr_npdm.cpp Patched/stratosphere/loader/source/ldr_npdm.cpp
-*** PatchedC/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 15:38:51.210012600 -0700
---- Patched/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 15:41:10.336075600 -0700
+--- 84,89 ----
+diff -crB -x .git AtmosphereO/stratosphere/pm/source/pm_main.cpp Atmosphere/stratosphere/pm/source/pm_main.cpp
+*** AtmosphereO/stratosphere/pm/source/pm_main.cpp	2018-09-21 18:56:22.373637100 -0700
+--- Atmosphere/stratosphere/pm/source/pm_main.cpp	2018-09-21 19:00:12.177294100 -0700
 ***************
-*** 29,39 ****
---- 29,62 ----
-  
-  
-  FILE *NpdmUtils::OpenNpdm(u64 title_id) {
-+     if (title_id == 0x010000000000100D) {
-+         Result rc;
-+         rc = hidInitialize();
-+         if (R_FAILED(rc)){
-+             fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
-+         }
-+         hidScanInput();
-+         u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
-+         if((kDown & KEY_R) == 0) {
-+           hidExit();
-+           FILE *f_out = OpenNpdmFromSdCard(title_id);
-+           if (f_out != NULL) {
-+            return f_out;
-+         }
-+           return OpenNpdmFromExeFS();
-+         }
-+         else {
-+          hidExit();
-+          return OpenNpdmFromExeFS();
-+         }
-+     }
-+     else {
-      FILE *f_out = OpenNpdmFromSdCard(title_id);
-      if (f_out != NULL) {
-          return f_out;
-      }
-      return OpenNpdmFromExeFS();
-+     }
-  }
-  
-  Result NpdmUtils::LoadNpdm(u64 tid, NpdmInfo *out) {
-diff -crB -x .git PatchedC/stratosphere/loader/source/ldr_nso.cpp Patched/stratosphere/loader/source/ldr_nso.cpp
-*** PatchedC/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 15:38:51.227012500 -0700
---- Patched/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 15:42:15.035502100 -0700
-***************
-*** 38,43 ****
---- 38,67 ----
-  }
-  
-  FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
-+     if (title_id == 0x010000000000100D) {
-+         Result rc;
-+         rc = hidInitialize();
-+         if (R_FAILED(rc)){
-+             fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
-+         }
-+         hidScanInput();
-+         u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
-+         if((kDown & KEY_R) == 0) {
-+               hidExit();
-+               FILE *f_out = OpenNsoFromSdCard(index, title_id);
-+               if (f_out != NULL) {
-+                 return f_out;
-+               } else if (CheckNsoStubbed(index, title_id)) {
-+                return NULL;
-+               } else {
-+                return OpenNsoFromExeFS(index);
-+               }
-+         }
-+         else {
-+             hidExit();
-+             return OpenNsoFromExeFS(index); }
-+     }
-+      else {        
-      FILE *f_out = OpenNsoFromSdCard(index, title_id);
-      if (f_out != NULL) {
-          return f_out;
-***************
-*** 46,51 ****
---- 70,76 ----
-      } else {
-          return OpenNsoFromExeFS(index);
-      }
-+     }
-  }
-  
-  bool NsoUtils::IsNsoPresent(unsigned int index) {
-diff -crB -x .git PatchedC/stratosphere/pm/source/pm_main.cpp Patched/stratosphere/pm/source/pm_main.cpp
-*** PatchedC/stratosphere/pm/source/pm_main.cpp	2018-08-14 19:14:38.958329400 -0700
---- Patched/stratosphere/pm/source/pm_main.cpp	2018-08-15 15:45:28.801110200 -0700
-***************
-*** 77,89 ****
+*** 93,105 ****
       if (R_FAILED(rc))  {
           fatalSimple(0xCAFE << 4 | 6);
       }
@@ -145,4 +61,4 @@ diff -crB -x .git PatchedC/stratosphere/pm/source/pm_main.cpp Patched/stratosphe
   }
   
   void __appExit(void) {
---- 77,82 ----
+--- 93,98 ----
