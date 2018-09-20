@@ -1,8 +1,8 @@
-diff -crB -x .git PatchedC/stratosphere/fs_mitm/source/fsmitm_main.cpp Patched/stratosphere/fs_mitm/source/fsmitm_main.cpp
-*** PatchedC/stratosphere/fs_mitm/source/fsmitm_main.cpp	2018-08-14 19:14:38.946329700 -0700
---- Patched/stratosphere/fs_mitm/source/fsmitm_main.cpp	2018-08-15 15:42:55.824299100 -0700
+diff -crB -x .git Atmosphere/stratosphere/fs_mitm/source/fsmitm_main.cpp AtmoPatch/stratosphere/fs_mitm/source/fsmitm_main.cpp
+*** Atmosphere/stratosphere/fs_mitm/source/fsmitm_main.cpp	2018-09-18 08:57:40.342663718 +0300
+--- AtmoPatch/stratosphere/fs_mitm/source/fsmitm_main.cpp	2018-09-20 14:02:09.418675866 +0300
 ***************
-*** 66,83 ****
+*** 82,99 ****
           fatalSimple(0xCAFE << 4 | 3);
       }
       
@@ -21,12 +21,12 @@ diff -crB -x .git PatchedC/stratosphere/fs_mitm/source/fsmitm_main.cpp Patched/s
       //splExit();
   }
   
---- 66,71 ----
-diff -crB -x .git PatchedC/stratosphere/loader/source/ldr_main.cpp Patched/stratosphere/loader/source/ldr_main.cpp
-*** PatchedC/stratosphere/loader/source/ldr_main.cpp	2018-08-14 19:14:38.950335400 -0700
---- Patched/stratosphere/loader/source/ldr_main.cpp	2018-08-15 15:40:28.037450400 -0700
+--- 82,87 ----
+diff -crB -x .git Atmosphere/stratosphere/loader/source/ldr_main.cpp AtmoPatch/stratosphere/loader/source/ldr_main.cpp
+*** Atmosphere/stratosphere/loader/source/ldr_main.cpp	2018-09-18 08:57:40.346663748 +0300
+--- AtmoPatch/stratosphere/loader/source/ldr_main.cpp	2018-09-20 14:02:31.546614271 +0300
 ***************
-*** 69,81 ****
+*** 85,97 ****
           fatalSimple(0xCAFE << 4 | 3);
       }
       
@@ -40,30 +40,46 @@ diff -crB -x .git PatchedC/stratosphere/loader/source/ldr_main.cpp Patched/strat
       //splExit();
   }
   
---- 69,74 ----
-diff -crB -x .git PatchedC/stratosphere/loader/source/ldr_npdm.cpp Patched/stratosphere/loader/source/ldr_npdm.cpp
-*** PatchedC/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 15:38:51.210012600 -0700
---- Patched/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 15:41:10.336075600 -0700
+--- 85,90 ----
+diff -crB -x .git Atmosphere/stratosphere/loader/source/ldr_npdm.cpp AtmoPatch/stratosphere/loader/source/ldr_npdm.cpp
+*** Atmosphere/stratosphere/loader/source/ldr_npdm.cpp	2018-09-20 14:01:15.686839803 +0300
+--- AtmoPatch/stratosphere/loader/source/ldr_npdm.cpp	2018-09-20 14:04:04.410389520 +0300
 ***************
-*** 29,39 ****
---- 29,62 ----
+*** 53,68 ****
   
   
   FILE *NpdmUtils::OpenNpdm(u64 title_id) {
-+     if (title_id == 0x010000000000100D) {
-+         Result rc;
-+         rc = hidInitialize();
-+         if (R_FAILED(rc)){
-+             fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
-+         }
-+         hidScanInput();
-+         u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
-+         if((kDown & KEY_R) == 0) {
-+           hidExit();
-+           FILE *f_out = OpenNpdmFromSdCard(title_id);
-+           if (f_out != NULL) {
-+            return f_out;
-+         }
+!     if (ContentManagement::ShouldOverrideContents()) {
+!         if (ContentManagement::ShouldReplaceWithHBL(title_id)) {
+!             return OpenNpdmFromHBL();
+          }
+!         FILE *f_out = OpenNpdmFromSdCard(title_id);
+!         if (f_out != NULL) {
+!             return f_out;
+          }
+      }
+-     return OpenNpdmFromExeFS();
+  }
+  
+  Result NpdmUtils::LoadNpdmInternal(FILE *f_npdm, NpdmUtils::NpdmCache *cache) {
+--- 53,91 ----
+  
+  
+  FILE *NpdmUtils::OpenNpdm(u64 title_id) {
+!     if (title_id == 0x010000000000100D) {
+!         Result rc;
+!         rc = hidInitialize();
+!         if (R_FAILED(rc)){
+!             fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
+          }
+!         hidScanInput();
+!         u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
+!         if((kDown & KEY_R) == 0) {
+!           hidExit();
+!           FILE *f_out = OpenNpdmFromSdCard(title_id);
+!           if (f_out != NULL) {
+!            return f_out;
+          }
 +           return OpenNpdmFromExeFS();
 +         }
 +         else {
@@ -72,66 +88,92 @@ diff -crB -x .git PatchedC/stratosphere/loader/source/ldr_npdm.cpp Patched/strat
 +         }
 +     }
 +     else {
-      FILE *f_out = OpenNpdmFromSdCard(title_id);
-      if (f_out != NULL) {
-          return f_out;
++         if (ContentManagement::ShouldOverrideContents()) {
++             if (ContentManagement::ShouldReplaceWithHBL(title_id)) {
++                 return OpenNpdmFromHBL();
++             }
++             FILE *f_out = OpenNpdmFromSdCard(title_id);
++             if (f_out != NULL) {
++                 return f_out;
++             }
++         }
++         return OpenNpdmFromExeFS();
       }
-      return OpenNpdmFromExeFS();
-+     }
   }
   
-  Result NpdmUtils::LoadNpdm(u64 tid, NpdmInfo *out) {
-diff -crB -x .git PatchedC/stratosphere/loader/source/ldr_nso.cpp Patched/stratosphere/loader/source/ldr_nso.cpp
-*** PatchedC/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 15:38:51.227012500 -0700
---- Patched/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 15:42:15.035502100 -0700
+  Result NpdmUtils::LoadNpdmInternal(FILE *f_npdm, NpdmUtils::NpdmCache *cache) {
+diff -crB -x .git Atmosphere/stratosphere/loader/source/ldr_nso.cpp AtmoPatch/stratosphere/loader/source/ldr_nso.cpp
+*** Atmosphere/stratosphere/loader/source/ldr_nso.cpp	2018-09-20 14:01:15.686839803 +0300
+--- AtmoPatch/stratosphere/loader/source/ldr_nso.cpp	2018-09-20 14:05:01.790275015 +0300
 ***************
-*** 38,43 ****
---- 38,67 ----
+*** 61,78 ****
   }
   
   FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
-+     if (title_id == 0x010000000000100D) {
-+         Result rc;
-+         rc = hidInitialize();
-+         if (R_FAILED(rc)){
-+             fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
-+         }
-+         hidScanInput();
-+         u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
-+         if((kDown & KEY_R) == 0) {
-+               hidExit();
-+               FILE *f_out = OpenNsoFromSdCard(index, title_id);
-+               if (f_out != NULL) {
-+                 return f_out;
-+               } else if (CheckNsoStubbed(index, title_id)) {
-+                return NULL;
-+               } else {
-+                return OpenNsoFromExeFS(index);
-+               }
-+         }
+!     if (ContentManagement::ShouldOverrideContents()) {
+!         if (ContentManagement::ShouldReplaceWithHBL(title_id)) {
+!             return OpenNsoFromHBL(index);
+          }
+!         FILE *f_out = OpenNsoFromSdCard(index, title_id);
+!         if (f_out != NULL) {
+!             return f_out;
+!         } else if (CheckNsoStubbed(index, title_id)) {
+!             return NULL;
+          }
+      }
+-     return OpenNsoFromExeFS(index);
+  }
+  
+  bool NsoUtils::IsNsoPresent(unsigned int index) {
+--- 61,103 ----
+  }
+  
+  FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
+!     if (title_id == 0x010000000000100D) {
+!         Result rc;
+!         rc = hidInitialize();
+!         if (R_FAILED(rc)){
+!             fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
+          }
+!         hidScanInput();
+!         u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
+!         if((kDown & KEY_R) == 0) {
+!               hidExit();
+!               FILE *f_out = OpenNsoFromSdCard(index, title_id);
+!               if (f_out != NULL) {
+!                 return f_out;
+!               } else if (CheckNsoStubbed(index, title_id)) {
+!                return NULL;
+!               } else {
+!                return OpenNsoFromExeFS(index);
+!               }
+          }
 +         else {
 +             hidExit();
 +             return OpenNsoFromExeFS(index); }
 +     }
-+      else {        
-      FILE *f_out = OpenNsoFromSdCard(index, title_id);
-      if (f_out != NULL) {
-          return f_out;
-***************
-*** 46,51 ****
---- 70,76 ----
-      } else {
-          return OpenNsoFromExeFS(index);
++     else {
++         if (ContentManagement::ShouldOverrideContents()) {
++             if (ContentManagement::ShouldReplaceWithHBL(title_id)) {
++                 return OpenNsoFromHBL(index);
++             }
++             FILE *f_out = OpenNsoFromSdCard(index, title_id);
++             if (f_out != NULL) {
++                 return f_out;
++             } else if (CheckNsoStubbed(index, title_id)) {
++                 return NULL;
++             }
++         }
++         return OpenNsoFromExeFS(index);
       }
-+     }
   }
   
   bool NsoUtils::IsNsoPresent(unsigned int index) {
-diff -crB -x .git PatchedC/stratosphere/pm/source/pm_main.cpp Patched/stratosphere/pm/source/pm_main.cpp
-*** PatchedC/stratosphere/pm/source/pm_main.cpp	2018-08-14 19:14:38.958329400 -0700
---- Patched/stratosphere/pm/source/pm_main.cpp	2018-08-15 15:45:28.801110200 -0700
+diff -crB -x .git Atmosphere/stratosphere/pm/source/pm_main.cpp AtmoPatch/stratosphere/pm/source/pm_main.cpp
+*** Atmosphere/stratosphere/pm/source/pm_main.cpp	2018-09-18 08:57:40.346663748 +0300
+--- AtmoPatch/stratosphere/pm/source/pm_main.cpp	2018-09-20 14:05:20.042242083 +0300
 ***************
-*** 77,89 ****
+*** 93,105 ****
       if (R_FAILED(rc))  {
           fatalSimple(0xCAFE << 4 | 6);
       }
@@ -145,4 +187,4 @@ diff -crB -x .git PatchedC/stratosphere/pm/source/pm_main.cpp Patched/stratosphe
   }
   
   void __appExit(void) {
---- 77,82 ----
+--- 93,98 ----
