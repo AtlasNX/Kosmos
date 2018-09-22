@@ -1,0 +1,86 @@
+diff -crB -x .git PatchedC/stratosphere/loader/source/ldr_npdm.cpp Patched/stratosphere/loader/source/ldr_npdm.cpp
+*** PatchedC/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 15:38:51.210012600 -0700
+--- Patched/stratosphere/loader/source/ldr_npdm.cpp	2018-08-15 15:41:10.336075600 -0700
+***************
+*** 29,39 ****
+--- 29,62 ----
+  
+  
+  FILE *NpdmUtils::OpenNpdm(u64 title_id) {
++     if (title_id == 0x010000000000100D) {
++         Result rc;
++         rc = hidInitialize();
++         if (R_FAILED(rc)){
++             fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
++         }
++         hidScanInput();
++         u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
++         if((kDown & KEY_R) == 0) {
++           hidExit();
++           FILE *f_out = OpenNpdmFromSdCard(title_id);
++           if (f_out != NULL) {
++            return f_out;
++         }
++           return OpenNpdmFromExeFS();
++         }
++         else {
++          hidExit();
++          return OpenNpdmFromExeFS();
++         }
++     }
++     else {
+      FILE *f_out = OpenNpdmFromSdCard(title_id);
+      if (f_out != NULL) {
+          return f_out;
+      }
+      return OpenNpdmFromExeFS();
++     }
+  }
+  
+  Result NpdmUtils::LoadNpdm(u64 tid, NpdmInfo *out) {
+diff -crB -x .git PatchedC/stratosphere/loader/source/ldr_nso.cpp Patched/stratosphere/loader/source/ldr_nso.cpp
+*** PatchedC/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 15:38:51.227012500 -0700
+--- Patched/stratosphere/loader/source/ldr_nso.cpp	2018-08-15 15:42:15.035502100 -0700
+***************
+*** 38,43 ****
+--- 38,67 ----
+  }
+  
+  FILE *NsoUtils::OpenNso(unsigned int index, u64 title_id) {
++     if (title_id == 0x010000000000100D) {
++         Result rc;
++         rc = hidInitialize();
++         if (R_FAILED(rc)){
++             fatalSimple(MAKERESULT(Module_Libnx, LibnxError_InitFail_HID));
++         }
++         hidScanInput();
++         u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
++         if((kDown & KEY_R) == 0) {
++               hidExit();
++               FILE *f_out = OpenNsoFromSdCard(index, title_id);
++               if (f_out != NULL) {
++                 return f_out;
++               } else if (CheckNsoStubbed(index, title_id)) {
++                return NULL;
++               } else {
++                return OpenNsoFromExeFS(index);
++               }
++         }
++         else {
++             hidExit();
++             return OpenNsoFromExeFS(index); }
++     }
++      else {        
+      FILE *f_out = OpenNsoFromSdCard(index, title_id);
+      if (f_out != NULL) {
+          return f_out;
+***************
+*** 46,51 ****
+--- 70,76 ----
+      } else {
+          return OpenNsoFromExeFS(index);
+      }
++     }
+  }
+  
+  bool NsoUtils::IsNsoPresent(unsigned int index) {
