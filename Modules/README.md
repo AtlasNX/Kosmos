@@ -15,7 +15,8 @@ reinx | ReiNX - The bootloader by Rei
 old_layered | Older LayeredFS
 edizon | EdiZon
 appstore | AppstoreNX
-featured | The featured homebrew
+Checkpoint | Save File Manager
 sdfilesupdater | The SDFilesUpdater homebrew
 hbmenu | The homebrew menu
 landscape_hekate | Hekate with landscape by @balika011
+dopus | A GUI version of Tinfoil

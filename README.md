@@ -17,19 +17,22 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * Signature Patches
 * NSP Installation
 * Automatic Updating through your console
-* Launching the album by pressing R
+* Completely customizable button bindings for the Homebrew Loader
 * Full Atmosphere
 * Completely modular
 * Drag and drop
 * Background audio-player
-* Background netcheat system (like Cheat Engine)
+* Background netcheat system
 * Discord Rich Presence integration
-* Featured Homebrew
+* Auto-boot selection through Horizon
+* Module selection through Horizon
+**and much more!**
+
 
 ## How to use
 1. Download [Hekate](https://github.com/CTCaer/hekate/releases) or use the payload that comes with the package
-2. Download the [latest release](https://github.com/tumGER/SDFilesSwitch/releases) of your designated CFW and extract it to the root of your Switch SD card
-3. Start hekate or ReiNX through e.g. [Fusée Gelée](https://github.com/reswitched/fusee-launcher), [TegraRcmSmash](https://switchtools.sshnuke.net/) or [WebCFWLoader](https://elijahzawesome.github.io/web-cfw-loader/)
+2. Download the [latest release](https://github.com/tumGER/SDFilesSwitch/releases) and extract it to the root of your Switch SD card
+3. Start hekate through e.g. [Fusée Gelée](https://github.com/reswitched/fusee-launcher), [TegraRcmSmash](https://switchtools.sshnuke.net/) or [WebCFWLoader](https://elijahzawesome.github.io/web-cfw-loader/)
 4. ???
 5. Profit!
 
@@ -41,7 +44,7 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * [EdiZon](https://github.com/thomasnet-mc/EdiZon)
 * [SDFilesUpdater](https://github.com/StevenMattera/SDFilesUpdater)
 * [Sys-FTPD](https://github.com/jakibaki/sys-ftpd)
-* [Tinfoil](https://github.com/Adubbz/Tinfoil)
 * [ReiNX](https://github.com/Reisyukaku/ReiNX)
-* [SwitchPresence](https://github.com/Random0666/SwitchPresence)
+* [SwitchPresence Fork](https://github.com/SunTheCourier/SwitchPresence)
 * [xor:play](https://github.com/XorTroll/ModuleMania/tree/master/xor.play)
+* [Checkpoint](https://github.com/BernardoGiordano/Checkpoint)
