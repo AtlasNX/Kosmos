@@ -43,5 +43,5 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * [Sys-FTPD](https://github.com/jakibaki/sys-ftpd)
 * [Tinfoil](https://github.com/Adubbz/Tinfoil)
 * [ReiNX](https://github.com/Reisyukaku/ReiNX)
-* [SwitchPresence](https://github.com/Random0666/SwitchPresence)
+* [SwitchPresence Fork](https://github.com/SunTheCourier/SwitchPresence)
 * [xor:play](https://github.com/XorTroll/ModuleMania/tree/master/xor.play)
