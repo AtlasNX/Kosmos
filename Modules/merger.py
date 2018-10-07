@@ -3,7 +3,7 @@
 import subprocess as sbp
 import os
 
-modules = ["appstore", "bootlogo", "dopus", "edizon", "es_patches", "fusee_atmosphere", "hbmenu", "hekate_payload", "must_have", "reinx", "sdfilesupdater", "sunpresence", "switchpresence", "sys-ftpd", "sys-netcheat", "xor.play"]
+modules = ["appstore", "bootlogo", "dopus", "edizon", "es_patches", "fusee_atmosphere", "hbmenu", "hekate_payload", "must_have", "reinx", "sdfilesupdater", "sunpresence", "switchpresence", "sys-ftpd", "sys-netcheat", "xor.play", "sdfiles_toolkit"]
 p2 = "compiled"
 
 for path in modules:
