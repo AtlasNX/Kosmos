@@ -13,7 +13,7 @@ Licenses
 * Tinfoil is licensed under [GPLv3](https://github.com/Adubbz/Tinfoil/blob/master/LICENSE)
 * Sys-Netcheat is licensed under [GPLv3](https://github.com/jakibaki/sys-netcheat/blob/master/LICENSE)
 * Switchrichpresence is licensed under [GPLv2](https://github.com/Random0666/SwitchPresence/blob/master/LICENSE)
-* Sys-play is licensed under [GPLv3](https://github.com/XorTroll/sys-play/blob/master/LICENSE)
+* xor:play is licensed under [GPLv3](https://github.com/XorTroll/ModuleMania/blob/master/LICENSE)
 * Hekate is licensed under [GPLv2](https://github.com/CTCaer/hekate/blob/master/LICENSE)
 * Checkpoint is licensed under [GPLv3](https://github.com/BernardoGiordano/Checkpoint/blob/master/LICENSE)
 
