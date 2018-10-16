@@ -37,7 +37,7 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere)
 * [Switch Homebrew Menu](https://github.com/switchbrew/nx-hbmenu)
 * [Switch Homebrew Loader](https://github.com/switchbrew/nx-hbloader)
-* [AppstoreNX](https://github.com/vgmoose/appstorenx)
+* [Homebrew App Store](https://github.com/vgmoose/hb-appstore)
 * [EdiZon](https://github.com/thomasnet-mc/EdiZon)
 * [SDFilesUpdater](https://github.com/StevenMattera/SDFilesUpdater)
 * [Sys-FTPD](https://github.com/jakibaki/sys-ftpd)
