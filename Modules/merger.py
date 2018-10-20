@@ -5,8 +5,12 @@ import subprocess as sbp
 import os
 import shutil
 
-modules = ["appstore", "bootlogo", "checkpoint", "edizon", "es_patches", "fusee_atmosphere", "hbmenu", "hekate_payload", "must_have", "reinx", "sdfilesupdater", "sunpresence", "switchpresence", "sys-ftpd", "sys-netcheat", "xor.play", "sdfiles_toolkit"]
-p2 = "compiled"
+modules = ["appstore", "bootlogo", "checkpoint", "edizon", "es_patches", 
+        "fusee_atmosphere", "hbmenu", "hekate_payload", "must_have", 
+        "reinx", "sdfilesupdater", "sunpresence", "switchpresence", 
+        "sys-ftpd", "sys-netcheat", "xor.play", "sdfiles_toolkit", 
+        "kip_patches", "tinfoil"] # Everything that will be merged together
+p2 = "compiled" # How the merged folder should be called
 
 print("""
                         https://github.com/tumGER/
@@ -20,12 +24,12 @@ print("""
                     By: @_tomGER (tumGER on Github)
 
 It could be that a permissions error will pop up, fix it by restarting the python script! We don\'t really know why that happens!
-""")
+""") # Fancy stuff
 
 if os.path.exists("compiled"):
     shutil.rmtree("compiled") # Delete Content of "compiled" if it exists!
 
-os.makedirs("compiled")
+os.makedirs("compiled") # Double check
 
 for path in modules:
     fol = os.listdir(path)

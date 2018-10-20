@@ -16,6 +16,5 @@ Licenses
 * xor:play is licensed under [GPLv3](https://github.com/XorTroll/ModuleMania/blob/master/LICENSE)
 * Hekate is licensed under [GPLv2](https://github.com/CTCaer/hekate/blob/master/LICENSE)
 * Checkpoint is licensed under [GPLv3](https://github.com/BernardoGiordano/Checkpoint/blob/master/LICENSE)
-* dOPUS is licensed under [GPLv3](https://github.com/Hidki/dOPUS)
 
 All patches made to the original software respect their original license

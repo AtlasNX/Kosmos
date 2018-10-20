@@ -1,4 +1,4 @@
-All-in-One Package ("SDFiles.zip") 
+All-in-One Package ("SDFiles.zip")
 ===========================
 
 This handy All-in-One package includes everything you need to run Hekate / Atmosphere / ReiNX with some extra patches to enhance your experience.
@@ -47,5 +47,4 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * [ReiNX](https://github.com/Reisyukaku/ReiNX)
 * [SwitchPresence Fork](https://github.com/SunTheCourier/SwitchPresence)
 * [xor:play](https://github.com/XorTroll/ModuleMania/tree/master/xor.play)
-* [dOPUS](https://github.com/Hidki/dOPUS)
 * [Checkpoint](https://github.com/BernardoGiordano/Checkpoint)
