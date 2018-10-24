@@ -18,5 +18,3 @@ Licenses
 * Checkpoint is licensed under [GPLv3](https://github.com/BernardoGiordano/Checkpoint/blob/master/LICENSE)
 
 All patches made to the original software respect their original license.
-
-If a license changes, SDFilesSwitch will remain on the previous license till a commit made on the new license is integrated into a the repo or related projects.
