@@ -1,10 +1,15 @@
+# This guide is outdated - A lot has changed and thus I only recommend reading it for historical purposes
+
+
+
+
+
+
 # How To Compile SDFiles for Hekate
 ## The Automated Way™
 Use [this](https://github.com/ThatNerdyPikachu/LaunchpadNX/releases/latest)!
 
 ## The Manual Way
-
-**This guide could be pretty outdated, I would honestly recommend just using the automated 'LaunchpadNX' way**
 
 Subject | Topic
 --------|--------
