@@ -1,23 +1,21 @@
 {
-	"beta" : true,
-	"all" : {
-		"saveFilePaths" : [ "Managers" ],
-		"files" : "PlayerManager.bs",
+	"beta": true,
+	"all": {
+		"saveFilePaths": ["Managers"],
+		"files": "PlayerManager.bs",
 		"filetype": "bin",
-		"items":[
+		"items": [
 			{
-				"name":"Levels Unlocked (All or nothing)",
-				"category" : "Unlockables",
-				"intArgs" : [ 2, 4 ], 
-				"strArgs" : [ 
-					"0000", "0086"
-				], 
-				"widget" : {
-					"type" : "bool",
-					"onValue" : 400000,
-					"offValue" : 0
+				"name": "Levels Unlocked (All or nothing)",
+				"category": "Unlockables",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "0086"],
+				"widget": {
+					"type": "bool",
+					"onValue": 400000,
+					"offValue": 0
 				}
-            }
-        ]
+			}
+		]
 	}
 }

@@ -1,1176 +1,2122 @@
 {
-	"beta" : false,
-	"all" : {
-		"saveFilePaths": [ "" ],
+	"beta": false,
+	"all": {
+		"saveFilePaths": [""],
 		"files": "KSSaveData\\d",
 		"filetype": "octp",
 		"items": [
-		{
-			"name": "PlaySecond",
-			"category": "1. General",
-			"intArgs": [ 2, 4 ],
-			"strArgs": [ "100000", "0024", "PlaySecond" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 3599999
+			{
+				"name": "PlaySecond",
+				"category": "01. General",
+				"intArgs": [2, 4],
+				"strArgs": ["100000", "0024", "PlaySecond"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 3599999
+				}
+			},
+			{
+				"name": "Gold",
+				"category": "01. General",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "0042", "Money_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9999999
+				}
+			},
+			{
+				"name": "Level",
+				"category": "02. Olberic",
+				"intArgs": [2, 2, 1],
+				"strArgs": ["F0000", "0092", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Job (Primary)",
+				"category": "02. Olberic",
+				"intArgs": [2, 2, 1],
+				"strArgs": ["F0000", "0225", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Job (Secondary)",
+				"category": "02. Olberic",
+				"intArgs": [2, 2, 1],
+				"strArgs": ["F0000", "0276", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "02. Olberic",
+				"intArgs": [2, 4, 1],
+				"strArgs": ["F0000", "00DB", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 5505414
+				}
+			},
+			{
+				"name": "Job Point",
+				"category": "02. Olberic",
+				"intArgs": [2, 4, 1],
+				"strArgs": ["F0000", "02C5", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 999999
+				}
+			},
+			{
+				"name": "Extra HP",
+				"category": "02. Olberic",
+				"intArgs": [2, 4, 1],
+				"strArgs": ["F0000", "1575", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra MP",
+				"category": "02. Olberic",
+				"intArgs": [2, 4, 1],
+				"strArgs": ["F0000", "15BD", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra ATK",
+				"category": "02. Olberic",
+				"intArgs": [2, 4, 1],
+				"strArgs": ["F0000", "1696", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra DEF",
+				"category": "02. Olberic",
+				"intArgs": [2, 4, 1],
+				"strArgs": ["F0000", "16DF", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MATK",
+				"category": "02. Olberic",
+				"intArgs": [2, 4, 1],
+				"strArgs": ["F0000", "1729", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MDEF",
+				"category": "02. Olberic",
+				"intArgs": [2, 4, 1],
+				"strArgs": ["F0000", "1773", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra ACC",
+				"category": "02. Olberic",
+				"intArgs": [2, 4, 1],
+				"strArgs": ["F0000", "17BC", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra EVA",
+				"category": "02. Olberic",
+				"intArgs": [2, 4, 1],
+				"strArgs": ["F0000", "1805", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra CON",
+				"category": "02. Olberic",
+				"intArgs": [2, 4, 1],
+				"strArgs": ["F0000", "184E", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra AGI",
+				"category": "02. Olberic",
+				"intArgs": [2, 4, 1],
+				"strArgs": ["F0000", "1897", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Level",
+				"category": "03. Tressa",
+				"intArgs": [2, 2, 2],
+				"strArgs": ["F0000", "0092", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Job (Primary)",
+				"category": "03. Tressa",
+				"intArgs": [2, 2, 2],
+				"strArgs": ["F0000", "0225", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Job (Secondary)",
+				"category": "03. Tressa",
+				"intArgs": [2, 2, 2],
+				"strArgs": ["F0000", "0276", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "03. Tressa",
+				"intArgs": [2, 4, 2],
+				"strArgs": ["F0000", "00DB", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 5505414
+				}
+			},
+			{
+				"name": "Job Point",
+				"category": "03. Tressa",
+				"intArgs": [2, 4, 2],
+				"strArgs": ["F0000", "02C5", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 999999
+				}
+			},
+			{
+				"name": "Extra HP",
+				"category": "03. Tressa",
+				"intArgs": [2, 4, 2],
+				"strArgs": ["F0000", "1575", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra MP",
+				"category": "03. Tressa",
+				"intArgs": [2, 4, 2],
+				"strArgs": ["F0000", "15BD", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra ATK",
+				"category": "03. Tressa",
+				"intArgs": [2, 4, 2],
+				"strArgs": ["F0000", "1696", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra DEF",
+				"category": "03. Tressa",
+				"intArgs": [2, 4, 2],
+				"strArgs": ["F0000", "16DF", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MATK",
+				"category": "03. Tressa",
+				"intArgs": [2, 4, 2],
+				"strArgs": ["F0000", "1729", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MDEF",
+				"category": "03. Tressa",
+				"intArgs": [2, 4, 2],
+				"strArgs": ["F0000", "1773", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra ACC",
+				"category": "03. Tressa",
+				"intArgs": [2, 4, 2],
+				"strArgs": ["F0000", "17BC", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra EVA",
+				"category": "03. Tressa",
+				"intArgs": [2, 4, 2],
+				"strArgs": ["F0000", "1805", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra CON",
+				"category": "03. Tressa",
+				"intArgs": [2, 4, 2],
+				"strArgs": ["F0000", "184E", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra AGI",
+				"category": "03. Tressa",
+				"intArgs": [2, 4, 2],
+				"strArgs": ["F0000", "1897", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Level",
+				"category": "04. Cyrus",
+				"intArgs": [2, 2, 3],
+				"strArgs": ["F0000", "0092", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Job (Primary)",
+				"category": "04. Cyrus",
+				"intArgs": [2, 2, 3],
+				"strArgs": ["F0000", "0225", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Job (Secondary)",
+				"category": "04. Cyrus",
+				"intArgs": [2, 2, 3],
+				"strArgs": ["F0000", "0276", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "04. Cyrus",
+				"intArgs": [2, 4, 3],
+				"strArgs": ["F0000", "00DB", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 5505414
+				}
+			},
+			{
+				"name": "Job Point",
+				"category": "04. Cyrus",
+				"intArgs": [2, 4, 3],
+				"strArgs": ["F0000", "02C5", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 999999
+				}
+			},
+			{
+				"name": "Extra HP",
+				"category": "04. Cyrus",
+				"intArgs": [2, 4, 3],
+				"strArgs": ["F0000", "1575", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra MP",
+				"category": "04. Cyrus",
+				"intArgs": [2, 4, 3],
+				"strArgs": ["F0000", "15BD", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra ATK",
+				"category": "04. Cyrus",
+				"intArgs": [2, 4, 3],
+				"strArgs": ["F0000", "1696", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra DEF",
+				"category": "04. Cyrus",
+				"intArgs": [2, 4, 3],
+				"strArgs": ["F0000", "16DF", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MATK",
+				"category": "04. Cyrus",
+				"intArgs": [2, 4, 3],
+				"strArgs": ["F0000", "1729", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MDEF",
+				"category": "04. Cyrus",
+				"intArgs": [2, 4, 3],
+				"strArgs": ["F0000", "1773", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra ACC",
+				"category": "04. Cyrus",
+				"intArgs": [2, 4, 3],
+				"strArgs": ["F0000", "17BC", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra EVA",
+				"category": "04. Cyrus",
+				"intArgs": [2, 4, 3],
+				"strArgs": ["F0000", "1805", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra CON",
+				"category": "04. Cyrus",
+				"intArgs": [2, 4, 3],
+				"strArgs": ["F0000", "184E", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra AGI",
+				"category": "04. Cyrus",
+				"intArgs": [2, 4, 3],
+				"strArgs": ["F0000", "1897", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Level",
+				"category": "05. Primrose",
+				"intArgs": [2, 2, 4],
+				"strArgs": ["F0000", "0092", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Job (Primary)",
+				"category": "05. Primrose",
+				"intArgs": [2, 2, 4],
+				"strArgs": ["F0000", "0225", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Job (Secondary)",
+				"category": "05. Primrose",
+				"intArgs": [2, 2, 4],
+				"strArgs": ["F0000", "0276", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "05. Primrose",
+				"intArgs": [2, 4, 4],
+				"strArgs": ["F0000", "00DB", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 5505414
+				}
+			},
+			{
+				"name": "Job Point",
+				"category": "05. Primrose",
+				"intArgs": [2, 4, 4],
+				"strArgs": ["F0000", "02C5", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 999999
+				}
+			},
+			{
+				"name": "Extra HP",
+				"category": "05. Primrose",
+				"intArgs": [2, 4, 4],
+				"strArgs": ["F0000", "1575", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra MP",
+				"category": "05. Primrose",
+				"intArgs": [2, 4, 4],
+				"strArgs": ["F0000", "15BD", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra ATK",
+				"category": "05. Primrose",
+				"intArgs": [2, 4, 4],
+				"strArgs": ["F0000", "1696", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra DEF",
+				"category": "05. Primrose",
+				"intArgs": [2, 4, 4],
+				"strArgs": ["F0000", "16DF", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MATK",
+				"category": "05. Primrose",
+				"intArgs": [2, 4, 4],
+				"strArgs": ["F0000", "1729", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MDEF",
+				"category": "05. Primrose",
+				"intArgs": [2, 4, 4],
+				"strArgs": ["F0000", "1773", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra ACC",
+				"category": "05. Primrose",
+				"intArgs": [2, 4, 4],
+				"strArgs": ["F0000", "17BC", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra EVA",
+				"category": "05. Primrose",
+				"intArgs": [2, 4, 4],
+				"strArgs": ["F0000", "1805", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra CON",
+				"category": "05. Primrose",
+				"intArgs": [2, 4, 4],
+				"strArgs": ["F0000", "184E", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra AGI",
+				"category": "05. Primrose",
+				"intArgs": [2, 4, 4],
+				"strArgs": ["F0000", "1897", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Level",
+				"category": "06. H'annit",
+				"intArgs": [2, 2, 5],
+				"strArgs": ["F0000", "0092", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Job (Primary)",
+				"category": "06. H'annit",
+				"intArgs": [2, 2, 5],
+				"strArgs": ["F0000", "0225", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Job (Secondary)",
+				"category": "06. H'annit",
+				"intArgs": [2, 2, 5],
+				"strArgs": ["F0000", "0276", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "06. H'annit",
+				"intArgs": [2, 4, 5],
+				"strArgs": ["F0000", "00DB", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 5505414
+				}
+			},
+			{
+				"name": "Job Point",
+				"category": "06. H'annit",
+				"intArgs": [2, 4, 5],
+				"strArgs": ["F0000", "02C5", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 999999
+				}
+			},
+			{
+				"name": "Extra HP",
+				"category": "06. H'annit",
+				"intArgs": [2, 4, 5],
+				"strArgs": ["F0000", "1575", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra MP",
+				"category": "06. H'annit",
+				"intArgs": [2, 4, 5],
+				"strArgs": ["F0000", "15BD", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra ATK",
+				"category": "06. H'annit",
+				"intArgs": [2, 4, 5],
+				"strArgs": ["F0000", "1696", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra DEF",
+				"category": "06. H'annit",
+				"intArgs": [2, 4, 5],
+				"strArgs": ["F0000", "16DF", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MATK",
+				"category": "06. H'annit",
+				"intArgs": [2, 4, 5],
+				"strArgs": ["F0000", "1729", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MDEF",
+				"category": "06. H'annit",
+				"intArgs": [2, 4, 5],
+				"strArgs": ["F0000", "1773", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra ACC",
+				"category": "06. H'annit",
+				"intArgs": [2, 4, 5],
+				"strArgs": ["F0000", "17BC", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra EVA",
+				"category": "06. H'annit",
+				"intArgs": [2, 4, 5],
+				"strArgs": ["F0000", "1805", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra CON",
+				"category": "06. H'annit",
+				"intArgs": [2, 4, 5],
+				"strArgs": ["F0000", "184E", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra AGI",
+				"category": "06. H'annit",
+				"intArgs": [2, 4, 5],
+				"strArgs": ["F0000", "1897", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Level",
+				"category": "07. Therion",
+				"intArgs": [2, 2, 6],
+				"strArgs": ["F0000", "0092", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Job (Primary)",
+				"category": "07. Therion",
+				"intArgs": [2, 2, 6],
+				"strArgs": ["F0000", "0225", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Job (Secondary)",
+				"category": "07. Therion",
+				"intArgs": [2, 2, 6],
+				"strArgs": ["F0000", "0276", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "07. Therion",
+				"intArgs": [2, 4, 6],
+				"strArgs": ["F0000", "00DB", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 5505414
+				}
+			},
+			{
+				"name": "Job Point",
+				"category": "07. Therion",
+				"intArgs": [2, 4, 6],
+				"strArgs": ["F0000", "02C5", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 999999
+				}
+			},
+			{
+				"name": "Extra HP",
+				"category": "07. Therion",
+				"intArgs": [2, 4, 6],
+				"strArgs": ["F0000", "1575", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra MP",
+				"category": "07. Therion",
+				"intArgs": [2, 4, 6],
+				"strArgs": ["F0000", "15BD", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra ATK",
+				"category": "07. Therion",
+				"intArgs": [2, 4, 6],
+				"strArgs": ["F0000", "1696", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra DEF",
+				"category": "07. Therion",
+				"intArgs": [2, 4, 6],
+				"strArgs": ["F0000", "16DF", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MATK",
+				"category": "07. Therion",
+				"intArgs": [2, 4, 6],
+				"strArgs": ["F0000", "1729", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MDEF",
+				"category": "07. Therion",
+				"intArgs": [2, 4, 6],
+				"strArgs": ["F0000", "1773", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra ACC",
+				"category": "07. Therion",
+				"intArgs": [2, 4, 6],
+				"strArgs": ["F0000", "17BC", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra EVA",
+				"category": "07. Therion",
+				"intArgs": [2, 4, 6],
+				"strArgs": ["F0000", "1805", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra CON",
+				"category": "07. Therion",
+				"intArgs": [2, 4, 6],
+				"strArgs": ["F0000", "184E", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra AGI",
+				"category": "07. Therion",
+				"intArgs": [2, 4, 6],
+				"strArgs": ["F0000", "1897", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Level",
+				"category": "08. Ophilia",
+				"intArgs": [2, 2, 7],
+				"strArgs": ["F0000", "0092", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Job (Primary)",
+				"category": "08. Ophilia",
+				"intArgs": [2, 2, 7],
+				"strArgs": ["F0000", "0225", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Job (Secondary)",
+				"category": "08. Ophilia",
+				"intArgs": [2, 2, 7],
+				"strArgs": ["F0000", "0276", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "08. Ophilia",
+				"intArgs": [2, 4, 7],
+				"strArgs": ["F0000", "00DB", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 5505414
+				}
+			},
+			{
+				"name": "Job Point",
+				"category": "08. Ophilia",
+				"intArgs": [2, 4, 7],
+				"strArgs": ["F0000", "02C5", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 999999
+				}
+			},
+			{
+				"name": "Extra HP",
+				"category": "08. Ophilia",
+				"intArgs": [2, 4, 7],
+				"strArgs": ["F0000", "1575", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra MP",
+				"category": "08. Ophilia",
+				"intArgs": [2, 4, 7],
+				"strArgs": ["F0000", "15BD", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra ATK",
+				"category": "08. Ophilia",
+				"intArgs": [2, 4, 7],
+				"strArgs": ["F0000", "1696", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra DEF",
+				"category": "08. Ophilia",
+				"intArgs": [2, 4, 7],
+				"strArgs": ["F0000", "16DF", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MATK",
+				"category": "08. Ophilia",
+				"intArgs": [2, 4, 7],
+				"strArgs": ["F0000", "1729", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MDEF",
+				"category": "08. Ophilia",
+				"intArgs": [2, 4, 7],
+				"strArgs": ["F0000", "1773", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra ACC",
+				"category": "08. Ophilia",
+				"intArgs": [2, 4, 7],
+				"strArgs": ["F0000", "17BC", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra EVA",
+				"category": "08. Ophilia",
+				"intArgs": [2, 4, 7],
+				"strArgs": ["F0000", "1805", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra CON",
+				"category": "08. Ophilia",
+				"intArgs": [2, 4, 7],
+				"strArgs": ["F0000", "184E", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra AGI",
+				"category": "08. Ophilia",
+				"intArgs": [2, 4, 7],
+				"strArgs": ["F0000", "1897", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Level",
+				"category": "09. Alfyn",
+				"intArgs": [2, 2, 8],
+				"strArgs": ["F0000", "0092", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Job (Primary)",
+				"category": "09. Alfyn",
+				"intArgs": [2, 2, 8],
+				"strArgs": ["F0000", "0225", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Job (Secondary)",
+				"category": "09. Alfyn",
+				"intArgs": [2, 2, 8],
+				"strArgs": ["F0000", "0276", "CharacterID"],
+				"widget": {
+					"type": "list",
+					"listItemNames": [
+						"Merchant",
+						"Thief",
+						"Warrior",
+						"Hunter",
+						"Cleric",
+						"Dancer",
+						"Scholar",
+						"Apothecary",
+						"Warmaster",
+						"Sorcerer",
+						"Starseeker",
+						"Runelord"
+					],
+					"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "09. Alfyn",
+				"intArgs": [2, 4, 8],
+				"strArgs": ["F0000", "00DB", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 5505414,
+					"stepSize": 500
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "09. Alfyn",
+				"intArgs": [2, 4, 8],
+				"strArgs": ["F0000", "00DB", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 5505414
+				}
+			},
+			{
+				"name": "Job Point",
+				"category": "09. Alfyn",
+				"intArgs": [2, 4, 8],
+				"strArgs": ["F0000", "02C5", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 999999
+				}
+			},
+			{
+				"name": "Extra HP",
+				"category": "09. Alfyn",
+				"intArgs": [2, 4, 8],
+				"strArgs": ["F0000", "1575", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra MP",
+				"category": "09. Alfyn",
+				"intArgs": [2, 4, 8],
+				"strArgs": ["F0000", "15BD", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 20000
+				}
+			},
+			{
+				"name": "Extra ATK",
+				"category": "09. Alfyn",
+				"intArgs": [2, 4, 8],
+				"strArgs": ["F0000", "1696", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra DEF",
+				"category": "09. Alfyn",
+				"intArgs": [2, 4, 8],
+				"strArgs": ["F0000", "16DF", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MATK",
+				"category": "09. Alfyn",
+				"intArgs": [2, 4, 8],
+				"strArgs": ["F0000", "1729", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra MDEF",
+				"category": "09. Alfyn",
+				"intArgs": [2, 4, 8],
+				"strArgs": ["F0000", "1773", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra ACC",
+				"category": "09. Alfyn",
+				"intArgs": [2, 4, 8],
+				"strArgs": ["F0000", "17BC", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra EVA",
+				"category": "09. Alfyn",
+				"intArgs": [2, 4, 8],
+				"strArgs": ["F0000", "1805", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra CON",
+				"category": "09. Alfyn",
+				"intArgs": [2, 4, 8],
+				"strArgs": ["F0000", "184E", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Extra AGI",
+				"category": "09. Alfyn",
+				"intArgs": [2, 4, 8],
+				"strArgs": ["F0000", "1897", "CharacterID"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Monster 00: ID",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "00DF", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 500
+				}
+			},
+			{
+				"name": "Monster 00: Count",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "012A", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 00: Used",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "0174", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 01: ID",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "01C8", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 500
+				}
+			},
+			{
+				"name": "Monster 01: Count",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "0213", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 01: Used",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "025D", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 02: ID",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "02B1", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 500
+				}
+			},
+			{
+				"name": "Monster 02: Count",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "02FC", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 02: Used",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "0346", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 03: ID",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "039A", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 500
+				}
+			},
+			{
+				"name": "Monster 03: Count",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "03E5", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 03: Used",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "042F", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 04: ID",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "0483", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 500
+				}
+			},
+			{
+				"name": "Monster 04: Count",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "04CE", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 04: Used",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "0518", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 05: ID",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "056C", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 500
+				}
+			},
+			{
+				"name": "Monster 05: Count",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "05B7", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 05: Used",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "0601", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 06: ID",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "0655", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 500
+				}
+			},
+			{
+				"name": "Monster 06: Count",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "06A0", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 06: Used",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "06EA", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 07: ID",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "073E", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 500
+				}
+			},
+			{
+				"name": "Monster 07: Count",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "0789", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 07: Used",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "07D3", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 08: ID",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "0827", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 500
+				}
+			},
+			{
+				"name": "Monster 08: Count",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "0872", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 08: Used",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "08BC", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 09: ID",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "0910", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 500
+				}
+			},
+			{
+				"name": "Monster 09: Count",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "095B", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Monster 09: Used",
+				"category": "10. Tame Monsters",
+				"intArgs": [2, 2],
+				"strArgs": ["100000", "09A5", "TameMonsterData"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Item 0: ID",
+				"category": "11. Items",
+				"intArgs": [2, 2, 1],
+				"strArgs": ["0000", "0043", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Item 0: Count",
+				"category": "11. Items",
+				"intArgs": [2, 2, 1],
+				"strArgs": ["0000", "008B", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Item 1: ID",
+				"category": "11. Items",
+				"intArgs": [2, 2, 2],
+				"strArgs": ["0000", "0043", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Item 1: Count",
+				"category": "11. Items",
+				"intArgs": [2, 2, 2],
+				"strArgs": ["0000", "008B", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Item 2: ID",
+				"category": "11. Items",
+				"intArgs": [2, 2, 3],
+				"strArgs": ["0000", "0043", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Item 2: Count",
+				"category": "11. Items",
+				"intArgs": [2, 2, 3],
+				"strArgs": ["0000", "008B", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Item 3: ID",
+				"category": "11. Items",
+				"intArgs": [2, 2, 4],
+				"strArgs": ["0000", "0043", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Item 3: Count",
+				"category": "11. Items",
+				"intArgs": [2, 2, 4],
+				"strArgs": ["0000", "008B", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Item 4: ID",
+				"category": "11. Items",
+				"intArgs": [2, 2, 5],
+				"strArgs": ["0000", "0043", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Item 4: Count",
+				"category": "11. Items",
+				"intArgs": [2, 2, 5],
+				"strArgs": ["0000", "008B", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Item 5: ID",
+				"category": "11. Items",
+				"intArgs": [2, 2, 6],
+				"strArgs": ["0000", "0043", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Item 5: Count",
+				"category": "11. Items",
+				"intArgs": [2, 2, 6],
+				"strArgs": ["0000", "008B", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Item 6: ID",
+				"category": "11. Items",
+				"intArgs": [2, 2, 7],
+				"strArgs": ["0000", "0043", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Item 6: Count",
+				"category": "11. Items",
+				"intArgs": [2, 2, 7],
+				"strArgs": ["0000", "008B", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Item 7: ID",
+				"category": "11. Items",
+				"intArgs": [2, 2, 8],
+				"strArgs": ["0000", "0043", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Item 7: Count",
+				"category": "11. Items",
+				"intArgs": [2, 2, 8],
+				"strArgs": ["0000", "008B", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Item 8: ID",
+				"category": "11. Items",
+				"intArgs": [2, 2, 9],
+				"strArgs": ["0000", "0043", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Item 8: Count",
+				"category": "11. Items",
+				"intArgs": [2, 2, 9],
+				"strArgs": ["0000", "008B", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Item 9: ID",
+				"category": "11. Items",
+				"intArgs": [2, 2, 10],
+				"strArgs": ["0000", "0043", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 2000
+				}
+			},
+			{
+				"name": "Item 9: Count",
+				"category": "11. Items",
+				"intArgs": [2, 2, 10],
+				"strArgs": ["0000", "008B", "ItemID_8_"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
 			}
-		},
-		{
-			"name": "Gold",
-			"category": "1. General",
-			"intArgs": [ 2, 4 ],
-			"strArgs": [ "0000", "0042", "Money_" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 9999999
-			}
-		},
-		{
-			"name": "Level",
-			"category": "2. Olberic",
-			"intArgs": [ 2, 2, 1 ],
-			"strArgs": [ "F0000", "0092", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 1,
-				"maxValue": 99
-			}
-		},
-		{
-			"name": "Exp",
-			"category": "2. Olberic",
-			"intArgs": [ 2, 4, 1 ],
-			"strArgs": [ "F0000", "00DB", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 5505414
-			}
-		},
-		{
-			"name": "Job Point",
-			"category": "2. Olberic",
-			"intArgs": [ 2, 4, 1 ],
-			"strArgs": [ "F0000", "02C5", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 999999
-			}
-		},
-		{
-			"name": "Extra HP",
-			"category": "2. Olberic",
-			"intArgs": [ 2, 4, 1 ],
-			"strArgs": [ "F0000", "1575", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra MP",
-			"category": "2. Olberic",
-			"intArgs": [ 2, 4, 1 ],
-			"strArgs": [ "F0000", "15BD", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra ATK",
-			"category": "2. Olberic",
-			"intArgs": [ 2, 4, 1 ],
-			"strArgs": [ "F0000", "1696", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra DEF",
-			"category": "2. Olberic",
-			"intArgs": [ 2, 4, 1 ],
-			"strArgs": [ "F0000", "16DF", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MATK",
-			"category": "2. Olberic",
-			"intArgs": [ 2, 4, 1 ],
-			"strArgs": [ "F0000", "1729", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MDEF",
-			"category": "2. Olberic",
-			"intArgs": [ 2, 4, 1 ],
-			"strArgs": [ "F0000", "1773", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra ACC",
-			"category": "2. Olberic",
-			"intArgs": [ 2, 4, 1 ],
-			"strArgs": [ "F0000", "17BC", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra EVA",
-			"category": "2. Olberic",
-			"intArgs": [ 2, 4, 1 ],
-			"strArgs": [ "F0000", "1805", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra CON",
-			"category": "2. Olberic",
-			"intArgs": [ 2, 4, 1 ],
-			"strArgs": [ "F0000", "184E", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra AGI",
-			"category": "2. Olberic",
-			"intArgs": [ 2, 4, 1 ],
-			"strArgs": [ "F0000", "1897", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Level",
-			"category": "3. Tressa",
-			"intArgs": [ 2, 2, 2 ],
-			"strArgs": [ "F0000", "0092", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 1,
-				"maxValue": 99
-			}
-		},
-		{
-			"name": "Exp",
-			"category": "3. Tressa",
-			"intArgs": [ 2, 4, 2 ],
-			"strArgs": [ "F0000", "00DB", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 5505414
-			}
-		},
-		{
-			"name": "Job Point",
-			"category": "3. Tressa",
-			"intArgs": [ 2, 4, 2 ],
-			"strArgs": [ "F0000", "02C5", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 999999
-			}
-		},
-		{
-			"name": "Extra HP",
-			"category": "3. Tressa",
-			"intArgs": [ 2, 4, 2 ],
-			"strArgs": [ "F0000", "1575", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra MP",
-			"category": "3. Tressa",
-			"intArgs": [ 2, 4, 2 ],
-			"strArgs": [ "F0000", "15BD", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra ATK",
-			"category": "3. Tressa",
-			"intArgs": [ 2, 4, 2 ],
-			"strArgs": [ "F0000", "1696", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra DEF",
-			"category": "3. Tressa",
-			"intArgs": [ 2, 4, 2 ],
-			"strArgs": [ "F0000", "16DF", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MATK",
-			"category": "3. Tressa",
-			"intArgs": [ 2, 4, 2 ],
-			"strArgs": [ "F0000", "1729", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MDEF",
-			"category": "3. Tressa",
-			"intArgs": [ 2, 4, 2 ],
-			"strArgs": [ "F0000", "1773", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra ACC",
-			"category": "3. Tressa",
-			"intArgs": [ 2, 4, 2 ],
-			"strArgs": [ "F0000", "17BC", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra EVA",
-			"category": "3. Tressa",
-			"intArgs": [ 2, 4, 2 ],
-			"strArgs": [ "F0000", "1805", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra CON",
-			"category": "3. Tressa",
-			"intArgs": [ 2, 4, 2 ],
-			"strArgs": [ "F0000", "184E", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra AGI",
-			"category": "3. Tressa",
-			"intArgs": [ 2, 4, 2 ],
-			"strArgs": [ "F0000", "1897", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Level",
-			"category": "4. Cyrus",
-			"intArgs": [ 2, 2, 3 ],
-			"strArgs": [ "F0000", "0092", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 1,
-				"maxValue": 99
-			}
-		},
-		{
-			"name": "Exp",
-			"category": "4. Cyrus",
-			"intArgs": [ 2, 4, 3 ],
-			"strArgs": [ "F0000", "00DB", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 5505414
-			}
-		},
-		{
-			"name": "Job Point",
-			"category": "4. Cyrus",
-			"intArgs": [ 2, 4, 3 ],
-			"strArgs": [ "F0000", "02C5", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 999999
-			}
-		},
-		{
-			"name": "Extra HP",
-			"category": "4. Cyrus",
-			"intArgs": [ 2, 4, 3 ],
-			"strArgs": [ "F0000", "1575", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra MP",
-			"category": "4. Cyrus",
-			"intArgs": [ 2, 4, 3 ],
-			"strArgs": [ "F0000", "15BD", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra ATK",
-			"category": "4. Cyrus",
-			"intArgs": [ 2, 4, 3 ],
-			"strArgs": [ "F0000", "1696", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra DEF",
-			"category": "4. Cyrus",
-			"intArgs": [ 2, 4, 3 ],
-			"strArgs": [ "F0000", "16DF", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MATK",
-			"category": "4. Cyrus",
-			"intArgs": [ 2, 4, 3 ],
-			"strArgs": [ "F0000", "1729", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MDEF",
-			"category": "4. Cyrus",
-			"intArgs": [ 2, 4, 3 ],
-			"strArgs": [ "F0000", "1773", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra ACC",
-			"category": "4. Cyrus",
-			"intArgs": [ 2, 4, 3 ],
-			"strArgs": [ "F0000", "17BC", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra EVA",
-			"category": "4. Cyrus",
-			"intArgs": [ 2, 4, 3 ],
-			"strArgs": [ "F0000", "1805", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra CON",
-			"category": "4. Cyrus",
-			"intArgs": [ 2, 4, 3 ],
-			"strArgs": [ "F0000", "184E", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra AGI",
-			"category": "4. Cyrus",
-			"intArgs": [ 2, 4, 3 ],
-			"strArgs": [ "F0000", "1897", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Level",
-			"category": "5. Primrose",
-			"intArgs": [ 2, 2, 4 ],
-			"strArgs": [ "F0000", "0092", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 1,
-				"maxValue": 99
-			}
-		},
-		{
-			"name": "Exp",
-			"category": "5. Primrose",
-			"intArgs": [ 2, 4, 4 ],
-			"strArgs": [ "F0000", "00DB", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 5505414
-			}
-		},
-		{
-			"name": "Job Point",
-			"category": "5. Primrose",
-			"intArgs": [ 2, 4, 4 ],
-			"strArgs": [ "F0000", "02C5", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 999999
-			}
-		},
-		{
-			"name": "Extra HP",
-			"category": "5. Primrose",
-			"intArgs": [ 2, 4, 4 ],
-			"strArgs": [ "F0000", "1575", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra MP",
-			"category": "5. Primrose",
-			"intArgs": [ 2, 4, 4 ],
-			"strArgs": [ "F0000", "15BD", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra ATK",
-			"category": "5. Primrose",
-			"intArgs": [ 2, 4, 4 ],
-			"strArgs": [ "F0000", "1696", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra DEF",
-			"category": "5. Primrose",
-			"intArgs": [ 2, 4, 4 ],
-			"strArgs": [ "F0000", "16DF", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MATK",
-			"category": "5. Primrose",
-			"intArgs": [ 2, 4, 4 ],
-			"strArgs": [ "F0000", "1729", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MDEF",
-			"category": "5. Primrose",
-			"intArgs": [ 2, 4, 4 ],
-			"strArgs": [ "F0000", "1773", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra ACC",
-			"category": "5. Primrose",
-			"intArgs": [ 2, 4, 4 ],
-			"strArgs": [ "F0000", "17BC", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra EVA",
-			"category": "5. Primrose",
-			"intArgs": [ 2, 4, 4 ],
-			"strArgs": [ "F0000", "1805", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra CON",
-			"category": "5. Primrose",
-			"intArgs": [ 2, 4, 4 ],
-			"strArgs": [ "F0000", "184E", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra AGI",
-			"category": "5. Primrose",
-			"intArgs": [ 2, 4, 4 ],
-			"strArgs": [ "F0000", "1897", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Level",
-			"category": "6. H'annit",
-			"intArgs": [ 2, 2, 5 ],
-			"strArgs": [ "F0000", "0092", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 1,
-				"maxValue": 99
-			}
-		},
-		{
-			"name": "Exp",
-			"category": "6. H'annit",
-			"intArgs": [ 2, 4, 5 ],
-			"strArgs": [ "F0000", "00DB", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 5505414
-			}
-		},
-		{
-			"name": "Job Point",
-			"category": "6. H'annit",
-			"intArgs": [ 2, 4, 5 ],
-			"strArgs": [ "F0000", "02C5", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 999999
-			}
-		},
-		{
-			"name": "Extra HP",
-			"category": "6. H'annit",
-			"intArgs": [ 2, 4, 5 ],
-			"strArgs": [ "F0000", "1575", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra MP",
-			"category": "6. H'annit",
-			"intArgs": [ 2, 4, 5 ],
-			"strArgs": [ "F0000", "15BD", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra ATK",
-			"category": "6. H'annit",
-			"intArgs": [ 2, 4, 5 ],
-			"strArgs": [ "F0000", "1696", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra DEF",
-			"category": "6. H'annit",
-			"intArgs": [ 2, 4, 5 ],
-			"strArgs": [ "F0000", "16DF", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MATK",
-			"category": "6. H'annit",
-			"intArgs": [ 2, 4, 5 ],
-			"strArgs": [ "F0000", "1729", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MDEF",
-			"category": "6. H'annit",
-			"intArgs": [ 2, 4, 5 ],
-			"strArgs": [ "F0000", "1773", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra ACC",
-			"category": "6. H'annit",
-			"intArgs": [ 2, 4, 5 ],
-			"strArgs": [ "F0000", "17BC", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra EVA",
-			"category": "6. H'annit",
-			"intArgs": [ 2, 4, 5 ],
-			"strArgs": [ "F0000", "1805", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra CON",
-			"category": "6. H'annit",
-			"intArgs": [ 2, 4, 5 ],
-			"strArgs": [ "F0000", "184E", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra AGI",
-			"category": "6. H'annit",
-			"intArgs": [ 2, 4, 5 ],
-			"strArgs": [ "F0000", "1897", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Level",
-			"category": "7. Therion",
-			"intArgs": [ 2, 2, 6 ],
-			"strArgs": [ "F0000", "0092", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 1,
-				"maxValue": 99
-			}
-		},
-		{
-			"name": "Exp",
-			"category": "7. Therion",
-			"intArgs": [ 2, 4, 6 ],
-			"strArgs": [ "F0000", "00DB", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 5505414
-			}
-		},
-		{
-			"name": "Job Point",
-			"category": "7. Therion",
-			"intArgs": [ 2, 4, 6 ],
-			"strArgs": [ "F0000", "02C5", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 999999
-			}
-		},
-		{
-			"name": "Extra HP",
-			"category": "7. Therion",
-			"intArgs": [ 2, 4, 6 ],
-			"strArgs": [ "F0000", "1575", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra MP",
-			"category": "7. Therion",
-			"intArgs": [ 2, 4, 6 ],
-			"strArgs": [ "F0000", "15BD", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra ATK",
-			"category": "7. Therion",
-			"intArgs": [ 2, 4, 6 ],
-			"strArgs": [ "F0000", "1696", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra DEF",
-			"category": "7. Therion",
-			"intArgs": [ 2, 4, 6 ],
-			"strArgs": [ "F0000", "16DF", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MATK",
-			"category": "7. Therion",
-			"intArgs": [ 2, 4, 6 ],
-			"strArgs": [ "F0000", "1729", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MDEF",
-			"category": "7. Therion",
-			"intArgs": [ 2, 4, 6 ],
-			"strArgs": [ "F0000", "1773", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra ACC",
-			"category": "7. Therion",
-			"intArgs": [ 2, 4, 6 ],
-			"strArgs": [ "F0000", "17BC", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra EVA",
-			"category": "7. Therion",
-			"intArgs": [ 2, 4, 6 ],
-			"strArgs": [ "F0000", "1805", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra CON",
-			"category": "7. Therion",
-			"intArgs": [ 2, 4, 6 ],
-			"strArgs": [ "F0000", "184E", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra AGI",
-			"category": "7. Therion",
-			"intArgs": [ 2, 4, 6 ],
-			"strArgs": [ "F0000", "1897", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Level",
-			"category": "8. Ophilia",
-			"intArgs": [ 2, 2, 7 ],
-			"strArgs": [ "F0000", "0092", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 1,
-				"maxValue": 99
-			}
-		},
-		{
-			"name": "Exp",
-			"category": "8. Ophilia",
-			"intArgs": [ 2, 4, 7 ],
-			"strArgs": [ "F0000", "00DB", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 5505414
-			}
-		},
-		{
-			"name": "Job Point",
-			"category": "8. Ophilia",
-			"intArgs": [ 2, 4, 7 ],
-			"strArgs": [ "F0000", "02C5", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 999999
-			}
-		},
-		{
-			"name": "Extra HP",
-			"category": "8. Ophilia",
-			"intArgs": [ 2, 4, 7 ],
-			"strArgs": [ "F0000", "1575", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra MP",
-			"category": "8. Ophilia",
-			"intArgs": [ 2, 4, 7 ],
-			"strArgs": [ "F0000", "15BD", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra ATK",
-			"category": "8. Ophilia",
-			"intArgs": [ 2, 4, 7 ],
-			"strArgs": [ "F0000", "1696", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra DEF",
-			"category": "8. Ophilia",
-			"intArgs": [ 2, 4, 7 ],
-			"strArgs": [ "F0000", "16DF", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MATK",
-			"category": "8. Ophilia",
-			"intArgs": [ 2, 4, 7 ],
-			"strArgs": [ "F0000", "1729", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MDEF",
-			"category": "8. Ophilia",
-			"intArgs": [ 2, 4, 7 ],
-			"strArgs": [ "F0000", "1773", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra ACC",
-			"category": "8. Ophilia",
-			"intArgs": [ 2, 4, 7 ],
-			"strArgs": [ "F0000", "17BC", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra EVA",
-			"category": "8. Ophilia",
-			"intArgs": [ 2, 4, 7 ],
-			"strArgs": [ "F0000", "1805", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra CON",
-			"category": "8. Ophilia",
-			"intArgs": [ 2, 4, 7 ],
-			"strArgs": [ "F0000", "184E", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra AGI",
-			"category": "8. Ophilia",
-			"intArgs": [ 2, 4, 7 ],
-			"strArgs": [ "F0000", "1897", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Level",
-			"category": "9. Alfyn",
-			"intArgs": [ 2, 2, 8 ],
-			"strArgs": [ "F0000", "0092", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 1,
-				"maxValue": 99
-			}
-		},
-		{
-			"name": "Exp",
-			"category": "9. Alfyn",
-			"intArgs": [ 2, 4, 8 ],
-			"strArgs": [ "F0000", "00DB", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 5505414
-			}
-		},
-		{
-			"name": "Job Point",
-			"category": "9. Alfyn",
-			"intArgs": [ 2, 4, 8 ],
-			"strArgs": [ "F0000", "02C5", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 999999
-			}
-		},
-		{
-			"name": "Extra HP",
-			"category": "9. Alfyn",
-			"intArgs": [ 2, 4, 8 ],
-			"strArgs": [ "F0000", "1575", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra MP",
-			"category": "9. Alfyn",
-			"intArgs": [ 2, 4, 8 ],
-			"strArgs": [ "F0000", "15BD", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 20000
-			}
-		},
-		{
-			"name": "Extra ATK",
-			"category": "9. Alfyn",
-			"intArgs": [ 2, 4, 8 ],
-			"strArgs": [ "F0000", "1696", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra DEF",
-			"category": "9. Alfyn",
-			"intArgs": [ 2, 4, 8 ],
-			"strArgs": [ "F0000", "16DF", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MATK",
-			"category": "9. Alfyn",
-			"intArgs": [ 2, 4, 8 ],
-			"strArgs": [ "F0000", "1729", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra MDEF",
-			"category": "9. Alfyn",
-			"intArgs": [ 2, 4, 8 ],
-			"strArgs": [ "F0000", "1773", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra ACC",
-			"category": "9. Alfyn",
-			"intArgs": [ 2, 4, 8 ],
-			"strArgs": [ "F0000", "17BC", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra EVA",
-			"category": "9. Alfyn",
-			"intArgs": [ 2, 4, 8 ],
-			"strArgs": [ "F0000", "1805", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra CON",
-			"category": "9. Alfyn",
-			"intArgs": [ 2, 4, 8 ],
-			"strArgs": [ "F0000", "184E", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		},
-		{
-			"name": "Extra AGI",
-			"category": "9. Alfyn",
-			"intArgs": [ 2, 4, 8 ],
-			"strArgs": [ "F0000", "1897", "CharacterID" ],
-			"widget": {
-				"type": "int",
-				"minValue": 0,
-				"maxValue": 2000
-			}
-		}
 		]
-	}	
+	}
 }

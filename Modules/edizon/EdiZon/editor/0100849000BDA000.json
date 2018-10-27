@@ -1,602 +1,602 @@
 {
-	"beta" : true,
+	"beta": true,
 	"all": {
-		"saveFilePaths" : [ "" ],
-		"files" : "setsuna\\d\\d\\.dat",
+		"saveFilePaths": [""],
+		"files": "setsuna\\d\\d\\.dat",
 		"filetype": "setsuna",
 		"items": [
-		 {
-			"name" : "Gold",
-			"category" : "1. Inventory",
-			"intArgs" : [ 2, 4 ], 
-			"strArgs" : [ "0000", "00CC" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 0,
-				"maxValue" : 999999999
-		   } 
-		 },
-		 {
-			"name" : "Level",
-			"category" : "2. Endir",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "72FE6" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   }
-		 },
-		 {
-			"name" : "Current HP",
-			"category" : "2. Endir",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "72FEE" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Max HP",
-			"category" : "2. Endir",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "72FE2" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Current MP",
-			"category" : "2. Endir",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "72FF2" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Max MP",
-			"category" : "2. Endir",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "72FE8" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Strength",
-			"category" : "2. Endir",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "72FEA" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 9999,
-				"stepSize" : 100
-		   }
-		 },
-		 {
-			"name" : "Intelligence",
-			"category" : "2. Endir",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "72FEC" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 9999,
-				"stepSize" : 100
-		   }
-		 },
-		 {
-			"name" : "Level",
-			"category" : "3. Setsuna",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "7303C" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   }
-		 },
-		 {
-			"name" : "Current HP",
-			"category" : "3. Setsuna",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73044" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Max HP",
-			"category" : "3. Setsuna",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73038" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Current MP",
-			"category" : "3. Setsuna",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73048" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Max MP",
-			"category" : "3. Setsuna",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "7303E" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Strength",
-			"category" : "3. Setsuna",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73040" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 9999,
-				"stepSize" : 100
-		   }
-		 },
-		 {
-			"name" : "Intelligence",
-			"category" : "3. Setsuna",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73042" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 9999,
-				"stepSize" : 100
-		   }
-		 },
-		 {
-			"name" : "Level",
-			"category" : "4. Aeterna",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "73092" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   }
-		 },
-		 {
-			"name" : "Current HP",
-			"category" : "4. Aeterna",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "7309A" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Max HP",
-			"category" : "4. Aeterna",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "7308E" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Current MP",
-			"category" : "4. Aeterna",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "7309E" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Max MP",
-			"category" : "4. Aeterna",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73094" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Strength",
-			"category" : "4. Aeterna",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73096" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 9999,
-				"stepSize" : 100
-		   }
-		 },
-		 {
-			"name" : "Intelligence",
-			"category" : "4. Aeterna",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73098" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 9999,
-				"stepSize" : 100
-		   }
-		 },
-		 {
-			"name" : "Level",
-			"category" : "5. Nidr",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "730E8" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   }
-		 },
-		 {
-			"name" : "Current HP",
-			"category" : "5. Nidr",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "730F0" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Max HP",
-			"category" : "5. Nidr",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "730E4" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Current MP",
-			"category" : "5. Nidr",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "730F4" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Max MP",
-			"category" : "5. Nidr",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "730EA" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Strength",
-			"category" : "5. Nidr",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "730EC" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 9999,
-				"stepSize" : 100
-		   }
-		 },
-		 {
-			"name" : "Intelligence",
-			"category" : "5. Nidr",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "730EE" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 9999,
-				"stepSize" : 100
-		   }
-		 },
-		 {
-			"name" : "Level",
-			"category" : "6. Kir",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "7313E" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   }
-		 },
-		 {
-			"name" : "Current HP",
-			"category" : "6. Kir",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73146" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Max HP",
-			"category" : "6. Kir",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "7313A" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Current MP",
-			"category" : "6. Kir",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "7314A" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Max MP",
-			"category" : "6. Kir",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73140" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Strength",
-			"category" : "6. Kir",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73142" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 9999,
-				"stepSize" : 100
-		   }
-		 },
-		 {
-			"name" : "Intelligence",
-			"category" : "6. Kir",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73144" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 9999,
-				"stepSize" : 100
-		   }
-		 },
-		 {
-			"name" : "Level",
-			"category" : "7. Julienne",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "73194" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   }
-		 },
-		 {
-			"name" : "Current HP",
-			"category" : "7. Julienne",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "7319C" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Max HP",
-			"category" : "7. Julienne",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73190" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Current MP",
-			"category" : "7. Julienne",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "731A0" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Max MP",
-			"category" : "7. Julienne",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73196" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Strength",
-			"category" : "7. Julienne",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "73198" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 9999,
-				"stepSize" : 100
-		   }
-		 },
-		 {
-			"name" : "Intelligence",
-			"category" : "7. Julienne",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "7319A" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 9999,
-				"stepSize" : 100
-		   }
-		 },
-		 {
-			"name" : "Level",
-			"category" : "8. Fides",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "731EA" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   }
-		 },
-		 {
-			"name" : "Current HP",
-			"category" : "8. Fides",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "731F2" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Max HP",
-			"category" : "8. Fides",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "731E6" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Current MP",
-			"category" : "8. Fides",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "731F6" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Max MP",
-			"category" : "8. Fides",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "731EC" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 999,
-				"stepSize" : 10
-		   }
-		 },
-		 {
-			"name" : "Strength",
-			"category" : "8. Fides",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "731EE" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 9999,
-				"stepSize" : 100
-		   }
-		 },
-		 {
-			"name" : "Intelligence",
-			"category" : "8. Fides",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "731F0" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 9999,
-				"stepSize" : 100
-		   }
-		 }
+			{
+				"name": "Gold",
+				"category": "1. Inventory",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "00CC"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 999999999
+				}
+			},
+			{
+				"name": "Level",
+				"category": "2. Endir",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "72FE6"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Current HP",
+				"category": "2. Endir",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "72FEE"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Max HP",
+				"category": "2. Endir",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "72FE2"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Current MP",
+				"category": "2. Endir",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "72FF2"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Max MP",
+				"category": "2. Endir",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "72FE8"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Strength",
+				"category": "2. Endir",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "72FEA"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 9999,
+					"stepSize": 100
+				}
+			},
+			{
+				"name": "Intelligence",
+				"category": "2. Endir",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "72FEC"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 9999,
+					"stepSize": 100
+				}
+			},
+			{
+				"name": "Level",
+				"category": "3. Setsuna",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "7303C"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Current HP",
+				"category": "3. Setsuna",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73044"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Max HP",
+				"category": "3. Setsuna",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73038"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Current MP",
+				"category": "3. Setsuna",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73048"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Max MP",
+				"category": "3. Setsuna",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "7303E"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Strength",
+				"category": "3. Setsuna",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73040"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 9999,
+					"stepSize": 100
+				}
+			},
+			{
+				"name": "Intelligence",
+				"category": "3. Setsuna",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73042"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 9999,
+					"stepSize": 100
+				}
+			},
+			{
+				"name": "Level",
+				"category": "4. Aeterna",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "73092"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Current HP",
+				"category": "4. Aeterna",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "7309A"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Max HP",
+				"category": "4. Aeterna",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "7308E"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Current MP",
+				"category": "4. Aeterna",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "7309E"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Max MP",
+				"category": "4. Aeterna",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73094"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Strength",
+				"category": "4. Aeterna",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73096"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 9999,
+					"stepSize": 100
+				}
+			},
+			{
+				"name": "Intelligence",
+				"category": "4. Aeterna",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73098"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 9999,
+					"stepSize": 100
+				}
+			},
+			{
+				"name": "Level",
+				"category": "5. Nidr",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "730E8"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Current HP",
+				"category": "5. Nidr",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "730F0"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Max HP",
+				"category": "5. Nidr",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "730E4"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Current MP",
+				"category": "5. Nidr",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "730F4"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Max MP",
+				"category": "5. Nidr",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "730EA"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Strength",
+				"category": "5. Nidr",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "730EC"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 9999,
+					"stepSize": 100
+				}
+			},
+			{
+				"name": "Intelligence",
+				"category": "5. Nidr",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "730EE"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 9999,
+					"stepSize": 100
+				}
+			},
+			{
+				"name": "Level",
+				"category": "6. Kir",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "7313E"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Current HP",
+				"category": "6. Kir",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73146"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Max HP",
+				"category": "6. Kir",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "7313A"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Current MP",
+				"category": "6. Kir",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "7314A"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Max MP",
+				"category": "6. Kir",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73140"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Strength",
+				"category": "6. Kir",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73142"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 9999,
+					"stepSize": 100
+				}
+			},
+			{
+				"name": "Intelligence",
+				"category": "6. Kir",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73144"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 9999,
+					"stepSize": 100
+				}
+			},
+			{
+				"name": "Level",
+				"category": "7. Julienne",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "73194"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Current HP",
+				"category": "7. Julienne",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "7319C"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Max HP",
+				"category": "7. Julienne",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73190"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Current MP",
+				"category": "7. Julienne",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "731A0"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Max MP",
+				"category": "7. Julienne",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73196"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Strength",
+				"category": "7. Julienne",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "73198"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 9999,
+					"stepSize": 100
+				}
+			},
+			{
+				"name": "Intelligence",
+				"category": "7. Julienne",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "7319A"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 9999,
+					"stepSize": 100
+				}
+			},
+			{
+				"name": "Level",
+				"category": "8. Fides",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "731EA"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Current HP",
+				"category": "8. Fides",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "731F2"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Max HP",
+				"category": "8. Fides",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "731E6"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Current MP",
+				"category": "8. Fides",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "731F6"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Max MP",
+				"category": "8. Fides",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "731EC"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 999,
+					"stepSize": 10
+				}
+			},
+			{
+				"name": "Strength",
+				"category": "8. Fides",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "731EE"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 9999,
+					"stepSize": 100
+				}
+			},
+			{
+				"name": "Intelligence",
+				"category": "8. Fides",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "731F0"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 9999,
+					"stepSize": 100
+				}
+			}
 		]
 	}
 }

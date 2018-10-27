@@ -1,0 +1,341 @@
+{
+	"beta": true,
+	"all": {
+		"saveFilePaths": [""],
+		"files": "slot\\d\\.dat",
+		"encoding": "ascii",
+		"filetype": "json",
+		"items": [
+			{
+				"name": "Arcade Token Count",
+				"category": "Collectibles",
+				"intArgs": [0],
+				"strArgs": ["player", "arcadeTokenCount"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 5
+				}
+			},
+			{
+				"name": "Health Extender Tokens",
+				"category": "Collectibles",
+				"intArgs": [0],
+				"strArgs": ["player", "healthExtenderTokenCount"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 100
+				}
+			},
+			{
+				"name": "Special Extender Tokens",
+				"category": "Collectibles",
+				"intArgs": [0],
+				"strArgs": ["player", "specialExtenderTokenCount"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 100
+				}
+			},
+			{
+				"name": "Unspent Pagies",
+				"category": "Collectibles",
+				"intArgs": [0],
+				"strArgs": ["player", "unspentPagies"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 1000
+				}
+			},
+			{
+				"name": "Tribalstack Tropics Unlocked",
+				"category": "Worlds",
+				"intArgs": [1],
+				"strArgs": ["worlds", "\\2", "worldUnlocked"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Tribalstack Tropics Expanded",
+				"category": "Worlds",
+				"intArgs": [1],
+				"strArgs": ["worlds", "\\2", "worldExpanded"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Glitterglaze Glacier Unlocked",
+				"category": "Worlds",
+				"intArgs": [1],
+				"strArgs": ["worlds", "\\5", "worldUnlocked"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Glitterglaze Glacier Expanded",
+				"category": "Worlds",
+				"intArgs": [1],
+				"strArgs": ["worlds", "\\5", "worldExpanded"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Galleon Galaxy Unlocked",
+				"category": "Worlds",
+				"intArgs": [1],
+				"strArgs": ["worlds", "\\3", "worldUnlocked"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Galleon Galaxy Expanded",
+				"category": "Worlds",
+				"intArgs": [1],
+				"strArgs": ["worlds", "\\3", "worldExpanded"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Capital Cashino Unlocked",
+				"category": "Worlds",
+				"intArgs": [1],
+				"strArgs": ["worlds", "\\4", "worldUnlocked"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Capital Cashino Expanded",
+				"category": "Worlds",
+				"intArgs": [1],
+				"strArgs": ["worlds", "\\4", "worldExpanded"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Moodymaze Marsh Unlocked",
+				"category": "Worlds",
+				"intArgs": [1],
+				"strArgs": ["worlds", "\\6", "worldUnlocked"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Moodymaze Marsh Expanded",
+				"category": "Worlds",
+				"intArgs": [1],
+				"strArgs": ["worlds", "\\6", "worldExpanded"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Camo Cloak Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\0"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Sonar Shot Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\1"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Sonar 'Splosion Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\2"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Sonar Shield Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\3"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Roll Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\4"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Slurp Shot Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\5"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Slurp State Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\6"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Reptile Rush Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\8"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Glide Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\9"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Flappy Flight Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\10"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Buddy Slam Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\11"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Lizard Leap Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\12"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Buddy Bubble Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\13"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Lizard Lash Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\14"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Ground Attack (Tail Twirl) Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\15"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			},
+			{
+				"name": "Air Attack (Tail Twirl) Unlocked",
+				"category": "Abilities",
+				"intArgs": [1],
+				"strArgs": ["player", "moveEnabled", "\\16"],
+				"widget": {
+					"type": "bool",
+					"onValue": 1,
+					"offValue": 0
+				}
+			}
+		]
+	}
+}

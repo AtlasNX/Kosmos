@@ -1,23 +1,21 @@
 {
-	"beta" : true,
-	"all" : {
-		"saveFilePaths" : [ "" ],
-		"files" : "File[ABC]",
+	"beta": true,
+	"all": {
+		"saveFilePaths": [""],
+		"files": "File[ABC]",
 		"filetype": "bin",
-		"items":[
+		"items": [
 			{
-				"name":"Stat Points",
-				"category" : "Stats",
-				"intArgs" : [ 2, 4 ], 
-				"strArgs" : [ 
-					"0000", "0906"
-				], 
-				"widget" : {
-					"type" : "int",
-					"minValue" : 10,
-					"maxValue" : 255
+				"name": "Stat Points",
+				"category": "Stats",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "0906"],
+				"widget": {
+					"type": "int",
+					"minValue": 10,
+					"maxValue": 255
 				}
-            }
-        ]
+			}
+		]
 	}
 }

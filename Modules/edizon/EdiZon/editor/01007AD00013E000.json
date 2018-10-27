@@ -1,10 +1,11 @@
 {
-	"beta" : false,
-	"all" : {
+	"beta": false,
+	"all": {
 		"saveFilePaths": [""],
 		"files": "systemData",
 		"filetype": "bin",
-		"items": [{
+		"items": [
+			{
 				"name": "Coins",
 				"category": "1. Main",
 				"intArgs": [2, 4],
@@ -14,7 +15,8 @@
 					"minValue": 0,
 					"maxValue": 999999999
 				}
-			}, {
+			},
+			{
 				"name": "Unlock Levels",
 				"category": "1. Main",
 				"intArgs": [2, 3],
@@ -24,7 +26,8 @@
 					"listItemNames": ["Reset", "Unlock All"],
 					"listItemValues": [0, 16777215]
 				}
-			}, {
+			},
+			{
 				"name": "Accessories 01-02",
 				"category": "2. Accessories",
 				"intArgs": [2, 1],
@@ -34,7 +37,8 @@
 					"listItemNames": ["None", "1 Full", "2 Full", "All Full"],
 					"listItemValues": [0, 128, 8, 136]
 				}
-			}, {
+			},
+			{
 				"name": "Accessories 03-04",
 				"category": "2. Accessories",
 				"intArgs": [2, 1],
@@ -44,7 +48,8 @@
 					"listItemNames": ["None", "3 Full", "4 Full", "All Full"],
 					"listItemValues": [0, 128, 8, 136]
 				}
-			}, {
+			},
+			{
 				"name": "Accessories 05-06",
 				"category": "2. Accessories",
 				"intArgs": [2, 1],
@@ -54,7 +59,8 @@
 					"listItemNames": ["None", "5 Full", "6 Full", "All Full"],
 					"listItemValues": [0, 128, 8, 136]
 				}
-			}, {
+			},
+			{
 				"name": "Accessories 07-08",
 				"category": "2. Accessories",
 				"intArgs": [2, 1],
@@ -64,7 +70,8 @@
 					"listItemNames": ["None", "7 Full", "8 Full", "All Full"],
 					"listItemValues": [0, 128, 8, 136]
 				}
-			}, {
+			},
+			{
 				"name": "Accessories 09-10",
 				"category": "2. Accessories",
 				"intArgs": [2, 1],
@@ -74,7 +81,8 @@
 					"listItemNames": ["None", "9 Full", "10 Full", "All Full"],
 					"listItemValues": [0, 128, 8, 136]
 				}
-			}, {
+			},
+			{
 				"name": "Accessories 11-12",
 				"category": "2. Accessories",
 				"intArgs": [2, 1],
@@ -84,7 +92,8 @@
 					"listItemNames": ["None", "11 Full", "12 Full", "All Full"],
 					"listItemValues": [0, 128, 8, 136]
 				}
-			}, {
+			},
+			{
 				"name": "Accessories 13-14",
 				"category": "2. Accessories",
 				"intArgs": [2, 1],
@@ -94,7 +103,8 @@
 					"listItemNames": ["None", "13 Full", "14 Full", "All Full"],
 					"listItemValues": [0, 128, 8, 136]
 				}
-			}, {
+			},
+			{
 				"name": "Accessories 15-16",
 				"category": "2. Accessories",
 				"intArgs": [2, 1],
@@ -104,7 +114,8 @@
 					"listItemNames": ["None", "15 Full", "16 Full", "All Full"],
 					"listItemValues": [0, 128, 8, 136]
 				}
-			}, {
+			},
+			{
 				"name": "Accessories 17-18",
 				"category": "2. Accessories",
 				"intArgs": [2, 1],
@@ -114,7 +125,8 @@
 					"listItemNames": ["None", "17 Full", "18 Full", "All Full"],
 					"listItemValues": [0, 128, 8, 136]
 				}
-			}, {
+			},
+			{
 				"name": "Accessories 19-20",
 				"category": "2. Accessories",
 				"intArgs": [2, 1],
