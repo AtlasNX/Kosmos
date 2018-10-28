@@ -1,19 +1,20 @@
 {
-	"beta": false,
+	"beta": true,
 	"all": {
 		"saveFilePaths": [""],
-		"files": "File\\d+\\.bin",
+		"files": "buffer_save\\.dat",
 		"filetype": "bin",
 		"items": [
 			{
-				"name": "Coin Count",
+				"name": "Party Points",
 				"category": "Collectibles",
-				"intArgs": [2, 2],
-				"strArgs": ["001C", "0050"],
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "000C"],
 				"widget": {
 					"type": "int",
 					"minValue": 0,
-					"maxValue": 9999
+					"maxValue": 1000000,
+					"stepSize": 100
 				}
 			}
 		]

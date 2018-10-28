@@ -2,18 +2,18 @@
 	"beta": true,
 	"all": {
 		"saveFilePaths": [""],
-		"files": "File[ABC]",
+		"files": "MySaveData\\d",
 		"filetype": "bin",
 		"items": [
 			{
-				"name": "Stat Points",
-				"category": "Stats",
+				"name": "Cash (Leaves)",
+				"category": "1. Inventory",
 				"intArgs": [2, 4],
-				"strArgs": ["0000", "0906"],
+				"strArgs": ["0000", "0014"],
 				"widget": {
 					"type": "int",
-					"minValue": 10,
-					"maxValue": 255
+					"minValue": 0,
+					"maxValue": 9999999
 				}
 			}
 		]

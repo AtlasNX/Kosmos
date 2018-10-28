@@ -1,21 +1,21 @@
 {
-	"beta" : false,
-	"all" : {
-		"saveFilePaths" : [ "" ],
-		"files" : "data.bin",
+	"beta": false,
+	"all": {
+		"saveFilePaths": [""],
+		"files": "data.bin",
 		"filetype": "puyopuyo",
 		"items": [
-		 {
-			"name" : "Credits",
-			"category" : "Game",
-			"intArgs" : [ 2, 2 ], 
-			"strArgs" : [ "0000", "06C4" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 0,
-				"maxValue" : 9999
-		   } 
-		 }
+			{
+				"name": "Credits",
+				"category": "Game",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "06C4"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9999
+				}
+			}
 		]
 	}
 }

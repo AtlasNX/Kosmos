@@ -1,120 +1,120 @@
 {
-	"beta" : true,
+	"beta": true,
 	"all": {
-		"saveFilePaths" : [ "" ],
-		"files" : "SAVEDATA\\d\\d",
+		"saveFilePaths": [""],
+		"files": "SAVEDATA\\d\\d",
 		"filetype": "lostsphear",
 		"items": [
-		 {
-			"name" : "Gold",
-			"category" : "01. Inventory",
-			"intArgs" : [ 2, 4 ], 
-			"strArgs" : [ "0000", "0524" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 0,
-				"maxValue" : 999999999
-		   } 
-		 },
-		 {
-			"name" : "Level",
-			"category" : "02. Kanata",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "1C3E6" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   } 
-		 },
-		 {
-			"name" : "Level",
-			"category" : "03. Lumina",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "1C518" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   } 
-		 },
-		 {
-			"name" : "Level",
-			"category" : "04. Locke",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "1C8AE" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   } 
-		 },
-		 {
-			"name" : "Level",
-			"category" : "05. Van",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "1C47F" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   } 
-		 },
-		 {
-			"name" : "Level",
-			"category" : "06. Obaro",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "1C5B1" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   } 
-		 },
-		 {
-			"name" : "Level",
-			"category" : "07. Galdra",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "1C815" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   } 
-		 },
-		 {
-			"name" : "Level",
-			"category" : "08. Sherra",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "1C64A" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   } 
-		 },
-		 {
-			"name" : "Level",
-			"category" : "09. Dianto",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "1C6E3" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   } 
-		 },
-		 {
-			"name" : "Level",
-			"category" : "10. Gears",
-			"intArgs" : [ 2, 1 ], 
-			"strArgs" : [ "0000", "1C77C" ],
-			"widget" : {
-				"type" : "int",
-				"minValue" : 1,
-				"maxValue" : 99
-		   } 
-		 }	 	 	 	 
+			{
+				"name": "Gold",
+				"category": "01. Inventory",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "0524"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 999999999
+				}
+			},
+			{
+				"name": "Level",
+				"category": "02. Kanata",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "1C3E6"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Level",
+				"category": "03. Lumina",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "1C518"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Level",
+				"category": "04. Locke",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "1C8AE"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Level",
+				"category": "05. Van",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "1C47F"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Level",
+				"category": "06. Obaro",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "1C5B1"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Level",
+				"category": "07. Galdra",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "1C815"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Level",
+				"category": "08. Sherra",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "1C64A"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Level",
+				"category": "09. Dianto",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "1C6E3"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Level",
+				"category": "10. Gears",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "1C77C"],
+				"widget": {
+					"type": "int",
+					"minValue": 1,
+					"maxValue": 99
+				}
+			}
 		]
 	}
 }

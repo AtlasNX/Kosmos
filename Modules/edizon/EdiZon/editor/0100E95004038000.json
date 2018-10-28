@@ -1,1253 +1,1253 @@
 {
-	"beta" : true,
-	"all" : {
-		"saveFilePaths" : [ "" ],
-		"files" : "bf2savefile\\.sav",
+	"beta": true,
+	"all": {
+		"saveFilePaths": [""],
+		"files": "bf2savefile\\.sav",
 		"filetype": "bin",
 		"items": [
-		{
-		  "name" : "Money",
-			  "category" : "Items",
-		  "intArgs" : [ 2, 4 ],
-		  "strArgs" : [ "0000", "10" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-		  }
-		},
-		{
-		  "name" : "Magic",
-			  "category" : "Items",
-		  "intArgs" : [ 2, 4 ],
-		  "strArgs" : [ "0000", "00" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-		  }
-		},
-		{
-		  "name" : "Ether Crystals",
-			  "category" : "Items",
-		  "intArgs" : [ 2, 4 ],
-		  "strArgs" : [ "0000", "10AD4C" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-		  }
-		},
-		{
-		  "name" : "Common Cores",
-			  "category" : "Cores",
-		  "intArgs" : [ 2, 2 ],
-		  "strArgs" : [ "0000", "F627A" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-		  }
-		},
-		{
-		  "name" : "Rare Cores",
-			  "category" : "Cores",
-		  "intArgs" : [ 2, 2 ],
-		  "strArgs" : [ "0000", "F6286" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-		  }
-		},
-		{
-		  "name" : "Trust",
-			  "category" : "Pyra",
-		  "intArgs" : [ 2, 4 ],
-		  "strArgs" : [ "0000", "A3F4" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-		  }
-		},
-		{
-		  "name" : "Cooldown Timer",
-			  "category" : "Pyra",
-		  "intArgs" : [ 2, 2 ],
-		  "strArgs" : [ "0000", "A3FC" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-		  }
-		},
-		{
-		  "name" : "Art0 Level",
-			  "category" : "Pyra",
-		  "intArgs" : [ 2, 2 ],
-		  "strArgs" : [ "0000", "5A7F" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-		  }
-		},
-		{
-		  "name" : "Art1 Level",
-			  "category" : "Pyra",
-		  "intArgs" : [ 2, 2 ],
-		  "strArgs" : [ "0000", "5A8B" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-		  }
-		},
-		{
-		  "name" : "Art2 Level",
-			  "category" : "Pyra",
-		  "intArgs" : [ 2, 2 ],
-		  "strArgs" : [ "0000", "5A97" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-		  }
-		},
-		{
-		  "name" : "1st Blade Skills Level",
-			  "category" : "Pyra",
-		  "intArgs" : [ 2, 2 ],
-		  "strArgs" : [ "0000", "5ADB" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 9
-		  }
-		},
-		{
-		  "name" : "2nd Blade Skills Level",
-			  "category" : "Pyra",
-		  "intArgs" : [ 2, 1 ],
-		  "strArgs" : [ "0000", "5AE1" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 9
-		  }
-		},
-		{
-		  "name" : "3rd Blade Skills Level",
-			  "category" : "Pyra",
-		  "intArgs" : [ 2, 1 ],
-		  "strArgs" : [ "0000", "5AE7" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 9
-		  }
-		},
-		{
-		  "name" : "1st Field Skills Level",
-			  "category" : "Pyra",
-		  "intArgs" : [ 2, 1 ],
-		  "strArgs" : [ "0000", "5AED" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 9
-		  }
-		},
-		{
-		  "name" : "2nd Field Skills Level",
-			  "category" : "Pyra",
-		  "intArgs" : [ 2, 1 ],
-		  "strArgs" : [ "0000", "5AF3" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 9
-		  }
-		},
-		{
-		  "name" : "3rd Field Skills Level",
-			  "category" : "Pyra",
-		  "intArgs" : [ 2, 1 ],
-		  "strArgs" : [ "0000", "5AF9" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 9
-		  }
-		},
-		{
-		  "name" : "Weapon Type",
-			  "category" : "Pyra",
-		  "intArgs" : [ 2, 1 ],
-		  "strArgs" : [ "0000", "A44C" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 9
-		  }
-		},
-		{
-		  "name" : "Trust",
-			  "category" : "Mythra",
-		  "intArgs" : [ 2, 4 ],
-		  "strArgs" : [ "0000", "6314" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-		  }
-		},
-		{
-		  "name" : "Cooldown Timer",
-			  "category" : "Mythra",
-		  "intArgs" : [ 2, 2 ],
-		  "strArgs" : [ "0000", "6B08" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-		  }
-		},
-		{
-		  "name" : "Art0 Level",
-			  "category" : "Mythra",
-		  "intArgs" : [ 2, 2 ],
-		  "strArgs" : [ "0000", "6323" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-		  }
-		},
-		{
-		  "name" : "Art1 Level",
-			  "category" : "Mythra",
-		  "intArgs" : [ 2, 2 ],
-		  "strArgs" : [ "0000", "632F" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-		  }
-		},
-		{
-		  "name" : "Art2 Level",
-			  "category" : "Mythra",
-		  "intArgs" : [ 2, 2 ],
-		  "strArgs" : [ "0000", "633B" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-		  }
-		},
-		{
-		  "name" : "1st Blade Skills Level",
-			  "category" : "Mythra",
-		  "intArgs" : [ 2, 2 ],
-		  "strArgs" : [ "0000", "637F" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 9
-		  }
-		},
-		{
-		  "name" : "2nd Blade Skills Level",
-			  "category" : "Mythra",
-		  "intArgs" : [ 2, 1 ],
-		  "strArgs" : [ "0000", "6385" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 9
-		  }
-		},
-		{
-		  "name" : "3rd Blade Skills Level",
-			  "category" : "Mythra",
-		  "intArgs" : [ 2, 1 ],
-		  "strArgs" : [ "0000", "638B" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 9
-		  }
-		},
-		{
-		  "name" : "1st Field Skills Level",
-			  "category" : "Mythra",
-		  "intArgs" : [ 2, 1 ],
-		  "strArgs" : [ "0000", "6391" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 9
-		  }
-		},
-		{
-		  "name" : "2nd Field Skills Level",
-			  "category" : "Mythra",
-		  "intArgs" : [ 2, 1 ],
-		  "strArgs" : [ "0000", "6397" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 9
-		  }
-		},
-		{
-		  "name" : "3rd Field Skills Level",
-			  "category" : "Mythra",
-		  "intArgs" : [ 2, 1 ],
-		  "strArgs" : [ "0000", "639D" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 9
-		  }
-		},
-		{
-		  "name" : "Weapon Type",
-			  "category" : "Mythra",
-		  "intArgs" : [ 2, 1 ],
-		  "strArgs" : [ "0000", "6B01" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 9
-		  }
-		},
-		{
-		  "name" : "Bravery",
-			  "category" : "Rex",
-		  "intArgs" : [ 2, 4 ],
-		  "strArgs" : [ "0000", "40" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-		  }
-		},
-		{
-		  "name" : "Truth",
-			  "category" : "Rex",
-		  "intArgs" : [ 2, 4 ],
-		  "strArgs" : [ "0000", "48" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-		  }
-		},
-		{
-			"name" : "Compation",
-						"category" : "Rex",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "50" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
+			{
+				"name": "Money",
+				"category": "Items",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "10"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Magic",
+				"category": "Items",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "00"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Ether Crystals",
+				"category": "Items",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "10AD4C"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Common Cores",
+				"category": "Cores",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "F627A"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Rare Cores",
+				"category": "Cores",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "F6286"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Trust",
+				"category": "Pyra",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "A3F4"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Cooldown Timer",
+				"category": "Pyra",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "A3FC"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Art0 Level",
+				"category": "Pyra",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "5A7F"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Art1 Level",
+				"category": "Pyra",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "5A8B"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Art2 Level",
+				"category": "Pyra",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "5A97"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "1st Blade Skills Level",
+				"category": "Pyra",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "5ADB"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9
+				}
+			},
+			{
+				"name": "2nd Blade Skills Level",
+				"category": "Pyra",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "5AE1"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9
+				}
+			},
+			{
+				"name": "3rd Blade Skills Level",
+				"category": "Pyra",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "5AE7"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9
+				}
+			},
+			{
+				"name": "1st Field Skills Level",
+				"category": "Pyra",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "5AED"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9
+				}
+			},
+			{
+				"name": "2nd Field Skills Level",
+				"category": "Pyra",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "5AF3"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9
+				}
+			},
+			{
+				"name": "3rd Field Skills Level",
+				"category": "Pyra",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "5AF9"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9
+				}
+			},
+			{
+				"name": "Weapon Type",
+				"category": "Pyra",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "A44C"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9
+				}
+			},
+			{
+				"name": "Trust",
+				"category": "Mythra",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "6314"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Cooldown Timer",
+				"category": "Mythra",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "6B08"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Art0 Level",
+				"category": "Mythra",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "6323"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Art1 Level",
+				"category": "Mythra",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "632F"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Art2 Level",
+				"category": "Mythra",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "633B"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "1st Blade Skills Level",
+				"category": "Mythra",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "637F"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9
+				}
+			},
+			{
+				"name": "2nd Blade Skills Level",
+				"category": "Mythra",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "6385"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9
+				}
+			},
+			{
+				"name": "3rd Blade Skills Level",
+				"category": "Mythra",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "638B"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9
+				}
+			},
+			{
+				"name": "1st Field Skills Level",
+				"category": "Mythra",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "6391"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9
+				}
+			},
+			{
+				"name": "2nd Field Skills Level",
+				"category": "Mythra",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "6397"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9
+				}
+			},
+			{
+				"name": "3rd Field Skills Level",
+				"category": "Mythra",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "639D"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9
+				}
+			},
+			{
+				"name": "Weapon Type",
+				"category": "Mythra",
+				"intArgs": [2, 1],
+				"strArgs": ["0000", "6B01"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 9
+				}
+			},
+			{
+				"name": "Bravery",
+				"category": "Rex",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "40"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Truth",
+				"category": "Rex",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "48"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Compation",
+				"category": "Rex",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "50"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Justice",
+				"category": "Rex",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "58"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "Rex",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "EC"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Max HP",
+				"category": "Rex",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "D2"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Strength",
+				"category": "Rex",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "D4"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Ether",
+				"category": "Rex",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "D6"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Dexterity",
+				"category": "Rex",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "D8"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Luck",
+				"category": "Rex",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "DC"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Agility",
+				"category": "Rex",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "DA"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Skill Points",
+				"category": "Rex",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "F4"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Total Skill Points",
+				"category": "Rex",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "F8"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Battle Exp",
+				"category": "Rex",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "F0"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Bravery",
+				"category": "Nia",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "5E0"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Truth",
+				"category": "Nia",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "5E8"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Compation",
+				"category": "Nia",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "5F0"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Justice",
+				"category": "Nia",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "5F8"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Max HP",
+				"category": "Nia",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "672"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Strength",
+				"category": "Nia",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "674"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Ether",
+				"category": "Nia",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "676"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Dexterity",
+				"category": "Nia",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "678"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Agility",
+				"category": "Nia",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "67A"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Luck",
+				"category": "Nia",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "67C"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "Nia",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "68C"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Skill Points",
+				"category": "Nia",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "694"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Total Skill Points",
+				"category": "Nia",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "698"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Battle Exp",
+				"category": "Nia",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "690"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Bravery",
+				"category": "Tora",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1120"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Truth",
+				"category": "Tora",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1128"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Compation",
+				"category": "Tora",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1130"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Justice",
+				"category": "Tora",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1138"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Max HP",
+				"category": "Tora",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "1182"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Strength",
+				"category": "Tora",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "1184"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Ether",
+				"category": "Tora",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "11B6"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Dexterity",
+				"category": "Tora",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "11B8"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Agility",
+				"category": "Tora",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "11BA"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Luck",
+				"category": "Tora",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "11BC"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "Tora",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "11CC"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Skill Points",
+				"category": "Tora",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "11D4"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Total Skill Points",
+				"category": "Tora",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "11D8"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Battle Exp",
+				"category": "Tora",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "11D0"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Bravery",
+				"category": "Zeke",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "B80"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Truth",
+				"category": "Zeke",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "B88"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Compation",
+				"category": "Zeke",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "B90"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Justice",
+				"category": "Zeke",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "B98"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Max HP",
+				"category": "Zeke",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "C12"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Strength",
+				"category": "Zeke",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "C14"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Ether",
+				"category": "Zeke",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "C16"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Dexterity",
+				"category": "Zeke",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "C18"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Agility",
+				"category": "Zeke",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "C1A"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Luck",
+				"category": "Zeke",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "C1C"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "Zeke",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "C2C"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Skill Points",
+				"category": "Zeke",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "C34"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Total Skill Points",
+				"category": "Zeke",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "C38"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Battle Exp",
+				"category": "Zeke",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "C30"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Bravery",
+				"category": "Morag",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1C60"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Truth",
+				"category": "Morag",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1C68"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Compation",
+				"category": "Morag",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1C70"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Justice",
+				"category": "Morag",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1C78"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Max HP",
+				"category": "Morag",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "1CF2"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Strength",
+				"category": "Morag",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "1CF4"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Ether",
+				"category": "Morag",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1CF6"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Dexterity",
+				"category": "Morag",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "1CF8"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Agility",
+				"category": "Morag",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "1CFA"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Luck",
+				"category": "Morag",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "1CFC"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "Morag",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1D0C"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Skill Points",
+				"category": "Morag",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1D14"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Total Skill Points",
+				"category": "Morag",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1D18"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Battle Exp",
+				"category": "Morag",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1D10"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Bravery",
+				"category": "Vandham",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "16C0"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Truth",
+				"category": "Vandham",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "16C8"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Compation",
+				"category": "Vandham",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "16D0"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Justice",
+				"category": "Vandham",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "16D8"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Max HP",
+				"category": "Vandham",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "11752"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Strength",
+				"category": "Vandham",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "1754"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Ether",
+				"category": "Vandham",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1756"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Dexterity",
+				"category": "Vandham",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "1758"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Agility",
+				"category": "Vandham",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "175A"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Luck",
+				"category": "Vandham",
+				"intArgs": [2, 2],
+				"strArgs": ["0000", "175C"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99
+				}
+			},
+			{
+				"name": "Exp",
+				"category": "Vandham",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "176C"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Skill Points",
+				"category": "Vandham",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1774"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Total Skill Points",
+				"category": "Vandham",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1778"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
+			},
+			{
+				"name": "Battle Exp",
+				"category": "Vandham",
+				"intArgs": [2, 4],
+				"strArgs": ["0000", "1770"],
+				"widget": {
+					"type": "int",
+					"minValue": 0,
+					"maxValue": 99999999
+				}
 			}
-		},
-		{
-			"name" : "Justice",
-						"category" : "Rex",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "58" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Exp",
-						"category" : "Rex",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "EC" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Max HP",
-						"category" : "Rex",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "D2" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Strength",
-						"category" : "Rex",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "D4" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Ether",
-						"category" : "Rex",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "D6" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Dexterity",
-						"category" : "Rex",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "D8" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Luck",
-						"category" : "Rex",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "DC" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Agility",
-						"category" : "Rex",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "DA" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Skill Points",
-						"category" : "Rex",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "F4" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Total Skill Points",
-						"category" : "Rex",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "F8" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Battle Exp",
-						"category" : "Rex",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "F0" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-		  "name" : "Bravery",
-			  "category" : "Nia",
-		  "intArgs" : [ 2, 4 ],
-		  "strArgs" : [ "0000", "5E0" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-		  }
-		},
-		{
-		  "name" : "Truth",
-			  "category" : "Nia",
-		  "intArgs" : [ 2, 4 ],
-		  "strArgs" : [ "0000", "5E8" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-		  }
-		},
-		{
-			"name" : "Compation",
-						"category" : "Nia",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "5F0" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Justice",
-						"category" : "Nia",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "5F8" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Max HP",
-						"category" : "Nia",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "672" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Strength",
-						"category" : "Nia",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "674" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Ether",
-						"category" : "Nia",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "676" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Dexterity",
-						"category" : "Nia",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "678" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Agility",
-						"category" : "Nia",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "67A" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Luck",
-						"category" : "Nia",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "67C" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Exp",
-						"category" : "Nia",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "68C" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Skill Points",
-						"category" : "Nia",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "694" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Total Skill Points",
-						"category" : "Nia",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "698" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Battle Exp",
-						"category" : "Nia",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "690" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-		  "name" : "Bravery",
-			  "category" : "Tora",
-		  "intArgs" : [ 2, 4 ],
-		  "strArgs" : [ "0000", "1120" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-		  }
-		},
-		{
-		  "name" : "Truth",
-			  "category" : "Tora",
-		  "intArgs" : [ 2, 4 ],
-		  "strArgs" : [ "0000", "1128" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-		  }
-		},
-		{
-			"name" : "Compation",
-						"category" : "Tora",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1130" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Justice",
-						"category" : "Tora",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1138" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Max HP",
-						"category" : "Tora",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "1182" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Strength",
-						"category" : "Tora",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "1184" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Ether",
-						"category" : "Tora",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "11B6" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Dexterity",
-						"category" : "Tora",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "11B8" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Agility",
-						"category" : "Tora",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "11BA" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Luck",
-						"category" : "Tora",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "11BC" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Exp",
-						"category" : "Tora",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "11CC" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Skill Points",
-						"category" : "Tora",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "11D4" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Total Skill Points",
-						"category" : "Tora",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "11D8" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Battle Exp",
-						"category" : "Tora",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "11D0" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-		  "name" : "Bravery",
-			  "category" : "Zeke",
-		  "intArgs" : [ 2, 4 ],
-		  "strArgs" : [ "0000", "B80" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-		  }
-		},
-		{
-		  "name" : "Truth",
-			  "category" : "Zeke",
-		  "intArgs" : [ 2, 4 ],
-		  "strArgs" : [ "0000", "B88" ],
-		  "widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-		  }
-		},
-		{
-			"name" : "Compation",
-						"category" : "Zeke",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "B90" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Justice",
-						"category" : "Zeke",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "B98" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Max HP",
-						"category" : "Zeke",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "C12" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Strength",
-						"category" : "Zeke",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "C14" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Ether",
-						"category" : "Zeke",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "C16" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Dexterity",
-						"category" : "Zeke",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "C18" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Agility",
-						"category" : "Zeke",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "C1A" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Luck",
-						"category" : "Zeke",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "C1C" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Exp",
-						"category" : "Zeke",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "C2C" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Skill Points",
-						"category" : "Zeke",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "C34" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Total Skill Points",
-						"category" : "Zeke",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "C38" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Battle Exp",
-						"category" : "Zeke",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "C30" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Bravery",
-						"category" : "Morag",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1C60" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Truth",
-						"category" : "Morag",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1C68" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Compation",
-						"category" : "Morag",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1C70" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Justice",
-						"category" : "Morag",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1C78" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Max HP",
-						"category" : "Morag",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "1CF2" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Strength",
-						"category" : "Morag",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "1CF4" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Ether",
-						"category" : "Morag",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1CF6" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Dexterity",
-						"category" : "Morag",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "1CF8" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Agility",
-						"category" : "Morag",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "1CFA" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Luck",
-						"category" : "Morag",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "1CFC" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Exp",
-						"category" : "Morag",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1D0C" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Skill Points",
-						"category" : "Morag",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1D14" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Total Skill Points",
-						"category" : "Morag",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1D18" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Battle Exp",
-						"category" : "Morag",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1D10" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Bravery",
-						"category" : "Vandham",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "16C0" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Truth",
-						"category" : "Vandham",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "16C8" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Compation",
-						"category" : "Vandham",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "16D0" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Justice",
-						"category" : "Vandham",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "16D8" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Max HP",
-						"category" : "Vandham",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "11752" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Strength",
-						"category" : "Vandham",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "1754" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Ether",
-						"category" : "Vandham",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1756" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Dexterity",
-						"category" : "Vandham",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "1758" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Agility",
-						"category" : "Vandham",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "175A" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Luck",
-						"category" : "Vandham",
-			"intArgs" : [ 2, 2 ],
-			"strArgs" : [ "0000", "175C" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99
-			}
-		},
-		{
-			"name" : "Exp",
-						"category" : "Vandham",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "176C" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Skill Points",
-						"category" : "Vandham",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1774" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Total Skill Points",
-						"category" : "Vandham",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1778" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		},
-		{
-			"name" : "Battle Exp",
-						"category" : "Vandham",
-			"intArgs" : [ 2, 4 ],
-			"strArgs" : [ "0000", "1770" ],
-			"widget" : {
-			"type" : "int",
-			"minValue" : 0,
-			"maxValue" : 99999999
-			}
-		}
 		]
 	}
 }
