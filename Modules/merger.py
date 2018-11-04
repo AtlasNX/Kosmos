@@ -7,7 +7,7 @@ import shutil
 
 modules = ["appstore", "bootlogo", "checkpoint", "edizon", "es_patches", 
         "fusee_atmosphere", "hbmenu", "hekate_payload", "must_have", 
-        "reinx", "sdfilesupdater", "sunpresence", "switchpresence", 
+        "marinanx", "reinx", "sdfilesupdater", "sunpresence", "switchpresence", 
         "sys-ftpd", "sys-netcheat", "xor.play", "sdfiles_toolkit", 
         "kip_patches", "tinfoil"] # Everything that will be merged together
 p2 = "compiled" # How the merged folder should be called
