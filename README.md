@@ -2,7 +2,7 @@ Kosmos, The All-in-One Package
 ===========================
 *formerly known as SDFilesSwitch*
 
-This handy All-in-One package includes everything you need to run Hekate / Atmosphere / ReiNX with some extra patches to enhance your experience.
+This handy All-in-One package includes everything you need to run Hekate / Atmosphere with some extra patches to enhance your experience.
 
 ## [Join us on Discord](https://discord.gg/qbRAuy7)
 
