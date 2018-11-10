@@ -4,10 +4,11 @@
 import subprocess as sbp
 import os
 import shutil
+import time
 
 modules = ["appstore", "bootlogo", "checkpoint", "edizon", "es_patches", 
         "hbmenu", "hekate_payload", "must_have", "kosmosupdater", 
-        "sys-ftpd", "sys-netcheat", "sdfiles_toolkit", "kip_patches", 
+        "sys-ftpd", "sys-netcheat", "sdfiles_toolkit", 
         "tinfoil"] # Everything that will be merged together
 p2 = "compiled" # How the merged folder should be called
 
@@ -36,5 +37,6 @@ for path in modules:
         p1 = os.path.join(path,i)
         p3 = 'cp -r ' + p1 +' ' + p2+'/.'
         sbp.Popen(p3,shell=True)
+        time.sleep(0.1)
 
 print("Done!")
