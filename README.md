@@ -1,5 +1,6 @@
-All-in-One Package ("SDFiles.zip")
+Kosmos, The All-in-One Package
 ===========================
+*formerly known as SDFilesSwitch*
 
 This handy All-in-One package includes everything you need to run Hekate / Atmosphere / ReiNX with some extra patches to enhance your experience.
 
@@ -13,7 +14,6 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * Game Mods
 * A background FTP-Server
 * Atmosphere
-* ReiNX
 * Signature Patches
 * NSP Installation
 * Automatic Updating through your console
@@ -21,9 +21,7 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * Full Atmosphere
 * Completely modular
 * Drag and drop
-* Background audio-player
 * Background netcheat system
-* Discord Rich Presence integration
 * Auto-boot selection through Horizon
 * Module selection through Horizon
 **and much more!**
@@ -31,7 +29,7 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 
 ## How to use
 1. Download [Hekate](https://github.com/CTCaer/hekate/releases) or use the payload that comes with the package
-2. Download the [latest release](https://github.com/tumGER/SDFilesSwitch/releases) and extract it to the root of your Switch SD card
+2. Download the [latest release](https://github.com/tumGER/Kosmos/releases) and extract it to the root of your Switch SD card
 3. Start hekate through e.g. [Fusée Gelée](https://github.com/reswitched/fusee-launcher), [TegraRcmSmash](https://switchtools.sshnuke.net/) or [WebCFWLoader](https://elijahzawesome.github.io/web-cfw-loader/)
 4. ???
 5. Profit!
@@ -42,9 +40,6 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * [Switch Homebrew Loader](https://github.com/switchbrew/nx-hbloader)
 * [AppstoreNX](https://github.com/vgmoose/appstorenx)
 * [EdiZon](https://github.com/thomasnet-mc/EdiZon)
-* [SDFilesUpdater](https://github.com/StevenMattera/SDFilesUpdater)
+* [KosmosUpdater](https://github.com/StevenMattera/SDFilesUpdater)
 * [Sys-FTPD](https://github.com/jakibaki/sys-ftpd)
-* [ReiNX](https://github.com/Reisyukaku/ReiNX)
-* [SwitchPresence Fork](https://github.com/SunTheCourier/SwitchPresence)
-* [xor:play](https://github.com/XorTroll/ModuleMania/tree/master/xor.play)
 * [Checkpoint](https://github.com/BernardoGiordano/Checkpoint)
