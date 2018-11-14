@@ -30,7 +30,7 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 
 ## How to use
 1. Download [Hekate](https://github.com/CTCaer/hekate/releases) or use the payload that comes with the package
-2. Download the [latest release](https://github.com/tumGER/Kosmos/releases) and extract it to the root of your Switch SD card
+2. Download the [latest release](https://github.com/AtlasNX/Kosmos/releases) and extract it to the root of your Switch SD card
 3. Start hekate through e.g. [Fusée Gelée](https://github.com/reswitched/fusee-launcher), [TegraRcmSmash](https://switchtools.sshnuke.net/) or [WebCFWLoader](https://elijahzawesome.github.io/web-cfw-loader/)
 4. ???
 5. Profit!
