@@ -5,6 +5,7 @@ Kosmos, The All-in-One Package
 This handy All-in-One package includes everything you need to run Hekate / Atmosphere with some extra patches to enhance your experience.
 
 ## [Join us on Discord](https://discord.gg/qbRAuy7)
+## [Donations](https://www.patreon.com/atlasnx)
 
 ## Features
 * Up-to-date package
