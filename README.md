@@ -44,3 +44,4 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * [KosmosUpdater](https://github.com/StevenMattera/SDFilesUpdater)
 * [Sys-FTPD](https://github.com/jakibaki/sys-ftpd)
 * [Checkpoint](https://github.com/BernardoGiordano/Checkpoint)
+* [CFW-Settings](https://github.com/AtlasNX/CFW-Settings)
