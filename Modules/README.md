@@ -9,6 +9,6 @@ sys-netcheat | netcheat sys-module by jakibaki
 edizon | EdiZon
 appstore | AppstoreNX
 Checkpoint | Save File Manager
-KosmosUpdater | The Kosmos homebrew
+KosmosUpdater | A homebrew for directly updating Kosmos
 hbmenu | The homebrew menu
 kosmos_toolkit | Homebrew for modifying CFW settings
