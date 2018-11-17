@@ -13,15 +13,17 @@ modules = ["appstore", "bootlogo", "checkpoint", "edizon", "es_patches",
 p2 = "compiled" # How the merged folder should be called
 
 print("""
-                        https://github.com/tumGER/
-   _____ _____  ______ _ _            _____         _ _       _     
-  / ____|  __ \|  ____(_) |          / ____|       (_) |     | |    
- | (___ | |  | | |__   _| | ___  ___| (_____      ___| |_ ___| |__  
-  \___ \| |  | |  __| | | |/ _ \/ __|\___ \ \ /\ / / | __/ __| '_ \ 
-  ____) | |__| | |    | | |  __/\__ \____) \ V  V /| | || (__| | | |
- |_____/|_____/|_|    |_|_|\___||___/_____/ \_/\_/ |_|\__\___|_| |_|
+                        https://github.com/AtlasNX/Kosmos
+
+ ____  __.                                 
+|    |/ _|____  ______ _____   ____  ______
+|      < /  _ \/  ___//     \ /  _ \/  ___/
+|    |  (  <_> )___ \|  Y Y  (  <_> )___ \ 
+|____|__ \____/____  >__|_|  /\____/____  >
+        \/         \/      \/           \/ 
+
                                                                     
-                    By: @_tomGER (tumGER on Github)
+                    By: @AtlasNX (AtlasNX/Kosmos on Github)
 
 It could be that a permissions error will pop up, fix it by restarting the python script! We don\'t really know why that happens!
 """) # Fancy stuff
