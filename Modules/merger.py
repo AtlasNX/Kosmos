@@ -8,7 +8,7 @@ import time
 
 modules = ["appstore", "bootlogo", "checkpoint", "edizon", "es_patches", 
         "hbmenu", "hekate_payload", "must_have", "kosmosupdater", 
-        "sys-ftpd", "sys-netcheat", "sdfiles_toolkit", 
+        "sys-ftpd", "sys-netcheat", "kosmos_toolkit", 
         "tinfoil"] # Everything that will be merged together
 p2 = "compiled" # How the merged folder should be called
 
