@@ -13,6 +13,6 @@ Licenses
 * Hekate is licensed under [GPLv2](https://github.com/CTCaer/hekate/blob/master/LICENSE)
 * Checkpoint is licensed under [GPLv3](https://github.com/BernardoGiordano/Checkpoint/blob/master/LICENSE)
 * Noexes is licensed under [GPLv3](https://github.com/mdbell/Noexes/blob/master/LICENSE)
-* ES Patches were/are made by @The-4n and are not licensed - However permissions have been granted by the respected creator for usage in this project.
+* Ldn_mitm is licensed under [GPLv2](https://github.com/spacemeowx2/ldn_mitm/blob/master/LICENSE)
 
 All patches made to the original software respect their original license.
