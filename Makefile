@@ -81,7 +81,6 @@ tinfoil:
 	mkdir out/sd/switch/Tinfoil/
 	cp apps/Tinfoil/Tinfoil.nro out/sd/switch/Tinfoil/
 
-
 clean:
 	$(MAKE) -C apps/hekate clean
 	$(MAKE) -C apps/Atmosphere clean
