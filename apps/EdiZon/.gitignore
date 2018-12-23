@@ -1,7 +1,0 @@
-###################
-#.gitignore       #
-###################
-
-build/
-out/
-.build-tools.cson

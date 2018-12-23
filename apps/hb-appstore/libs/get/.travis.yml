@@ -1,8 +1,0 @@
-language: c++
-sudo: required
-matrix:
-  include:
-    - os: linux
-      dist: xenial
-
-script: make && make run_tests

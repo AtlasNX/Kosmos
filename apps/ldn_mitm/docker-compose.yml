@@ -1,8 +1,0 @@
-version: "2"
-
-services:
-  devkit:
-    build: .
-    volumes:
-      - ".:/code"
-    command: make

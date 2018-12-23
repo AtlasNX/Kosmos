@@ -1,9 +1,0 @@
-build/
-*.elf
-*.nso
-*.npdm
-*.nsp
-*.pfs0
-*.db
-*.zip
-*~

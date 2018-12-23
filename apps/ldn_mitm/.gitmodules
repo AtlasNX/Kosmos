@@ -1,4 +1,0 @@
-[submodule "libstratosphere"]
-	path = libstratosphere
-	url = https://github.com/spacemeowx2/libstratosphere.git
-	branch = ipc-smart
