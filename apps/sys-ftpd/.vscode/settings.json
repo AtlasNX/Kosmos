@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "__locale": "c",
+        "stdlib.h": "c",
+        "inet.h": "c",
+        "__bit_reference": "c",
+        "bitset": "c",
+        "chrono": "c",
+        "dirent.h": "c",
+        "stdio.h": "c",
+        "string.h": "c",
+        "mp3.h": "c",
+        "__string": "c",
+        "string": "c",
+        "string_view": "c",
+        "ios": "c",
+        "ftp.h": "c"
+    }
+}

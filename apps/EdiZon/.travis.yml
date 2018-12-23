@@ -1,0 +1,11 @@
+language: cpp
+cache:
+  directories:
+    - /opt/devkitpro/pacman/var/cache/pacman/pkg/
+before_install:
+  - wget https://github.com/devkitPro/pacman/releases/download/devkitpro-pacman-1.0.1/devkitpro-pacman.deb
+  - sudo dpkg -i devkitpro-pacman.deb
+  - sudo dkp-pacman -S switch-{dev,curl,freetype} --noconfirm
+  - source /etc/profile.d/devkit-env.sh
+script:
+  - make

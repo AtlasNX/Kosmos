@@ -1,0 +1,3 @@
+[submodule "libs/get"]
+	path = libs/get
+	url = https://github.com/vgmoose/get.git

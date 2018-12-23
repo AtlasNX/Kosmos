@@ -1,0 +1,19 @@
+{
+    "repos": [
+        {
+            "name": "Test Repo A",
+            "url": "http://127.0.0.1:8000/a",
+            "enabled": true
+        },
+        {
+            "name": "Test Repo B",
+            "url": "http://127.0.0.1:8000/b",
+            "enabled": false
+        },
+        {
+            "name": "Ignore me",
+            "url": "badurl",
+            "enabled": false
+        }
+    ]
+}

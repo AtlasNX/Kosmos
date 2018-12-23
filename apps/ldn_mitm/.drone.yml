@@ -1,0 +1,26 @@
+clone:
+  git:
+    image: plugins/git
+    tags: true
+
+pipeline:
+  build:
+    image: devkitpro/devkita64_devkitarm:20181128
+    commands:
+      - make -j8
+  rename:
+    image: alpine
+    commands:
+      - mv ./ldn_mitm/ldn_mitm.kip ./ldn_mitm/ldn_mitm_${DRONE_TAG}.kip
+    when:
+      event: tag
+  github_pre_release:
+    image: plugins/github-release
+    secrets: [ github_token ]
+    files:
+      - ldn_mitm/ldn_mitm*.kip
+    checksum:
+       - sha1
+    prerelease: true
+    when:
+      event: tag

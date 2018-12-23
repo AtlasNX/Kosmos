@@ -1,0 +1,8 @@
+Language: Cpp
+BasedOnStyle: WebKit
+BreakBeforeBraces: Allman
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+AlignTrailingComments: true
+TabWidth: 4
+UseTab: Always

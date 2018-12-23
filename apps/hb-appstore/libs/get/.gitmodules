@@ -1,0 +1,7 @@
+[submodule "src/libs/rapidjson"]
+	path = src/libs/rapidjson
+	url = https://github.com/Tencent/rapidjson.git
+
+[submodule "src/libs/zlib"]
+	path = src/libs/zlib
+	url = https://github.com/madler/zlib.git

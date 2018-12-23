@@ -1,0 +1,16 @@
+language: c++
+sudo: required
+matrix:
+  include:
+    - os: linux
+      dist: xenial
+addons:
+  apt:
+    packages:
+      - libsdl2-dev
+      - libsdl2-image-dev
+      - libsdl2-gfx-dev
+      - libsdl2-ttf-dev
+      - zlib1g-dev
+
+script: make -f Makefile.pc

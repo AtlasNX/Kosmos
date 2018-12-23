@@ -1,0 +1,15 @@
+*~
+*.exe
+*.o
+test
+tahoma12.c
+tahoma24.c
+*.zip
+build
+*.elf
+*.nso
+*.pfs0
+*.nacp
+*.nro
+test.*
+switch
