@@ -1,0 +1,36 @@
+[submodule "apps/Atmosphere"]
+	path = apps/Atmosphere
+	url = https://github.com/Atmosphere-NX/Atmosphere.git
+[submodule "apps/CFW-Settings"]
+	path = apps/CFW-Settings
+	url = https://github.com/AtlasNX/CFW-Settings.git
+[submodule "apps/EdiZon"]
+	path = apps/EdiZon
+	url = https://github.com/WerWolv98/EdiZon.git
+[submodule "apps/Kosmos-Updater"]
+	path = apps/Kosmos-Updater
+	url = https://github.com/AtlasNX/Kosmos-Updater.git
+[submodule "apps/Tinfoil"]
+	path = apps/Tinfoil
+	url = https://github.com/Adubbz/Tinfoil.git
+[submodule "apps/hb-appstore"]
+	path = apps/hb-appstore
+	url = https://github.com/vgmoose/hb-appstore.git
+[submodule "apps/hekate"]
+	path = apps/hekate
+	url = https://github.com/CTCaer/hekate.git
+[submodule "apps/ldn_mitm"]
+	path = apps/ldn_mitm
+	url = https://github.com/spacemeowx2/ldn_mitm.git
+[submodule "apps/nx-hbmenu"]
+	path = apps/nx-hbmenu
+	url = https://github.com/switchbrew/nx-hbmenu.git
+[submodule "apps/nx-hbloader"]
+	path = apps/nx-hbloader
+	url = https://github.com/switchbrew/nx-hbloader.git
+[submodule "apps/sys-ftpd"]
+	path = apps/sys-ftpd
+	url = https://github.com/jakibaki/sys-ftpd.git
+[submodule "apps/sys-netcheat"]
+	path = apps/sys-netcheat
+	url = https://github.com/jakibaki/sys-netcheat.git
