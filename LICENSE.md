@@ -8,7 +8,7 @@ Licenses
 * EdiZon is licensed under [MIT](https://github.com/thomasnet-mc/EdiZon/blob/master/LICENSE)
 * SDFilesUpdater is licensed under [GPLv2](https://github.com/StevenMattera/SDFilesUpdater/blob/master/LICENSE)
 * Sys-FTPD is licensed under [GPLv3](https://github.com/jakibaki/sys-ftpd/blob/master/LICENSE)
-* Tinfoil is licensed under [GPLv3](https://github.com/Adubbz/Tinfoil/blob/master/LICENSE)
+* Goldleaf is licensed under [GPLv3](https://github.com/Adubbz/Tinfoil/blob/master/LICENSE)
 * Sys-Netcheat is licensed under [GPLv3](https://github.com/jakibaki/sys-netcheat/blob/master/LICENSE)
 * Hekate is licensed under [GPLv2](https://github.com/CTCaer/hekate/blob/master/LICENSE)
 * Checkpoint is licensed under [GPLv3](https://github.com/BernardoGiordano/Checkpoint/blob/master/LICENSE)
