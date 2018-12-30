@@ -1,241 +1,245 @@
 {
+	"author": "madhatter",
+	"scriptLanguage": "lua",
 	"beta": false,
-	"all": {
-		"saveFilePaths": [""],
-		"files": "save\\d\\d\\d\\d\\.sav",
-		"filetype": "bin",
-		"items": [
-			{
-				"name": "Halos",
-				"category": "Halos",
-				"intArgs": [2, 4],
-				"strArgs": ["0000", "A3B0"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99999999
+	"all": [
+		{
+			"saveFilePaths": [""],
+			"files": "save\\d\\d\\d\\d\\.sav",
+			"filetype": "bin",
+			"items": [
+				{
+					"name": "Halos",
+					"category": "Halos",
+					"intArgs": [2, 4],
+					"strArgs": ["0000", "A3B0"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999999
+					}
+				},
+				{
+					"name": "Mandragora Root",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A3E4"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Baked Gecko",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A3DC"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Unicorn Horn",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A3D4"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Yellow Moon Lollipop",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A3EC"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Mega Bloody Rose Lollipop",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A3F4"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Bloody Rose Lollipop",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A3FC"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Mega Purple Magic Lollipop",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A404"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Purple Magic Lollipop",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A40C"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Mega Green Herb Lollipop",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A414"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Green Herb Lollipop",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A41C"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "item 11",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A424"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "item 12",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A42C"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Witchs Recipes",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A434"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "item 14",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A43C"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "item 15",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A444"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "item 16",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A44C"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "item 17",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A454"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "item 18",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A45C"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "item 19",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A464"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "item 20",
+					"category": "Items",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "A46C"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99
+					}
 				}
-			},
-			{
-				"name": "Mandragora Root",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A3E4"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Baked Gecko",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A3DC"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Unicorn Horn",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A3D4"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Yellow Moon Lollipop",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A3EC"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Mega Bloody Rose Lollipop",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A3F4"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Bloody Rose Lollipop",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A3FC"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Mega Purple Magic Lollipop",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A404"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Purple Magic Lollipop",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A40C"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Mega Green Herb Lollipop",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A414"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Green Herb Lollipop",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A41C"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "item 11",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A424"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "item 12",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A42C"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Witchs Recipes",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A434"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "item 14",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A43C"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "item 15",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A444"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "item 16",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A44C"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "item 17",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A454"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "item 18",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A45C"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "item 19",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A464"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "item 20",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "A46C"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			}
-		]
-	}
+			]
+		}
+	]
 }

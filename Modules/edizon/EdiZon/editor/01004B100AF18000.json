@@ -1,637 +1,640 @@
 {
+    "author": "findonovan95",
+	"scriptLanguage": "lua",
 	"beta": true,
-	"all": {
-		"saveFilePaths": [""],
-		"files": "save.001",
-		"filetype": "bin",
-		"items": [
-			{
-				"name": "HL",
-				"category": "Money",
-				"intArgs": [0, 8],
-				"strArgs": ["0000", "0290"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 9999999999999
-				}
-            },
-            {
-                "name": "HP",
-				"category": "Laharl",
-				"intArgs": [0, 4],
-				"strArgs": ["0000", "1184"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 10000000
-				}
-            },
-            {
-                "name": "Mana",
-				"category": "Laharl",
-				"intArgs": [0, 4],
-				"strArgs": ["0000", "11E4"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 9999999
-				}
-            },
-            {
-                "name": "SP",
-				"category": "Laharl",
-				"intArgs": [0, 4],
-				"strArgs": ["0000", "1180"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 10000000
-				}
-            },
-            {
-                "name": "ATT",
-				"category": "Laharl",
-				"intArgs": [0, 4],
-				"strArgs": ["0000", "118C"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 10000000
-				}
-            },
-            {
-                "name": "DEF",
-				"category": "Laharl",
-				"intArgs": [0, 4],
-				"strArgs": ["0000", "1190"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 10000000
-				}
-            },
-            {
-                "name": "HIT",
-				"category": "Laharl",
-				"intArgs": [0, 4],
-				"strArgs": ["0000", "119C"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 10000000
-				}
-            },
-            {
-                "name": "INT",
-				"category": "Laharl",
-				"intArgs": [0, 4],
-				"strArgs": ["0000", "1184"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 10000000
-				}
-            },
-            {
-                "name": "SPD",
-				"category": "Laharl",
-				"intArgs": [0, 4],
-				"strArgs": ["0000", "1198"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 10000000
-				}
-            },
-            {
-                "name": "RES",
-				"category": "Laharl",
-				"intArgs": [0, 4],
-				"strArgs": ["0000", "11A8"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 10000000
-				}
-            },
-            {
-                
-                "name": "Value",
-				"category": "Laharl's Main Weapon",
-				"intArgs": [0, 4],
-				"strArgs": ["0000", "0C00"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 268435455
-                    }
-				},
+	"all": [
+        {
+            "saveFilePaths": [""],
+            "files": "save.001",
+            "filetype": "bin",
+            "items": [
                 {
-
-                "name": "HP",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 4],
-                "strArgs": ["0000", "0C08"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 2000000
+                    "name": "HL",
+                    "category": "Money",
+                    "intArgs": [0, 8],
+                    "strArgs": ["0000", "0290"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 9999999999999
                     }
                 },
                 {
-
-                "name": "SP",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 4],
-                "strArgs": ["0000", "0C0C"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 2000000
+                    "name": "HP",
+                    "category": "Laharl",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "1184"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 10000000
                     }
                 },
                 {
-
-                "name": "ATT",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 4],
-                "strArgs": ["0000", "0C10"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 2000000
+                    "name": "Mana",
+                    "category": "Laharl",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "11E4"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 9999999
                     }
                 },
                 {
-
-                "name": "DEF",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 4],
-                "strArgs": ["0000", "0C14"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 2000000
+                    "name": "SP",
+                    "category": "Laharl",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "1180"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 10000000
                     }
                 },
                 {
-
-                "name": "INT",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 4],
-                "strArgs": ["0000", "0C18"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 2000000
+                    "name": "ATT",
+                    "category": "Laharl",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "118C"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 10000000
                     }
                 },
                 {
-
-                "name": "SPD",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 4],
-                "strArgs": ["0000", "0C1C"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 2000000
+                    "name": "DEF",
+                    "category": "Laharl",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "1190"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 10000000
                     }
                 },
                 {
-
-                "name": "HIT",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 4],
-                "strArgs": ["0000", "0C20"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 2000000
+                    "name": "HIT",
+                    "category": "Laharl",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "119C"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 10000000
                     }
                 },
                 {
-
-                "name": "RES",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 4],
-                "strArgs": ["0000", "0C24"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 2000000
+                    "name": "INT",
+                    "category": "Laharl",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "1184"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 10000000
                     }
                 },
                 {
-
-                "name": "Specialist 1 - Value",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 2],
-                "strArgs": ["0000", "0BC0"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
+                    "name": "SPD",
+                    "category": "Laharl",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "1198"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 10000000
                     }
                 },
                 {
-
-                "name": "Specialist 2 - Value",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 2],
-                "strArgs": ["0000", "0BC4"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
+                    "name": "RES",
+                    "category": "Laharl",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "11A8"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 10000000
                     }
                 },
                 {
+                    
+                    "name": "Value",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "0C00"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 268435455
+                        }
+                    },
+                    {
 
-                "name": "Specialist 3 - Value",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 2],
-                "strArgs": ["0000", "0BC8"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
-                    }
-                },
-                {
+                    "name": "HP",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "0C08"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 2000000
+                        }
+                    },
+                    {
 
-                "name": "Specialist 4 - Value",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 2],
-                "strArgs": ["0000", "0BCC"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
-                    }
-                },
-                {
+                    "name": "SP",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "0C0C"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 2000000
+                        }
+                    },
+                    {
 
-                "name": "Specialist 5 - Value",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 2],
-                "strArgs": ["0000", "0BD0"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
-                    }
-                },
-                {
+                    "name": "ATT",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "0C10"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 2000000
+                        }
+                    },
+                    {
 
-                "name": "Specialist 6 - Value",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 2],
-                "strArgs": ["0000", "0BD4"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
-                    }
-                },
-                {
+                    "name": "DEF",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "0C14"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 2000000
+                        }
+                    },
+                    {
 
-                "name": "Specialist 7 - Value",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 2],
-                "strArgs": ["0000", "0BD8"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
-                    }
-                },
-                {
+                    "name": "INT",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "0C18"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 2000000
+                        }
+                    },
+                    {
 
-                "name": "Specialist 8 - Value",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 2],
-                "strArgs": ["0000", "0BDC"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
-                    }
-                },
-                {
+                    "name": "SPD",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "0C1C"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 2000000
+                        }
+                    },
+                    {
 
-                "name": "Specialist 1 - Type",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0BC2"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "HIT",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "0C20"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 2000000
+                        }
+                    },
+                    {
 
-                "name": "Specialist 2 - Type",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0BC6"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "RES",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 4],
+                    "strArgs": ["0000", "0C24"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 2000000
+                        }
+                    },
+                    {
 
-                "name": "Specialist 3 - Type",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0BCA"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "Specialist 1 - Value",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 2],
+                    "strArgs": ["0000", "0BC0"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
 
-                "name": "Specialist 4 - Type",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0BCE"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "Specialist 2 - Value",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 2],
+                    "strArgs": ["0000", "0BC4"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
 
-                "name": "Specialist 5 - Type",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0BD2"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "Specialist 3 - Value",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 2],
+                    "strArgs": ["0000", "0BC8"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
 
-                "name": "Specialist 6 - Type",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0BD6"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "Specialist 4 - Value",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 2],
+                    "strArgs": ["0000", "0BCC"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
 
-                "name": "Specialist 7 - Type",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0BDA"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "Specialist 5 - Value",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 2],
+                    "strArgs": ["0000", "0BD0"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
 
-                "name": "Specialist 8 - Type",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0BDE"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "Specialist 6 - Value",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 2],
+                    "strArgs": ["0000", "0BD4"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
 
-                "name": "POP",
-                "category": "Laharl's Main Weapon",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C41"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 8
-                    }
-                },
-                {
+                    "name": "Specialist 7 - Value",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 2],
+                    "strArgs": ["0000", "0BD8"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
 
-                "name": "Specialist 1 - Type",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C50"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "Specialist 8 - Value",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 2],
+                    "strArgs": ["0000", "0BDC"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
 
-                "name": "Specialist 2 - Type",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C54"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "Specialist 1 - Type",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0BC2"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
 
-                "name": "Specialist 3 - Type",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C58"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "Specialist 2 - Type",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0BC6"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
 
-                "name": "Specialist 4 - Type",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C5C"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "Specialist 3 - Type",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0BCA"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
 
-                "name": "Specialist 5 - Type",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C60"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "Specialist 4 - Type",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0BCE"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
 
-                "name": "Specialist 6 - Type",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C64"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "Specialist 5 - Type",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0BD2"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
 
-                "name": "Specialist 7 - Type",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C68"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "Specialist 6 - Type",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0BD6"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
 
-                "name": "Specialist 8 - Type",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C6C"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 65
-                    }
-                },
-                {
+                    "name": "Specialist 7 - Type",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0BDA"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
 
-                "name": "Specialist 1 - Value",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C4E"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
-                    }
-                },
-                {
+                    "name": "Specialist 8 - Type",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0BDE"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
 
-                "name": "Specialist 2 - Value",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C52"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
-                    }
-                },
-                {
+                    "name": "POP",
+                    "category": "Laharl's Main Weapon",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C41"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 8
+                        }
+                    },
+                    {
 
-                "name": "Specialist 3 - Value",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C56"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
-                    }
-                },
-                {
+                    "name": "Specialist 1 - Type",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C50"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
 
-                "name": "Specialist 4 - Value",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C5A"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
-                    }
-                },
-                {
+                    "name": "Specialist 2 - Type",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C54"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
 
-                "name": "Specialist 5 - Value",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C5E"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
-                    }
-                },
-                {
+                    "name": "Specialist 3 - Type",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C58"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
 
-                "name": "Specialist 6 - Value",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C62"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
-                    }
-                },
-                {
+                    "name": "Specialist 4 - Type",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C5C"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
 
-                "name": "Specialist 7 - Value",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C66"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
-                    }
-                },
-                {
+                    "name": "Specialist 5 - Type",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C60"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
 
-                "name": "Specialist 8 - Value",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0C6A"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 19999
-                    }
-                },
-                {
+                    "name": "Specialist 6 - Type",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C64"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
 
-                "name": "POP",
-                "category": "Laharl's Item - Other #1",
-                "intArgs": [0, 1],
-                "strArgs": ["0000", "0CCF"],
-                "widget": {
-                    "type": "int",
-                    "minValue": 0,
-                    "maxValue": 8
+                    "name": "Specialist 7 - Type",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C68"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
+
+                    "name": "Specialist 8 - Type",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C6C"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 65
+                        }
+                    },
+                    {
+
+                    "name": "Specialist 1 - Value",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C4E"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
+
+                    "name": "Specialist 2 - Value",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C52"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
+
+                    "name": "Specialist 3 - Value",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C56"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
+
+                    "name": "Specialist 4 - Value",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C5A"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
+
+                    "name": "Specialist 5 - Value",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C5E"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
+
+                    "name": "Specialist 6 - Value",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C62"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
+
+                    "name": "Specialist 7 - Value",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C66"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
+
+                    "name": "Specialist 8 - Value",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0C6A"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 19999
+                        }
+                    },
+                    {
+
+                    "name": "POP",
+                    "category": "Laharl's Item - Other #1",
+                    "intArgs": [0, 1],
+                    "strArgs": ["0000", "0CCF"],
+                    "widget": {
+                        "type": "int",
+                        "minValue": 0,
+                        "maxValue": 8
                     }
                 }
-                
-		]
-	}
+            ]
+        }
+    ]
 }

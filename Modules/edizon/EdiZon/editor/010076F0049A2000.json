@@ -1,197 +1,305 @@
 {
-	"beta": true,
-	"all": {
-		"saveFilePaths": [""],
-		"files": "File\\d+\\data00",
-		"filetype": "bin",
-		"items": [
-			{
-				"name": "Halos",
-				"category": "Halos",
-				"intArgs": [2, 4],
-				"strArgs": ["0000", "EF64"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 9999
-				}
-			},
-			{
-				"name": "Compound Green",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EF7C"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Compound Yellow",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EF78"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Compound Red",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EF80"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Green Herb",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EF84"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Mega Green Herb",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EF88"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Purple_Magic",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EF8C"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Mega Purple Magic",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EF90"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Bloody Rose",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EF94"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Mega Bloody Rose",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EF98"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Yellow Moon",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EF9C"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Mega Yellow Moon",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EFA0"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Broken Heart",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EFA4"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Broken Pearl",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EFA8"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Arcade Bullet",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EFAC"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Red Hot Shot",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EFB0"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Magic Flute",
-				"category": "Items",
-				"intArgs": [2, 2],
-				"strArgs": ["0000", "EFB4"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99
-				}
-			}
-		]
-	}
+  "author": "madhatter",
+	"scriptLanguage": "lua",
+  "beta": true,
+  "all": [
+    {
+      "saveFilePaths": [
+        ""
+      ],
+      "files": "data00",
+      "filetype": "bin",
+      "items": [
+        {
+          "name": "Halos",
+          "category": "Halos",
+          "intArgs": [
+            2,
+            4
+          ],
+          "strArgs": [
+            "0000",
+            "EF64"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 9999
+          }
+        },
+        {
+          "name": "Compound Green",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EF7C"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Compound Yellow",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EF78"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Compound Red",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EF80"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Green Herb",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EF84"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Mega Green Herb",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EF88"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Purple_Magic",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EF8C"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Mega Purple Magic",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EF90"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Bloody Rose",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EF94"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Mega Bloody Rose",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EF98"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Yellow Moon",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EF9C"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Mega Yellow Moon",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EFA0"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Broken Heart",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EFA4"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Broken Pearl",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EFA8"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Arcade Bullet",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EFAC"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Red Hot Shot",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EFB0"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        },
+        {
+          "name": "Magic Flute",
+          "category": "Items",
+          "intArgs": [
+            2,
+            2
+          ],
+          "strArgs": [
+            "0000",
+            "EFB4"
+          ],
+          "widget": {
+            "type": "int",
+            "minValue": 0,
+            "maxValue": 99
+          }
+        }
+      ]
+    }
+  ]
 }

@@ -1,109 +1,113 @@
 {
+	"author": "jonyluke",
+	"scriptLanguage": "lua",
 	"beta": true,
-	"all": {
-		"saveFilePaths": [""],
-		"files": "GAMEDATA.bin",
-		"filetype": "bin",
-		"items": [
-			{
-				"name": "Bolt",
-				"category": "Money",
-				"intArgs": [2, 4],
-				"strArgs": ["0000", "0B00"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 999999
+	"all": [
+		{
+			"saveFilePaths": [""],
+			"files": "GAMEDATA.bin",
+			"filetype": "bin",
+			"items": [
+				{
+					"name": "Bolt",
+					"category": "Money",
+					"intArgs": [2, 4],
+					"strArgs": ["0000", "0B00"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 999999
+					}
+				},
+				{
+					"name": "1-UP",
+					"category": "Items",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "0CB0"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 9
+					}
+				},
+				{
+					"name": "Energy Tank",
+					"category": "Items",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "0CB8"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 6
+					}
+				},
+				{
+					"name": "Weapon Tank",
+					"category": "Items",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "0CC8"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 6
+					}
+				},
+				{
+					"name": "Mistery Tank",
+					"category": "Items",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "0CC0"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 1
+					}
+				},
+				{
+					"name": "Super Guard",
+					"category": "Support",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "0CE0"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 1
+					}
+				},
+				{
+					"name": "Eddie Call",
+					"category": "Support",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "0CF0"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 1
+					}
+				},
+				{
+					"name": "Pierce Protector",
+					"category": "Support",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "0CD8"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 3
+					}
+				},
+				{
+					"name": "Beat Call",
+					"category": "Support",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "0CF8"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 1
+					}
 				}
-			},
-			{
-				"name": "1-UP",
-				"category": "Items",
-				"intArgs": [2, 1],
-				"strArgs": ["0000", "0CB0"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 9
-				}
-			},
-			{
-				"name": "Energy Tank",
-				"category": "Items",
-				"intArgs": [2, 1],
-				"strArgs": ["0000", "0CB8"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 6
-				}
-			},
-			{
-				"name": "Weapon Tank",
-				"category": "Items",
-				"intArgs": [2, 1],
-				"strArgs": ["0000", "0CC8"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 6
-				}
-			},
-			{
-				"name": "Mistery Tank",
-				"category": "Items",
-				"intArgs": [2, 1],
-				"strArgs": ["0000", "0CC0"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 1
-				}
-			},
-			{
-				"name": "Super Guard",
-				"category": "Support",
-				"intArgs": [2, 1],
-				"strArgs": ["0000", "0CE0"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 1
-				}
-			},
-			{
-				"name": "Eddie Call",
-				"category": "Support",
-				"intArgs": [2, 1],
-				"strArgs": ["0000", "0CF0"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 1
-				}
-			},
-			{
-				"name": "Pierce Protector",
-				"category": "Support",
-				"intArgs": [2, 1],
-				"strArgs": ["0000", "0CD8"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 3
-				}
-			},
-			{
-				"name": "Beat Call",
-				"category": "Support",
-				"intArgs": [2, 1],
-				"strArgs": ["0000", "0CF8"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 1
-				}
-			}
-		]
-	}
+			]
+		}
+	]
 }

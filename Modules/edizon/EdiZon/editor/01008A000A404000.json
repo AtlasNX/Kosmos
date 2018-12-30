@@ -1,120 +1,124 @@
 {
+	"author": "mrLewisFC",
+	"scriptLanguage": "lua",
 	"beta": true,
-	"all": {
-		"saveFilePaths": [""],
-		"files": "MySaveData\\d",
-		"filetype": "bin",
-		"items": [
-			{
-				"name": "Money",
-				"category": "1. Inventory",
-				"intArgs": [2, 4],
-				"strArgs": ["0000", "0010"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99999999
+	"all": [
+		{
+			"saveFilePaths": [""],
+			"files": "MySaveData\\d",
+			"filetype": "bin",
+			"items": [
+				{
+					"name": "Money",
+					"category": "1. Inventory",
+					"intArgs": [2, 4],
+					"strArgs": ["0000", "0010"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999999
+					}
+				},
+				{
+					"name": "Blue Karma",
+					"category": "1. Inventory",
+					"intArgs": [2, 4],
+					"strArgs": ["0000", "0004"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999999
+					}
+				},
+				{
+					"name": "Purple Karma",
+					"category": "1. Inventory",
+					"intArgs": [2, 4],
+					"strArgs": ["0000", "0008"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999999
+					}
+				},
+				{
+					"name": "Red Karma",
+					"category": "1. Inventory",
+					"intArgs": [2, 4],
+					"strArgs": ["0000", "000C"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999999
+					}
+				},
+				{
+					"name": "Level",
+					"category": "2. Hayato",
+					"intArgs": [3, 4],
+					"strArgs": ["000000", "0146D4"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999
+					}
+				},
+				{
+					"name": "HP",
+					"category": "2. Hayato",
+					"intArgs": [3, 4],
+					"strArgs": ["000000", "0146D8"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 640019
+					}
+				},
+				{
+					"name": "MP",
+					"category": "2. Hayato",
+					"intArgs": [3, 4],
+					"strArgs": ["000000", "0146DC"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 999999
+					}
+				},
+				{
+					"name": "Level",
+					"category": "3. Lua",
+					"intArgs": [3, 4],
+					"strArgs": ["000000", "01497B"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999
+					}
+				},
+				{
+					"name": "HP",
+					"category": "3. Lua",
+					"intArgs": [3, 4],
+					"strArgs": ["000000", "01497F"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 544016
+					}
+				},
+				{
+					"name": "MP",
+					"category": "3. Lua",
+					"intArgs": [3, 4],
+					"strArgs": ["000000", "014983"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 999999
+					}
 				}
-			},
-			{
-				"name": "Blue Karma",
-				"category": "1. Inventory",
-				"intArgs": [2, 4],
-				"strArgs": ["0000", "0004"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99999999
-				}
-			},
-			{
-				"name": "Purple Karma",
-				"category": "1. Inventory",
-				"intArgs": [2, 4],
-				"strArgs": ["0000", "0008"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99999999
-				}
-			},
-			{
-				"name": "Red Karma",
-				"category": "1. Inventory",
-				"intArgs": [2, 4],
-				"strArgs": ["0000", "000C"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99999999
-				}
-			},
-			{
-				"name": "Level",
-				"category": "2. Hayato",
-				"intArgs": [3, 4],
-				"strArgs": ["000000", "0146D4"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99999
-				}
-			},
-			{
-				"name": "HP",
-				"category": "2. Hayato",
-				"intArgs": [3, 4],
-				"strArgs": ["000000", "0146D8"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 640019
-				}
-			},
-			{
-				"name": "MP",
-				"category": "2. Hayato",
-				"intArgs": [3, 4],
-				"strArgs": ["000000", "0146DC"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 999999
-				}
-			},
-			{
-				"name": "Level",
-				"category": "3. Lua",
-				"intArgs": [3, 4],
-				"strArgs": ["000000", "01497B"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99999
-				}
-			},
-			{
-				"name": "HP",
-				"category": "3. Lua",
-				"intArgs": [3, 4],
-				"strArgs": ["000000", "01497F"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 544016
-				}
-			},
-			{
-				"name": "MP",
-				"category": "3. Lua",
-				"intArgs": [3, 4],
-				"strArgs": ["000000", "014983"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 999999
-				}
-			}
-		]
-	}
+			]
+		}
+	]
 }

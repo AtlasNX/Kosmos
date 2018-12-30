@@ -1,0 +1,136 @@
+{
+	"author": "kingofblues",
+	"scriptLanguage": "lua",
+	"beta": true,
+	"all": [
+		{
+			"saveFilePaths": [""],
+			"files": "save.bin",
+			"filetype": "dktf",
+			"items": [
+				{
+					"name": "Red Balloon",
+					"category": "Inventory",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "0873"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Banana Coins",
+					"category": "Inventory",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "086E"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 999,
+						"stepSize" : 100
+					}
+				},
+				{
+					"name": "Squawks",
+					"category": "Inventory",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "0897"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Crash Guard",
+					"category": "Inventory",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "089B"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Heart Boost",
+					"category": "Inventory",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "089F"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Blue Balloon",
+					"category": "Inventory",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "08A3"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Green Balloon",
+					"category": "Inventory",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "08A7"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Banana Juice",
+					"category": "Inventory",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "08AB"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Diddy Kong Barrel",
+					"category": "Inventory",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "08AF"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Dixie Kong Barrel",
+					"category": "Inventory",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "08B3"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Cranky Kong Barrel",
+					"category": "Inventory",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "08B7"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				}
+			]
+		}
+	]
+}

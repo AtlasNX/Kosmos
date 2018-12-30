@@ -1,22 +1,26 @@
 {
-	"beta": true,
-	"all": {
-		"saveFilePaths": [""],
-		"files": "buffer_save\\.dat",
-		"filetype": "bin",
-		"items": [
-			{
-				"name": "Party Points",
-				"category": "Collectibles",
-				"intArgs": [2, 4],
-				"strArgs": ["0000", "000C"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 1000000,
-					"stepSize": 100
+	"author": "WerWolv",
+	"scriptLanguage": "lua",
+	"beta": false,
+	"all": [
+		{
+			"saveFilePaths": [""],
+			"files": "buffer_save\\.dat",
+			"filetype": "bin",
+			"items": [
+				{
+					"name": "Party Points",
+					"category": "Collectibles",
+					"intArgs": [2, 4],
+					"strArgs": ["0000", "000C"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 1000000,
+						"stepSize": 100
+					}
 				}
-			}
-		]
-	}
+			]
+		}
+	]
 }

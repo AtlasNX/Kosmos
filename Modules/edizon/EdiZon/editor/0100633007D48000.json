@@ -1,626 +1,630 @@
 {
+	"author": "WerWolv",
+	"scriptLanguage": "lua",
 	"beta": false,
-	"all": {
-		"saveFilePaths": [""],
-		"files": "user\\d\\.dat",
-		"filetype": "json",
-		"items": [
-			{
-				"name": "Geo count",
-				"category": "Collectibles",
-				"intArgs": [0],
-				"strArgs": ["playerData", "geo"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99999
+	"all": [
+		{
+			"saveFilePaths": [""],
+			"files": "user\\d\\.dat",
+			"filetype": "json",
+			"items": [
+				{
+					"name": "Geo count",
+					"category": "Collectibles",
+					"intArgs": [0],
+					"strArgs": ["playerData", "geo"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999
+					}
+				},
+				{
+					"name": "Dream orb count",
+					"category": "Collectibles",
+					"intArgs": [0],
+					"strArgs": ["playerData", "dreamOrbs"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999
+					}
+				},
+				{
+					"name": "Simple keys count",
+					"category": "Collectibles",
+					"intArgs": [0],
+					"strArgs": ["playerData", "simpleKeys"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 100
+					}
+				},
+				{
+					"name": "Pale ore count",
+					"category": "Collectibles",
+					"intArgs": [0],
+					"strArgs": ["playerData", "ore"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 1000
+					}
+				},
+				{
+					"name": "Nail Damage",
+					"category": "Stats",
+					"intArgs": [0],
+					"strArgs": ["playerData", "nailDamage"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 100
+					}
+				},
+				{
+					"name": "Max Health",
+					"category": "Stats",
+					"intArgs": [0],
+					"strArgs": ["playerData", "maxHealthBase"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 100
+					}
+				},
+				{
+					"name": "Charm slot count",
+					"category": "Stats",
+					"intArgs": [0],
+					"strArgs": ["playerData", "charmSlots"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Gathering Swarm enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_1"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Wayward Compass enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_2"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Grubsong enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_3"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Stalwart Shell enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_4"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Baldur Shell enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_5"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Furry of the Fallen enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_6"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Quick Focus enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_7"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Lifeblood Heart enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_8"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Lifeblood Core enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_9"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Defender's Crest enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_10"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Flukenest enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_11"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Thorns of Agony enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_12"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mark of Pride enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_13"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Steady body enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_14"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Heavy Bow enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_15"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sharp Shadow enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_16"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Spore Shroom enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_17"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Longnail enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_18"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Shaman Stone enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_19"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Soul Catcher enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_20"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Soul Eater enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_21"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Glowing Womb enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_22"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Fragile Heart enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_23"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Fragile Greed enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_24"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Fragile Strength enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_25"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Nailmaster's Glory enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_26"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Joni's Blessing enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_27"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Shape of Unn enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_28"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Hiveblood enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_29"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Dream Wielder enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_30"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Dashmaster enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_31"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Quick Slash enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_32"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Spell Twister enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_33"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Deep Focus enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_34"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Grubberfly's Elegy enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_35"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Void Soul enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_36"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sprintmaster enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_37"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Dreamshield enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_38"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Weaversong enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_39"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Grimmchild / Carefree Melody enabled",
+					"category": "Charms",
+					"intArgs": [1],
+					"strArgs": ["playerData", "gotCharm_40"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mothwing Cloak enabled",
+					"category": "Abilities",
+					"intArgs": [1],
+					"strArgs": ["playerData", "hasDash"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Shadow Mothwing Cloak enabled",
+					"category": "Abilities",
+					"intArgs": [1],
+					"strArgs": ["playerData", "hasShadowDash"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mantis Claw enabled",
+					"category": "Abilities",
+					"intArgs": [1],
+					"strArgs": ["playerData", "hasWalljump"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Crystal Dash enabled",
+					"category": "Abilities",
+					"intArgs": [1],
+					"strArgs": ["playerData", "hasSuperDash"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Monarch Wings enabled",
+					"category": "Abilities",
+					"intArgs": [1],
+					"strArgs": ["playerData", "hasDoubleJump"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Dreamnail enabled",
+					"category": "Abilities",
+					"intArgs": [1],
+					"strArgs": ["playerData", "hasDreamNail"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Dream Gate enabled",
+					"category": "Abilities",
+					"intArgs": [1],
+					"strArgs": ["playerData", "hasDreamGate"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Dreamnail Upgrade enabled",
+					"category": "Abilities",
+					"intArgs": [1],
+					"strArgs": ["playerData", "dreamNailUpgraded"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Ismas enabled",
+					"category": "Abilities",
+					"intArgs": [1],
+					"strArgs": ["playerData", "hasAcidArmour"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
 				}
-			},
-			{
-				"name": "Dream orb count",
-				"category": "Collectibles",
-				"intArgs": [0],
-				"strArgs": ["playerData", "dreamOrbs"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 99999
-				}
-			},
-			{
-				"name": "Simple keys count",
-				"category": "Collectibles",
-				"intArgs": [0],
-				"strArgs": ["playerData", "simpleKeys"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 100
-				}
-			},
-			{
-				"name": "Pale ore count",
-				"category": "Collectibles",
-				"intArgs": [0],
-				"strArgs": ["playerData", "ore"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 1000
-				}
-			},
-			{
-				"name": "Nail Damage",
-				"category": "Stats",
-				"intArgs": [0],
-				"strArgs": ["playerData", "nailDamage"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 100
-				}
-			},
-			{
-				"name": "Max Health",
-				"category": "Stats",
-				"intArgs": [0],
-				"strArgs": ["playerData", "maxHealthBase"],
-				"widget": {
-					"type": "int",
-					"minValue": 0,
-					"maxValue": 100
-				}
-			},
-			{
-				"name": "Charm slot count",
-				"category": "Stats",
-				"intArgs": [0],
-				"strArgs": ["playerData", "charmSlots"],
-				"widget": {
-					"type": "int",
-					"minValue": 1,
-					"maxValue": 99
-				}
-			},
-			{
-				"name": "Gathering Swarm enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_1"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Wayward Compass enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_2"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Grubsong enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_3"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Stalwart Shell enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_4"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Baldur Shell enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_5"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Furry of the Fallen enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_6"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Quick Focus enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_7"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Lifeblood Heart enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_8"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Lifeblood Core enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_9"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Defender's Crest enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_10"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Flukenest enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_11"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Thorns of Agony enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_12"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Mark of Pride enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_13"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Steady body enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_14"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Heavy Bow enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_15"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Sharp Shadow enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_16"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Spore Shroom enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_17"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Longnail enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_18"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Shaman Stone enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_19"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Soul Catcher enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_20"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Soul Eater enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_21"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Glowing Womb enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_22"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Fragile Heart enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_23"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Fragile Greed enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_24"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Fragile Strength enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_25"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Nailmaster's Glory enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_26"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Joni's Blessing enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_27"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Shape of Unn enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_28"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Hiveblood enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_29"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Dream Wielder enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_30"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Dashmaster enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_31"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Quick Slash enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_32"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Spell Twister enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_33"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Deep Focus enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_34"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Grubberfly's Elegy enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_35"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Void Soul enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_36"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Sprintmaster enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_37"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Dreamshield enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_38"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Weaversong enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_39"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Grimmchild / Carefree Melody enabled",
-				"category": "Charms",
-				"intArgs": [1],
-				"strArgs": ["playerData", "gotCharm_40"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Mothwing Cloak enabled",
-				"category": "Abilities",
-				"intArgs": [1],
-				"strArgs": ["playerData", "hasDash"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Shadow Mothwing Cloak enabled",
-				"category": "Abilities",
-				"intArgs": [1],
-				"strArgs": ["playerData", "hasShadowDash"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Mantis Claw enabled",
-				"category": "Abilities",
-				"intArgs": [1],
-				"strArgs": ["playerData", "hasWalljump"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Crystal Dash enabled",
-				"category": "Abilities",
-				"intArgs": [1],
-				"strArgs": ["playerData", "hasSuperDash"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Monarch Wings enabled",
-				"category": "Abilities",
-				"intArgs": [1],
-				"strArgs": ["playerData", "hasDoubleJump"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Dreamnail enabled",
-				"category": "Abilities",
-				"intArgs": [1],
-				"strArgs": ["playerData", "hasDreamNail"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Dream Gate enabled",
-				"category": "Abilities",
-				"intArgs": [1],
-				"strArgs": ["playerData", "hasDreamGate"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Dreamnail Upgrade enabled",
-				"category": "Abilities",
-				"intArgs": [1],
-				"strArgs": ["playerData", "dreamNailUpgraded"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			},
-			{
-				"name": "Ismas enabled",
-				"category": "Abilities",
-				"intArgs": [1],
-				"strArgs": ["playerData", "hasAcidArmour"],
-				"widget": {
-					"type": "bool",
-					"onValue": 1,
-					"offValue": 0
-				}
-			}
-		]
-	}
+			]
+		}
+	]
 }
