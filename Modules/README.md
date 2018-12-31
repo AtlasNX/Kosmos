@@ -13,3 +13,4 @@ KosmosUpdater | A homebrew for directly updating Kosmos
 hbmenu | The homebrew menu
 kosmos_toolkit | Homebrew for modifying CFW settings
 ldn_mitm | This allows **online** ad-hoc / lan-play for games such as Smash and Mario Kart 8!
+lockpick | This allows dumping all keys used by the Switch
