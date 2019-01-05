@@ -3,25 +3,37 @@
 	"all": [
 		{
 			"saveFilePaths": [""],
-			"files": "SAVEDATA\\d\\d",
-			"filetype": "lostsphear",
+			"files": "save.bin",
+			"filetype": "dktf",
 			"items": [
 				{
-					"name": "Gold",
-					"category": "01. Inventory",
-					"intArgs": [2, 4],
-					"strArgs": ["0000", "0524"],
+					"name": "Red Balloon",
+					"category": "Inventory",
+					"intArgs": [2, 1],
+					"strArgs": ["0000", "0873"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Banana Coins",
+					"category": "Inventory",
+					"intArgs": [2, 2],
+					"strArgs": ["0000", "086E"],
 					"widget": {
 						"type": "int",
 						"minValue": 0,
-						"maxValue": 999999999
+						"maxValue": 999,
+						"stepSize" : 100
 					}
 				},
 				{
-					"name": "Level",
-					"category": "02. Kanata",
+					"name": "Squawks",
+					"category": "Inventory",
 					"intArgs": [2, 1],
-					"strArgs": ["0000", "1C3E6"],
+					"strArgs": ["0000", "0897"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
@@ -29,10 +41,10 @@
 					}
 				},
 				{
-					"name": "Level",
-					"category": "03. Lumina",
+					"name": "Crash Guard",
+					"category": "Inventory",
 					"intArgs": [2, 1],
-					"strArgs": ["0000", "1C518"],
+					"strArgs": ["0000", "089B"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
@@ -40,10 +52,10 @@
 					}
 				},
 				{
-					"name": "Level",
-					"category": "04. Locke",
+					"name": "Heart Boost",
+					"category": "Inventory",
 					"intArgs": [2, 1],
-					"strArgs": ["0000", "1C8AE"],
+					"strArgs": ["0000", "089F"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
@@ -51,10 +63,10 @@
 					}
 				},
 				{
-					"name": "Level",
-					"category": "05. Van",
+					"name": "Blue Balloon",
+					"category": "Inventory",
 					"intArgs": [2, 1],
-					"strArgs": ["0000", "1C47F"],
+					"strArgs": ["0000", "08A3"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
@@ -62,10 +74,10 @@
 					}
 				},
 				{
-					"name": "Level",
-					"category": "06. Obaro",
+					"name": "Green Balloon",
+					"category": "Inventory",
 					"intArgs": [2, 1],
-					"strArgs": ["0000", "1C5B1"],
+					"strArgs": ["0000", "08A7"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
@@ -73,10 +85,10 @@
 					}
 				},
 				{
-					"name": "Level",
-					"category": "07. Galdra",
+					"name": "Banana Juice",
+					"category": "Inventory",
 					"intArgs": [2, 1],
-					"strArgs": ["0000", "1C815"],
+					"strArgs": ["0000", "08AB"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
@@ -84,10 +96,10 @@
 					}
 				},
 				{
-					"name": "Level",
-					"category": "08. Sherra",
+					"name": "Diddy Kong Barrel",
+					"category": "Inventory",
 					"intArgs": [2, 1],
-					"strArgs": ["0000", "1C64A"],
+					"strArgs": ["0000", "08AF"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
@@ -95,10 +107,10 @@
 					}
 				},
 				{
-					"name": "Level",
-					"category": "09. Dianto",
+					"name": "Dixie Kong Barrel",
+					"category": "Inventory",
 					"intArgs": [2, 1],
-					"strArgs": ["0000", "1C6E3"],
+					"strArgs": ["0000", "08B3"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
@@ -106,10 +118,10 @@
 					}
 				},
 				{
-					"name": "Level",
-					"category": "10. Gears",
+					"name": "Cranky Kong Barrel",
+					"category": "Inventory",
 					"intArgs": [2, 1],
-					"strArgs": ["0000", "1C77C"],
+					"strArgs": ["0000", "08B7"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
