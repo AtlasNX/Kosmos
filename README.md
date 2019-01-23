@@ -8,41 +8,41 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 ## [Donations](https://www.patreon.com/atlasnx)
 
 ## Features
-* Up-to-date package
-* Firmware launching and sleep mode for every firmware
-* Starting games after launching the Homebrew Menu works
-* Splash Screens and instant launch
-* Game Mods
-* A background FTP-Server
 * Atmosphere
-* Signature Patches
-* NSP Installation
-* Automatic Updating through your console
-* Completely customizable button bindings for the Homebrew Loader
-* Full Atmosphere
+* Up-to-date packages
+* Support for every firmware
+* No issues with starting games after launching homebrew
+* Splash screens and instant launch
+* Background FTP-Server
+* Background netcheat system
+* Signature patches
+* NSP installation
+* Updating through a console homebrew app
+* Customizable button bindings for the Homebrew Loader
 * Completely modular
 * Drag and drop
-* Background netcheat system
-* Auto-boot selection through Horizon
-* Module selection through Horizon
+* Auto-boot and module selection through a console homebrew app
 **and much more!**
 
 
 ## How to use
 1. Download [Hekate](https://github.com/CTCaer/hekate/releases) or use the payload that comes with the package
 2. Download the [latest release](https://github.com/AtlasNX/Kosmos/releases) and extract it to the root of your Switch SD card
-3. Start hekate through e.g. [Fusée Gelée](https://github.com/reswitched/fusee-launcher), [TegraRcmSmash](https://switchtools.sshnuke.net/) or [WebCFWLoader](https://elijahzawesome.github.io/web-cfw-loader/)
+3. Launch Hekate through either [TegraSharp](https://github.com/simontime/TegraSharp/releases), [Fusée Gelée](https://github.com/reswitched/fusee-launcher) or [WebCFWLoader](https://elijahzawesome.github.io/web-cfw-loader/)
 4. ???
 5. Profit!
 
 ## Featuring
+* [Hekate](https://github.com/CTCaer/hekate)
 * [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere)
-* [Switch Homebrew Menu](https://github.com/switchbrew/nx-hbmenu)
 * [Switch Homebrew Loader](https://github.com/switchbrew/nx-hbloader)
-* [AppstoreNX](https://github.com/vgmoose/appstorenx)
-* [EdiZon](https://github.com/thomasnet-mc/EdiZon)
-* [KosmosUpdater](https://github.com/StevenMattera/SDFilesUpdater)
+* [Switch Homebrew Menu](https://github.com/switchbrew/nx-hbmenu)
 * [Sys-FTPD](https://github.com/jakibaki/sys-ftpd)
+* [Sys-Netcheat](https://github.com/jakibaki/sys-netcheat)
+* [Ldn-mitm](https://github.com/spacemeowx2/ldn_mitm)
+* [AppstoreNX](https://github.com/vgmoose/appstorenx)
+* [Lockpick](https://github.com/shchmue/Lockpick)
+* [EdiZon](https://github.com/thomasnet-mc/EdiZon)
 * [Checkpoint](https://github.com/BernardoGiordano/Checkpoint)
+* [KosmosUpdater](https://github.com/StevenMattera/SDFilesUpdater)
 * [CFW-Settings](https://github.com/AtlasNX/CFW-Settings)
-* [Ldn_mitm](https://github.com/spacemeowx2/ldn_mitm/)
