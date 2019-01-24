@@ -1,4 +1,6 @@
 {
+	"author": "madhatter",
+	"scriptLanguage": "lua",
 	"beta": false,
 	"all": [
 		{

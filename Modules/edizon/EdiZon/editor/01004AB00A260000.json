@@ -1,4 +1,6 @@
 {
+	"author": "Jojo",
+	"scriptLanguage": "lua",
 	"beta": true,
 	"all": [
 		{

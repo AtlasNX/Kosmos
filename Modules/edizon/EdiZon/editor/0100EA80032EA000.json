@@ -1,0 +1,897 @@
+{
+	"author": "DNA",
+	"scriptLanguage": "lua",
+	"beta": true,
+	"all": [
+		{
+			"saveFilePaths": [""],
+			"files": "rp_savedata.dat",
+			"filetype": "nsmbud",
+			"items": [
+				{
+					"name": "INFO",
+					"category": "INFO",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "It is not possible, to create\na save file with this editor.\nStart a new game, open the menu and\n'Quick Save' the game."
+					}
+				},
+				{
+					"name": "Lives",
+					"category": "Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0001C", "Lives"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Readme",
+					"category": "Save Slot 1",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "There is some strange behavior\n if you start with the crown power up"
+					}
+				},
+				{
+					"name": "Start with Power UP",
+					"category": "Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0026"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"None",
+							"Mushroom",
+							"Fire Flower",
+							"Mini Mushroom",
+							"Propeller Mushroom",
+							"Penguin Suit",
+							"Ice Flower",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown"
+						],
+						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+					}
+				},
+				{
+					"name": "Start AS",
+					"category": "Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0021"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mario",
+							"Luigi",
+							"Yellow Toad",
+							"Blue Toad",
+							"Toadette",
+							"Nabbit"
+						],
+						"listItemValues": [0, 1, 2, 3, 4, 5]
+					}
+				},
+				{
+					"name": "Inventory 1",
+					"category": "Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0161"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 2",
+					"category": "Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0162"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 3",
+					"category": "Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0163"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 4",
+					"category": "Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0164"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 5",
+					"category": "Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0165"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 6",
+					"category": "Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0166"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 7",
+					"category": "Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0167"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 8",
+					"category": "Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0168"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 9",
+					"category": "Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0169"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 10",
+					"category": "Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "016A"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Lives",
+					"category": "Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "00224", "Lives"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Readme",
+					"category": "Save Slot 2",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "There is some strange behavior\n if you start with the crown power up"
+					}
+				},
+				{
+					"name": "Start with Power UP",
+					"category": "Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "022E"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"None",
+							"Mushroom",
+							"Fire Flower",
+							"Mini Mushroom",
+							"Propeller Mushroom",
+							"Penguin Suit",
+							"Ice Flower",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown"
+						],
+						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+					}
+				},
+				{
+					"name": "Start AS",
+					"category": "Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "00229"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mario",
+							"Luigi",
+							"Yellow Toad",
+							"Blue Toad",
+							"Toadette",
+							"Nabbit"
+						],
+						"listItemValues": [0, 1, 2, 3, 4, 5]
+					}
+				},
+				{
+					"name": "Inventory 1",
+					"category": "Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0369"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 2",
+					"category": "Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "036A"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 3",
+					"category": "Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "036B"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 4",
+					"category": "Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "036C"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 5",
+					"category": "Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "036D"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 6",
+					"category": "Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "036E"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 7",
+					"category": "Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "036F"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 8",
+					"category": "Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0370"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 9",
+					"category": "Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0371"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 10",
+					"category": "Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0372"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Lives",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "042C", "Lives"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Readme",
+					"category": "Save Slot 3",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "There is some strange behavior\n if you start with the crown power up"
+					}
+				},
+				{
+					"name": "Start with Power UP",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0436"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"None",
+							"Mushroom",
+							"Fire Flower",
+							"Mini Mushroom",
+							"Propeller Mushroom",
+							"Penguin Suit",
+							"Ice Flower",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown"
+						],
+						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+					}
+				},
+				{
+					"name": "Start AS",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0431"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mario",
+							"Luigi",
+							"Yellow Toad",
+							"Blue Toad",
+							"Toadette",
+							"Nabbit"
+						],
+						"listItemValues": [0, 1, 2, 3, 4, 5]
+					}
+				},
+				{
+					"name": "Inventory 1",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0571"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 2",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0572"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 3",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0573"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 4",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0574"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 5",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0575"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 6",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0576"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 7",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0577"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 8",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0578"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 9",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0579"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 10",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "057A"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,4 +1,6 @@
 {
+	"author": "mrLewisFC",
+	"scriptLanguage": "lua",
 	"beta" : true,
 	"all" : [
 		{

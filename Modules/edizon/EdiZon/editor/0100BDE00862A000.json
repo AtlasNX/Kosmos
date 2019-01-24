@@ -1,4 +1,6 @@
 {
+	"author": "cubex",
+	"scriptLanguage": "lua",
 	"beta": false,
 	"all": [
 		{
