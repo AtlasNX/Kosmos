@@ -1,5 +1,5 @@
-Kosmos, The All-in-One Package
-===========================
+![release](https://cdn.discordapp.com/attachments/507697244955213825/524325588593279005/KosmosBanner1.png)
+
 *formerly known as SDFilesSwitch*
 
 This handy All-in-One package includes everything you need to run Hekate / Atmosphere with some extra patches to enhance your experience.
@@ -44,5 +44,6 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * [Lockpick](https://github.com/shchmue/Lockpick)
 * [EdiZon](https://github.com/thomasnet-mc/EdiZon)
 * [Checkpoint](https://github.com/BernardoGiordano/Checkpoint)
+* [Goldleaf](https://github.com/XorTroll/Goldleaf)
 * [KosmosUpdater](https://github.com/StevenMattera/SDFilesUpdater)
 * [CFW-Settings](https://github.com/AtlasNX/CFW-Settings)

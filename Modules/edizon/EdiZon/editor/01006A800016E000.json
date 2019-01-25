@@ -1,298 +1,298 @@
 {
 	"author": "mrLewisFC",
 	"scriptLanguage": "lua",
-	"beta" : true,
-	"all" : [
+	"beta": true,
+	"all": [
 		{
-			"saveFilePaths" : [ "save_data" ],
-			"files" : "system_data.bin",
+			"saveFilePaths": ["save_data"],
+			"files": "system_data.bin",
 			"filetype": "smash",
-			"items":[
+			"items": [
 				{
-					"name" : "Gold",
-					"category" : "1. General",
-					"intArgs" : [ 3, 3 ], 
-					"strArgs" : [ "000000", "5506DC" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 9999999
-				} 
+					"name": "Gold",
+					"category": "1. General",
+					"intArgs": [3, 3],
+					"strArgs": ["000000", "5506DC"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 9999999
+					}
 				},
 				{
-					"name" : "Spirit Points (SP)",
-					"category" : "1. General",
-					"intArgs" : [ 3, 3 ], 
-					"strArgs" : [ "000000", "4831E4" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 9999999
-				} 
+					"name": "Spirit Points (SP)",
+					"category": "1. General",
+					"intArgs": [3, 3],
+					"strArgs": ["000000", "4831E4"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 9999999
+					}
 				},
 				{
-					"name" : "Hammers",
-					"category" : "1. General",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "000000", "555E5C" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 255
-				} 
+					"name": "Hammers",
+					"category": "1. General",
+					"intArgs": [3, 1],
+					"strArgs": ["000000", "555E5C"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 255
+					}
 				},
 				{
-					"name" : "Skill Points",
-					"category" : "1. General",
-					"intArgs" : [ 3, 3 ], 
-					"strArgs" : [ "000000", "4C40D8 " ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 9999999
-				} 
+					"name": "Skill Points",
+					"category": "1. General",
+					"intArgs": [3, 3],
+					"strArgs": ["000000", "4C40D8 "],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 9999999
+					}
 				},
 				{
-					"name" : "Tickets",
-					"category" : "1. General",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "000000", "5506CC" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 255
-				} 
+					"name": "Tickets",
+					"category": "1. General",
+					"intArgs": [3, 1],
+					"strArgs": ["000000", "5506CC"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 255
+					}
 				},
 				{
-					"name" : "Shuffle All",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "000000", "4831C0" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 255
-				} 
+					"name": "Shuffle All",
+					"category": "2. Support Items",
+					"intArgs": [3, 1],
+					"strArgs": ["000000", "4831C0"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 255
+					}
 				},
 				{
-					"name" : "All Primaries",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "000000", "4831C1" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 255
-				} 
+					"name": "All Primaries",
+					"category": "2. Support Items",
+					"intArgs": [3, 1],
+					"strArgs": ["000000", "4831C1"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 255
+					}
 				},
 				{
-					"name" : "All Supports",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "000000", "4831C2" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 255
-				} 
+					"name": "All Supports",
+					"category": "2. Support Items",
+					"intArgs": [3, 1],
+					"strArgs": ["000000", "4831C2"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 255
+					}
 				},
 				{
-					"name" : "Filler",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "000000", "4831C3" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 255
-				} 
+					"name": "Filler",
+					"category": "2. Support Items",
+					"intArgs": [3, 1],
+					"strArgs": ["000000", "4831C3"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 255
+					}
 				},
 				{
-					"name" : "Rematch",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "000000", "4831C4" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 255
-				} 
+					"name": "Rematch",
+					"category": "2. Support Items",
+					"intArgs": [3, 1],
+					"strArgs": ["000000", "4831C4"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 255
+					}
 				},
 				{
-					"name" : "Damage 50%",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "000000", "4831C6" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 255
-				} 
+					"name": "Damage 50%",
+					"category": "2. Support Items",
+					"intArgs": [3, 1],
+					"strArgs": ["000000", "4831C6"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 255
+					}
 				},
 				{
-					"name" : "Slow FS Charging",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "000000", "4831C7" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 255
-				} 
+					"name": "Slow FS Charging",
+					"category": "2. Support Items",
+					"intArgs": [3, 1],
+					"strArgs": ["000000", "4831C7"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 255
+					}
 				},
 				{
-					"name" : "Weaken Minions",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "000000", "4831C8" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 255
-				} 
+					"name": "Weaken Minions",
+					"category": "2. Support Items",
+					"intArgs": [3, 1],
+					"strArgs": ["000000", "4831C8"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 255
+					}
 				},
 				{
-					"name" : "Health Drain",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "000000", "4831C9" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 255
-				} 
+					"name": "Health Drain",
+					"category": "2. Support Items",
+					"intArgs": [3, 1],
+					"strArgs": ["000000", "4831C9"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 255
+					}
 				},
 				{
-					"name" : "Disable Items",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "000000", "4831CA" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 255
-				} 
+					"name": "Disable Items",
+					"category": "2. Support Items",
+					"intArgs": [3, 1],
+					"strArgs": ["000000", "4831CA"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 255
+					}
 				},
 				{
-					"name" : "Shield Spacer",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "000000", "4831CB" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 255
-				} 
+					"name": "Shield Spacer",
+					"category": "2. Support Items",
+					"intArgs": [3, 1],
+					"strArgs": ["000000", "4831CB"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 255
+					}
 				},
 				{
-					"name" : "Sluggish Shield",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "000000", "4831CC" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 255
-				} 
+					"name": "Sluggish Shield",
+					"category": "2. Support Items",
+					"intArgs": [3, 1],
+					"strArgs": ["000000", "4831CC"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 255
+					}
 				},
 				{
-					"name" : "Snack (S)",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 2 ], 
-					"strArgs" : [ "000000", "4831CE" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 65535
-				} 
+					"name": "Snack (S)",
+					"category": "2. Support Items",
+					"intArgs": [3, 2],
+					"strArgs": ["000000", "4831CE"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 65535
+					}
 				},
 				{
-					"name" : "Snack (M)",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 2 ], 
-					"strArgs" : [ "000000", "4831D0" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 65535
-				} 
+					"name": "Snack (M)",
+					"category": "2. Support Items",
+					"intArgs": [3, 2],
+					"strArgs": ["000000", "4831D0"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 65535
+					}
 				},
 				{
-					"name" : "Snack (L)",
-					"category" : "2. Support Items",
-					"intArgs" : [ 3, 2 ], 
-					"strArgs" : [ "000000", "4831D2" ],
-					"widget" : {
-						"type" : "int",
-						"minValue" : 0,
-						"maxValue" : 65535
-				} 
+					"name": "Snack (L)",
+					"category": "2. Support Items",
+					"intArgs": [3, 2],
+					"strArgs": ["000000", "4831D2"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 65535
+					}
 				},
 				{
-					"name" : "Unlock all characters (All or Nothing)",
-					"category" : "3. Characters",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "53FF60", "540260" ],
-					"widget" : {
-						"type" : "bool",
-						"offValue" : 0,
-						"onValue" : 1
-				} 
+					"name": "Unlock all characters (All or Nothing)",
+					"category": "3. Characters",
+					"intArgs": [3, 1],
+					"strArgs": ["53FF60", "540260"],
+					"widget": {
+						"type": "bool",
+						"offValue": 0,
+						"onValue": 1
+					}
 				},
 				{
-					"name" : "Get all cores (All or Nothing)",
-					"category" : "4. Cores",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "426C77", "434720" ],
-					"widget" : {
-						"type" : "bool",
-						"offValue" : 0,
-						"onValue" : 255
-				} 
+					"name": "Get all cores (All or Nothing)",
+					"category": "4. Cores",
+					"intArgs": [3, 1],
+					"strArgs": ["426C77", "434720"],
+					"widget": {
+						"type": "bool",
+						"offValue": 0,
+						"onValue": 255
+					}
 				},
 				{
-					"name" : "Unlock all inventory spirits (All or Nothing)",
-					"category" : "5. Spirits",
-					"intArgs" : [ 3, 2 ], 
-					"strArgs" : [ "426C76", "42FA46" ],
-					"widget" : {
-						"type" : "bool",
-						"offValue" : 0,
-						"onValue" : 65293
-				} 
+					"name": "Unlock all inventory spirits (All or Nothing)",
+					"category": "5. Spirits",
+					"intArgs": [3, 2],
+					"strArgs": ["426C76", "42FA46"],
+					"widget": {
+						"type": "bool",
+						"offValue": 0,
+						"onValue": 65293
+					}
 				},
 				{
-					"name" : "Unlock all activities spirits (All or Nothing)",
-					"category" : "5. Spirits",
-					"intArgs" : [ 3, 2 ], 
-					"strArgs" : [ "434750", "444EA5" ],
-					"widget" : {
-						"type" : "bool",
-						"offValue" : 0,
-						"onValue" : 65294
-				} 
+					"name": "Unlock all activities spirits (All or Nothing)",
+					"category": "5. Spirits",
+					"intArgs": [3, 2],
+					"strArgs": ["434750", "444EA5"],
+					"widget": {
+						"type": "bool",
+						"offValue": 0,
+						"onValue": 65294
+					}
 				},
 				{
-					"name" : "Unlock All challenges (All or Nothing)",
-					"category" : "6. Challenges",
-					"intArgs" : [ 3, 1 ], 
-					"strArgs" : [ "555BB8", "555BE8" ],
-					"widget" : {
-						"type" : "bool",
-						"offValue" : 0,
-						"onValue" : 255
-				} 
+					"name": "Unlock All challenges (All or Nothing)",
+					"category": "6. Challenges",
+					"intArgs": [3, 1],
+					"strArgs": ["555BB8", "555BE8"],
+					"widget": {
+						"type": "bool",
+						"offValue": 0,
+						"onValue": 255
+					}
 				},
 				{
-					"name" : "Unlock All Stores, Explore, Gym, Dojos, Music",
-					"category" : "7. Misc",
-					"intArgs" : [ 2, 1 ], 
-					"strArgs" : [ "00D0", "0378" ],
-					"widget" : {
-						"type" : "bool",
-						"offValue" : 0,
-						"onValue" : 255
-				} 
+					"name": "Unlock All Stores, Explore, Gym, Dojos, Music",
+					"category": "7. Misc",
+					"intArgs": [2, 1],
+					"strArgs": ["00D0", "0378"],
+					"widget": {
+						"type": "bool",
+						"offValue": 0,
+						"onValue": 255
+					}
 				}
 			]
 		}

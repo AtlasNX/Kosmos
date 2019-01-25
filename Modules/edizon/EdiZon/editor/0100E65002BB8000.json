@@ -1,116 +1,109 @@
 {
 	"author": "echo000 & WerWolv",
 	"scriptLanguage": "py",
-	"beta" : true,
-	"all" : [{
-		"saveFilePaths" : [ "[a-zA-Z0-9]+_\\d+" ],
-		"files" : "[a-zA-Z0-9]+_\\d+",
-		"filetype": "xmls",
-		"items": 
-		[
-			{
-			  "name" : "Money",
-			  "category" : "Player",
-			  "intArgs" : [ 0 ], 
-			  "strArgs" : [ "SaveGame", "player", "money" ],
-			  "widget" : 
-			  {
-					"type" : "int",
-					"stepSize" : 1,
-					"minValue" : 0,
-					"maxValue" : 999999999
-			  }
-			},
-			{
-			  "name" : "Total Money Earned",
-			  "category" : "Player",
-			  "intArgs" : [ 0 ], 
-			  "strArgs" : [ "SaveGame", "player", "totalMoneyEarned" ],
-			  "widget" : 
-			  {
-					"type" : "int",
-					"stepSize" : 1,
-					"minValue" : 0,
-					"maxValue" : 999999999
-			  }
-			},
-			{
-			  "name" : "Fishing Level",
-			  "category" : "Player",
-			  "intArgs" : [ 0 ], 
-			  "strArgs" : [ "SaveGame", "player", "fishingLevel" ],
-			  "widget" : 
-			  {
-					"type" : "int",
-					"stepSize" : 1,
-					"minValue" : 0,
-					"maxValue" : 10
-			  }
-			},
-			{
-			  "name" : "Farming Level",
-			  "category" : "Player",
-			  "intArgs" : [ 0 ], 
-			  "strArgs" : [ "SaveGame", "player", "farmingLevel" ],
-			  "widget" : 
-			  {
-					"type" : "int",
-					"stepSize" : 1,
-					"minValue" : 0,
-					"maxValue" : 10
-			  }
-			},
-			{
-			  "name" : "Mining Level",
-			  "category" : "Player",
-			  "intArgs" : [ 0 ], 
-			  "strArgs" : [ "SaveGame", "player", "miningLevel" ],
-			  "widget" : 
-			  {
-					"type" : "int",
-					"stepSize" : 1,
-					"minValue" : 0,
-					"maxValue" : 10
-			  }
-			},
-			{
-			  "name" : "Combat Level",
-			  "category" : "Player",
-			  "intArgs" : [ 0 ], 
-			  "strArgs" : [ "SaveGame", "player", "combatLevel" ],
-			  "widget" : 
-			  {
-					"type" : "int",
-					"stepSize" : 1,
-					"minValue" : 0,
-					"maxValue" : 10
-			  }
-			},
-			{
-			  "name" : "Foraging Level",
-			  "category" : "Player",
-			  "intArgs" : [ 0 ], 
-			  "strArgs" : [ "SaveGame", "player", "foragingLevel" ],
-			  "widget" : 
-			  {
-					"type" : "int",
-					"stepSize" : 1,
-					"minValue" : 0,
-					"maxValue" : 10
-			  }
-			},
-			{
-			  "name" : "Has Greenhouse",
-			  "category" : "Player",
-			  "intArgs" : [ 1 ], 
-			  "strArgs" : [ "SaveGame", "player", "hasGreenhouse" ],
-			  "widget" : 
-			  {
-					"type" : "bool",
-					"onValue" : 0,
-					"offValue" : 1
-			  }
-			}
-		]
-	}]
+	"beta": true,
+	"all": [
+		{
+			"saveFilePaths": ["[a-zA-Z0-9]+_\\d+"],
+			"files": "[a-zA-Z0-9]+_\\d+",
+			"filetype": "xmls",
+			"items": [
+				{
+					"name": "Money",
+					"category": "Player",
+					"intArgs": [0],
+					"strArgs": ["SaveGame", "player", "money"],
+					"widget": {
+						"type": "int",
+						"stepSize": 1,
+						"minValue": 0,
+						"maxValue": 999999999
+					}
+				},
+				{
+					"name": "Total Money Earned",
+					"category": "Player",
+					"intArgs": [0],
+					"strArgs": ["SaveGame", "player", "totalMoneyEarned"],
+					"widget": {
+						"type": "int",
+						"stepSize": 1,
+						"minValue": 0,
+						"maxValue": 999999999
+					}
+				},
+				{
+					"name": "Fishing Level",
+					"category": "Player",
+					"intArgs": [0],
+					"strArgs": ["SaveGame", "player", "fishingLevel"],
+					"widget": {
+						"type": "int",
+						"stepSize": 1,
+						"minValue": 0,
+						"maxValue": 10
+					}
+				},
+				{
+					"name": "Farming Level",
+					"category": "Player",
+					"intArgs": [0],
+					"strArgs": ["SaveGame", "player", "farmingLevel"],
+					"widget": {
+						"type": "int",
+						"stepSize": 1,
+						"minValue": 0,
+						"maxValue": 10
+					}
+				},
+				{
+					"name": "Mining Level",
+					"category": "Player",
+					"intArgs": [0],
+					"strArgs": ["SaveGame", "player", "miningLevel"],
+					"widget": {
+						"type": "int",
+						"stepSize": 1,
+						"minValue": 0,
+						"maxValue": 10
+					}
+				},
+				{
+					"name": "Combat Level",
+					"category": "Player",
+					"intArgs": [0],
+					"strArgs": ["SaveGame", "player", "combatLevel"],
+					"widget": {
+						"type": "int",
+						"stepSize": 1,
+						"minValue": 0,
+						"maxValue": 10
+					}
+				},
+				{
+					"name": "Foraging Level",
+					"category": "Player",
+					"intArgs": [0],
+					"strArgs": ["SaveGame", "player", "foragingLevel"],
+					"widget": {
+						"type": "int",
+						"stepSize": 1,
+						"minValue": 0,
+						"maxValue": 10
+					}
+				},
+				{
+					"name": "Has Greenhouse",
+					"category": "Player",
+					"intArgs": [1],
+					"strArgs": ["SaveGame", "player", "hasGreenhouse"],
+					"widget": {
+						"type": "bool",
+						"onValue": 0,
+						"offValue": 1
+					}
+				}
+			]
+		}
+	]
 }

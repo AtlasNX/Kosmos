@@ -28,7 +28,7 @@
 						"type": "int",
 						"minValue": 0,
 						"maxValue": 999,
-						"stepSize" : 100
+						"stepSize": 100
 					}
 				},
 				{

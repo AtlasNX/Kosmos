@@ -1,22 +1,1408 @@
 {
-	"author": "WerWolv",
-	"scriptLanguage": "lua",
-	"beta": false,
+	"author": "Ac_K & WerWolv",
+	"scriptLanguage": "py",
+  "beta": true,
 	"all": [
 		{
 			"saveFilePaths": [""],
 			"files": "File\\d+\\.bin",
-			"filetype": "bin",
+			"filetype": "smo",
 			"items": [
 				{
-					"name": "Coin Count",
-					"category": "Collectibles",
-					"intArgs": [2, 2],
-					"strArgs": ["001C", "0050"],
+					"name": "Coins",
+					"category": "1. Items",
+					"intArgs": [0],
+					"strArgs": ["Number", "CoinNum"],
 					"widget": {
 						"type": "int",
 						"minValue": 0,
 						"maxValue": 9999
+					}
+				},
+				{
+					"name": "Mario",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "Mario"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario 64",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "Mario64"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario 64 Metal",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "Mario64Metal"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Aloha",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioAloha"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Armor",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioArmor"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Bone",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioBone"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Clown",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioClown"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Color Classic",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioColorClassic"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Color Gold",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioColorGold"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Color Luigi",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioColorLuigi"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Color Waluigi",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioColorWaluigi"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Color Wario",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioColorWario"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Cook",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioCook"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Diddy Kong",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioDiddyKong"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Doctor",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioDoctor"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Explorer",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioExplorer"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Football",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioFootball"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Golf",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioGolf"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Gunman",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioGunman"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Hakama",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioHakama"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Happi",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioHappi"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario King",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioKing"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Koopa",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioKoopa"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Maker",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioMaker"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Mechanic",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioMechanic"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario New3DS",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioNew3DS"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Painter",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioPainter"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Peach",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioPeach"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Pilot",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioPilot"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Pirate",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioPirate"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Poncho",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioPoncho"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Primitive Man",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioPrimitiveMan"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Sailor",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioSailor"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Scientist",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioScientist"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Shopman",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioShopman"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Snow Suit",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioSnowSuit"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Space Suit",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioSpaceSuit"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Suit",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioSuit"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Swimwear",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioSwimwear"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Tail Coat",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioTailCoat"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Tuxedo",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioTuxedo"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Underwear",
+					"category": "2. Clothes",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCloth", "MarioUnderwear"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "Mario"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario 64",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "Mario64"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario 64 Metal",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "Mario64Metal"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Aloha",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioAloha"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Armor",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioArmor"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Captain",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioCaptain"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Clown",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioClown"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Color Classic",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioColorClassic"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Color Gold",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioColorGold"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Color Luigi",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioColorLuigi"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Color Waluigi",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioColorWaluigi"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Color Wario",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioColorWario"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Cook",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "Mario"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Diddy Kong",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioDiddyKong"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Doctor",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioDoctor"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Explorer",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioExplorer"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Football",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioFootball"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Golf",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioGolf"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Gunman",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioGunman"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Happi",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioHappi"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Invisible",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioInvisible"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario King",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioKing"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Koopa",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioKoopa"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Maker",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioMaker"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Mechanic",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioMechanic"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario New3DS",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioNew3DS"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Painter",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioPainter"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Peach",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioPeach"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Pilot",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioPilot"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Pirate",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioPirate"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Poncho",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioPoncho"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Primitive Man",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioPrimitiveMan"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Sailor",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioSailor"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Scientist",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioScientist"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Shopman",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioShopman"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Snow Suit",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioSnowSuit"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Space Suit",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioSpaceSuit"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Suit",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioSuit"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Swimwear",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioSwimwear"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Tail Coat",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioTailCoat"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Mario Tuxedo",
+					"category": "3. Caps",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemCap", "MarioTuxedo"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Cap",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerCap"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker City",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerCity"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Clash",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerClash"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Forest",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerForest"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Lake",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerLake"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Lava",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerLava"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Moon",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerMoon"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Peach",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerPeach"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Peach Block",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerPeachBlock"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Peach Block Question",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerPeachBlockQuestion"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Peach Coin",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerPeachCoin"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Peach Dokan",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerPeachDokan"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Sand",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerSand"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Sea",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerSea"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Sky",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerSky"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Snow",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerSnow"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Sticker Water",
+					"category": "4. Stickers",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemSticker", "StickerWater"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir City 1",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirCity1"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir City 2",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirCity2"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Crash 1",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirCrash1"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Crash 2",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirCrash2"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Fall 1",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirFall1"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Fall 2",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirFall2"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Forest 1",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirForest1"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Forest 2",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirForest2"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Hat 1",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirHat1"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Hat 2",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirHat2"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Lake 1",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirLake1"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Lake 2",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirLake2"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Lava 1",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirLava1"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Lava 2",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirLava2"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Moon 1",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirMoon1"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Moon 2",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirMoon2"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Peach 1",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirPeach1"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Peach 2",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirPeach2"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Sand 1",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirSand1"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Sand 2",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirSand2"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Sea 1",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirSea1"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Sea 2",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirSea2"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Sky 1",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirSky1"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Sky 2",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirSky2"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Snow 1",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirSnow1"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Souvenir Snow 2",
+					"category": "5. Gifts",
+					"intArgs": [],
+					"strArgs": ["ListItem", "ItemGift", "SouvenirSnow2"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
 					}
 				}
 			]
