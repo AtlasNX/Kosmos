@@ -5,11 +5,12 @@ import subprocess as sbp
 import os
 import shutil
 import time
+import json
 
-modules = ["appstore", "bootlogo", "checkpoint", "edizon", "es_patches", 
-        "hbmenu", "hekate_payload", "must_have", "kosmosupdater", 
-        "sys-ftpd", "sys-netcheat", "kosmos_toolkit", 
-        "goldleaf", "ldn_mitm", "lockpick", "sd_setup"] # Everything that will be merged together
+with open("modules.json") as f:
+        config = json.load(f)
+modules = config.get("modules")
+
 p2 = "compiled" # How the merged folder should be called
 
 print("""
