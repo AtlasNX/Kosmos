@@ -14,17 +14,14 @@ p2 = "compiled" # How the merged folder should be called
 
 print("""
                         https://github.com/AtlasNX/Kosmos
-
  ____  __.                                 
 |    |/ _|____  ______ _____   ____  ______
 |      < /  _ \/  ___//     \ /  _ \/  ___/
 |    |  (  <_> )___ \|  Y Y  (  <_> )___ \ 
 |____|__ \____/____  >__|_|  /\____/____  >
         \/         \/      \/           \/ 
-
                                                                     
                     By: @AtlasNX (AtlasNX/Kosmos on Github)
-
 It could be that a permissions error will pop up, fix it by restarting the python script! We don\'t really know why that happens!
 """) # Fancy stuff
 
