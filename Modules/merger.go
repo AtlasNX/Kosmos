@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -9,18 +8,15 @@ import (
 	"path"
 )
 
-type moduleJSON struct {
-	MODULES []string `json:"modules"`
-}
-
 func main() {
-	bytes, err := ioutil.ReadFile("modules.json")
-	if err != nil {
-		fmt.Println("modules.json not found")
-		return
+	var modules []string
+
+	fdr, _ := ioutil.ReadDir(".")
+	for _, item := range fdr {
+		if item.IsDir() {
+			modules = append(modules, item.Name())
+		}
 	}
-	jsFile := moduleJSON{}
-	json.Unmarshal(bytes, &jsFile)
 
 	fmt.Println(`
 		https://github.com/AtlasNX/Kosmos
@@ -39,8 +35,8 @@ func main() {
 		os.RemoveAll("compiled")
 	}
 
-	for _, y := range jsFile.MODULES {
-		dir(y, "compiled")
+	for _, item := range modules {
+		dir(item, "compiled")
 	}
 }
 
