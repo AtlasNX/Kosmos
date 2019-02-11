@@ -29,7 +29,7 @@ print(r"""
         \/         \/      \/           \/ 
                                                                     
                     By: @AtlasNX (AtlasNX/Kosmos on Github)
-It could be that a permissions error will pop up, fix it by restarting the python script! We don\'t really know why that happens!
+It could be that a permissions error will pop up, fix it by restarting the python script! We don't really know why that happens!
 """)  # Fancy stuff
 
 if os.path.exists("compiled"):
