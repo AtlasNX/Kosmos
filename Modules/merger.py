@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # Merges all modules together because I'm lazy ;^)
 
-import subprocess as sbp
 import os
 import shutil
+
+if os.path.exists("compiled"):
+    shutil.rmtree("compiled") 
 
 modules = [module for module in os.listdir() if os.path.isdir(module)]
 
@@ -28,14 +30,9 @@ print(r"""
 |____|__ \____/____  >__|_|  /\____/____  >
         \/         \/      \/           \/ 
                                                                     
-                    By: @AtlasNX (AtlasNX/Kosmos on Github)
-It could be that a permissions error will pop up, fix it by restarting the python script! We don't really know why that happens!
-""")  # Fancy stuff
+                    By: @AtlasNX (AtlasNX/Kosmos on Github)""")
 
-if os.path.exists("compiled"):
-    shutil.rmtree("compiled")  # Delete Content of "compiled" if it exists!
-
-os.makedirs("compiled")  # Double check
+os.makedirs("compiled")
 
 for path in modules:
     copyDir(path, "compiled")
