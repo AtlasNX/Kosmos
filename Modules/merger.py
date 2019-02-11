@@ -4,13 +4,8 @@
 import subprocess as sbp
 import os
 import shutil
-import time
-import json
 
-with open("modules.json") as f:
-    config = json.load(f)
-modules = config.get("modules")
-
+modules = [module for module in os.listdir() if os.path.isdir(module)]
 
 def copyDir(srcDir, dstDir):
     os.makedirs(dstDir, exist_ok=True)
@@ -24,7 +19,7 @@ def copyDir(srcDir, dstDir):
         else:
             shutil.copy(srcfp, dstfp)
 
-print("""
+print(r"""
                         https://github.com/AtlasNX/Kosmos
  ____  __.                                 
 |    |/ _|____  ______ _____   ____  ______
