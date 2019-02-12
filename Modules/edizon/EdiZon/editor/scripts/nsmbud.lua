@@ -9,62 +9,77 @@ saveFileBuffer = edizon.getSaveFileBuffer()
 function getValueFromSaveFile()
 	strArgs = edizon.getStrArgs()
 	intArgs = edizon.getIntArgs()
-	indirectAddress = tonumber(strArgs[1], 16)
-	address = tonumber(strArgs[2], 16)
+	slot = tonumber(strArgs[1], 16)
+	offset = tonumber(strArgs[2], 16)
 	addressSize = intArgs[1]
 	valueSize = intArgs[2]
 	
-	offset = 0
 	value = 0
-		
-	if indirectAddress ~= 0 then
-		for i = 0, addressSize - 1 do
-			offset = offset | (saveFileBuffer[indirectAddress + i + 1] << i * 8)
-		end
-	end
+	
+	struct_start = 0x10
+	struct_size = 0x207
+
 		
 	for i = 0, valueSize - 1 do
-		value = value | (saveFileBuffer[offset + address + i + 1] << i * 8)
+		value = value | (saveFileBuffer[struct_start + offset + i + 1 + slot * struct_size] << i * 8)
 	end
+	
 	
 	return value
 end
 
+function StarCoins()
+	strArgs = edizon.getStrArgs()
+	slot = tonumber(strArgs[1], 16)
+	offsetStarCoins = tonumber(strArgs[2], 16)
+
+	for i = 0, 40 do
+		saveFileBuffer[i + 1 + offsetStarCoins + 0x10 + 0x207 * slot] = 119
+	end
+	
+	
+			
+	return "All Star Coins unlocked"
+end
+
+
 function setValueInSaveFile(value)
 	strArgs = edizon.getStrArgs()
 	intArgs = edizon.getIntArgs()
-	indirectAddress = tonumber(strArgs[1], 16)
-	address = tonumber(strArgs[2], 16)
+	slot = tonumber(strArgs[1], 16)
+	offset = tonumber(strArgs[2], 16)
 	dummy = strArgs[3]
 	
 	addressSize = intArgs[1]
 	valueSize = intArgs[2]
 	
-	offset = 0
+	struct_start = 0x10
 	struct_size = 0x207
-	s1=0x10
+	
+
+	if dummy == "Lives" then
+		for i = 0, 4 do
+			saveFileBuffer[struct_start + offset + i + 1 + slot * struct_size] = value
+		end
+	else
+		for i = 0, valueSize - 1 do
+			saveFileBuffer[struct_start + offset + i + 1 + slot * struct_size] = (value & (0xFF << i * 8)) >> (i * 8)
+		end
+	end
+	
+end
+
+function copyquickslot()
+    s1=0x10
 	s2=0x218
 	s3=0x420
 	qs1=0xC40
 	qs2=0xE48
 	qs3=0x1050
 	
-	if indirectAddress ~= 0 then
-		for i = 0, addressSize - 1 do
-			offset = offset | (saveFileBuffer[indirectAddress + i + 1] << (i * 8))
-		end
-	end
-	
-	
 	if saveFileBuffer[qs1+1] > 0 then
-	
-		--print(saveFileBuffer[qs1+1])
-	
 		for i = 0, struct_size - 3 do
-
 			saveFileBuffer[i + s1 + 1] = saveFileBuffer[i + qs1 + 1]
-			--print(s1 + i .. "-" .. qs1 + i)
-			--print(saveFileBuffer[i + s1 + 1] .. "-" .. saveFileBuffer[i + qs1 + 1] .. "\n")
 			saveFileBuffer[i + qs1 + 1] = 0
 		end
 		
@@ -97,17 +112,6 @@ function setValueInSaveFile(value)
 		saveFileBuffer[qs3 + struct_size] = 0x7B
 		saveFileBuffer[qs3 + struct_size + 1] = 0x17
 	end
-
-		if dummy == "Lives" then
-		for i = 0, 4 do
-			saveFileBuffer[offset + address + i + 1] = value
-		end
-	else
-		for i = 0, valueSize - 1 do
-			saveFileBuffer[offset + address + i + 1] = (value & (0xFF << i * 8)) >> (i * 8)
-		end
-	end
-	
 end
 
 
@@ -136,6 +140,7 @@ function setChecksum()
 end
 
 function getModifiedSaveFile()
+	copyquickslot()
 	setChecksum()
 	return saveFileBuffer
 end

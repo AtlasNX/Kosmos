@@ -1,0 +1,197 @@
+{
+	"author": "WerWolv",
+	"scriptLanguage": "py",
+	"beta": true,
+	"all": [
+		{
+			"saveFilePaths": [""],
+			"files": "[0-9]\\.celeste",
+			"filetype": "xmls",
+			"items": [
+				{
+					"name": "Total Deaths",
+					"category": "Player stats",
+					"intArgs": [0],
+					"strArgs": ["SaveData", "TotalDeaths"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999999
+					}
+				},
+				{
+					"name": "Total Strawberries",
+					"category": "Player stats",
+					"intArgs": [0],
+					"strArgs": ["SaveData", "TotalStrawberries"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999999
+					}
+				},
+				{
+					"name": "Total Golden Strawberries",
+					"category": "Player stats",
+					"intArgs": [0],
+					"strArgs": ["SaveData", "TotalGoldenStrawberries"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999999
+					}
+				},
+				{
+					"name": "Total Jumps",
+					"category": "Player stats",
+					"intArgs": [0],
+					"strArgs": ["SaveData", "TotalJumps"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999999
+					}
+				},
+				{
+					"name": "Total Wall Jumps",
+					"category": "Player stats",
+					"intArgs": [0],
+					"strArgs": ["SaveData", "TotalWallJumps"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999999
+					}
+				},
+				{
+					"name": "Total Dashes",
+					"category": "Player stats",
+					"intArgs": [0],
+					"strArgs": ["SaveData", "TotalDashes"],
+					"widget": {
+						"type": "int",
+						"minValue": 0,
+						"maxValue": 99999999
+					}
+				},
+				{
+					"name": "Respawn point X (Dangerous)",
+					"category": "Player stats",
+					"intArgs": [0],
+					"strArgs": ["SaveData", "CurrentSession", "RespawnPoint", "X"],
+					"widget": {
+						"type": "int",
+						"minValue": -50000,
+						"maxValue": 50000
+					}
+				},
+				{
+					"name": "Respawn point Y (Dangerous)",
+					"category": "Player stats",
+					"intArgs": [0],
+					"strArgs": ["SaveData", "CurrentSession", "RespawnPoint", "Y"],
+					"widget": {
+						"type": "int",
+						"minValue": -50000,
+						"maxValue": 50000
+					}
+				},
+				{
+					"name": "Number of dashes",
+					"category": "Player stats",
+					"intArgs": [0],
+					"strArgs": ["SaveData", "CurrentSession", "Inventory", "Dashes"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 100
+					}
+				},
+				{
+					"name": "Cheat Mode",
+					"category": "Assists",
+					"intArgs": [1],
+					"strArgs": ["SaveData", "CheatMode"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Assist Mode",
+					"category": "Assists",
+					"intArgs": [1],
+					"strArgs": ["SaveData", "AssistMode"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Game Speed (Default: 10)",
+					"category": "Assists",
+					"intArgs": [0],
+					"strArgs": ["SaveData", "Assists", "GameSpeed"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 20
+					}
+				},
+				{
+					"name": "Invincible",
+					"category": "Assists",
+					"intArgs": [1],
+					"strArgs": ["SaveData", "Assists", "Invincible"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Infinite Stamina",
+					"category": "Assists",
+					"intArgs": [1],
+					"strArgs": ["SaveData", "Assists", "InfiniteStamina"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				}
+			]
+		},
+		{
+			"saveFilePaths": [""],
+			"files": "settings\\.celeste",
+			"filetype": "xmls",
+			"items": [
+				{
+					"name": "Pico8 on main menu",
+					"category": "Settings",
+					"intArgs": [1],
+					"strArgs": ["Settings", "Pico8OnMainMenu"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				},
+				{
+					"name": "Debug mode",
+					"category": "Settings",
+					"intArgs": [1],
+					"strArgs": ["Settings", "LaunchInDebugMode"],
+					"widget": {
+						"type": "bool",
+						"onValue": 1,
+						"offValue": 0
+					}
+				}
+			]
+		}
+	]
+}

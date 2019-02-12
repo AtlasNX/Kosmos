@@ -22,7 +22,7 @@
 					"name": "Lives",
 					"category": "Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0001C", "Lives"],
+					"strArgs": ["0", "C", "Lives"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
@@ -30,20 +30,20 @@
 					}
 				},
 				{
-					"name": "Readme",
+					"name": "Info Start with power up",
 					"category": "Save Slot 1",
 					"intArgs": [ ],
 					"strArgs": [ ],
 					"widget": {
 						"type": "comment",
-						"comment": "There is some strange behavior\n if you start with the crown power up"
+						"comment": "Do not set the crown as 'Start with power up'\nwhile you have set 'Start as...' to blue or yellow Toad!!!\nThe game will CRASH!\nYou can start with Mario or Luigi and\nset 'start with power up' to crown,\nif you want to see Mario/Luigi headless"
 					}
 				},
 				{
-					"name": "Start with Power UP",
+					"name": "Start with power up",
 					"category": "Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0026"],
+					"strArgs": ["0000", "0016"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -56,16 +56,26 @@
 							"Ice Flower",
 							"Super Acorn",
 							"P-Acorn",
-							"Crown"
+							"Crown",
+							"Super Star",
+							"Mushroom + Super Star",
+							"Fire Flower + Super Star",
+							"Mini Mushroom + Super Star",
+							"Propeller Mushroom + Super Star",
+							"Penguin Suit + Super Star",
+							"Ice Flower + Super Star",
+							"Super Acorn + Super Star",
+							"P-Acorn + Super Star",
+							"Crown + Super Star"
 						],
-						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,128,129,130,131,132,133,134,135,136,137]
 					}
 				},
 				{
-					"name": "Start AS",
+					"name": "Start as...",
 					"category": "Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0021"],
+					"strArgs": ["0000", "0011"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -83,7 +93,7 @@
 					"name": "Inventory 1",
 					"category": "Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0161"],
+					"strArgs": ["0000", "0151"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -106,7 +116,7 @@
 					"name": "Inventory 2",
 					"category": "Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0162"],
+					"strArgs": ["0000", "0152"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -129,7 +139,7 @@
 					"name": "Inventory 3",
 					"category": "Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0163"],
+					"strArgs": ["0000", "0153"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -152,7 +162,7 @@
 					"name": "Inventory 4",
 					"category": "Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0164"],
+					"strArgs": ["0000", "0154"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -175,7 +185,7 @@
 					"name": "Inventory 5",
 					"category": "Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0165"],
+					"strArgs": ["0000", "0155"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -198,7 +208,7 @@
 					"name": "Inventory 6",
 					"category": "Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0166"],
+					"strArgs": ["0000", "0156"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -221,7 +231,7 @@
 					"name": "Inventory 7",
 					"category": "Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0167"],
+					"strArgs": ["0000", "0157"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -244,7 +254,7 @@
 					"name": "Inventory 8",
 					"category": "Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0168"],
+					"strArgs": ["0000", "0158"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -267,7 +277,7 @@
 					"name": "Inventory 9",
 					"category": "Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0169"],
+					"strArgs": ["0000", "0159"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -290,7 +300,7 @@
 					"name": "Inventory 10",
 					"category": "Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "016A"],
+					"strArgs": ["0000", "015A"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -307,13 +317,44 @@
 							"Nothing"
 						],
 						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Save",
+					"category": "Save Slot 1",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "The following option enables the 'Save' feature.\nNo more 'Quick Save' ;)"
+					}
+				},
+				{
+					"name": "Normal Save",
+					"category": "Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0020"],
+					"widget": {
+						"type": "bool",
+						"onValue" : 1,
+						"offValue" : 0
+					}
+				},
+				{
+					"name": "All Star Coins",
+					"category": "Save Slot 1",
+					"intArgs": [],
+					"strArgs": ["0000","0118"],
+					"widget": {
+						"type": "button",
+						"function" : "StarCoins"
 					}
 				},
 				{
 					"name": "Lives",
 					"category": "Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "00224", "Lives"],
+					"strArgs": ["0", "C", "Lives"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
@@ -321,20 +362,20 @@
 					}
 				},
 				{
-					"name": "Readme",
+					"name": "Info Start with power up",
 					"category": "Save Slot 2",
 					"intArgs": [ ],
 					"strArgs": [ ],
 					"widget": {
 						"type": "comment",
-						"comment": "There is some strange behavior\n if you start with the crown power up"
+						"comment": "Do not set the crown as 'Start with power up'\nwhile you have set 'Start as...' to blue or yellow Toad!!!\nThe game will CRASH!\nYou can start with Mario or Luigi and\nset 'start with power up' to crown,\nif you want to see Mario/Luigi headless"
 					}
 				},
 				{
-					"name": "Start with Power UP",
+					"name": "Start with power up",
 					"category": "Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "022E"],
+					"strArgs": ["0001", "0026"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -347,16 +388,26 @@
 							"Ice Flower",
 							"Super Acorn",
 							"P-Acorn",
-							"Crown"
+							"Crown",
+							"Super Star",
+							"Mushroom + Super Star",
+							"Fire Flower + Super Star",
+							"Mini Mushroom + Super Star",
+							"Propeller Mushroom + Super Star",
+							"Penguin Suit + Super Star",
+							"Ice Flower + Super Star",
+							"Super Acorn + Super Star",
+							"P-Acorn + Super Star",
+							"Crown + Super Star"
 						],
-						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,128,129,130,131,132,133,134,135,136,137]
 					}
 				},
 				{
-					"name": "Start AS",
+					"name": "Start as...",
 					"category": "Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "00229"],
+					"strArgs": ["0001", "0021"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -374,7 +425,7 @@
 					"name": "Inventory 1",
 					"category": "Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0369"],
+					"strArgs": ["0001", "0151"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -397,7 +448,7 @@
 					"name": "Inventory 2",
 					"category": "Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "036A"],
+					"strArgs": ["0001", "0152"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -420,7 +471,7 @@
 					"name": "Inventory 3",
 					"category": "Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "036B"],
+					"strArgs": ["0001", "0153"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -443,7 +494,7 @@
 					"name": "Inventory 4",
 					"category": "Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "036C"],
+					"strArgs": ["0001", "0154"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -466,7 +517,7 @@
 					"name": "Inventory 5",
 					"category": "Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "036D"],
+					"strArgs": ["0001", "0155"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -489,7 +540,7 @@
 					"name": "Inventory 6",
 					"category": "Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "036E"],
+					"strArgs": ["0001", "0156"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -512,7 +563,7 @@
 					"name": "Inventory 7",
 					"category": "Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "036F"],
+					"strArgs": ["0001", "0157"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -535,7 +586,7 @@
 					"name": "Inventory 8",
 					"category": "Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0370"],
+					"strArgs": ["0001", "0158"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -558,7 +609,7 @@
 					"name": "Inventory 9",
 					"category": "Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0371"],
+					"strArgs": ["0001", "0159"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -581,7 +632,7 @@
 					"name": "Inventory 10",
 					"category": "Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0372"],
+					"strArgs": ["0001", "015A"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -598,13 +649,44 @@
 							"Nothing"
 						],
 						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Save",
+					"category": "Save Slot 2",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "The following option enables the 'Save' feature.\nNo more 'Quick Save' ;)"
+					}
+				},
+				{
+					"name": "Normal Save",
+					"category": "Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0001", "0020"],
+					"widget": {
+						"type": "bool",
+						"onValue" : 1,
+						"offValue" : 0
+					}
+				},
+				{
+					"name": "All Star Coins",
+					"category": "Save Slot 2",
+					"intArgs": [],
+					"strArgs": ["0001","0118"],
+					"widget": {
+						"type": "button",
+						"function" : "StarCoins"
 					}
 				},
 				{
 					"name": "Lives",
 					"category": "Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "042C", "Lives"],
+					"strArgs": ["0", "C", "Lives"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
@@ -612,20 +694,45 @@
 					}
 				},
 				{
-					"name": "Readme",
+					"name": "Yoshi",
 					"category": "Save Slot 3",
 					"intArgs": [ ],
 					"strArgs": [ ],
 					"widget": {
 						"type": "comment",
-						"comment": "There is some strange behavior\n if you start with the crown power up"
+						"comment": "You won't see a Yoshi following you,\nbut he will be there, if you start a level ;)"
 					}
 				},
 				{
-					"name": "Start with Power UP",
+					"name": "Yoshi",
 					"category": "Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0436"],
+					"strArgs": ["0002", "0052"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"None",
+							"Blue",
+							"Red"
+						],
+						"listItemValues": [15, 10, 11]
+					}
+				},
+				{
+					"name": "Info Start with power up",
+					"category": "Save Slot 3",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "Do not set the crown as 'Start with power up'\nwhile you have set 'Start as...' to blue or yellow Toad!!!\nThe game will CRASH!\nYou can start with Mario or Luigi and\nset 'start with power up' to crown,\nif you want to see Mario/Luigi headless"
+					}
+				},
+				{
+					"name": "Start with power up",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0002", "0026"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -638,16 +745,26 @@
 							"Ice Flower",
 							"Super Acorn",
 							"P-Acorn",
-							"Crown"
+							"Crown",
+							"Super Star",
+							"Mushroom + Super Star",
+							"Fire Flower + Super Star",
+							"Mini Mushroom + Super Star",
+							"Propeller Mushroom + Super Star",
+							"Penguin Suit + Super Star",
+							"Ice Flower + Super Star",
+							"Super Acorn + Super Star",
+							"P-Acorn + Super Star",
+							"Crown + Super Star"
 						],
-						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,128,129,130,131,132,133,134,135,136,137]
 					}
 				},
 				{
-					"name": "Start AS",
+					"name": "Start as...",
 					"category": "Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0431"],
+					"strArgs": ["0002", "0021"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -665,7 +782,7 @@
 					"name": "Inventory 1",
 					"category": "Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0571"],
+					"strArgs": ["0002", "0151"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -688,7 +805,7 @@
 					"name": "Inventory 2",
 					"category": "Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0572"],
+					"strArgs": ["0002", "0152"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -711,7 +828,7 @@
 					"name": "Inventory 3",
 					"category": "Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0573"],
+					"strArgs": ["0002", "0153"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -734,7 +851,7 @@
 					"name": "Inventory 4",
 					"category": "Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0574"],
+					"strArgs": ["0002", "0154"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -757,7 +874,7 @@
 					"name": "Inventory 5",
 					"category": "Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0575"],
+					"strArgs": ["0002", "0155"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -780,7 +897,7 @@
 					"name": "Inventory 6",
 					"category": "Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0576"],
+					"strArgs": ["0002", "0156"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -803,7 +920,7 @@
 					"name": "Inventory 7",
 					"category": "Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0577"],
+					"strArgs": ["0002", "0157"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -826,7 +943,7 @@
 					"name": "Inventory 8",
 					"category": "Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0578"],
+					"strArgs": ["0002", "0158"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -849,7 +966,7 @@
 					"name": "Inventory 9",
 					"category": "Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0579"],
+					"strArgs": ["0002", "0159"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -872,7 +989,7 @@
 					"name": "Inventory 10",
 					"category": "Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "057A"],
+					"strArgs": ["0002", "015A"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -889,6 +1006,37 @@
 							"Nothing"
 						],
 						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Save",
+					"category": "Save Slot 3",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "The following option enables the 'Save' feature.\nNo more 'Quick Save' ;)"
+					}
+				},
+				{
+					"name": "Normal Save",
+					"category": "Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0002", "0020"],
+					"widget": {
+						"type": "bool",
+						"onValue" : 1,
+						"offValue" : 0
+					}
+				},
+				{
+					"name": "All Star Coins",
+					"category": "Save Slot 3",
+					"intArgs": [],
+					"strArgs": ["0002","0118"],
+					"widget": {
+						"type": "button",
+						"function" : "StarCoins"
 					}
 				}
 			]

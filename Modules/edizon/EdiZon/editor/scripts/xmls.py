@@ -1,6 +1,6 @@
 import edizon
 from xmltodict import parse, unparse
-from functools import reduce  # forward compatibility for Python 3
+from functools import reduce
 import operator
 
 saveFileBuffer = parse(edizon.getSaveFileString())
@@ -24,6 +24,20 @@ def setValueInSaveFile(value):
 	intArgs = edizon.getIntArgs()
 	
 	setInDict(saveFileBuffer, strArgs, value if intArgs[0] == 0 else ("false" if value == 0 else "true"))
+	
+def getStringFromSaveFile():
+	strArgs = edizon.getStrArgs()
+	intArgs = edizon.getIntArgs()
+	
+	return str(getFromDict(saveFileBuffer, strArgs))
+
+def setStringInSaveFile(value):
+	global saveFileBuffer
+	
+	strArgs = edizon.getStrArgs()
+	intArgs = edizon.getIntArgs()
+	
+	setInDict(saveFileBuffer, strArgs, value)
 	
 def getModifiedSaveFile():
 	return bytearray(unparse(saveFileBuffer), 'utf-8')
