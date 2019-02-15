@@ -1,3 +1,6 @@
 disabled_game_cart = false;
 received_exfat_warning = false;
 installed_files = [ ];
+channel = "stable";
+bundle = "kosmos";
+version = "v11.10.0";

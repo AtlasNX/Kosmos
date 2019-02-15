@@ -1,4 +1,4 @@
-![release](https://cdn.discordapp.com/attachments/507697244955213825/524325588593279005/KosmosBanner1.png)
+![Image](https://user-images.githubusercontent.com/25822956/52866161-64c6e300-313e-11e9-9e3a-87636ed67467.png)
 
 *formerly known as SDFilesSwitch*
 
