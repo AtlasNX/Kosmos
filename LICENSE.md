@@ -5,7 +5,7 @@ Licenses
 * Switch Homebrew Menu is licensed under [ISC](https://github.com/switchbrew/nx-hbmenu/blob/master/LICENSE.md)
 * Switch Homebrew Loader is licensed under [ISC](https://github.com/switchbrew/nx-hbloader/blob/master/LICENSE.md)
 * AppstoreNX is licensed under [GPLv3](https://github.com/vgmoose/appstorenx/blob/master/LICENSE)
-* EdiZon is licensed under [MIT](https://github.com/thomasnet-mc/EdiZon/blob/master/LICENSE)
+* EdiZon is licensed under [GPLv2](https://github.com/WerWolv/EdiZon/blob/master/LICENSE)
 * SDFilesUpdater is licensed under [GPLv2](https://github.com/StevenMattera/SDFilesUpdater/blob/master/LICENSE)
 * Sys-FTPD is licensed under [GPLv3](https://github.com/jakibaki/sys-ftpd/blob/master/LICENSE)
 * Goldleaf is licensed under [GPLv3](https://github.com/XorTroll/Goldleaf/blob/master/LICENSE)
