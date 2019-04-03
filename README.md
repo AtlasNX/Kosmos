@@ -47,3 +47,4 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * [Goldleaf](https://github.com/XorTroll/Goldleaf)
 * [Kosmos Updater](https://github.com/StevenMattera/SDFilesUpdater)
 * [Kosmos Toolbox](https://github.com/AtlasNX/CFW-Settings)
+* [Sys-CLK](https://github.com/retronx-team/sys-clk)

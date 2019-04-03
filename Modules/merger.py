@@ -9,7 +9,7 @@ import time
 modules = ["appstore", "bootlogo", "edizon", "goldleaf", 
         "hbmenu", "hekate_payload", "must_have", "kosmosupdater", 
         "sys-ftpd", "sys-netcheat", "kosmos_toolkit", 
-        "lockpick", "sd_setup"] # Everything that will be merged together
+        "lockpick", "hid-mitm", "sys-clk"] # Everything that will be merged together
 p2 = "compiled" # How the merged folder should be called
 
 print("""

@@ -13,5 +13,6 @@ Licenses
 * Hekate is licensed under [GPLv2](https://github.com/CTCaer/hekate/blob/master/LICENSE)
 * Noexes is licensed under [GPLv3](https://github.com/mdbell/Noexes/blob/master/LICENSE)
 * Lockpick is licensed under [GPLv2](https://github.com/shchmue/Lockpick/blob/master/LICENSE)
+* sys-clk is licensed under [Beerware](https://github.com/retronx-team/sys-clk/blob/master/LICENSE)
 
 All patches made to the original software respect their original license.
