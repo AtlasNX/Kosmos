@@ -6,6 +6,11 @@
 			"requires_reboot": false
 		},
 		{
+			"name"  : "nxsh",
+			"tid"   : "43000000000000FF",
+			"requires_reboot": false
+		},
+		{
 			"name"  : "sys-netcheat",
 			"tid"   : "430000000000000A",
 			"requires_reboot": false
