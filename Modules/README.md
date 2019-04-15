@@ -12,3 +12,5 @@ KosmosUpdater | A homebrew for directly updating Kosmos
 hbmenu | The homebrew menu
 kosmos_toolkit | Homebrew for modifying CFW settings
 lockpick | This allows dumping all keys used by the Switch
+sys-clk | Overclocking
+ldn_mitm | ad-hoc -> internet

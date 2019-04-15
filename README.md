@@ -10,29 +10,23 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 </p>
 
 ## Features
-* Atmosphere
+* Vanilla Atmosphere
 * Up-to-date packages
-* Support for every firmware
-* No issues with starting games after launching homebrew
 * Splash screens and instant launch
 * Background FTP-Server
 * Background netcheat system
-* Signature patches
-* NSP installation
 * Updating through a console homebrew app
 * Customizable button bindings for the Homebrew Loader
-* Completely modular
 * Drag and drop
 * Auto-boot and module selection through a console homebrew app
-**and much more!**
+* Launching and reloading sys-modules without restarting your system
+* A very handsome bootlogo by bernv3
+* The latest and best homebrew
+* **and much more!**
 
 
 ## How to use
-1. Download [Hekate](https://github.com/CTCaer/hekate/releases) or use the payload that comes with the package
-2. Download the [latest release](https://github.com/AtlasNX/Kosmos/releases) and extract it to the root of your Switch SD card
-3. Launch Hekate through either [TegraSharp](https://github.com/simontime/TegraSharp/releases), [Fusée Gelée](https://github.com/reswitched/fusee-launcher) or [WebCFWLoader](https://elijahzawesome.github.io/web-cfw-loader/)
-4. ???
-5. Profit!
+Follow this guide: https://guide.teamatlasnx.com
 
 ## Featuring
 * [Hekate](https://github.com/CTCaer/hekate)
@@ -48,3 +42,5 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * [Kosmos Updater](https://github.com/StevenMattera/SDFilesUpdater)
 * [Kosmos Toolbox](https://github.com/AtlasNX/CFW-Settings)
 * [Sys-CLK](https://github.com/retronx-team/sys-clk)
+* [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm)
+* [emuiibo](https://github.com/XorTroll/emuiibo)
