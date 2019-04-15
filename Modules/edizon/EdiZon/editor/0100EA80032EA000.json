@@ -1,7 +1,7 @@
 {
 	"author": "DNA",
 	"scriptLanguage": "lua",
-	"beta": true,
+	"beta": false,
 	"all": [
 		{
 			"saveFilePaths": [""],
@@ -10,9 +10,9 @@
 			"items": [
 				{
 					"name": "INFO",
-					"category": "INFO",
-					"intArgs": [],
-					"strArgs": [],
+					"category": "#INFO",
+					"intArgs": [ ],
+					"strArgs": [ ],
 					"widget": {
 						"type": "comment",
 						"comment": "It is not possible, to create\na save file with this editor.\nStart a new game, open the menu and\n'Quick Save' the game."
@@ -20,9 +20,9 @@
 				},
 				{
 					"name": "Lives",
-					"category": "Save Slot 1",
+					"category": "00 Mario Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0001C", "Lives"],
+					"strArgs": ["0", "C", "Lives"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
@@ -30,20 +30,20 @@
 					}
 				},
 				{
-					"name": "Readme",
-					"category": "Save Slot 1",
-					"intArgs": [],
-					"strArgs": [],
+					"name": "Info Start with power up",
+					"category": "00 Mario Save Slot 1",
+					"intArgs": [ ],
+					"strArgs": [ ],
 					"widget": {
 						"type": "comment",
-						"comment": "There is some strange behavior\n if you start with the crown power up"
+						"comment": "Do not set the crown as 'Start with power up'\nwhile you have set 'Start as...' to blue or yellow Toad!!!\nThe game will CRASH!\nYou can start with Mario or Luigi and\nset 'start with power up' to crown,\nif you want to see Mario/Luigi headless"
 					}
 				},
 				{
-					"name": "Start with Power UP",
-					"category": "Save Slot 1",
+					"name": "Start with power up",
+					"category": "00 Mario Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0026"],
+					"strArgs": ["0000", "0016"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -56,16 +56,26 @@
 							"Ice Flower",
 							"Super Acorn",
 							"P-Acorn",
-							"Crown"
+							"Crown",
+							"Super Star",
+							"Mushroom + Super Star",
+							"Fire Flower + Super Star",
+							"Mini Mushroom + Super Star",
+							"Propeller Mushroom + Super Star",
+							"Penguin Suit + Super Star",
+							"Ice Flower + Super Star",
+							"Super Acorn + Super Star",
+							"P-Acorn + Super Star",
+							"Crown + Super Star"
 						],
-						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,128,129,130,131,132,133,134,135,136,137]
 					}
 				},
 				{
-					"name": "Start AS",
-					"category": "Save Slot 1",
+					"name": "Start as...",
+					"category": "00 Mario Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0021"],
+					"strArgs": ["0000", "0011"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -81,9 +91,9 @@
 				},
 				{
 					"name": "Inventory 1",
-					"category": "Save Slot 1",
+					"category": "00 Mario Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0161"],
+					"strArgs": ["0000", "0151"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -104,9 +114,9 @@
 				},
 				{
 					"name": "Inventory 2",
-					"category": "Save Slot 1",
+					"category": "00 Mario Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0162"],
+					"strArgs": ["0000", "0152"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -127,9 +137,9 @@
 				},
 				{
 					"name": "Inventory 3",
-					"category": "Save Slot 1",
+					"category": "00 Mario Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0163"],
+					"strArgs": ["0000", "0153"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -150,9 +160,9 @@
 				},
 				{
 					"name": "Inventory 4",
-					"category": "Save Slot 1",
+					"category": "00 Mario Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0164"],
+					"strArgs": ["0000", "0154"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -173,9 +183,9 @@
 				},
 				{
 					"name": "Inventory 5",
-					"category": "Save Slot 1",
+					"category": "00 Mario Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0165"],
+					"strArgs": ["0000", "0155"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -196,9 +206,9 @@
 				},
 				{
 					"name": "Inventory 6",
-					"category": "Save Slot 1",
+					"category": "00 Mario Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0166"],
+					"strArgs": ["0000", "0156"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -219,9 +229,9 @@
 				},
 				{
 					"name": "Inventory 7",
-					"category": "Save Slot 1",
+					"category": "00 Mario Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0167"],
+					"strArgs": ["0000", "0157"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -242,9 +252,9 @@
 				},
 				{
 					"name": "Inventory 8",
-					"category": "Save Slot 1",
+					"category": "00 Mario Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0168"],
+					"strArgs": ["0000", "0158"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -265,9 +275,9 @@
 				},
 				{
 					"name": "Inventory 9",
-					"category": "Save Slot 1",
+					"category": "00 Mario Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0169"],
+					"strArgs": ["0000", "0159"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -288,9 +298,9 @@
 				},
 				{
 					"name": "Inventory 10",
-					"category": "Save Slot 1",
+					"category": "00 Mario Save Slot 1",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "016A"],
+					"strArgs": ["0000", "015A"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -307,13 +317,79 @@
 							"Nothing"
 						],
 						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Yoshi",
+					"category": "00 Mario Save Slot 1",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "You won't see a Yoshi following you,\nbut he will be there, if you start a level ;)"
+					}
+				},
+				{
+					"name": "Yoshi",
+					"category": "00 Mario Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0052"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"None",
+							"Blue",
+							"Red"
+						],
+						"listItemValues": [15, 10, 11]
+					}
+				},
+				{
+					"name": "Save",
+					"category": "00 Mario Save Slot 1",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "The following option enables the 'Save' feature.\nNo more 'Quick Save' ;)"
+					}
+				},
+				{
+					"name": "Normal Save",
+					"category": "00 Mario Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0000", "0020"],
+					"widget": {
+						"type": "bool",
+						"onValue" : 1,
+						"offValue" : 0
+					}
+				},
+				{
+					"name": "All Star Coins",
+					"category": "00 Mario Save Slot 1",
+					"intArgs": [],
+					"strArgs": ["0000","0128"],
+					"widget": {
+						"type": "button",
+						"function" : "StarCoins"
+					}
+				},
+				{
+					"name": "Unlock all levels",
+					"category": "00 Mario Save Slot 1",
+					"intArgs": [],
+					"strArgs": ["0000","006F"],
+					"widget": {
+						"type": "button",
+						"function" : "UnlockLevels"
 					}
 				},
 				{
 					"name": "Lives",
-					"category": "Save Slot 2",
+					"category": "00 Mario Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "00224", "Lives"],
+					"strArgs": ["0001", "000C", "Lives"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
@@ -321,20 +397,20 @@
 					}
 				},
 				{
-					"name": "Readme",
-					"category": "Save Slot 2",
-					"intArgs": [],
-					"strArgs": [],
+					"name": "Info Start with power up",
+					"category": "00 Mario Save Slot 2",
+					"intArgs": [ ],
+					"strArgs": [ ],
 					"widget": {
 						"type": "comment",
-						"comment": "There is some strange behavior\n if you start with the crown power up"
+						"comment": "Do not set the crown as 'Start with power up'\nwhile you have set 'Start as...' to blue or yellow Toad!!!\nThe game will CRASH!\nYou can start with Mario or Luigi and\nset 'start with power up' to crown,\nif you want to see Mario/Luigi headless"
 					}
 				},
 				{
-					"name": "Start with Power UP",
-					"category": "Save Slot 2",
+					"name": "Start with power up",
+					"category": "00 Mario Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "022E"],
+					"strArgs": ["0001", "0016"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -347,16 +423,26 @@
 							"Ice Flower",
 							"Super Acorn",
 							"P-Acorn",
-							"Crown"
+							"Crown",
+							"Super Star",
+							"Mushroom + Super Star",
+							"Fire Flower + Super Star",
+							"Mini Mushroom + Super Star",
+							"Propeller Mushroom + Super Star",
+							"Penguin Suit + Super Star",
+							"Ice Flower + Super Star",
+							"Super Acorn + Super Star",
+							"P-Acorn + Super Star",
+							"Crown + Super Star"
 						],
-						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,128,129,130,131,132,133,134,135,136,137]
 					}
 				},
 				{
-					"name": "Start AS",
-					"category": "Save Slot 2",
+					"name": "Start as...",
+					"category": "00 Mario Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "00229"],
+					"strArgs": ["0001", "0011"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -372,9 +458,9 @@
 				},
 				{
 					"name": "Inventory 1",
-					"category": "Save Slot 2",
+					"category": "00 Mario Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0369"],
+					"strArgs": ["0001", "0151"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -395,9 +481,9 @@
 				},
 				{
 					"name": "Inventory 2",
-					"category": "Save Slot 2",
+					"category": "00 Mario Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "036A"],
+					"strArgs": ["0001", "0152"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -418,9 +504,9 @@
 				},
 				{
 					"name": "Inventory 3",
-					"category": "Save Slot 2",
+					"category": "00 Mario Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "036B"],
+					"strArgs": ["0001", "0153"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -441,9 +527,9 @@
 				},
 				{
 					"name": "Inventory 4",
-					"category": "Save Slot 2",
+					"category": "00 Mario Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "036C"],
+					"strArgs": ["0001", "0154"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -464,9 +550,9 @@
 				},
 				{
 					"name": "Inventory 5",
-					"category": "Save Slot 2",
+					"category": "00 Mario Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "036D"],
+					"strArgs": ["0001", "0155"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -487,9 +573,9 @@
 				},
 				{
 					"name": "Inventory 6",
-					"category": "Save Slot 2",
+					"category": "00 Mario Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "036E"],
+					"strArgs": ["0001", "0156"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -510,9 +596,9 @@
 				},
 				{
 					"name": "Inventory 7",
-					"category": "Save Slot 2",
+					"category": "00 Mario Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "036F"],
+					"strArgs": ["0001", "0157"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -533,9 +619,9 @@
 				},
 				{
 					"name": "Inventory 8",
-					"category": "Save Slot 2",
+					"category": "00 Mario Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0370"],
+					"strArgs": ["0001", "0158"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -556,9 +642,9 @@
 				},
 				{
 					"name": "Inventory 9",
-					"category": "Save Slot 2",
+					"category": "00 Mario Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0371"],
+					"strArgs": ["0001", "0159"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -579,9 +665,9 @@
 				},
 				{
 					"name": "Inventory 10",
-					"category": "Save Slot 2",
+					"category": "00 Mario Save Slot 2",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0372"],
+					"strArgs": ["0001", "015A"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -598,13 +684,79 @@
 							"Nothing"
 						],
 						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Yoshi",
+					"category": "00 Mario Save Slot 2",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "You won't see a Yoshi following you,\nbut he will be there, if you start a level ;)"
+					}
+				},
+				{
+					"name": "Yoshi",
+					"category": "00 Mario Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0001", "0052"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"None",
+							"Blue",
+							"Red"
+						],
+						"listItemValues": [15, 10, 11]
+					}
+				},
+				{
+					"name": "Save",
+					"category": "00 Mario Save Slot 2",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "The following option enables the 'Save' feature.\nNo more 'Quick Save' ;)"
+					}
+				},
+				{
+					"name": "Normal Save",
+					"category": "00 Mario Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0001", "0020"],
+					"widget": {
+						"type": "bool",
+						"onValue" : 1,
+						"offValue" : 0
+					}
+				},
+				{
+					"name": "All Star Coins",
+					"category": "00 Mario Save Slot 2",
+					"intArgs": [],
+					"strArgs": ["0001","0128"],
+					"widget": {
+						"type": "button",
+						"function" : "StarCoins"
+					}
+				},
+				{
+					"name": "Unlock all levels",
+					"category": "00 Mario Save Slot 2",
+					"intArgs": [],
+					"strArgs": ["0001","006F"],
+					"widget": {
+						"type": "button",
+						"function" : "UnlockLevels"
 					}
 				},
 				{
 					"name": "Lives",
-					"category": "Save Slot 3",
+					"category": "00 Mario Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "042C", "Lives"],
+					"strArgs": ["2", "C", "Lives"],
 					"widget": {
 						"type": "int",
 						"minValue": 1,
@@ -612,20 +764,20 @@
 					}
 				},
 				{
-					"name": "Readme",
-					"category": "Save Slot 3",
-					"intArgs": [],
-					"strArgs": [],
+					"name": "Info Start with power up",
+					"category": "00 Mario Save Slot 3",
+					"intArgs": [ ],
+					"strArgs": [ ],
 					"widget": {
 						"type": "comment",
-						"comment": "There is some strange behavior\n if you start with the crown power up"
+						"comment": "Do not set the crown as 'Start with power up'\nwhile you have set 'Start as...' to blue or yellow Toad!!!\nThe game will CRASH!\nYou can start with Mario or Luigi and\nset 'start with power up' to crown,\nif you want to see Mario/Luigi headless"
 					}
 				},
 				{
-					"name": "Start with Power UP",
-					"category": "Save Slot 3",
+					"name": "Start with power up",
+					"category": "00 Mario Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0436"],
+					"strArgs": ["0002", "0016"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -638,16 +790,26 @@
 							"Ice Flower",
 							"Super Acorn",
 							"P-Acorn",
-							"Crown"
+							"Crown",
+							"Super Star",
+							"Mushroom + Super Star",
+							"Fire Flower + Super Star",
+							"Mini Mushroom + Super Star",
+							"Propeller Mushroom + Super Star",
+							"Penguin Suit + Super Star",
+							"Ice Flower + Super Star",
+							"Super Acorn + Super Star",
+							"P-Acorn + Super Star",
+							"Crown + Super Star"
 						],
-						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,128,129,130,131,132,133,134,135,136,137]
 					}
 				},
 				{
-					"name": "Start AS",
-					"category": "Save Slot 3",
+					"name": "Start as...",
+					"category": "00 Mario Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0431"],
+					"strArgs": ["0002", "0011"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -663,9 +825,9 @@
 				},
 				{
 					"name": "Inventory 1",
-					"category": "Save Slot 3",
+					"category": "00 Mario Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0571"],
+					"strArgs": ["0002", "0151"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -686,9 +848,9 @@
 				},
 				{
 					"name": "Inventory 2",
-					"category": "Save Slot 3",
+					"category": "00 Mario Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0572"],
+					"strArgs": ["0002", "0152"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -709,9 +871,9 @@
 				},
 				{
 					"name": "Inventory 3",
-					"category": "Save Slot 3",
+					"category": "00 Mario Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0573"],
+					"strArgs": ["0002", "0153"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -732,9 +894,9 @@
 				},
 				{
 					"name": "Inventory 4",
-					"category": "Save Slot 3",
+					"category": "00 Mario Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0574"],
+					"strArgs": ["0002", "0154"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -755,9 +917,9 @@
 				},
 				{
 					"name": "Inventory 5",
-					"category": "Save Slot 3",
+					"category": "00 Mario Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0575"],
+					"strArgs": ["0002", "0155"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -778,9 +940,9 @@
 				},
 				{
 					"name": "Inventory 6",
-					"category": "Save Slot 3",
+					"category": "00 Mario Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0576"],
+					"strArgs": ["0002", "0156"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -801,9 +963,9 @@
 				},
 				{
 					"name": "Inventory 7",
-					"category": "Save Slot 3",
+					"category": "00 Mario Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0577"],
+					"strArgs": ["0002", "0157"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -824,9 +986,9 @@
 				},
 				{
 					"name": "Inventory 8",
-					"category": "Save Slot 3",
+					"category": "00 Mario Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0578"],
+					"strArgs": ["0002", "0158"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -847,9 +1009,9 @@
 				},
 				{
 					"name": "Inventory 9",
-					"category": "Save Slot 3",
+					"category": "00 Mario Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "0579"],
+					"strArgs": ["0002", "0159"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -870,9 +1032,9 @@
 				},
 				{
 					"name": "Inventory 10",
-					"category": "Save Slot 3",
+					"category": "00 Mario Save Slot 3",
 					"intArgs": [1, 1],
-					"strArgs": ["0000", "057A"],
+					"strArgs": ["0002", "015A"],
 					"widget": {
 						"type": "list",
 						"listItemNames": [
@@ -889,6 +1051,1173 @@
 							"Nothing"
 						],
 						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Yoshi",
+					"category": "00 Mario Save Slot 3",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "You won't see a Yoshi following you,\nbut he will be there, if you start a level ;)"
+					}
+				},
+				{
+					"name": "Yoshi",
+					"category": "00 Mario Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0002", "0052"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"None",
+							"Blue",
+							"Red"
+						],
+						"listItemValues": [15, 10, 11]
+					}
+				},
+				{
+					"name": "Save",
+					"category": "00 Mario Save Slot 3",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "The following option enables the 'Save' feature.\nNo more 'Quick Save' ;)"
+					}
+				},
+				{
+					"name": "Normal Save",
+					"category": "00 Mario Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0002", "0020"],
+					"widget": {
+						"type": "bool",
+						"onValue" : 1,
+						"offValue" : 0
+					}
+				},
+				{
+					"name": "All Star Coins",
+					"category": "00 Mario Save Slot 3",
+					"intArgs": [],
+					"strArgs": ["0002","0128"],
+					"widget": {
+						"type": "button",
+						"function" : "StarCoins"
+					}
+				},
+				{
+					"name": "Unlock all levels",
+					"category": "00 Mario Save Slot 3",
+					"intArgs": [],
+					"strArgs": ["0002","006F"],
+					"widget": {
+						"type": "button",
+						"function" : "UnlockLevels"
+					}
+				},
+				{
+					"name": "Lives",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["3", "C", "Lives"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Info Start with power up",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "Do not set the crown as 'Start with power up'\nwhile you have set 'Start as...' to blue or yellow Toad!!!\nThe game will CRASH!\nYou can start with Mario or Luigi and\nset 'start with power up' to crown,\nif you want to see Mario/Luigi headless"
+					}
+				},
+				{
+					"name": "Start with power up",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["3", "0016"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"None",
+							"Mushroom",
+							"Fire Flower",
+							"Mini Mushroom",
+							"Propeller Mushroom",
+							"Penguin Suit",
+							"Ice Flower",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Super Star",
+							"Mushroom + Super Star",
+							"Fire Flower + Super Star",
+							"Mini Mushroom + Super Star",
+							"Propeller Mushroom + Super Star",
+							"Penguin Suit + Super Star",
+							"Ice Flower + Super Star",
+							"Super Acorn + Super Star",
+							"P-Acorn + Super Star",
+							"Crown + Super Star"
+						],
+						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,128,129,130,131,132,133,134,135,136,137]
+					}
+				},
+				{
+					"name": "Start as...",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["3", "0011"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mario",
+							"Luigi",
+							"Yellow Toad",
+							"Blue Toad",
+							"Toadette",
+							"Nabbit"
+						],
+						"listItemValues": [0, 1, 2, 3, 4, 5]
+					}
+				},
+				{
+					"name": "Inventory 1",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["3", "0151"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 2",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["3", "0152"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 3",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["3", "0153"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 4",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0003", "0154"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 5",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0003", "0155"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 6",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0003", "0156"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 7",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0003", "0157"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 8",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0003", "0158"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 9",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0003", "0159"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 10",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0003", "015A"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+        {
+					"name": "Yoshi",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "You won't see a Yoshi following you,\nbut he will be there, if you start a level ;)"
+					}
+				},
+				{
+					"name": "Yoshi",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0003", "0052"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"None",
+							"Blue",
+							"Red"
+						],
+						"listItemValues": [15, 10, 11]
+					}
+				},
+				{
+					"name": "Save",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "The following option enables the 'Save' feature.\nNo more 'Quick Save' ;)"
+					}
+				},
+				{
+					"name": "Normal Save",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [1, 1],
+					"strArgs": ["0003", "0021"],
+					"widget": {
+						"type": "bool",
+						"onValue" : 1,
+						"offValue" : 0
+					}
+				},
+				{
+					"name": "All Star Coins",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [],
+					"strArgs": ["0003","0128"],
+					"widget": {
+						"type": "button",
+						"function" : "StarCoins"
+					}
+				},
+				{
+					"name": "Unlock all levels",
+					"category": "01 Luigi Save Slot 1",
+					"intArgs": [],
+					"strArgs": ["0003","006F"],
+					"widget": {
+						"type": "button",
+						"function" : "UnlockLevels"
+					}
+				},
+				{
+					"name": "Lives",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "000C", "Lives"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Info Start with power up",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "Do not set the crown as 'Start with power up'\nwhile you have set 'Start as...' to blue or yellow Toad!!!\nThe game will CRASH!\nYou can start with Mario or Luigi and\nset 'start with power up' to crown,\nif you want to see Mario/Luigi headless"
+					}
+				},
+				{
+					"name": "Start with power up",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "0016"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"None",
+							"Mushroom",
+							"Fire Flower",
+							"Mini Mushroom",
+							"Propeller Mushroom",
+							"Penguin Suit",
+							"Ice Flower",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Super Star",
+							"Mushroom + Super Star",
+							"Fire Flower + Super Star",
+							"Mini Mushroom + Super Star",
+							"Propeller Mushroom + Super Star",
+							"Penguin Suit + Super Star",
+							"Ice Flower + Super Star",
+							"Super Acorn + Super Star",
+							"P-Acorn + Super Star",
+							"Crown + Super Star"
+						],
+						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,128,129,130,131,132,133,134,135,136,137]
+					}
+				},
+				{
+					"name": "Start as...",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "0011"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mario",
+							"Luigi",
+							"Yellow Toad",
+							"Blue Toad",
+							"Toadette",
+							"Nabbit"
+						],
+						"listItemValues": [0, 1, 2, 3, 4, 5]
+					}
+				},
+				{
+					"name": "Inventory 1",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "0151"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 2",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "0152"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 3",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "0153"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 4",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "0154"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 5",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "0155"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 6",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "0156"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 7",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "0157"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 8",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "0158"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 9",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "0159"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 10",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "015A"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Yoshi",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "You won't see a Yoshi following you,\nbut he will be there, if you start a level ;)"
+					}
+				},
+				{
+					"name": "Yoshi",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "0052"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"None",
+							"Blue",
+							"Red"
+						],
+						"listItemValues": [15, 10, 11]
+					}
+				},
+				{
+					"name": "Save",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "The following option enables the 'Save' feature.\nNo more 'Quick Save' ;)"
+					}
+				},
+				{
+					"name": "Normal Save",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [1, 1],
+					"strArgs": ["0004", "0021"],
+					"widget": {
+						"type": "bool",
+						"onValue" : 1,
+						"offValue" : 0
+					}
+				},
+				{
+					"name": "All Star Coins",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [],
+					"strArgs": ["0004","0128"],
+					"widget": {
+						"type": "button",
+						"function" : "StarCoins"
+					}
+				},
+				{
+					"name": "Unlock all levels",
+					"category": "01 Luigi Save Slot 2",
+					"intArgs": [],
+					"strArgs": ["0004","006F"],
+					"widget": {
+						"type": "button",
+						"function" : "UnlockLevels"
+					}
+				},
+				{
+					"name": "Lives",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "C", "Lives"],
+					"widget": {
+						"type": "int",
+						"minValue": 1,
+						"maxValue": 99
+					}
+				},
+				{
+					"name": "Info Start with power up",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "Do not set the crown as 'Start with power up'\nwhile you have set 'Start as...' to blue or yellow Toad!!!\nThe game will CRASH!\nYou can start with Mario or Luigi and\nset 'start with power up' to crown,\nif you want to see Mario/Luigi headless"
+					}
+				},
+				{
+					"name": "Start with power up",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "0016"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"None",
+							"Mushroom",
+							"Fire Flower",
+							"Mini Mushroom",
+							"Propeller Mushroom",
+							"Penguin Suit",
+							"Ice Flower",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Super Star",
+							"Mushroom + Super Star",
+							"Fire Flower + Super Star",
+							"Mini Mushroom + Super Star",
+							"Propeller Mushroom + Super Star",
+							"Penguin Suit + Super Star",
+							"Ice Flower + Super Star",
+							"Super Acorn + Super Star",
+							"P-Acorn + Super Star",
+							"Crown + Super Star"
+						],
+						"listItemValues": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,128,129,130,131,132,133,134,135,136,137]
+					}
+				},
+				{
+					"name": "Start as...",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "0011"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mario",
+							"Luigi",
+							"Yellow Toad",
+							"Blue Toad",
+							"Toadette",
+							"Nabbit"
+						],
+						"listItemValues": [0, 1, 2, 3, 4, 5]
+					}
+				},
+				{
+					"name": "Inventory 1",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "0151"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 2",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "0152"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 3",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "0153"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 4",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "0154"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 5",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "0155"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 6",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "0156"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 7",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "0157"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 8",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "0158"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 9",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "0159"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Inventory 10",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "015A"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"Mushroom",
+							"Fire Flower",
+							"Super Star",
+							"Ice Flower",
+							"Propeller Mushroom",
+							"Mini Mushroom",
+							"Penguin Suit",
+							"Super Acorn",
+							"P-Acorn",
+							"Crown",
+							"Nothing"
+						],
+						"listItemValues": [0, 1, 2, 3, 5, 6, 7, 8, 9, 14, 15]
+					}
+				},
+				{
+					"name": "Yoshi",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "You won't see a Yoshi following you,\nbut he will be there, if you start a level ;)"
+					}
+				},
+				{
+					"name": "Yoshi",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "0052"],
+					"widget": {
+						"type": "list",
+						"listItemNames": [
+							"None",
+							"Blue",
+							"Red"
+						],
+						"listItemValues": [15, 10, 11]
+					}
+				},
+				{
+					"name": "Save",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [ ],
+					"strArgs": [ ],
+					"widget": {
+						"type": "comment",
+						"comment": "The following option enables the 'Save' feature.\nNo more 'Quick Save' ;)"
+					}
+				},
+				{
+					"name": "Normal Save",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [1, 1],
+					"strArgs": ["0005", "0021"],
+					"widget": {
+						"type": "bool",
+						"onValue" : 1,
+						"offValue" : 0
+					}
+				},
+				{
+					"name": "All Star Coins",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [],
+					"strArgs": ["0005","0128"],
+					"widget": {
+						"type": "button",
+						"function" : "StarCoins"
+					}
+				},
+				{
+					"name": "Unlock all levels",
+					"category": "01 Luigi Save Slot 3",
+					"intArgs": [],
+					"strArgs": ["0005","006F"],
+					"widget": {
+						"type": "button",
+						"function" : "UnlockLevels"
 					}
 				}
 			]

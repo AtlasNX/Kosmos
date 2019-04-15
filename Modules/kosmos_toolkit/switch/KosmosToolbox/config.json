@@ -1,0 +1,29 @@
+{
+	"sysmodules" : [
+		{
+			"name"  : "sys-ftpd",
+			"tid"   : "420000000000000E",
+			"requires_reboot": false
+		},
+		{
+			"name"  : "nxsh",
+			"tid"   : "43000000000000FF",
+			"requires_reboot": false
+		},
+		{
+			"name"  : "sys-netcheat",
+			"tid"   : "430000000000000A",
+			"requires_reboot": false
+		},
+		{
+			"name"  : "hid-mitm",
+			"tid"   : "0100000000000FAF",
+			"requires_reboot": true
+		},
+		{
+			"name"  : "sys-clk",
+			"tid"   : "00FF0000636C6BFF",
+			"requires_reboot": true
+		}
+	]
+}
