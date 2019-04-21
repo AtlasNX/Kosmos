@@ -21,12 +21,12 @@
 			"requires_reboot": true
 		},
 		{
-			"name"  : "sys-clk (No 8.0)",
+			"name"  : "sys-clk",
 			"tid"   : "00FF0000636C6BFF",
 			"requires_reboot": false
 		},
 		{
-			"name"  : "ldn_mitm",
+			"name"  : "ldn_mitm (No 8.0)",
 			"tid"   : "4200000000000010",
 			"requires_reboot": true
 		},
