@@ -15,5 +15,6 @@ Licenses
 * Lockpick is licensed under [GPLv2](https://github.com/shchmue/Lockpick/blob/master/LICENSE)
 * sys-clk is licensed under [Beerware](https://github.com/retronx-team/sys-clk/blob/master/LICENSE)
 * ldn_mitm is licensed under [GPLv2](https://github.com/spacemeowx2/ldn_mitm/blob/master/LICENSE)
+* emuiibo is licensed under [GPLv2.0](https://github.com/XorTroll/emuiibo/blob/master/LICENSE)
 
 All patches made to the original software respect their original license.

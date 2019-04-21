@@ -43,3 +43,4 @@ Follow this guide: https://guide.teamatlasnx.com
 * [Kosmos Toolbox](https://github.com/AtlasNX/CFW-Settings)
 * [Sys-CLK](https://github.com/retronx-team/sys-clk)
 * [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm)
+* [emuiibo](https://github.com/XorTroll/emuiibo)
