@@ -21,7 +21,7 @@
 			"requires_reboot": true
 		},
 		{
-			"name"  : "sys-clk",
+			"name"  : "sys-clk (No 8.0)",
 			"tid"   : "00FF0000636C6BFF",
 			"requires_reboot": false
 		},
@@ -31,7 +31,7 @@
 			"requires_reboot": true
 		},
 		{
-			"name"  : "emuiibo",
+			"name"  : "emuiibo (No 8.0)",
 			"tid"   : "0100000000000352",
 			"requires_reboot": true
 		}
