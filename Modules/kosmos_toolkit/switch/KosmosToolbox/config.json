@@ -26,12 +26,12 @@
 			"requires_reboot": false
 		},
 		{
-			"name"  : "ldn_mitm (No 8.0)",
+			"name"  : "ldn_mitm",
 			"tid"   : "4200000000000010",
 			"requires_reboot": true
 		},
 		{
-			"name"  : "emuiibo (No 8.0)",
+			"name"  : "emuiibo",
 			"tid"   : "0100000000000352",
 			"requires_reboot": true
 		}
