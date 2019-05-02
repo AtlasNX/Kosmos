@@ -4,6 +4,7 @@
 import subprocess as sbp
 import os
 import shutil
+import sys
 import time
 
 from distutils.dir_util import copy_tree
@@ -13,6 +14,12 @@ modules = ["appstore", "bootlogo", "edizon", "goldleaf",
         "sys-ftpd", "sys-netcheat", "kosmos_toolkit", "emuiibo",
         "lockpick", "hid-mitm", "sys-clk", "ldn_mitm"] # Everything that will be merged together
 output_dir = "compiled" # How the merged folder should be called
+
+if len(sys.argv) != 2:
+    print("usage: merger.py <kosmos_version>")
+    exit()
+
+version = sys.argv[1]
 
 print("""
                         https://github.com/AtlasNX/Kosmos
@@ -40,5 +47,15 @@ working_dir = os.path.dirname(os.path.realpath(__file__))
 for path in modules:
     path = os.path.join(working_dir, path)
     copy_tree(path, output_dir)
+
+# Check every file in the output directory for the {$KOSMOS_VERSION} token and replace it with
+# the supplied Kosmos version.
+for directory, subdirectories, files in os.walk(output_dir):
+    for file in files:
+        contents = open(os.path.join(directory, file)).read()
+        contents = contents.replace("{$KOSMOS_VERSION}", version)
+        handle = open(os.path.join(directory, file), "w")
+        handle.write(contents)
+        handle.close()
 
 print("Done!")
