@@ -6,6 +6,8 @@ import os
 import shutil
 import time
 
+from distutils.dir_util import copy_tree
+
 modules = ["appstore", "bootlogo", "edizon", "goldleaf", 
         "hbmenu", "hekate_payload", "must_have", "kosmosupdater", 
         "sys-ftpd", "sys-netcheat", "kosmos_toolkit", "emuiibo",
@@ -33,12 +35,10 @@ if os.path.exists("compiled"):
 
 os.makedirs("compiled") # Double check
 
+# Copy modules to "compiled" directory
+working_dir = os.path.dirname(os.path.realpath(__file__))
 for path in modules:
-    fol = os.listdir(path)
-    for i in fol:
-        p1 = os.path.join(path,i)
-        p3 = 'cp -r ' + p1 +' ' + p2+'/.'
-        sbp.Popen(p3,shell=True)
-        time.sleep(0.1)
+    path = os.path.join(working_dir, path)
+    copy_tree(path, "compiled")
 
 print("Done!")
