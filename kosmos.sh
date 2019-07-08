@@ -351,21 +351,17 @@ download_sys_clk () {
 }
 
 download_sys_ftpd () {
-    build_history=$(curl -H "User-Agent: ${user_agent}" -s https://jenkins.lavatech.top/job/sys-ftpd/rssAll)
-    latest_stable_build=$(echo ${build_history} | grep -P -o '<entry>(.*?)<\/entry>' | sed -n '/<entry><title>sys-ftpd #[[:digit:]]\+ (\(back to normal\|stable\))/p' | head -n 1)
-    latest_stable_build_number=$(echo ${latest_stable_build} | grep -o -E '[0-9]+' | head -n 1)
-
-    download_file "https://jenkins.lavatech.top/job/sys-ftpd/${latest_stable_build_number}/artifact/*zip*/archive.zip"
+    download_file "http://bsnx.lavatech.top/sys-ftpd/sys-ftpd-latest.zip"
 
     temp_sysftpd_directory="/tmp/$(uuidgen)"
     mkdir -p "${temp_sysftpd_directory}"
     unzip -qq "${func_result}" -d "${temp_sysftpd_directory}"
-    cp -r "${temp_sysftpd_directory}/archive/bsnx/sd"/* "${1}"
+    cp -r "${temp_sysftpd_directory}/sd"/* "${1}"
     rm -f "${1}/atmosphere/titles/420000000000000E/flags/boot2.flag"
     rm -f "${func_result}"
     rm -rf "${temp_sysftpd_directory}"
 
-    func_result=${latest_stable_build_number}
+    func_result="latest"
 }
 
 # download_sys_netcheat () {
