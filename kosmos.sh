@@ -350,9 +350,23 @@ download_sys_clk () {
     get_version_number "${latest_release}"
 }
 
-# download_sys_ftpd () {
-    # Someone needs to create a release... =/
-# }
+download_sys_ftpd () {
+    build_history=$(curl -H "User-Agent: ${user_agent}" -s https://jenkins.lavatech.top/job/sys-ftpd/rssAll)
+    latest_stable_build=$(echo ${build_history} | grep -P -o '<entry>(.*?)<\/entry>' | sed -n '/<entry><title>sys-ftpd #[[:digit:]]\+ (\(back to normal\|stable\))/p' | head -n 1)
+    latest_stable_build_number=$(echo ${latest_stable_build} | grep -o -E '[0-9]+' | head -n 1)
+
+    download_file "https://jenkins.lavatech.top/job/sys-ftpd/${latest_stable_build_number}/artifact/*zip*/archive.zip"
+
+    temp_sysftpd_directory="/tmp/$(uuidgen)"
+    mkdir -p "${temp_sysftpd_directory}"
+    unzip -qq "${func_result}" -d "${temp_sysftpd_directory}"
+    cp -r "${temp_sysftpd_directory}/archive/bsnx/sd"/* "${1}"
+    rm -f "${1}/atmosphere/titles/420000000000000E/flags/boot2.flag"
+    rm -f "${func_result}"
+    rm -rf "${temp_sysftpd_directory}"
+
+    func_result=${latest_stable_build_number}
+}
 
 # download_sys_netcheat () {
     # Someone needs to update their release to not be a kip... =/
@@ -415,10 +429,17 @@ lockpick_rcm_version=${func_result}
 download_sys_clk "${temp_directory}"
 sys_clk_version=${func_result}
 
+download_sys_ftpd "${temp_directory}"
+sys_ftpd_version=${func_result}
+
+# Delete the bundle if it already exists.
+dest=$(realpath -s ${2})
+rm -f "${dest}/Kosmos-${1}.zip"
+
 # Bundle everything together.
 current_directory=${PWD}
 cd "${temp_directory}"
-zip -q -r "${2}/Kosmos-${1}.zip" .
+zip -q -r "${dest}/Kosmos-${1}.zip" .
 cd "${current_directory}"
 
 # Clean up.
@@ -439,3 +460,4 @@ echo "  ldn_mitm - ${ldn_mitm_version}"
 echo "  Lockpick - ${lockpick_version}"
 echo "  Lockpick RCM - ${lockpick_rcm_version}"
 echo "  sys-clk - ${sys_clk_version}"
+echo "  sys-ftpd - ${sys_ftpd_version}"
