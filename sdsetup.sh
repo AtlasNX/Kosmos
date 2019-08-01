@@ -74,36 +74,36 @@ temp_directory="/tmp/$(uuidgen)"
 mkdir -p "${temp_directory}"
 
 # Start building!
-atmosphere_version=$(./modules.sh download_atmosphere "${temp_directory}" "${username_password}")
-hekate_version=$(./modules.sh download_hekate "${temp_directory}" "${version_number}" "${username_password}")
-appstore_version=$(./modules.sh download_appstore "${temp_directory}" "${username_password}")
-edizon_version=$(./modules.sh download_edizon "${temp_directory}" "${username_password}")
-emuiibo_version=$(./modules.sh download_emuiibo "${temp_directory}" "${username_password}")
-goldleaf_version=$(./modules.sh download_goldleaf "${temp_directory}" "${username_password}")
-hid_mitm_version=$(./modules.sh download_hid_mitm "${temp_directory}" "${username_password}")
-kosmos_toolbox_version=$(./modules.sh download_kosmos_toolbox "${temp_directory}" "${username_password}")
-kosmos_updater_version=$(./modules.sh download_kosmos_updater "${temp_directory}" "${version_number}" "${username_password}")
-ldn_mitm_version=$(./modules.sh download_ldn_mitm "${temp_directory}" "${username_password}")
-lockpick_version=$(./modules.sh download_lockpick "${temp_directory}" "${username_password}")
-lockpick_rcm_version=$(./modules.sh download_lockpick_rcm "${temp_directory}" "${username_password}")
-sys_clk_version=$(./modules.sh download_sys_clk "${temp_directory}" "${username_password}")
-sys_ftpd_version=$(./modules.sh download_sys_ftpd "${temp_directory}" "${username_password}")
+atmosphere_version=$(./modules.sh download_atmosphere "${temp_directory}/atmosphere" "${username_password}")
+hekate_version=$(./modules.sh download_hekate "${temp_directory}/hekate" "${version_number}" "${username_password}")
+appstore_version=$(./modules.sh download_appstore "${temp_directory}/appstore" "${username_password}")
+edizon_version=$(./modules.sh download_edizon "${temp_directory}/edizon" "${username_password}")
+emuiibo_version=$(./modules.sh download_emuiibo "${temp_directory}/emuiibo" "${username_password}")
+goldleaf_version=$(./modules.sh download_goldleaf "${temp_directory}/goldleaf" "${username_password}")
+hid_mitm_version=$(./modules.sh download_hid_mitm "${temp_directory}/hid_mitm" "${username_password}")
+kosmos_toolbox_version=$(./modules.sh download_kosmos_toolbox "${temp_directory}/kosmos_toolbox" "${username_password}")
+kosmos_updater_version=$(./modules.sh download_kosmos_updater "${temp_directory}/kosmos_updater" "${version_number}" "${username_password}")
+ldn_mitm_version=$(./modules.sh download_ldn_mitm "${temp_directory}/ldn_mitm" "${username_password}")
+lockpick_version=$(./modules.sh download_lockpick "${temp_directory}/lockpick" "${username_password}")
+lockpick_rcm_version=$(./modules.sh download_lockpick_rcm "${temp_directory}/lockpick_rcm" "${username_password}")
+sys_clk_version=$(./modules.sh download_sys_clk "${temp_directory}/sys_clk" "${username_password}")
+sys_ftpd_version=$(./modules.sh download_sys_ftpd "${temp_directory}/sys_ftpd" "${username_password}")
 
 # Delete the bundle if it already exists.
 dest=$(realpath -s ${1})
-rm -f "${dest}/Kosmos-${version_number}.zip"
+rm -f "${dest}/SDSetupModules-${version_number}.zip"
 
 # Bundle everything together.
 current_directory=${PWD}
 cd "${temp_directory}"
-zip -q -r "${dest}/Kosmos-${version_number}.zip" .
+zip -q -r "${dest}/SDSetupModules-${version_number}.zip" .
 cd "${current_directory}"
 
 # Clean up.
 rm -rf "${temp_directory}"
 
 # Output some useful information.
-echo "Kosmos ${version_number} built with:"
+echo "SDSetup Modules built with:"
 echo "  Atmosphere - ${atmosphere_version}"
 echo "  Hekate - ${hekate_version}"
 echo "  EdiZon - ${edizon_version}"
