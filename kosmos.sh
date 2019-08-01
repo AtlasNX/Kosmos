@@ -25,15 +25,60 @@ user_agent="Kosmos/1.0.0"
 # General Functions
 # =============================================================================
 
+# Prompts for GitHub Username and Password
+# Returns:
+#   The username and password on ${func_result}.
+prompt_login () {
+    echo "It is recommended that you login to GitHub to use this tool. However you"
+    echo "can continue without logging in, but you may run into rate limits. If you"
+    echo "use two-factor authentication then you will need to generate a personal"
+    echo "access token and use it as your password. https://github.com/settings/tokens"
+    echo ""
+    read -p "Username: (Leave blank to continue without logging in) " username
+
+    if [ ! -z "${username}" ]
+    then
+        read -sp "Password or personal access token:" password
+        func_result="${username}:${password}"
+    else
+        func_result=""
+    fi
+}
+
+# Test username and password against GitHub's API
+# Params:
+#   - GitHub Login
+# Returns:
+#   Whether it worked or not on ${func_result}.
+test_login () {
+    urls=$(curl -u ${1} -H  "Accept: application/json" -H "Content-Type: application/json" -H "User-Agent: ${user_agent}" -s https://api.github.com/)
+    message_index=$(echo ${urls} | jq 'keys | index("message")')
+    
+    if [ "${message_index}" == "null" ]
+    then
+        func_result=1
+    else
+        echo "Incorrect Username/Password"
+        func_result=0
+    fi
+}
+
 # Downloads the latest release JSON.
 # Params:
+#   - GitHub Login
 #   - GitHub Company
 #   - GitHub Repo
 # Returns:
 #   The latest release JSON on ${func_result}.
 get_latest_release () {
-    releases=$(curl -H  "Accept: application/json" -H "Content-Type: application/json" -H "User-Agent: ${user_agent}" -s https://api.github.com/repos/${1}/${2}/releases)
-    func_result=$(echo ${releases} | jq -r '.[0]')
+    if [ -z "${1}" ] 
+    then
+        releases=$(curl -H "Accept: application/json" -H "Content-Type: application/json" -H "User-Agent: ${user_agent}" -s https://api.github.com/repos/${2}/${3}/releases)
+        func_result=$(echo ${releases} | jq -r '.[0]')
+    else
+        releases=$(curl -u ${1} -H "Accept: application/json" -H "Content-Type: application/json" -H "User-Agent: ${user_agent}" -s https://api.github.com/repos/${2}/${3}/releases)
+        func_result=$(echo ${releases} | jq -r '.[0]')
+    fi
 }
 
 # Gets the number of assets in a release.
@@ -123,7 +168,7 @@ glob () {
 # Returns:
 #   The version number on ${func_result}.
 download_atmosphere () {
-    get_latest_release "Atmosphere-NX" "Atmosphere"
+    get_latest_release ${2} "Atmosphere-NX" "Atmosphere"
     latest_release=${func_result}
 
     find_asset "${latest_release}" "atmosphere*" "*.zip"
@@ -140,6 +185,8 @@ download_atmosphere () {
 
     mkdir -p "${1}/bootloader/payloads"
     mv ${func_result} "${1}/bootloader/payloads/fusee-primary.bin"
+    rm -f "${1}/atmosphere/system_settings.ini"
+    cp "./Modules/atmosphere/system_settings.ini" "${1}/atmosphere/system_settings.ini"
 
     get_version_number "${latest_release}"
 }
@@ -154,7 +201,7 @@ download_atmosphere () {
 # Returns:
 #   The version number on ${func_result}.
 download_hekate () {
-    get_latest_release "CTCaer" "hekate"
+    get_latest_release ${2} "CTCaer" "hekate"
     latest_release=${func_result}
 
     find_asset "${latest_release}" "hekate*" "*.zip"
@@ -190,7 +237,7 @@ build_hekate_files () {
 # =============================================================================
 
 download_appstore () {
-    get_latest_release "vgmoose" "hb-appstore"
+    get_latest_release ${2} "vgmoose" "hb-appstore"
     latest_release=${func_result}
 
     find_asset "${latest_release}" "*.nro"
@@ -204,7 +251,7 @@ download_appstore () {
 }
 
 download_edizon () {
-    get_latest_release "WerWolv" "EdiZon"
+    get_latest_release ${2} "WerWolv" "EdiZon"
     latest_release=${func_result}
 
     find_asset "${latest_release}" "*.zip"
@@ -218,7 +265,7 @@ download_edizon () {
 }
 
 download_emuiibo () {
-    get_latest_release "XorTroll" "emuiibo"
+    get_latest_release ${2} "XorTroll" "emuiibo"
     latest_release=${func_result}
 
     find_asset "${latest_release}" "emuiibo*" "*.zip"
@@ -226,15 +273,16 @@ download_emuiibo () {
     download_file "${func_result}"
 
     unzip -qq "${func_result}" -d "${1}"
-    rm -rf "${1}/ReiNX"
-    rm -f "${1}/atmosphere/titles/0100000000000352/flags/boot2.flag"
+    rm -f "${1}/titles/0100000000000352/flags/boot2.flag"
     rm -f "${func_result}"
+    mv "${1}/titles/0100000000000352" "${1}/atmosphere/titles/"
+    rm -rf "${1}/titles"
 
     get_version_number "${latest_release}"
 }
 
 download_goldleaf () {
-    get_latest_release "XorTroll" "Goldleaf"
+    get_latest_release ${2} "XorTroll" "Goldleaf"
     latest_release=${func_result}
 
     find_asset "${latest_release}" "*.nro"
@@ -248,7 +296,7 @@ download_goldleaf () {
 }
 
 download_hid_mitm () {
-    get_latest_release "jakibaki" "hid-mitm"
+    get_latest_release ${2} "jakibaki" "hid-mitm"
     latest_release=${func_result}
 
     find_asset "${latest_release}" "hid*" "*.zip"
@@ -263,7 +311,7 @@ download_hid_mitm () {
 }
 
 download_kosmos_toolbox () {
-    get_latest_release "AtlasNX" "Kosmos-Toolbox"
+    get_latest_release ${2} "AtlasNX" "Kosmos-Toolbox"
     latest_release=${func_result}
 
     find_asset "${latest_release}" "*.nro"
@@ -278,7 +326,7 @@ download_kosmos_toolbox () {
 }
 
 download_kosmos_updater () {
-    get_latest_release "AtlasNX" "Kosmos-Updater"
+    get_latest_release ${3} "AtlasNX" "Kosmos-Updater"
     latest_release=${func_result}
 
     find_asset "${latest_release}" "*.nro"
@@ -293,7 +341,7 @@ download_kosmos_updater () {
 }
 
 download_ldn_mitm () {
-    get_latest_release "spacemeowx2" "ldn_mitm"
+    get_latest_release ${2} "spacemeowx2" "ldn_mitm"
     latest_release=${func_result}
 
     find_asset "${latest_release}" "ldn_mitm*" "*.zip"
@@ -308,7 +356,7 @@ download_ldn_mitm () {
 }
 
 download_lockpick () {
-    get_latest_release "shchmue" "Lockpick"
+    get_latest_release ${2} "shchmue" "Lockpick"
     latest_release=${func_result}
 
     find_asset "${latest_release}" "*.nro"
@@ -322,7 +370,7 @@ download_lockpick () {
 }
 
 download_lockpick_rcm () {
-    get_latest_release "shchmue" "Lockpick_RCM"
+    get_latest_release ${2} "shchmue" "Lockpick_RCM"
     latest_release=${func_result}
 
     find_asset "${latest_release}" "*.bin"
@@ -335,7 +383,7 @@ download_lockpick_rcm () {
 }
 
 download_sys_clk () {
-    get_latest_release "retronx-team" "sys-clk"
+    get_latest_release ${2} "retronx-team" "sys-clk"
     latest_release=${func_result}
 
     find_asset "${latest_release}" "sys-clk*" "*.zip"
@@ -364,10 +412,6 @@ download_sys_ftpd () {
     func_result="latest"
 }
 
-# download_sys_netcheat () {
-    # Someone needs to update their release to not be a kip... =/
-# }
-
 # =============================================================================
 # Main Script
 # =============================================================================
@@ -378,54 +422,71 @@ then
     exit 1
 fi
 
+authenticated=0
+username_password=""
+while [ $authenticated -ne 1 ]; do
+    prompt_login
+    username_password=${func_result}
+
+    if [ ! -z "${username_password}" ]
+    then
+        test_login "${username_password}"
+        authenticated=${func_result}
+    else
+        authenticated=1
+    fi
+
+    echo ""
+done
+
 # Build temp directory
 temp_directory="/tmp/$(uuidgen)"
 mkdir -p "${temp_directory}"
 
 # Start building!
 
-download_atmosphere "${temp_directory}"
+download_atmosphere "${temp_directory}" "${username_password}"
 atmosphere_version=${func_result}
 
-download_hekate "${temp_directory}"
+download_hekate "${temp_directory}" "${username_password}"
 hekate_version=${func_result}
 copy_payload "${temp_directory}"
 build_hekate_files "${temp_directory}" "${1}"
 
-download_appstore "${temp_directory}"
+download_appstore "${temp_directory}" "${username_password}"
 appstore_version=${func_result}
 
-download_edizon "${temp_directory}"
+download_edizon "${temp_directory}" "${username_password}"
 edizon_version=${func_result}
 
-download_emuiibo "${temp_directory}"
+download_emuiibo "${temp_directory}" "${username_password}"
 emuiibo_version=${func_result}
 
-download_goldleaf "${temp_directory}"
+download_goldleaf "${temp_directory}" "${username_password}"
 goldleaf_version=${func_result}
 
-download_hid_mitm "${temp_directory}"
+download_hid_mitm "${temp_directory}" "${username_password}"
 hid_mitm_version=${func_result}
 
-download_kosmos_toolbox "${temp_directory}"
+download_kosmos_toolbox "${temp_directory}" "${username_password}"
 kosmos_toolbox_version=${func_result}
 
-download_kosmos_updater "${temp_directory}" "${1}"
+download_kosmos_updater "${temp_directory}" "${1}" "${username_password}"
 kosmos_updater_version=${func_result}
 
-download_ldn_mitm "${temp_directory}"
+download_ldn_mitm "${temp_directory}" "${username_password}"
 ldn_mitm_version=${func_result}
 
-download_lockpick "${temp_directory}"
+download_lockpick "${temp_directory}" "${username_password}"
 lockpick_version=${func_result}
 
-download_lockpick_rcm "${temp_directory}"
+download_lockpick_rcm "${temp_directory}" "${username_password}"
 lockpick_rcm_version=${func_result}
 
-download_sys_clk "${temp_directory}"
+download_sys_clk "${temp_directory}" "${username_password}"
 sys_clk_version=${func_result}
 
-download_sys_ftpd "${temp_directory}"
+download_sys_ftpd "${temp_directory}" "${username_password}"
 sys_ftpd_version=${func_result}
 
 # Delete the bundle if it already exists.
