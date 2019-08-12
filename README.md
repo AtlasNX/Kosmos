@@ -34,7 +34,6 @@ Follow this guide: https://guide.teamatlasnx.com
 * [Switch Homebrew Loader](https://github.com/switchbrew/nx-hbloader)
 * [Switch Homebrew Menu](https://github.com/switchbrew/nx-hbmenu)
 * [Sys-FTPD](https://github.com/jakibaki/sys-ftpd)
-* [Sys-Netcheat](https://github.com/jakibaki/sys-netcheat)
 * [AppstoreNX](https://github.com/vgmoose/appstorenx)
 * [Lockpick](https://github.com/shchmue/Lockpick)
 * [EdiZon](https://github.com/thomasnet-mc/EdiZon)
