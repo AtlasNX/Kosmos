@@ -19,6 +19,7 @@
 #
 
 func_result=""
+auto=0
 
 # Prompts for GitHub Username and Password
 # Returns:
@@ -46,25 +47,47 @@ prompt_login () {
 
 if [ $# -le 0 ]
 then
-    echo "Usage: ./kosmos.sh [output_directory]"
+    echo "Usage: ./sdsetup.sh <output_directory> [github username] [github password/access token] [\"auto\"]"
     exit 1
+fi
+
+if [ $# -gt 3 ]
+then
+    if [ "${4}" == "auto" ]
+    then
+        auto=1
+    fi
 fi
 
 authenticated=0
 username_password=""
-while [ $authenticated -ne 1 ]; do
-    prompt_login
-    username_password=${func_result}
 
-    if [ ! -z "${username_password}" ]
+if [ $# -gt 2 ]
+then
+    username_password=${2}:${3}
+    authenticated=$(./common.sh test_login "${username_password}")
+    if [ $authenticated -ne 1 ]
     then
-        authenticated=$(./common.sh test_login "${username_password}")
-    else
-        authenticated=1
+        echo "Authentication Failed"
+        exit 1
     fi
+else
+    while [ $authenticated -ne 1 ]; do
+        prompt_login
+        username_password=${func_result}
 
-    echo ""
-done
+        if [ ! -z "${username_password}" ]
+        then
+            authenticated=$(./common.sh test_login "${username_password}")
+        else
+            authenticated=1
+        fi
+
+        echo ""
+    done
+fi
+
+
 
 # Get version number
 version_number=$(head -1 version.txt)
@@ -74,47 +97,73 @@ temp_directory="/tmp/$(uuidgen)"
 mkdir -p "${temp_directory}"
 
 # Start building!
-atmosphere_version=$(./modules.sh download_atmosphere "${temp_directory}/atmosphere" "${username_password}")
-hekate_version=$(./modules.sh download_hekate "${temp_directory}/hekate" "${version_number}" "${username_password}")
-appstore_version=$(./modules.sh download_appstore "${temp_directory}/appstore" "${username_password}")
-edizon_version=$(./modules.sh download_edizon "${temp_directory}/edizon" "${username_password}")
+atmosphere_version=$(./modules.sh download_atmosphere "${temp_directory}/must_have" "${username_password}")
+hekate_version=$(./modules.sh download_hekate "${temp_directory}/must_have" "${version_number}" "${username_password}")
 emuiibo_version=$(./modules.sh download_emuiibo "${temp_directory}/emuiibo" "${username_password}")
-goldleaf_version=$(./modules.sh download_goldleaf "${temp_directory}/goldleaf" "${username_password}")
 hid_mitm_version=$(./modules.sh download_hid_mitm "${temp_directory}/hid_mitm" "${username_password}")
 kosmos_toolbox_version=$(./modules.sh download_kosmos_toolbox "${temp_directory}/kosmos_toolbox" "${username_password}")
 kosmos_updater_version=$(./modules.sh download_kosmos_updater "${temp_directory}/kosmos_updater" "${version_number}" "${username_password}")
 ldn_mitm_version=$(./modules.sh download_ldn_mitm "${temp_directory}/ldn_mitm" "${username_password}")
-lockpick_version=$(./modules.sh download_lockpick "${temp_directory}/lockpick" "${username_password}")
 lockpick_rcm_version=$(./modules.sh download_lockpick_rcm "${temp_directory}/lockpick_rcm" "${username_password}")
 sys_clk_version=$(./modules.sh download_sys_clk "${temp_directory}/sys_clk" "${username_password}")
 sys_ftpd_version=$(./modules.sh download_sys_ftpd "${temp_directory}/sys_ftpd" "${username_password}")
 
-# Delete the bundle if it already exists.
-dest=$(realpath -s ${1})
-rm -f "${dest}/SDSetupModules-${version_number}.zip"
+if [ "${auto}" != "1" ]
+then
+    appstore_version=$(./modules.sh download_appstore "${temp_directory}/appstore" "${username_password}")
+    edizon_version=$(./modules.sh download_edizon "${temp_directory}/edizon" "${username_password}")
+    goldleaf_version=$(./modules.sh download_goldleaf "${temp_directory}/goldleaf" "${username_password}")
+    lockpick_version=$(./modules.sh download_lockpick "${temp_directory}/lockpick" "${username_password}")
+fi
 
-# Bundle everything together.
-current_directory=${PWD}
-cd "${temp_directory}"
-zip -q -r "${dest}/SDSetupModules-${version_number}.zip" .
-cd "${current_directory}"
 
-# Clean up.
-rm -rf "${temp_directory}"
+# Delete some files we don't want in the output
+rm -f ${temp_directory}/must_have/hbmenu.nro
+rm -f ${temp_directory}/must_have/hekate*
+
+# Delete the output directory if it already exists.
+dest=""
+
+if [ "${auto}" != "1" ]
+then
+    dest=$(realpath -s ${1})/${version_number}
+else
+    dest=$(realpath -s ${1})
+fi
+
+rm -rf ${dest}
+
+# Move temp folder files to output directory
+mv -f ${temp_directory} ${dest}
 
 # Output some useful information.
-echo "SDSetup Modules built with:"
-echo "  Atmosphere - ${atmosphere_version}"
-echo "  Hekate - ${hekate_version}"
-echo "  EdiZon - ${edizon_version}"
-echo "  Emuiibo - ${emuiibo_version}"
-echo "  Goldleaf - ${goldleaf_version}"
-echo "  hid-mitm - ${hid_mitm_version}"
-echo "  Homebrew App Store - ${appstore_version}"
-echo "  Kosmos Toolbox - ${kosmos_toolbox_version}"
-echo "  Kosmos Updater - ${kosmos_updater_version}"
-echo "  ldn_mitm - ${ldn_mitm_version}"
-echo "  Lockpick - ${lockpick_version}"
-echo "  Lockpick RCM - ${lockpick_rcm_version}"
-echo "  sys-clk - ${sys_clk_version}"
-echo "  sys-ftpd - ${sys_ftpd_version}"
+
+if [ "${auto}" != "1" ]
+then
+    echo "SDSetup Modules built with:"
+    echo "  Atmosphere - ${atmosphere_version}"
+    echo "  Hekate - ${hekate_version}"
+    echo "  EdiZon - ${edizon_version}"
+    echo "  Emuiibo - ${emuiibo_version}"
+    echo "  Goldleaf - ${goldleaf_version}"
+    echo "  hid-mitm - ${hid_mitm_version}"
+    echo "  Homebrew App Store - ${appstore_version}"
+    echo "  Kosmos Toolbox - ${kosmos_toolbox_version}"
+    echo "  Kosmos Updater - ${kosmos_updater_version}"
+    echo "  ldn_mitm - ${ldn_mitm_version}"
+    echo "  Lockpick - ${lockpick_version}"
+    echo "  Lockpick RCM - ${lockpick_rcm_version}"
+    echo "  sys-clk - ${sys_clk_version}"
+    echo "  sys-ftpd - ${sys_ftpd_version}"
+else
+    echo "must_have:${atmosphere_version}"
+    echo "hekate:${hekate_version}"
+    echo "emuiibo:${emuiibo_version}"
+    echo "hid_mitm:${hid_mitm_version}"
+    echo "kosmos_toolbox:${kosmos_toolbox_version}"
+    echo "kosmos_updater:${kosmos_updater_version}"
+    echo "ldn_mitm:${ldn_mitm_version}"
+    echo "lockpick_rcm:${lockpick_rcm_version}"
+    echo "sys_clk:${sys_clk_version}"
+    echo "sys_ftpd:${sys_ftpd_version}"
+fi
