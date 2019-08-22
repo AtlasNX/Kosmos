@@ -228,8 +228,12 @@ download_sys_clk () {
 }
 
 download_sys_ftpd () {
+    releases=$(curl -d '{"action":"get","items":{"href":"/sys-ftpd/","what":1}}' -H 'Content-Type: application/json' -X POST -s http://bsnx.lavatech.top/sys-ftpd/\?)
+    latest_release=$(echo ${releases} | jq -r '.items | map(select(has("fetched") | not)) | sort_by(.time) | reverse | .[1].href')
+    latest_release_url="http://bsnx.lavatech.top${latest_release}"
+
     mkdir -p ${1}
-    file=$(./common.sh download_file_url "http://bsnx.lavatech.top/sys-ftpd/sys-ftpd-latest.zip")
+    file=$(./common.sh download_file_url "${latest_release_url}")
 
     temp_sysftpd_directory="/tmp/$(uuidgen)"
     mkdir -p "${temp_sysftpd_directory}"
@@ -239,7 +243,7 @@ download_sys_ftpd () {
     rm -f "${file}"
     rm -rf "${temp_sysftpd_directory}"
 
-    echo "latest"
+    echo $(expr substr "${latest_release}" 20 7)
 }
 
 # =============================================================================
