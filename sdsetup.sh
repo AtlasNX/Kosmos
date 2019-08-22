@@ -108,7 +108,7 @@ lockpick_rcm_version=$(./modules.sh download_lockpick_rcm "${temp_directory}/loc
 sys_clk_version=$(./modules.sh download_sys_clk "${temp_directory}/sys_clk" "${username_password}")
 sys_ftpd_version=$(./modules.sh download_sys_ftpd "${temp_directory}/sys_ftpd" "${username_password}")
 
-if [ "${auto}" -eq 1 ]
+if [ "${auto}" != "1" ]
 then
     appstore_version=$(./modules.sh download_appstore "${temp_directory}/appstore" "${username_password}")
     edizon_version=$(./modules.sh download_edizon "${temp_directory}/edizon" "${username_password}")
