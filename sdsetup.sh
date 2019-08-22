@@ -156,7 +156,7 @@ then
     echo "  sys-clk - ${sys_clk_version}"
     echo "  sys-ftpd - ${sys_ftpd_version}"
 else
-    echo "atmosphere:${atmosphere_version}"
+    echo "must_have:${atmosphere_version}"
     echo "hekate:${hekate_version}"
     echo "emuiibo:${emuiibo_version}"
     echo "hid_mitm:${hid_mitm_version}"
