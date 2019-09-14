@@ -69,6 +69,10 @@ download_hekate () {
     cp "${payload}" "${1}/atmosphere/reboot_payload.bin"
 
     cp "./Modules/hekate/bootlogo.bmp" "${1}/bootloader/bootlogo.bmp"
+
+    rm -f "${1}/bootloader/patches_template.ini"
+    cp "./Modules/hekate/patches_template.ini" "${1}/bootloader/patches_template.ini"
+    
     sed "s/KOSMOS_VERSION/${2}/g" "./Modules/hekate/hekate_ipl.ini" >> "${1}/bootloader/hekate_ipl.ini"
 
     echo $(./common.sh get_version_number "${latest_release}")
@@ -126,20 +130,6 @@ download_goldleaf () {
 
     mkdir -p "${1}/switch/Goldleaf"
     mv ${file} "${1}/switch/Goldleaf/Goldleaf.nro"
-
-    echo $(./common.sh get_version_number "${latest_release}")
-}
-
-download_hid_mitm () {
-    mkdir -p ${1}
-    latest_release=$(./common.sh get_latest_release "${2}" "jakibaki" "hid-mitm")
-
-    asset=$(./common.sh find_asset "${latest_release}" "hid*" "*.zip")
-    file=$(./common.sh download_file "${asset}")
-
-    unzip -qq "${file}" -d "${1}"
-    rm -f "${1}/atmosphere/titles/0100000000000faf/flags/boot2.flag"
-    rm -f "${file}"
 
     echo $(./common.sh get_version_number "${latest_release}")
 }
