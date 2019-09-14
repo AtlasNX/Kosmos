@@ -100,7 +100,6 @@ mkdir -p "${temp_directory}"
 atmosphere_version=$(./modules.sh download_atmosphere "${temp_directory}/must_have" "${username_password}")
 hekate_version=$(./modules.sh download_hekate "${temp_directory}/must_have" "${version_number}" "${username_password}")
 emuiibo_version=$(./modules.sh download_emuiibo "${temp_directory}/emuiibo" "${username_password}")
-hid_mitm_version=$(./modules.sh download_hid_mitm "${temp_directory}/hid_mitm" "${username_password}")
 kosmos_toolbox_version=$(./modules.sh download_kosmos_toolbox "${temp_directory}/kosmos_toolbox" "${username_password}")
 kosmos_updater_version=$(./modules.sh download_kosmos_updater "${temp_directory}/kosmos_updater" "${version_number}" "${username_password}")
 ldn_mitm_version=$(./modules.sh download_ldn_mitm "${temp_directory}/ldn_mitm" "${username_password}")
@@ -146,7 +145,6 @@ then
     echo "  EdiZon - ${edizon_version}"
     echo "  Emuiibo - ${emuiibo_version}"
     echo "  Goldleaf - ${goldleaf_version}"
-    echo "  hid-mitm - ${hid_mitm_version}"
     echo "  Homebrew App Store - ${appstore_version}"
     echo "  Kosmos Toolbox - ${kosmos_toolbox_version}"
     echo "  Kosmos Updater - ${kosmos_updater_version}"
@@ -159,7 +157,6 @@ else
     echo "must_have:${atmosphere_version}"
     echo "hekate:${hekate_version}"
     echo "emuiibo:${emuiibo_version}"
-    echo "hid_mitm:${hid_mitm_version}"
     echo "kosmos_toolbox:${kosmos_toolbox_version}"
     echo "kosmos_updater:${kosmos_updater_version}"
     echo "ldn_mitm:${ldn_mitm_version}"

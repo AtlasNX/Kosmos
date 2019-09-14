@@ -80,7 +80,6 @@ appstore_version=$(./modules.sh download_appstore "${temp_directory}" "${usernam
 edizon_version=$(./modules.sh download_edizon "${temp_directory}" "${username_password}")
 emuiibo_version=$(./modules.sh download_emuiibo "${temp_directory}" "${username_password}")
 goldleaf_version=$(./modules.sh download_goldleaf "${temp_directory}" "${username_password}")
-hid_mitm_version=$(./modules.sh download_hid_mitm "${temp_directory}" "${username_password}")
 kosmos_toolbox_version=$(./modules.sh download_kosmos_toolbox "${temp_directory}" "${username_password}")
 kosmos_updater_version=$(./modules.sh download_kosmos_updater "${temp_directory}" "${version_number}" "${username_password}")
 ldn_mitm_version=$(./modules.sh download_ldn_mitm "${temp_directory}" "${username_password}")
@@ -109,7 +108,6 @@ echo "  Hekate - ${hekate_version}"
 echo "  EdiZon - ${edizon_version}"
 echo "  Emuiibo - ${emuiibo_version}"
 echo "  Goldleaf - ${goldleaf_version}"
-echo "  hid-mitm - ${hid_mitm_version}"
 echo "  Homebrew App Store - ${appstore_version}"
 echo "  Kosmos Toolbox - ${kosmos_toolbox_version}"
 echo "  Kosmos Updater - ${kosmos_updater_version}"

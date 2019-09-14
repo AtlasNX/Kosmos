@@ -130,20 +130,6 @@ download_goldleaf () {
     echo $(./common.sh get_version_number "${latest_release}")
 }
 
-download_hid_mitm () {
-    mkdir -p ${1}
-    latest_release=$(./common.sh get_latest_release "${2}" "jakibaki" "hid-mitm")
-
-    asset=$(./common.sh find_asset "${latest_release}" "hid*" "*.zip")
-    file=$(./common.sh download_file "${asset}")
-
-    unzip -qq "${file}" -d "${1}"
-    rm -f "${1}/atmosphere/titles/0100000000000faf/flags/boot2.flag"
-    rm -f "${file}"
-
-    echo $(./common.sh get_version_number "${latest_release}")
-}
-
 download_kosmos_toolbox () {
     mkdir -p ${1}
     latest_release=$(./common.sh get_latest_release "${2}" "AtlasNX" "Kosmos-Toolbox")
