@@ -236,6 +236,19 @@ download_sys_ftpd () {
     echo $(expr substr "${latest_release}" 20 7)
 }
 
+download_nxdumptool () {
+    mkdir -p ${1}
+    latest_release=$(./common.sh get_latest_release "${2}" "DarkMatterCore" "nxdumptool")
+
+    asset=$(./common.sh find_asset "${latest_release}" "nxdumptool*" "*.nro")
+    file=$(./common.sh download_file "${asset}")
+
+    mkdir -p "${1}/switch/NXDumpTool"
+    mv ${file} "${1}/switch/NXDumpTool/NXDumpTool.nro"
+
+    echo $(./common.sh get_version_number "${latest_release}")
+}
+
 # =============================================================================
 # Main Script
 # =============================================================================
