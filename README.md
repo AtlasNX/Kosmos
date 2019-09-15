@@ -14,7 +14,6 @@ This handy All-in-One package includes everything you need to run Hekate / Atmos
 * Up-to-date packages
 * Splash screens and instant launch
 * Background FTP-Server
-* Background netcheat system
 * Updating through a console homebrew app
 * Customizable button bindings for the Homebrew Loader
 * Drag and drop
