@@ -69,6 +69,10 @@ download_hekate () {
     cp "${payload}" "${1}/atmosphere/reboot_payload.bin"
 
     cp "./Modules/hekate/bootlogo.bmp" "${1}/bootloader/bootlogo.bmp"
+
+    rm -f "${1}/bootloader/patches_template.ini"
+    cp "./Modules/hekate/patches_template.ini" "${1}/bootloader/patches_template.ini"
+    
     sed "s/KOSMOS_VERSION/${2}/g" "./Modules/hekate/hekate_ipl.ini" >> "${1}/bootloader/hekate_ipl.ini"
 
     echo $(./common.sh get_version_number "${latest_release}")
