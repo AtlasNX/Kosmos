@@ -18,7 +18,7 @@
 		{
 			"name"  : "bootsoundnx",
 			"tid"   : "AA200000000002AA",
-			"requires_reboot": false
+			"requires_reboot": true
 		},
 		{
 			"name"  : "sys-clk",
