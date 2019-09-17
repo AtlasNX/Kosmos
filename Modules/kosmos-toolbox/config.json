@@ -15,6 +15,12 @@
 			"tid"   : "430000000000000A",
 			"requires_reboot": false
 		},
+		
+		{
+			"name"  : "bootsoundnx",
+			"tid"   : "AA200000000002AA",
+			"requires_reboot": false
+		},
 		{
 			"name"  : "sys-clk",
 			"tid"   : "00FF0000636C6BFF",
