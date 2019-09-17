@@ -15,7 +15,6 @@
 			"tid"   : "430000000000000A",
 			"requires_reboot": false
 		},
-		
 		{
 			"name"  : "bootsoundnx",
 			"tid"   : "AA200000000002AA",
