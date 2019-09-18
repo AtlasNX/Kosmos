@@ -2,7 +2,7 @@
 	"sysmodules" : [
 		{
 			"name"  : "bootsoundnx",
-			"tid"   : "AA200000000002AA",
+			"tid"   : "00FF0000000002AA",
 			"requires_reboot": true
 		},
 		{
