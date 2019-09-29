@@ -1,0 +1,5 @@
+version = "KOSMOS_VERSION";
+installed_files = [ ];
+received_exfat_warning = false;
+received_ignore_config_warning = false;
+ignore_config_files = false;
