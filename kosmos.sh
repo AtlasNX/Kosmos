@@ -86,6 +86,7 @@ ldn_mitm_version=$(./modules.sh download_ldn_mitm "${temp_directory}" "${usernam
 lockpick_version=$(./modules.sh download_lockpick "${temp_directory}" "${username_password}")
 lockpick_rcm_version=$(./modules.sh download_lockpick_rcm "${temp_directory}" "${username_password}")
 sys_clk_version=$(./modules.sh download_sys_clk "${temp_directory}" "${username_password}")
+sys_clk_editor_version=$(./modules.sh download_sys_clk_editor "${temp_directory}" "${username_password}")
 sys_ftpd_version=$(./modules.sh download_sys_ftpd "${temp_directory}" "${username_password}")
 nxdumptool_version=$(./modules.sh download_nxdumptool "${temp_directory}" "${username_password}")
 
@@ -116,5 +117,6 @@ echo "  ldn_mitm - ${ldn_mitm_version}"
 echo "  Lockpick - ${lockpick_version}"
 echo "  Lockpick RCM - ${lockpick_rcm_version}"
 echo "  sys-clk - ${sys_clk_version}"
+echo "  sys-clk-editor - ${sys_clk_editor_version}"
 echo "  sys-ftpd - ${sys_ftpd_version}"
 echo "  NXDumpTool - ${nxdumptool_version}"

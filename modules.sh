@@ -217,6 +217,19 @@ download_sys_clk () {
     echo $(./common.sh get_version_number "${latest_release}")
 }
 
+download_goldleaf () {
+    mkdir -p ${1}
+    latest_release=$(./common.sh get_latest_release "${2}" "SunTheCourier" "sys-clk-Editor")
+
+    asset=$(./common.sh find_asset "${latest_release}" "*.nro")
+    file=$(./common.sh download_file "${asset}")
+
+    mkdir -p "${1}/switch/sys-clk-Editor"
+    mv ${file} "${1}/switch/sys-clk-Editor/sys-clk-Editor.nro"
+
+    echo $(./common.sh get_version_number "${latest_release}")
+}
+
 download_sys_ftpd () {
     releases=$(curl -d '{"action":"get","items":{"href":"/sys-ftpd/","what":1}}' -H 'Content-Type: application/json' -X POST -s http://bsnx.lavatech.top/sys-ftpd/\?)
     latest_release=$(echo ${releases} | jq -r '.items | map(select(has("fetched") | not)) | sort_by(.time) | reverse | .[1].href')
