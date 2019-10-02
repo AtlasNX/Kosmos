@@ -217,7 +217,7 @@ download_sys_clk () {
     echo $(./common.sh get_version_number "${latest_release}")
 }
 
-download_goldleaf () {
+download_sys_clk_editor () {
     mkdir -p ${1}
     latest_release=$(./common.sh get_latest_release "${2}" "SunTheCourier" "sys-clk-Editor")
 
