@@ -2,7 +2,7 @@
 <a href="https://github.com/AtlasNX/Kosmos/releases">
 <img src="https://user-images.githubusercontent.com/25822956/52866161-64c6e300-313e-11e9-9e3a-87636ed67467.png"></a>
 <br> 
-This handy All-in-One package includes everything you need to run Hekate / Atmosphere with some extra patches to enhance your experience.
+This handy All-in-One package includes everything you need to run Hekate / Atmosphere
 <br>
 <br>
 <a href="https://discord.gg/qbRAuy7"><img src="https://discordapp.com/api/guilds/477891535174631424/embed.png?style=banner2" alt="Discord Server" /></a>
