@@ -37,7 +37,7 @@ Follow this guide: https://guide.teamatlasnx.com
 * [Lockpick](https://github.com/shchmue/Lockpick)
 * [EdiZon](https://github.com/thomasnet-mc/EdiZon)
 * [Goldleaf](https://github.com/XorTroll/Goldleaf)
-* [Kosmos Updater](https://github.com/StevenMattera/SDFilesUpdater)
+* [Kosmos Updater](https://github.com/AtlasNX/Kosmos-Updater)
 * [Kosmos Toolbox](https://github.com/AtlasNX/CFW-Settings)
 * [Sys-CLK](https://github.com/retronx-team/sys-clk)
 * [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm)
