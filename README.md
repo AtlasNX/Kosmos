@@ -3,7 +3,7 @@
         <img src="https://user-images.githubusercontent.com/25822956/52866161-64c6e300-313e-11e9-9e3a-87636ed67467.png" alt="AtlasNX Kosmos" />
     </a>
     <br /> 
-    This handy All-in-One package includes everything you need to run Hekate / Atmosphere with some extra patches to enhance your experience.<br /><br />
+    <small>The handy All-in-One package, which includes everything you need to run Atmosphère and Hekate with some extras to enhance your experience.</small><br /><br />
     <a href="https://discord.gg/qbRAuy7">
         <img src="https://discordapp.com/api/guilds/477891535174631424/embed.png?style=banner2" width="320" height="76" alt="Discord Server" />
     </a>
@@ -13,17 +13,17 @@
 </p>
 
 ## Features
-* Vanilla Atmosphere
+* Vanilla Atmosphère
 * Up-to-date packages
 * Splash screens and instant launch
-* Background FTP-Server
-* Updating through a console homebrew app
-* Customizable button bindings for the Homebrew Loader
-* Drag and drop
-* Auto-boot and module selection through a console homebrew app
-* Launching and reloading sys-modules without restarting your system
+* Background FTP Server
+* Updating directly from your console
+* Customize button bindings
+* Easy drag and drop install
+* Ability to enable autoboot without touching config files
+* Starting and reloading system modules without restarting
 * A very handsome bootlogo by bernv3
-* The latest and best homebrew
+* The latest and greatest homebrew from the scene
 * **and much more!**
 
 ## How to use
