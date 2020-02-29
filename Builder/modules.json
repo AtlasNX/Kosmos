@@ -1,0 +1,146 @@
+[
+    {
+        "name": "Atmosphère",
+        "download_function_name": "download_atmosphere",
+        "include_in_sdsetup": true,
+        "include_in_sdsetup_auto_builds": true,
+        "sdsetup_folder": "must_have",
+        "sdsetup_auto_name": "must_have"
+    },
+    {
+        "name": "Hekate",
+        "download_function_name": "download_hekate",
+        "include_in_sdsetup": true,
+        "include_in_sdsetup_auto_builds": true,
+        "sdsetup_folder": "must_have",
+        "sdsetup_auto_name": "hekate"
+    },
+    {
+        "name": "Homebrew App Store",
+        "download_function_name": "download_appstore",
+        "include_in_sdsetup": true,
+        "include_in_sdsetup_auto_builds": false,
+        "sdsetup_folder": "appstore",
+        "sdsetup_auto_name": ""
+    },
+    {
+        "name": "EdiZon",
+        "download_function_name": "download_edizon",
+        "include_in_sdsetup": true,
+        "include_in_sdsetup_auto_builds": false,
+        "sdsetup_folder": "edizon",
+        "sdsetup_auto_name": ""
+    },
+    {
+        "name": "Emuiibo",
+        "download_function_name": "download_emuiibo",
+        "include_in_sdsetup": true,
+        "include_in_sdsetup_auto_builds": true,
+        "sdsetup_folder": "emuiibo",
+        "sdsetup_auto_name": "emuiibo"
+    },
+    {
+        "name": "Goldleaf",
+        "download_function_name": "download_goldleaf",
+        "include_in_sdsetup": true,
+        "include_in_sdsetup_auto_builds": false,
+        "sdsetup_folder": "goldleaf",
+        "sdsetup_auto_name": ""
+    },
+    {
+        "name": "Kosmos Toolbox",
+        "download_function_name": "download_kosmos_toolbox",
+        "include_in_sdsetup": true,
+        "include_in_sdsetup_auto_builds": true,
+        "sdsetup_folder": "kosmos_toolbox",
+        "sdsetup_auto_name": "kosmos_toolbox"
+    },
+    {
+        "name": "Kosmos Updater",
+        "download_function_name": "download_kosmos_updater",
+        "include_in_sdsetup": true,
+        "include_in_sdsetup_auto_builds": true,
+        "sdsetup_folder": "kosmos_updater",
+        "sdsetup_auto_name": "kosmos_updater"
+    },
+    {
+        "name": "ldn_mitm",
+        "download_function_name": "download_ldn_mitm",
+        "include_in_sdsetup": true,
+        "include_in_sdsetup_auto_builds": true,
+        "sdsetup_folder": "ldn_mitm",
+        "sdsetup_auto_name": "ldn_mitm"
+    },
+    {
+        "name": "Lockpick",
+        "download_function_name": "download_lockpick",
+        "include_in_sdsetup": true,
+        "include_in_sdsetup_auto_builds": false,
+        "sdsetup_folder": "lockpick",
+        "sdsetup_auto_name": ""
+    },
+    {
+        "name": "Lockpick_RCM",
+        "download_function_name": "download_lockpick_rcm",
+        "include_in_sdsetup": true,
+        "include_in_sdsetup_auto_builds": true,
+        "sdsetup_folder": "lockpick_rcm",
+        "sdsetup_auto_name": "lockpick_rcm"
+    },
+    {
+        "name": "nxdumptool",
+        "download_function_name": "download_nxdumptool",
+        "include_in_sdsetup": false,
+        "include_in_sdsetup_auto_builds": false,
+        "sdsetup_folder": "",
+        "sdsetup_auto_name": ""
+    },
+    {
+        "name": "nx-ovlloader",
+        "download_function_name": "download_nx_ovlloader",
+        "include_in_sdsetup": false,
+        "include_in_sdsetup_auto_builds": false,
+        "sdsetup_folder": "",
+        "sdsetup_auto_name": ""
+    },
+    {
+        "name": "ovlSysModules",
+        "download_function_name": "download_ovl_sysmodules",
+        "include_in_sdsetup": false,
+        "include_in_sdsetup_auto_builds": false,
+        "sdsetup_folder": "",
+        "sdsetup_auto_name": ""
+    },
+    {
+        "name": "sys-clk",
+        "download_function_name": "download_sys_clk",
+        "include_in_sdsetup": true,
+        "include_in_sdsetup_auto_builds": true,
+        "sdsetup_folder": "sys_clk",
+        "sdsetup_auto_name": "sys_clk"
+    },
+    {
+        "name": "sys-con",
+        "download_function_name": "download_sys_con",
+        "include_in_sdsetup": true,
+        "include_in_sdsetup_auto_builds": true,
+        "sdsetup_folder": "sys_con",
+        "sdsetup_auto_name": "sys_con"
+    },
+    {
+        "name": "sys-ftpd-light",
+        "download_function_name": "download_sys_ftpd_light",
+        "include_in_sdsetup": true,
+        "include_in_sdsetup_auto_builds": true,
+        "sdsetup_folder": "sys_ftpd",
+        "sdsetup_auto_name": "sys_ftpd"
+    },
+    {
+        "name": "Tesla-Menu",
+        "download_function_name": "download_tesla_menu",
+        "include_in_sdsetup": false,
+        "include_in_sdsetup_auto_builds": false,
+        "sdsetup_folder": "",
+        "sdsetup_auto_name": ""
+    }
+]
