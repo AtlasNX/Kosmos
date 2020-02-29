@@ -2,145 +2,289 @@
     {
         "name": "Atmosphère",
         "download_function_name": "download_atmosphere",
-        "include_in_sdsetup": true,
-        "include_in_sdsetup_auto_builds": true,
-        "sdsetup_folder": "must_have",
-        "sdsetup_auto_name": "must_have"
+        "git": {
+            "service": 0,
+            "user_name": "Atmosphere-NX",
+            "project_name": "Atmosphere",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": true,
+            "included_with_auto_builds": true,
+            "folder": "must_have",
+            "auto_build_name": "must_have"
+        }
     },
     {
         "name": "Hekate",
         "download_function_name": "download_hekate",
-        "include_in_sdsetup": true,
-        "include_in_sdsetup_auto_builds": true,
-        "sdsetup_folder": "must_have",
-        "sdsetup_auto_name": "hekate"
+        "git": {
+            "service": 0,
+            "user_name": "CTCaer",
+            "project_name": "hekate",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": true,
+            "included_with_auto_builds": true,
+            "folder": "must_have",
+            "auto_build_name": "hekate"
+        }
     },
     {
         "name": "Homebrew App Store",
         "download_function_name": "download_appstore",
-        "include_in_sdsetup": true,
-        "include_in_sdsetup_auto_builds": false,
-        "sdsetup_folder": "appstore",
-        "sdsetup_auto_name": ""
+        "git": {
+            "service": 1,
+            "user_name": "4TU",
+            "project_name": "hb-appstore",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": true,
+            "included_with_auto_builds": false,
+            "folder": "appstore",
+            "auto_build_name": ""
+        }
     },
     {
         "name": "EdiZon",
         "download_function_name": "download_edizon",
-        "include_in_sdsetup": true,
-        "include_in_sdsetup_auto_builds": false,
-        "sdsetup_folder": "edizon",
-        "sdsetup_auto_name": ""
+        "git": {
+            "service": 0,
+            "user_name": "WerWolv",
+            "project_name": "EdiZon",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": true,
+            "included_with_auto_builds": false,
+            "folder": "edizon",
+            "auto_build_name": ""
+        }
     },
     {
         "name": "Emuiibo",
         "download_function_name": "download_emuiibo",
-        "include_in_sdsetup": true,
-        "include_in_sdsetup_auto_builds": true,
-        "sdsetup_folder": "emuiibo",
-        "sdsetup_auto_name": "emuiibo"
+        "git": {
+            "service": 0,
+            "user_name": "XorTroll",
+            "project_name": "emuiibo",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": true,
+            "included_with_auto_builds": true,
+            "folder": "emuiibo",
+            "auto_build_name": "emuiibo"
+        }
     },
     {
         "name": "Goldleaf",
         "download_function_name": "download_goldleaf",
-        "include_in_sdsetup": true,
-        "include_in_sdsetup_auto_builds": false,
-        "sdsetup_folder": "goldleaf",
-        "sdsetup_auto_name": ""
+        "git": {
+            "service": 0,
+            "user_name": "XorTroll",
+            "project_name": "Goldleaf",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": true,
+            "included_with_auto_builds": false,
+            "folder": "goldleaf",
+            "auto_build_name": ""
+        }
     },
     {
         "name": "Kosmos Toolbox",
         "download_function_name": "download_kosmos_toolbox",
-        "include_in_sdsetup": true,
-        "include_in_sdsetup_auto_builds": true,
-        "sdsetup_folder": "kosmos_toolbox",
-        "sdsetup_auto_name": "kosmos_toolbox"
+        "git": {
+            "service": 0,
+            "user_name": "AtlasNX",
+            "project_name": "Kosmos-Toolbox",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": true,
+            "included_with_auto_builds": true,
+            "folder": "kosmos_toolbox",
+            "auto_build_name": "kosmos_toolbox"
+        }
     },
     {
         "name": "Kosmos Updater",
         "download_function_name": "download_kosmos_updater",
-        "include_in_sdsetup": true,
-        "include_in_sdsetup_auto_builds": true,
-        "sdsetup_folder": "kosmos_updater",
-        "sdsetup_auto_name": "kosmos_updater"
+        "git": {
+            "service": 0,
+            "user_name": "AtlasNX",
+            "project_name": "Kosmos-Updater",
+            "include_prereleases": false
+        },
+        "sdsetup": {
+            "included": true,
+            "included_with_auto_builds": true,
+            "folder": "kosmos_updater",
+            "auto_build_name": "kosmos_updater"
+        }
     },
     {
         "name": "ldn_mitm",
         "download_function_name": "download_ldn_mitm",
-        "include_in_sdsetup": true,
-        "include_in_sdsetup_auto_builds": true,
-        "sdsetup_folder": "ldn_mitm",
-        "sdsetup_auto_name": "ldn_mitm"
+        "git": {
+            "service": 0,
+            "user_name": "spacemeowx2",
+            "project_name": "ldn_mitm",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": true,
+            "included_with_auto_builds": true,
+            "folder": "ldn_mitm",
+            "auto_build_name": "ldn_mitm"
+        }
     },
     {
         "name": "Lockpick",
         "download_function_name": "download_lockpick",
-        "include_in_sdsetup": true,
-        "include_in_sdsetup_auto_builds": false,
-        "sdsetup_folder": "lockpick",
-        "sdsetup_auto_name": ""
+        "git": {
+            "service": 0,
+            "user_name": "shchmue",
+            "project_name": "Lockpick",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": true,
+            "included_with_auto_builds": false,
+            "folder": "lockpick",
+            "auto_build_name": ""
+        }
     },
     {
         "name": "Lockpick_RCM",
         "download_function_name": "download_lockpick_rcm",
-        "include_in_sdsetup": true,
-        "include_in_sdsetup_auto_builds": true,
-        "sdsetup_folder": "lockpick_rcm",
-        "sdsetup_auto_name": "lockpick_rcm"
+        "git": {
+            "service": 0,
+            "user_name": "shchmue",
+            "project_name": "Lockpick_RCM",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": true,
+            "included_with_auto_builds": true,
+            "folder": "lockpick_rcm",
+            "auto_build_name": "lockpick_rcm"
+        }
     },
     {
         "name": "nxdumptool",
         "download_function_name": "download_nxdumptool",
-        "include_in_sdsetup": false,
-        "include_in_sdsetup_auto_builds": false,
-        "sdsetup_folder": "",
-        "sdsetup_auto_name": ""
+        "git": {
+            "service": 0,
+            "user_name": "DarkMatterCore",
+            "project_name": "nxdumptool",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": false,
+            "included_with_auto_builds": false,
+            "folder": "",
+            "auto_build_name": ""
+        }
     },
     {
         "name": "nx-ovlloader",
         "download_function_name": "download_nx_ovlloader",
-        "include_in_sdsetup": false,
-        "include_in_sdsetup_auto_builds": false,
-        "sdsetup_folder": "",
-        "sdsetup_auto_name": ""
+        "git": {
+            "service": 0,
+            "user_name": "WerWolv",
+            "project_name": "nx-ovlloader",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": false,
+            "included_with_auto_builds": false,
+            "folder": "",
+            "auto_build_name": ""
+        }
     },
     {
         "name": "ovlSysModules",
         "download_function_name": "download_ovl_sysmodules",
-        "include_in_sdsetup": false,
-        "include_in_sdsetup_auto_builds": false,
-        "sdsetup_folder": "",
-        "sdsetup_auto_name": ""
+        "git": {
+            "service": 0,
+            "user_name": "WerWolv",
+            "project_name": "ovl-sysmodules",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": false,
+            "included_with_auto_builds": false,
+            "folder": "",
+            "auto_build_name": ""
+        }
     },
     {
         "name": "sys-clk",
         "download_function_name": "download_sys_clk",
-        "include_in_sdsetup": true,
-        "include_in_sdsetup_auto_builds": true,
-        "sdsetup_folder": "sys_clk",
-        "sdsetup_auto_name": "sys_clk"
+        "git": {
+            "service": 0,
+            "user_name": "retronx-team",
+            "project_name": "sys-clk",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": true,
+            "included_with_auto_builds": true,
+            "folder": "sys_clk",
+            "auto_build_name": "sys_clk"
+        }
     },
     {
         "name": "sys-con",
         "download_function_name": "download_sys_con",
-        "include_in_sdsetup": true,
-        "include_in_sdsetup_auto_builds": true,
-        "sdsetup_folder": "sys_con",
-        "sdsetup_auto_name": "sys_con"
+        "git": {
+            "service": 0,
+            "user_name": "cathery",
+            "project_name": "sys-con",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": true,
+            "included_with_auto_builds": true,
+            "folder": "sys_con",
+            "auto_build_name": "sys_con"
+        }
     },
     {
         "name": "sys-ftpd-light",
         "download_function_name": "download_sys_ftpd_light",
-        "include_in_sdsetup": true,
-        "include_in_sdsetup_auto_builds": true,
-        "sdsetup_folder": "sys_ftpd",
-        "sdsetup_auto_name": "sys_ftpd"
+        "git": {
+            "service": 0,
+            "user_name": "cathery",
+            "project_name": "sys-ftpd-light",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": true,
+            "included_with_auto_builds": true,
+            "folder": "sys_ftpd",
+            "auto_build_name": "sys_ftpd"
+        }
     },
     {
         "name": "Tesla-Menu",
         "download_function_name": "download_tesla_menu",
-        "include_in_sdsetup": false,
-        "include_in_sdsetup_auto_builds": false,
-        "sdsetup_folder": "",
-        "sdsetup_auto_name": ""
+        "git": {
+            "service": 0,
+            "user_name": "WerWolv",
+            "project_name": "Tesla-Menu",
+            "include_prereleases": true
+        },
+        "sdsetup": {
+            "included": false,
+            "included_with_auto_builds": false,
+            "folder": "",
+            "auto_build_name": ""
+        }
     }
 ]

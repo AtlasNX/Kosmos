@@ -96,6 +96,8 @@ def build(args, temp_directory, kosmos_version):
 
         # Loop through modules
         for module in data:
+            sdsetup_opts = module['sdsetup']
+
             # Running a Kosmos Build
             if args.command == Command.Kosmos:
                 # Download the module.
@@ -106,7 +108,7 @@ def build(args, temp_directory, kosmos_version):
                 results.append(f'  {module["name"]} - {version}')
 
             # Running a SDSetup Build
-            elif args.command == Command.SDSetup and module['include_in_sdsetup']:
+            elif args.command == Command.SDSetup and sdsetup_opts['included']:
                 # Only show prompts when it's not an auto build.
                 if not args.auto:
                     print(f'Downloading {module["name"]}...')
@@ -114,14 +116,16 @@ def build(args, temp_directory, kosmos_version):
                 # Download the module.
                 version = ''
                 if not args.auto or (
-                    args.auto and module['include_in_sdsetup_auto_builds']):
+                    args.auto and sdsetup_opts['included_with_auto_builds']):
                     download = getattr(modules,
                         module['download_function_name'])
                     version = download(temp_directory, kosmos_version)
+                else:
+                    continue
 
                 # Auto builds have a different prompt at the end for parsing.
-                if args.auto and module['include_in_sdsetup_auto_builds']:
-                    results.append(f'{module["sdsetup_auto_name"]}:{version}')
+                if args.auto and sdsetup_opts['included_with_auto_builds']:
+                    results.append(f'{sdsetup_opts["auto_build_name"]}:{version}')
                 else:
                     results.append(f'  {module["name"]} - {version}')
     return results
