@@ -6,5 +6,4 @@ github_username = ''
 github_password = ''
 
 # GitLab Login Information
-gitlab_username = ''
-gitlab_password = ''
+gitlab_private_access_token = ''

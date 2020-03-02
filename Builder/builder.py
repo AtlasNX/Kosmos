@@ -20,18 +20,12 @@
 #
 
 import argparse
+import common
 import config
-import enum
-import json
 import modules
 import os
-import uuid
 import shutil
-
-
-class Command(enum.Enum):
-    Kosmos = 0
-    SDSetup = 1
+import sys
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -50,7 +44,7 @@ def parse_args():
     parser_kosmos.add_argument(
         'output',
         help='Zip file to create.')
-    parser_kosmos.set_defaults(command=Command.Kosmos)
+    parser_kosmos.set_defaults(command=common.Command.Kosmos)
 
     # SDSetup subcommands
     parser_sdsetup = subparsers.add_parser(
@@ -64,15 +58,16 @@ def parse_args():
         action='store_true',
         default=False,
         help='Perform an auto build.')
-    parser_sdsetup.set_defaults(command=Command.SDSetup)
+    parser_sdsetup.set_defaults(command=common.Command.SDSetup)
 
     # Parse arguments
-    return parser.parse_args()
+    args = parser.parse_args()
 
-def create_temp_directory():
-    directory = f'{os.getcwd()}/tmp/{str(uuid.uuid4())}'
-    os.makedirs(directory)
-    return directory
+    if not hasattr(args, 'command'):
+        parser.print_help()
+        sys.exit()
+
+    return args
 
 def get_kosmos_version(args):
     if args.version is not None:
@@ -80,82 +75,41 @@ def get_kosmos_version(args):
     return config.version
 
 def init_version_messages(args, kosmos_version):
-    if args.command == Command.Kosmos:
+    if args.command == common.Command.Kosmos:
         return [ f'Kosmos {kosmos_version} built with:' ]
-    elif args.command == Command.SDSetup and not args.auto:
+    elif args.command == common.Command.SDSetup and not args.auto:
         return [ 'SDSetup Modules built with:' ]
     return []
 
-def build(args, temp_directory, kosmos_version):
-    results = []
-
-    # Open up modules.json
-    with open('modules.json') as json_file:
-        # Parse JSON
-        data = json.load(json_file)
-
-        # Loop through modules
-        for module in data:
-            sdsetup_opts = module['sdsetup']
-
-            # Running a Kosmos Build
-            if args.command == Command.Kosmos:
-                # Download the module.
-                print(f'Downloading {module["name"]}...')
-                download = getattr(modules,
-                    module['download_function_name'])
-                version = download(temp_directory, kosmos_version)
-                results.append(f'  {module["name"]} - {version}')
-
-            # Running a SDSetup Build
-            elif args.command == Command.SDSetup and sdsetup_opts['included']:
-                # Only show prompts when it's not an auto build.
-                if not args.auto:
-                    print(f'Downloading {module["name"]}...')
-
-                # Download the module.
-                version = ''
-                if not args.auto or (
-                    args.auto and sdsetup_opts['included_with_auto_builds']):
-                    download = getattr(modules,
-                        module['download_function_name'])
-                    version = download(temp_directory, kosmos_version)
-                else:
-                    continue
-
-                # Auto builds have a different prompt at the end for parsing.
-                if args.auto and sdsetup_opts['included_with_auto_builds']:
-                    results.append(f'{sdsetup_opts["auto_build_name"]}:{version}')
-                else:
-                    results.append(f'  {module["name"]} - {version}')
-    return results
-
-def delete_file_or_folder(path):
-    if os.path.exists(path):
-        if os.path.isfile(path):
-            os.remove(path)
-        else:
-            shutil.rmtree(path)
-
 if __name__ == '__main__':
     args = parse_args()
-    temp_directory = create_temp_directory()
+
+    temp_directory = common.generate_temp_path()
+    os.makedirs(temp_directory)
     kosmos_version = get_kosmos_version(args)
 
+    auto_build = False
+    if hasattr(args, 'auto'):
+        auto_build = args.auto
+
     version_messages = init_version_messages(args, kosmos_version)
-    version_messages += build(args, temp_directory, kosmos_version)
+    version_messages += modules.build(
+        temp_directory,
+        kosmos_version,
+        args.command == common.Command.Kosmos,
+        auto_build)
 
-    delete_file_or_folder(args.output)
+    common.delete_path(args.output)
 
-    if args.command == Command.Kosmos:
+    if args.command == common.Command.Kosmos:
         shutil.make_archive(
             os.path.splitext(args.output)[0],
             'zip',
             temp_directory)
-    elif args.command == Command.SDSetup:
+    elif args.command == common.Command.SDSetup:
         shutil.move(temp_directory, args.output)
 
-    delete_file_or_folder(f'{os.getcwd()}/tmp')
+    common.delete_path(os.path.join(os.getcwd(), 'tmp'))
 
     for message in version_messages:
         print(message)
