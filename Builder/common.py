@@ -29,6 +29,10 @@ class Command(enum.Enum):
     Kosmos = 0
     SDSetup = 1
 
+class GitService(enum.Enum):
+    GitHub = 0
+    GitLab = 1
+
 def generate_temp_path():
     return os.path.join(os.getcwd(), 'tmp', str(uuid.uuid4()))
 
@@ -52,3 +56,7 @@ def sed(pattern, replace, file_path):
     with open(file_path, 'w') as text_file:
         for line in lines:
             text_file.write(re.sub(pattern, replace, line))
+
+def mkdir(path):
+    if not os.path.exists(path):
+        os.makedirs(path)

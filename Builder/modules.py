@@ -29,11 +29,16 @@ import urllib.request
 import uuid
 import zipfile
 
-git = Github(config.github_username, config.github_password)
+github = Github(config.github_username, config.github_password)
 
 def get_latest_release(module):
-    repo = git.get_repo(f'{module["git"]["org_name"]}/{module["git"]["repo_name"]}')
-    return repo.get_latest_release()
+    if module['git']['service'] == common.GitService.GitHub:
+        repo = github.get_repo(f'{module["git"]["org_name"]}/{module["git"]["repo_name"]}')
+        releases = repo.get_releases()
+        return releases[0]
+    else:
+        # TODO: GitLab
+        return None
 
 def download_asset(release, pattern):
     matched_asset = None
@@ -59,7 +64,7 @@ def find_asset(release, pattern):
 
 def download_atmosphere(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    bundle_path = download_asset(release, '.*atmosphere-.*\\.zip')
+    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
     with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
         zip_ref.extractall(temp_directory)
     
@@ -67,17 +72,17 @@ def download_atmosphere(module, temp_directory, kosmos_version):
     common.delete_path(os.path.join(temp_directory, 'switch', 'reboot_to_payload.nro'))
     common.delete_path(os.path.join(temp_directory, 'atmosphere', 'reboot_payload.bin'))
     
-    payload_path = download_asset(release, '.*fusee-primary\\.bin')
+    payload_path = download_asset(release, module['git']['asset_patterns'][1])
 
-    os.makedirs(os.path.join(temp_directory, 'bootloader', 'payloads'))
-    shutil.move(payload_path, os.path.join(temp_directory, 'bootloader', 'payloads','fusee-primary.bin'))
+    common.mkdir(os.path.join(temp_directory, 'bootloader', 'payloads'))
+    shutil.move(payload_path, os.path.join(temp_directory, 'bootloader', 'payloads', 'fusee-primary.bin'))
     common.copy_module_file('atmosphere', 'system_settings.ini', os.path.join(temp_directory, 'atmosphere', 'config', 'system_settings.ini'))
 
     return release.tag_name
 
 def download_hekate(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    bundle_path = download_asset(release, '.*hekate_ctcaer_.*\\.zip')
+    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
     with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
         zip_ref.extractall(temp_directory)
 
@@ -99,62 +104,163 @@ def download_appstore(module, temp_directory, kosmos_version):
 
 def download_edizon(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    app_path = download_asset(release, module['git']['asset_patterns'][0])
+
+    common.mkdir(os.path.join(temp_directory, 'switch', 'EdiZon'))
+    shutil.move(app_path, os.path.join(temp_directory, 'switch', 'EdiZon', 'EdiZon.nro'))
+
     return release.tag_name
 
 def download_emuiibo(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_directory)
+
+    common.delete_path(bundle_path)
+    common.mkdir(os.path.join(temp_directory, 'atmosphere', 'contents'))
+    shutil.move(os.path.join(temp_directory, 'contents', '0100000000000352'), os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352'))
+    common.delete_path(os.path.join(temp_directory, 'contents'))
+    common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352', 'flags', 'boot2.flag'))
+    common.copy_module_file('emuiibo', 'toolbox.json', os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352', 'toolbox.json'))
+
     return release.tag_name
 
 def download_goldleaf(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    app_path = download_asset(release, module['git']['asset_patterns'][0])
+
+    common.mkdir(os.path.join(temp_directory, 'switch', 'Goldleaf'))
+    shutil.move(app_path, os.path.join(temp_directory, 'switch', 'Goldleaf', 'Goldleaf.nro'))
+
     return release.tag_name
 
 def download_kosmos_toolbox(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    app_path = download_asset(release, module['git']['asset_patterns'][0])
+
+    common.mkdir(os.path.join(temp_directory, 'switch', 'KosmosToolbox'))
+    shutil.move(app_path, os.path.join(temp_directory, 'switch', 'KosmosToolbox', 'KosmosToolbox.nro'))
+    common.copy_module_file('kosmos-toolbox', 'config.json', os.path.join(temp_directory, 'switch', 'KosmosToolbox', 'config.json'))
+
     return release.tag_name
 
 def download_kosmos_updater(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    app_path = download_asset(release, module['git']['asset_patterns'][0])
+
+    common.mkdir(os.path.join(temp_directory, 'switch', 'KosmosUpdater'))
+    shutil.move(app_path, os.path.join(temp_directory, 'switch', 'KosmosUpdater', 'KosmosUpdater.nro'))
+    common.copy_module_file('kosmos-updater', 'internal.db', os.path.join(temp_directory, 'switch', 'KosmosUpdater', 'internal.db'))
+    common.sed('KOSMOS_VERSION', kosmos_version, os.path.join(temp_directory, 'switch', 'KosmosUpdater', 'internal.db'))
+
     return release.tag_name
 
 def download_ldn_mitm(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_directory)
+    
+    common.delete_path(bundle_path)
+    common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '4200000000000010', 'flags', 'boot2.flag'))
+    common.copy_module_file('ldn_mitm', 'toolbox.json', os.path.join(temp_directory, 'atmosphere', 'contents', '4200000000000010', 'toolbox.json'))
+
     return release.tag_name
 
 def download_lockpick(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    app_path = download_asset(release, module['git']['asset_patterns'][0])
+
+    common.mkdir(os.path.join(temp_directory, 'switch', 'Lockpick'))
+    shutil.move(app_path, os.path.join(temp_directory, 'switch', 'Lockpick', 'Lockpick.nro'))
+
     return release.tag_name
 
 def download_lockpick_rcm(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    payload_path = download_asset(release, module['git']['asset_patterns'][0])
+
+    common.mkdir(os.path.join(temp_directory, 'bootloader', 'payloads'))
+    shutil.move(payload_path, os.path.join(temp_directory, 'bootloader', 'payloads', 'Lockpick_RCM.bin'))
+
     return release.tag_name
 
 def download_nxdumptool(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    app_path = download_asset(release, module['git']['asset_patterns'][0])
+
+    common.mkdir(os.path.join(temp_directory, 'switch', 'NXDumpTool'))
+    shutil.move(app_path, os.path.join(temp_directory, 'switch', 'NXDumpTool', 'NXDumpTool.nro'))
+
     return release.tag_name
 
 def download_nx_ovlloader(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_directory)
+    
+    common.delete_path(bundle_path)
+
     return release.tag_name
 
 def download_ovl_sysmodules(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    app_path = download_asset(release, module['git']['asset_patterns'][0])
+
+    common.mkdir(os.path.join(temp_directory, 'switch', '.overlays'))
+    shutil.move(app_path, os.path.join(temp_directory, 'switch', '.overlays', 'ovlSysmodules.ovl'))
+
     return release.tag_name
 
 def download_sys_clk(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_directory)
+
+    common.delete_path(bundle_path)
+    common.mkdir(os.path.join(temp_directory, 'atmosphere', 'contents'))
+    shutil.move(os.path.join(temp_directory, 'atmosphere', 'titles', '00FF0000636C6BFF'), os.path.join(temp_directory, 'atmosphere', 'contents', '00FF0000636C6BFF'))
+    common.delete_path(os.path.join(temp_directory, 'atmosphere', 'titles'))
+    common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '00FF0000636C6BFF', 'flags', 'boot2.flag'))
+    common.delete_path(os.path.join(temp_directory, 'README.md'))
+    common.copy_module_file('sys-clk', 'toolbox.json', os.path.join(temp_directory, 'atmosphere', 'contents', '00FF0000636C6BFF', 'toolbox.json'))
+
     return release.tag_name
 
 def download_sys_con(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_directory)
+
+    common.delete_path(bundle_path)
+    common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '690000000000000D', 'flags', 'boot2.flag'))
+
     return release.tag_name
 
 def download_sys_ftpd_light(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_directory)
+
+    common.delete_path(bundle_path)
+    common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '420000000000000E', 'flags', 'boot2.flag'))
+    common.copy_module_file('sys-ftpd-light', 'toolbox.json', os.path.join(temp_directory, 'atmosphere', 'contents', '420000000000000E', 'toolbox.json'))
+
     return release.tag_name
 
 def download_tesla_menu(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
+    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_directory)
+    
+    common.delete_path(bundle_path)
+
     return release.tag_name
 
 def build(temp_directory, kosmos_version, kosmos_build, auto_build):

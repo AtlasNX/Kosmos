@@ -5,7 +5,11 @@
         "git": {
             "service": 0,
             "org_name": "Atmosphere-NX",
-            "repo_name": "Atmosphere"
+            "repo_name": "Atmosphere",
+            "asset_patterns": [
+                ".*atmosphere-.*\\.zip",
+                ".*fusee-primary\\.bin"
+            ]
         },
         "sdsetup": {
             "included": true,
@@ -20,7 +24,10 @@
         "git": {
             "service": 0,
             "org_name": "CTCaer",
-            "repo_name": "hekate"
+            "repo_name": "hekate",
+            "asset_patterns": [
+                ".*hekate_ctcaer_.*\\.zip"
+            ]
         },
         "sdsetup": {
             "included": true,
@@ -50,7 +57,10 @@
         "git": {
             "service": 0,
             "org_name": "WerWolv",
-            "repo_name": "EdiZon"
+            "repo_name": "EdiZon",
+            "asset_patterns": [
+                ".*EdiZon\\.nro"
+            ]
         },
         "sdsetup": {
             "included": true,
@@ -65,7 +75,10 @@
         "git": {
             "service": 0,
             "org_name": "XorTroll",
-            "repo_name": "emuiibo"
+            "repo_name": "emuiibo",
+            "asset_patterns": [
+                ".*emuiibo.*\\.zip"
+            ]
         },
         "sdsetup": {
             "included": true,
@@ -80,7 +93,10 @@
         "git": {
             "service": 0,
             "org_name": "XorTroll",
-            "repo_name": "Goldleaf"
+            "repo_name": "Goldleaf",
+            "asset_patterns": [
+                ".*Goldleaf\\.nro"
+            ]
         },
         "sdsetup": {
             "included": true,
@@ -95,7 +111,10 @@
         "git": {
             "service": 0,
             "org_name": "AtlasNX",
-            "repo_name": "Kosmos-Toolbox"
+            "repo_name": "Kosmos-Toolbox",
+            "asset_patterns": [
+                ".*KosmosToolbox\\.nro"
+            ]
         },
         "sdsetup": {
             "included": true,
@@ -110,7 +129,10 @@
         "git": {
             "service": 0,
             "org_name": "AtlasNX",
-            "repo_name": "Kosmos-Updater"
+            "repo_name": "Kosmos-Updater",
+            "asset_patterns": [
+                ".*KosmosUpdater\\.nro"
+            ]
         },
         "sdsetup": {
             "included": true,
@@ -125,7 +147,10 @@
         "git": {
             "service": 0,
             "org_name": "spacemeowx2",
-            "repo_name": "ldn_mitm"
+            "repo_name": "ldn_mitm",
+            "asset_patterns": [
+                ".*ldn_mitm_.*\\.zip"
+            ]
         },
         "sdsetup": {
             "included": true,
@@ -140,7 +165,10 @@
         "git": {
             "service": 0,
             "org_name": "shchmue",
-            "repo_name": "Lockpick"
+            "repo_name": "Lockpick",
+            "asset_patterns": [
+                ".*Lockpick\\.nro"
+            ]
         },
         "sdsetup": {
             "included": true,
@@ -155,7 +183,10 @@
         "git": {
             "service": 0,
             "org_name": "shchmue",
-            "repo_name": "Lockpick_RCM"
+            "repo_name": "Lockpick_RCM",
+            "asset_patterns": [
+                ".*Lockpick_RCM\\.bin"
+            ]
         },
         "sdsetup": {
             "included": true,
@@ -170,7 +201,10 @@
         "git": {
             "service": 0,
             "org_name": "DarkMatterCore",
-            "repo_name": "nxdumptool"
+            "repo_name": "nxdumptool",
+            "asset_patterns": [
+                ".*nxdumptool\\.nro"
+            ]
         },
         "sdsetup": {
             "included": false,
@@ -185,7 +219,10 @@
         "git": {
             "service": 0,
             "org_name": "WerWolv",
-            "repo_name": "nx-ovlloader"
+            "repo_name": "nx-ovlloader",
+            "asset_patterns": [
+                ".*nx-ovlloader\\.zip"
+            ]
         },
         "sdsetup": {
             "included": false,
@@ -200,7 +237,10 @@
         "git": {
             "service": 0,
             "org_name": "WerWolv",
-            "repo_name": "ovl-sysmodules"
+            "repo_name": "ovl-sysmodules",
+            "asset_patterns": [
+                ".*ovlSysmodules\\.ovl"
+            ]
         },
         "sdsetup": {
             "included": false,
@@ -215,7 +255,10 @@
         "git": {
             "service": 0,
             "org_name": "retronx-team",
-            "repo_name": "sys-clk"
+            "repo_name": "sys-clk",
+            "asset_patterns": [
+                ".*sys-clk-.*\\.zip"
+            ]
         },
         "sdsetup": {
             "included": true,
@@ -230,7 +273,10 @@
         "git": {
             "service": 0,
             "org_name": "cathery",
-            "repo_name": "sys-con"
+            "repo_name": "sys-con",
+            "asset_patterns": [
+                ".*sys-con-.*\\.zip"
+            ]
         },
         "sdsetup": {
             "included": true,
@@ -245,7 +291,10 @@
         "git": {
             "service": 0,
             "org_name": "cathery",
-            "repo_name": "sys-ftpd-light"
+            "repo_name": "sys-ftpd-light",
+            "asset_patterns": [
+                ".*sys-ftpd-light\\.zip"
+            ]
         },
         "sdsetup": {
             "included": true,
@@ -260,7 +309,10 @@
         "git": {
             "service": 0,
             "org_name": "WerWolv",
-            "repo_name": "Tesla-Menu"
+            "repo_name": "Tesla-Menu",
+            "asset_patterns": [
+                ".*ovlmenu\\.zip"
+            ]
         },
         "sdsetup": {
             "included": false,
