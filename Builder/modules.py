@@ -32,15 +32,27 @@ import zipfile
 github = Github(config.github_username, config.github_password)
 
 def get_latest_release(module):
-    if module['git']['service'] == common.GitService.GitHub:
-        repo = github.get_repo(f'{module["git"]["org_name"]}/{module["git"]["repo_name"]}')
+    if common.GitService(module['git']['service']) == common.GitService.GitHub:
+        try:
+            repo = github.get_repo(f'{module["git"]["org_name"]}/{module["git"]["repo_name"]}')
+        except:
+            print(f'[Error] Unable to find repo: {module["git"]["org_name"]}/{module["git"]["repo_name"]}')
+            return None
+        
         releases = repo.get_releases()
+        if releases.totalCount == 0:
+            print(f'[Error] Unable to find any releases for repo: {module["git"]["org_name"]}/{module["git"]["repo_name"]}')
+            return None
+        
         return releases[0]
     else:
         # TODO: GitLab
         return None
 
 def download_asset(release, pattern):
+    if release is None:
+        return None
+    
     matched_asset = None
     for asset in release.get_assets():
         if re.search(pattern, asset.name):
@@ -48,6 +60,7 @@ def download_asset(release, pattern):
             break
 
     if matched_asset is None:
+        print(f'[Error] Unable to find asset that match pattern: "{pattern}"')
         return None
 
     download_path = common.generate_temp_path()
@@ -65,6 +78,9 @@ def find_asset(release, pattern):
 def download_atmosphere(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    if bundle_path is None:
+        return None
+
     with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
         zip_ref.extractall(temp_directory)
     
@@ -73,6 +89,8 @@ def download_atmosphere(module, temp_directory, kosmos_version):
     common.delete_path(os.path.join(temp_directory, 'atmosphere', 'reboot_payload.bin'))
     
     payload_path = download_asset(release, module['git']['asset_patterns'][1])
+    if payload_path is None:
+        return None
 
     common.mkdir(os.path.join(temp_directory, 'bootloader', 'payloads'))
     shutil.move(payload_path, os.path.join(temp_directory, 'bootloader', 'payloads', 'fusee-primary.bin'))
@@ -83,6 +101,9 @@ def download_atmosphere(module, temp_directory, kosmos_version):
 def download_hekate(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    if bundle_path is None:
+        return None
+
     with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
         zip_ref.extractall(temp_directory)
 
@@ -105,6 +126,8 @@ def download_appstore(module, temp_directory, kosmos_version):
 def download_edizon(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     app_path = download_asset(release, module['git']['asset_patterns'][0])
+    if app_path is None:
+        return None
 
     common.mkdir(os.path.join(temp_directory, 'switch', 'EdiZon'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', 'EdiZon', 'EdiZon.nro'))
@@ -114,6 +137,9 @@ def download_edizon(module, temp_directory, kosmos_version):
 def download_emuiibo(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    if bundle_path is None:
+        return None
+    
     with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
         zip_ref.extractall(temp_directory)
 
@@ -129,6 +155,8 @@ def download_emuiibo(module, temp_directory, kosmos_version):
 def download_goldleaf(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     app_path = download_asset(release, module['git']['asset_patterns'][0])
+    if app_path is None:
+        return None
 
     common.mkdir(os.path.join(temp_directory, 'switch', 'Goldleaf'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', 'Goldleaf', 'Goldleaf.nro'))
@@ -138,6 +166,8 @@ def download_goldleaf(module, temp_directory, kosmos_version):
 def download_kosmos_toolbox(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     app_path = download_asset(release, module['git']['asset_patterns'][0])
+    if app_path is None:
+        return None
 
     common.mkdir(os.path.join(temp_directory, 'switch', 'KosmosToolbox'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', 'KosmosToolbox', 'KosmosToolbox.nro'))
@@ -148,6 +178,8 @@ def download_kosmos_toolbox(module, temp_directory, kosmos_version):
 def download_kosmos_updater(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     app_path = download_asset(release, module['git']['asset_patterns'][0])
+    if app_path is None:
+        return None
 
     common.mkdir(os.path.join(temp_directory, 'switch', 'KosmosUpdater'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', 'KosmosUpdater', 'KosmosUpdater.nro'))
@@ -159,6 +191,9 @@ def download_kosmos_updater(module, temp_directory, kosmos_version):
 def download_ldn_mitm(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    if bundle_path is None:
+        return None
+    
     with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
         zip_ref.extractall(temp_directory)
     
@@ -171,6 +206,8 @@ def download_ldn_mitm(module, temp_directory, kosmos_version):
 def download_lockpick(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     app_path = download_asset(release, module['git']['asset_patterns'][0])
+    if app_path is None:
+        return None
 
     common.mkdir(os.path.join(temp_directory, 'switch', 'Lockpick'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', 'Lockpick', 'Lockpick.nro'))
@@ -180,6 +217,8 @@ def download_lockpick(module, temp_directory, kosmos_version):
 def download_lockpick_rcm(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     payload_path = download_asset(release, module['git']['asset_patterns'][0])
+    if payload_path is None:
+        return None
 
     common.mkdir(os.path.join(temp_directory, 'bootloader', 'payloads'))
     shutil.move(payload_path, os.path.join(temp_directory, 'bootloader', 'payloads', 'Lockpick_RCM.bin'))
@@ -189,6 +228,8 @@ def download_lockpick_rcm(module, temp_directory, kosmos_version):
 def download_nxdumptool(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     app_path = download_asset(release, module['git']['asset_patterns'][0])
+    if app_path is None:
+        return None
 
     common.mkdir(os.path.join(temp_directory, 'switch', 'NXDumpTool'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', 'NXDumpTool', 'NXDumpTool.nro'))
@@ -198,6 +239,9 @@ def download_nxdumptool(module, temp_directory, kosmos_version):
 def download_nx_ovlloader(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    if bundle_path is None:
+        return None
+    
     with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
         zip_ref.extractall(temp_directory)
     
@@ -208,15 +252,31 @@ def download_nx_ovlloader(module, temp_directory, kosmos_version):
 def download_ovl_sysmodules(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     app_path = download_asset(release, module['git']['asset_patterns'][0])
+    if app_path is None:
+        return None
 
     common.mkdir(os.path.join(temp_directory, 'switch', '.overlays'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', '.overlays', 'ovlSysmodules.ovl'))
 
     return release.tag_name
 
+def download_status_monitor_overlay(module, temp_directory, kosmos_version):
+    release = get_latest_release(module)
+    app_path = download_asset(release, module['git']['asset_patterns'][0])
+    if app_path is None:
+        return None
+
+    common.mkdir(os.path.join(temp_directory, 'switch', '.overlays'))
+    shutil.move(app_path, os.path.join(temp_directory, 'switch', '.overlays', 'Status-Monitor-Overlay.ovl'))
+
+    return release.tag_name
+
 def download_sys_clk(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    if bundle_path is None:
+        return None
+    
     with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
         zip_ref.extractall(temp_directory)
 
@@ -233,6 +293,9 @@ def download_sys_clk(module, temp_directory, kosmos_version):
 def download_sys_con(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    if bundle_path is None:
+        return None
+    
     with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
         zip_ref.extractall(temp_directory)
 
@@ -244,6 +307,9 @@ def download_sys_con(module, temp_directory, kosmos_version):
 def download_sys_ftpd_light(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    if bundle_path is None:
+        return None
+    
     with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
         zip_ref.extractall(temp_directory)
 
@@ -256,6 +322,9 @@ def download_sys_ftpd_light(module, temp_directory, kosmos_version):
 def download_tesla_menu(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    if bundle_path is None:
+        return None
+    
     with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
         zip_ref.extractall(temp_directory)
     
@@ -281,6 +350,8 @@ def build(temp_directory, kosmos_version, kosmos_build, auto_build):
                 print(f'Downloading {module["name"]}...')
                 download = globals()[module['download_function_name']]
                 version = download(module, temp_directory, kosmos_version)
+                if version is None:
+                    return None
                 results.append(f'  {module["name"]} - {version}')
 
             # Running a SDSetup Build
@@ -291,10 +362,11 @@ def build(temp_directory, kosmos_version, kosmos_build, auto_build):
 
                 # Download the module.
                 version = ''
-                if not auto_build or (
-                    auto_build and sdsetup_opts['included_with_auto_builds']):
+                if not auto_build or (auto_build and sdsetup_opts['included_with_auto_builds']):
                     download = globals()[module['download_function_name']]
                     version = download(module, temp_directory, kosmos_version)
+                    if version is None:
+                        return None
                 else:
                     continue
 

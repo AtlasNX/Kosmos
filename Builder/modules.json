@@ -7,8 +7,8 @@
             "org_name": "Atmosphere-NX",
             "repo_name": "Atmosphere",
             "asset_patterns": [
-                ".*atmosphere-.*\\.zip",
-                ".*fusee-primary\\.bin"
+                ".*atmosphere.*\\.zip",
+                ".*fusee.*\\.bin"
             ]
         },
         "sdsetup": {
@@ -26,7 +26,7 @@
             "org_name": "CTCaer",
             "repo_name": "hekate",
             "asset_patterns": [
-                ".*hekate_ctcaer_.*\\.zip"
+                ".*hekate.*\\.zip"
             ]
         },
         "sdsetup": {
@@ -59,7 +59,7 @@
             "org_name": "WerWolv",
             "repo_name": "EdiZon",
             "asset_patterns": [
-                ".*EdiZon\\.nro"
+                ".*\\.nro"
             ]
         },
         "sdsetup": {
@@ -95,7 +95,7 @@
             "org_name": "XorTroll",
             "repo_name": "Goldleaf",
             "asset_patterns": [
-                ".*Goldleaf\\.nro"
+                ".*\\.nro"
             ]
         },
         "sdsetup": {
@@ -113,7 +113,7 @@
             "org_name": "AtlasNX",
             "repo_name": "Kosmos-Toolbox",
             "asset_patterns": [
-                ".*KosmosToolbox\\.nro"
+                ".*\\.nro"
             ]
         },
         "sdsetup": {
@@ -131,7 +131,7 @@
             "org_name": "AtlasNX",
             "repo_name": "Kosmos-Updater",
             "asset_patterns": [
-                ".*KosmosUpdater\\.nro"
+                ".*\\.nro"
             ]
         },
         "sdsetup": {
@@ -149,7 +149,7 @@
             "org_name": "spacemeowx2",
             "repo_name": "ldn_mitm",
             "asset_patterns": [
-                ".*ldn_mitm_.*\\.zip"
+                ".*ldn_mitm.*\\.zip"
             ]
         },
         "sdsetup": {
@@ -167,7 +167,7 @@
             "org_name": "shchmue",
             "repo_name": "Lockpick",
             "asset_patterns": [
-                ".*Lockpick\\.nro"
+                ".*\\.nro"
             ]
         },
         "sdsetup": {
@@ -185,7 +185,7 @@
             "org_name": "shchmue",
             "repo_name": "Lockpick_RCM",
             "asset_patterns": [
-                ".*Lockpick_RCM\\.bin"
+                ".*\\.bin"
             ]
         },
         "sdsetup": {
@@ -203,7 +203,7 @@
             "org_name": "DarkMatterCore",
             "repo_name": "nxdumptool",
             "asset_patterns": [
-                ".*nxdumptool\\.nro"
+                ".*nxdumptool.*\\.nro"
             ]
         },
         "sdsetup": {
@@ -221,7 +221,7 @@
             "org_name": "WerWolv",
             "repo_name": "nx-ovlloader",
             "asset_patterns": [
-                ".*nx-ovlloader\\.zip"
+                ".*\\.zip"
             ]
         },
         "sdsetup": {
@@ -239,7 +239,25 @@
             "org_name": "WerWolv",
             "repo_name": "ovl-sysmodules",
             "asset_patterns": [
-                ".*ovlSysmodules\\.ovl"
+                ".*\\.ovl"
+            ]
+        },
+        "sdsetup": {
+            "included": false,
+            "included_with_auto_builds": false,
+            "folder": "",
+            "auto_build_name": ""
+        }
+    },
+    {
+        "name": "Status Monitor Overlay",
+        "download_function_name": "download_status_monitor_overlay",
+        "git": {
+            "service": 0,
+            "org_name": "masagrator",
+            "repo_name": "Status-Monitor-Overlay",
+            "asset_patterns": [
+                ".*\\.ovl"
             ]
         },
         "sdsetup": {
@@ -293,7 +311,7 @@
             "org_name": "cathery",
             "repo_name": "sys-ftpd-light",
             "asset_patterns": [
-                ".*sys-ftpd-light\\.zip"
+                ".*sys-ftpd-light.*\\.zip"
             ]
         },
         "sdsetup": {
@@ -311,7 +329,7 @@
             "org_name": "WerWolv",
             "repo_name": "Tesla-Menu",
             "asset_patterns": [
-                ".*ovlmenu\\.zip"
+                ".*\\.zip"
             ]
         },
         "sdsetup": {

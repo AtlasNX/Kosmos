@@ -38,21 +38,13 @@ def parse_args():
     subparsers = parser.add_subparsers()
 
     # Kosmos subcommands
-    parser_kosmos = subparsers.add_parser(
-        'kosmos',
-        help='Create a release build of Kosmos.')
-    parser_kosmos.add_argument(
-        'output',
-        help='Zip file to create.')
+    parser_kosmos = subparsers.add_parser('kosmos', help='Create a release build of Kosmos.')
+    parser_kosmos.add_argument('output', help='Zip file to create.')
     parser_kosmos.set_defaults(command=common.Command.Kosmos)
 
     # SDSetup subcommands
-    parser_sdsetup = subparsers.add_parser(
-        'sdsetup',
-        help='Create a Kosmos modules for SDSetup.')
-    parser_sdsetup.add_argument(
-        'output',
-        help='Directory to output modules to.')
+    parser_sdsetup = subparsers.add_parser('sdsetup', help='Create a Kosmos modules for SDSetup.')
+    parser_sdsetup.add_argument('output', help='Directory to output modules to.')
     parser_sdsetup.add_argument(
         '-a', '--auto',
         action='store_true',
@@ -93,23 +85,26 @@ if __name__ == '__main__':
         auto_build = args.auto
 
     version_messages = init_version_messages(args, kosmos_version)
-    version_messages += modules.build(
-        temp_directory,
-        kosmos_version,
-        args.command == common.Command.Kosmos,
-        auto_build)
+
+    is_kosmos_build = args.command == common.Command.Kosmos
+    build_messages = modules.build(temp_directory, kosmos_version, is_kosmos_build, auto_build)
 
     common.delete_path(args.output)
 
-    if args.command == common.Command.Kosmos:
-        shutil.make_archive(
-            os.path.splitext(args.output)[0],
-            'zip',
-            temp_directory)
-    elif args.command == common.Command.SDSetup:
-        shutil.move(temp_directory, args.output)
+    if build_messages is not None:
+        version_messages += build_messages
+        
+        if is_kosmos_build:
+            shutil.make_archive(
+                os.path.splitext(args.output)[0],
+                'zip',
+                temp_directory)
+        else:
+            shutil.move(temp_directory, args.output)
 
-    common.delete_path(os.path.join(os.getcwd(), 'tmp'))
+        common.delete_path(os.path.join(os.getcwd(), 'tmp'))
 
-    for message in version_messages:
-        print(message)
+        for message in version_messages:
+            print(message)
+    else:
+        common.delete_path(os.path.join(os.getcwd(), 'tmp'))
