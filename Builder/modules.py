@@ -21,6 +21,7 @@
 import common
 import config
 from github import Github
+from gitlab import Gitlab
 import json
 import os
 import re
@@ -29,12 +30,14 @@ import urllib.request
 import uuid
 import zipfile
 
-github = Github(config.github_username, config.github_password)
+gh = Github(config.github_username, config.github_password)
+gl = Gitlab('https://gitlab.com', private_token=config.gitlab_private_access_token)
+gl.auth()
 
 def get_latest_release(module):
     if common.GitService(module['git']['service']) == common.GitService.GitHub:
         try:
-            repo = github.get_repo(f'{module["git"]["org_name"]}/{module["git"]["repo_name"]}')
+            repo = gh.get_repo(f'{module["git"]["org_name"]}/{module["git"]["repo_name"]}')
         except:
             print(f'[Error] Unable to find repo: {module["git"]["org_name"]}/{module["git"]["repo_name"]}')
             return None
@@ -46,27 +49,45 @@ def get_latest_release(module):
         
         return releases[0]
     else:
-        # TODO: GitLab
+        try:
+            project = gl.projects.get(f'{module["git"]["org_name"]}/{module["git"]["repo_name"]}')
+        except:
+            print(f'[Error] Unable to find repo: {module["git"]["org_name"]}/{module["git"]["repo_name"]}')
+            return None
+
+        tags = project.tags.list()
+        for tag in tags:
+            if tag.release is not None:
+                return tag
+
+        print(f'[Error] Unable to find any releases for repo: {module["git"]["org_name"]}/{module["git"]["repo_name"]}')
         return None
 
-def download_asset(release, pattern):
-    if release is None:
+def download_asset(module, release, index):
+    pattern = module["git"]["asset_patterns"][index]
+
+    if common.GitService(module['git']['service']) == common.GitService.GitHub:
+        if release is None:
+            return None
+        
+        matched_asset = None
+        for asset in release.get_assets():
+            if re.search(pattern, asset.name):
+                matched_asset = asset
+                break
+
+        if matched_asset is None:
+            print(f'[Error] Unable to find asset that match pattern: "{pattern}"')
+            return None
+
+        download_path = common.generate_temp_path()
+        urllib.request.urlretrieve(matched_asset.browser_download_url, download_path)
+
+        return download_path
+    else:
+        # release.release['description'] 
+        # TODO: Parse out link from description.
         return None
-    
-    matched_asset = None
-    for asset in release.get_assets():
-        if re.search(pattern, asset.name):
-            matched_asset = asset
-            break
-
-    if matched_asset is None:
-        print(f'[Error] Unable to find asset that match pattern: "{pattern}"')
-        return None
-
-    download_path = common.generate_temp_path()
-    urllib.request.urlretrieve(matched_asset.browser_download_url, download_path)
-
-    return download_path
 
 def find_asset(release, pattern):
     for asset in release.get_assets():
@@ -77,7 +98,7 @@ def find_asset(release, pattern):
 
 def download_atmosphere(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
         return None
 
@@ -88,7 +109,7 @@ def download_atmosphere(module, temp_directory, kosmos_version):
     common.delete_path(os.path.join(temp_directory, 'switch', 'reboot_to_payload.nro'))
     common.delete_path(os.path.join(temp_directory, 'atmosphere', 'reboot_payload.bin'))
     
-    payload_path = download_asset(release, module['git']['asset_patterns'][1])
+    payload_path = download_asset(module, release, 1)
     if payload_path is None:
         return None
 
@@ -100,7 +121,7 @@ def download_atmosphere(module, temp_directory, kosmos_version):
 
 def download_hekate(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
         return None
 
@@ -120,12 +141,14 @@ def download_hekate(module, temp_directory, kosmos_version):
     return release.tag_name
 
 def download_appstore(module, temp_directory, kosmos_version):
-    # TODO: GitLab.
-    return 'v1.0.0'
+    release = get_latest_release(module)
+    bundle_path = download_asset(module, release, 0)
+    
+    return release.name
 
 def download_edizon(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    app_path = download_asset(release, module['git']['asset_patterns'][0])
+    app_path = download_asset(module, release, 0)
     if app_path is None:
         return None
 
@@ -136,7 +159,7 @@ def download_edizon(module, temp_directory, kosmos_version):
 
 def download_emuiibo(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
         return None
     
@@ -154,7 +177,7 @@ def download_emuiibo(module, temp_directory, kosmos_version):
 
 def download_goldleaf(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    app_path = download_asset(release, module['git']['asset_patterns'][0])
+    app_path = download_asset(module, release, 0)
     if app_path is None:
         return None
 
@@ -165,7 +188,7 @@ def download_goldleaf(module, temp_directory, kosmos_version):
 
 def download_kosmos_toolbox(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    app_path = download_asset(release, module['git']['asset_patterns'][0])
+    app_path = download_asset(module, release, 0)
     if app_path is None:
         return None
 
@@ -177,7 +200,7 @@ def download_kosmos_toolbox(module, temp_directory, kosmos_version):
 
 def download_kosmos_updater(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    app_path = download_asset(release, module['git']['asset_patterns'][0])
+    app_path = download_asset(module, release, 0)
     if app_path is None:
         return None
 
@@ -190,7 +213,7 @@ def download_kosmos_updater(module, temp_directory, kosmos_version):
 
 def download_ldn_mitm(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
         return None
     
@@ -205,7 +228,7 @@ def download_ldn_mitm(module, temp_directory, kosmos_version):
 
 def download_lockpick(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    app_path = download_asset(release, module['git']['asset_patterns'][0])
+    app_path = download_asset(module, release, 0)
     if app_path is None:
         return None
 
@@ -216,7 +239,7 @@ def download_lockpick(module, temp_directory, kosmos_version):
 
 def download_lockpick_rcm(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    payload_path = download_asset(release, module['git']['asset_patterns'][0])
+    payload_path = download_asset(module, release, 0)
     if payload_path is None:
         return None
 
@@ -227,7 +250,7 @@ def download_lockpick_rcm(module, temp_directory, kosmos_version):
 
 def download_nxdumptool(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    app_path = download_asset(release, module['git']['asset_patterns'][0])
+    app_path = download_asset(module, release, 0)
     if app_path is None:
         return None
 
@@ -238,7 +261,7 @@ def download_nxdumptool(module, temp_directory, kosmos_version):
 
 def download_nx_ovlloader(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
         return None
     
@@ -251,7 +274,7 @@ def download_nx_ovlloader(module, temp_directory, kosmos_version):
 
 def download_ovl_sysmodules(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    app_path = download_asset(release, module['git']['asset_patterns'][0])
+    app_path = download_asset(module, release, 0)
     if app_path is None:
         return None
 
@@ -262,7 +285,7 @@ def download_ovl_sysmodules(module, temp_directory, kosmos_version):
 
 def download_status_monitor_overlay(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    app_path = download_asset(release, module['git']['asset_patterns'][0])
+    app_path = download_asset(module, release, 0)
     if app_path is None:
         return None
 
@@ -273,7 +296,7 @@ def download_status_monitor_overlay(module, temp_directory, kosmos_version):
 
 def download_sys_clk(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
         return None
     
@@ -292,7 +315,7 @@ def download_sys_clk(module, temp_directory, kosmos_version):
 
 def download_sys_con(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
         return None
     
@@ -306,7 +329,7 @@ def download_sys_con(module, temp_directory, kosmos_version):
 
 def download_sys_ftpd_light(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
         return None
     
@@ -321,7 +344,7 @@ def download_sys_ftpd_light(module, temp_directory, kosmos_version):
 
 def download_tesla_menu(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
-    bundle_path = download_asset(release, module['git']['asset_patterns'][0])
+    bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
         return None
     
