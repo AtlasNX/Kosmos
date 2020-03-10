@@ -9,7 +9,8 @@
             "asset_patterns": [
                 ".*atmosphere.*\\.zip",
                 ".*fusee.*\\.bin"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": true,
@@ -27,7 +28,8 @@
             "repo_name": "hekate",
             "asset_patterns": [
                 ".*hekate.*\\.zip"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": true,
@@ -42,7 +44,11 @@
         "git": {
             "service": 1,
             "org_name": "4TU",
-            "repo_name": "hb-appstore"
+            "repo_name": "hb-appstore",
+            "asset_patterns": [
+                "\\[.*\\.nro\\.zip\\]\\((.*\\.nro\\.zip)\\)"
+            ],
+            "group": 0
         },
         "sdsetup": {
             "included": true,
@@ -60,7 +66,8 @@
             "repo_name": "EdiZon",
             "asset_patterns": [
                 ".*\\.nro"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": true,
@@ -78,7 +85,8 @@
             "repo_name": "emuiibo",
             "asset_patterns": [
                 ".*emuiibo.*\\.zip"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": true,
@@ -96,7 +104,8 @@
             "repo_name": "Goldleaf",
             "asset_patterns": [
                 ".*\\.nro"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": true,
@@ -114,7 +123,8 @@
             "repo_name": "Kosmos-Toolbox",
             "asset_patterns": [
                 ".*\\.nro"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": true,
@@ -132,7 +142,8 @@
             "repo_name": "Kosmos-Updater",
             "asset_patterns": [
                 ".*\\.nro"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": true,
@@ -150,7 +161,8 @@
             "repo_name": "ldn_mitm",
             "asset_patterns": [
                 ".*ldn_mitm.*\\.zip"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": true,
@@ -168,7 +180,8 @@
             "repo_name": "Lockpick",
             "asset_patterns": [
                 ".*\\.nro"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": true,
@@ -186,7 +199,8 @@
             "repo_name": "Lockpick_RCM",
             "asset_patterns": [
                 ".*\\.bin"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": true,
@@ -204,7 +218,8 @@
             "repo_name": "nxdumptool",
             "asset_patterns": [
                 ".*nxdumptool.*\\.nro"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": false,
@@ -222,7 +237,8 @@
             "repo_name": "nx-ovlloader",
             "asset_patterns": [
                 ".*\\.zip"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": false,
@@ -240,7 +256,8 @@
             "repo_name": "ovl-sysmodules",
             "asset_patterns": [
                 ".*\\.ovl"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": false,
@@ -258,7 +275,8 @@
             "repo_name": "Status-Monitor-Overlay",
             "asset_patterns": [
                 ".*\\.ovl"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": false,
@@ -276,7 +294,8 @@
             "repo_name": "sys-clk",
             "asset_patterns": [
                 ".*sys-clk-.*\\.zip"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": true,
@@ -294,7 +313,8 @@
             "repo_name": "sys-con",
             "asset_patterns": [
                 ".*sys-con-.*\\.zip"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": true,
@@ -312,7 +332,8 @@
             "repo_name": "sys-ftpd-light",
             "asset_patterns": [
                 ".*sys-ftpd-light.*\\.zip"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": true,
@@ -330,7 +351,8 @@
             "repo_name": "Tesla-Menu",
             "asset_patterns": [
                 ".*\\.zip"
-            ]
+            ],
+            "group": null
         },
         "sdsetup": {
             "included": false,

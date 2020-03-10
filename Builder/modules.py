@@ -64,7 +64,7 @@ def get_latest_release(module):
         return None
 
 def download_asset(module, release, index):
-    pattern = module["git"]["asset_patterns"][index]
+    pattern = module['git']['asset_patterns'][index]
 
     if common.GitService(module['git']['service']) == common.GitService.GitHub:
         if release is None:
@@ -85,9 +85,20 @@ def download_asset(module, release, index):
 
         return download_path
     else:
-        # release.release['description'] 
-        # TODO: Parse out link from description.
-        return None
+        group = module['git']['group']
+
+        match = re.search(pattern, release.release['description'])
+        if match is None:
+            return None
+
+        groups = match.groups()
+        if len(groups) <= group:
+            return None
+
+        download_path = common.generate_temp_path()
+        urllib.request.urlretrieve(f'https://gitlab.com/{module["git"]["org_name"]}/{module["git"]["repo_name"]}{groups[group]}', download_path)
+
+        return download_path
 
 def find_asset(release, pattern):
     for asset in release.get_assets():
@@ -143,7 +154,16 @@ def download_hekate(module, temp_directory, kosmos_version):
 def download_appstore(module, temp_directory, kosmos_version):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
+    if bundle_path is None:
+        return None
+
+    with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_directory)
     
+    common.delete_path(bundle_path)
+    common.mkdir(os.path.join(temp_directory, 'switch', 'appstore'))
+    shutil.move(os.path.join(temp_directory, 'appstore.nro'), os.path.join(temp_directory, 'switch', 'appstore', 'appstore.nro'))
+
     return release.name
 
 def download_edizon(module, temp_directory, kosmos_version):
