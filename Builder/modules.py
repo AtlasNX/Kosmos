@@ -107,7 +107,7 @@ def find_asset(release, pattern):
 
     return None
 
-def download_atmosphere(module, temp_directory, kosmos_version):
+def download_atmosphere(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -127,10 +127,13 @@ def download_atmosphere(module, temp_directory, kosmos_version):
     common.mkdir(os.path.join(temp_directory, 'bootloader', 'payloads'))
     shutil.move(payload_path, os.path.join(temp_directory, 'bootloader', 'payloads', 'fusee-primary.bin'))
     common.copy_module_file('atmosphere', 'system_settings.ini', os.path.join(temp_directory, 'atmosphere', 'config', 'system_settings.ini'))
+    
+    if not kosmos_build:
+        common.delete_path(os.path.join(temp_directory, 'hbmenu.nro'))
 
     return release.tag_name
 
-def download_hekate(module, temp_directory, kosmos_version):
+def download_hekate(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -147,11 +150,17 @@ def download_hekate(module, temp_directory, kosmos_version):
     payload = common.find_file(os.path.join(temp_directory, 'hekate_ctcaer_*.bin'))
     if len(payload) != 0:
         shutil.copyfile(payload[0], os.path.join(temp_directory, 'bootloader', 'update.bin'))
+        common.mkdir(os.path.join(temp_directory, 'atmosphere'))
         shutil.copyfile(payload[0], os.path.join(temp_directory, 'atmosphere', 'reboot_payload.bin'))
+
+    if not kosmos_build:
+        common.mkdir(os.path.join(temp_directory, '..', 'must_have'))
+        shutil.move(os.path.join(temp_directory, 'bootloader'), os.path.join(temp_directory, '..', 'must_have'))
+        shutil.move(os.path.join(temp_directory, 'atmosphere'), os.path.join(temp_directory, '..', 'must_have'))
 
     return release.tag_name
 
-def download_appstore(module, temp_directory, kosmos_version):
+def download_appstore(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -166,7 +175,7 @@ def download_appstore(module, temp_directory, kosmos_version):
 
     return release.name
 
-def download_edizon(module, temp_directory, kosmos_version):
+def download_edizon(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -177,7 +186,7 @@ def download_edizon(module, temp_directory, kosmos_version):
 
     return release.tag_name
 
-def download_emuiibo(module, temp_directory, kosmos_version):
+def download_emuiibo(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -190,12 +199,13 @@ def download_emuiibo(module, temp_directory, kosmos_version):
     common.mkdir(os.path.join(temp_directory, 'atmosphere', 'contents'))
     shutil.move(os.path.join(temp_directory, 'contents', '0100000000000352'), os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352'))
     common.delete_path(os.path.join(temp_directory, 'contents'))
-    common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352', 'flags', 'boot2.flag'))
+    if kosmos_build:
+        common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352', 'flags', 'boot2.flag'))
     common.copy_module_file('emuiibo', 'toolbox.json', os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352', 'toolbox.json'))
 
     return release.tag_name
 
-def download_goldleaf(module, temp_directory, kosmos_version):
+def download_goldleaf(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -206,7 +216,7 @@ def download_goldleaf(module, temp_directory, kosmos_version):
 
     return release.tag_name
 
-def download_kosmos_toolbox(module, temp_directory, kosmos_version):
+def download_kosmos_toolbox(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -218,7 +228,7 @@ def download_kosmos_toolbox(module, temp_directory, kosmos_version):
 
     return release.tag_name
 
-def download_kosmos_updater(module, temp_directory, kosmos_version):
+def download_kosmos_updater(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -231,7 +241,7 @@ def download_kosmos_updater(module, temp_directory, kosmos_version):
 
     return release.tag_name
 
-def download_ldn_mitm(module, temp_directory, kosmos_version):
+def download_ldn_mitm(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -241,12 +251,13 @@ def download_ldn_mitm(module, temp_directory, kosmos_version):
         zip_ref.extractall(temp_directory)
     
     common.delete_path(bundle_path)
-    common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '4200000000000010', 'flags', 'boot2.flag'))
+    if kosmos_build:
+        common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '4200000000000010', 'flags', 'boot2.flag'))
     common.copy_module_file('ldn_mitm', 'toolbox.json', os.path.join(temp_directory, 'atmosphere', 'contents', '4200000000000010', 'toolbox.json'))
 
     return release.tag_name
 
-def download_lockpick(module, temp_directory, kosmos_version):
+def download_lockpick(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -257,18 +268,21 @@ def download_lockpick(module, temp_directory, kosmos_version):
 
     return release.tag_name
 
-def download_lockpick_rcm(module, temp_directory, kosmos_version):
+def download_lockpick_rcm(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     payload_path = download_asset(module, release, 0)
     if payload_path is None:
         return None
 
-    common.mkdir(os.path.join(temp_directory, 'bootloader', 'payloads'))
-    shutil.move(payload_path, os.path.join(temp_directory, 'bootloader', 'payloads', 'Lockpick_RCM.bin'))
+    if kosmos_build:
+        common.mkdir(os.path.join(temp_directory, 'bootloader', 'payloads'))
+        shutil.move(payload_path, os.path.join(temp_directory, 'bootloader', 'payloads', 'Lockpick_RCM.bin'))
+    else:
+        shutil.move(payload_path, os.path.join(temp_directory, 'Lockpick_RCM.bin'))
 
     return release.tag_name
 
-def download_nxdumptool(module, temp_directory, kosmos_version):
+def download_nxdumptool(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -279,7 +293,7 @@ def download_nxdumptool(module, temp_directory, kosmos_version):
 
     return release.tag_name
 
-def download_nx_ovlloader(module, temp_directory, kosmos_version):
+def download_nx_ovlloader(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -292,7 +306,7 @@ def download_nx_ovlloader(module, temp_directory, kosmos_version):
 
     return release.tag_name
 
-def download_ovl_sysmodules(module, temp_directory, kosmos_version):
+def download_ovl_sysmodules(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -303,7 +317,7 @@ def download_ovl_sysmodules(module, temp_directory, kosmos_version):
 
     return release.tag_name
 
-def download_status_monitor_overlay(module, temp_directory, kosmos_version):
+def download_status_monitor_overlay(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)
     if app_path is None:
@@ -314,7 +328,7 @@ def download_status_monitor_overlay(module, temp_directory, kosmos_version):
 
     return release.tag_name
 
-def download_sys_clk(module, temp_directory, kosmos_version):
+def download_sys_clk(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -327,13 +341,14 @@ def download_sys_clk(module, temp_directory, kosmos_version):
     common.mkdir(os.path.join(temp_directory, 'atmosphere', 'contents'))
     shutil.move(os.path.join(temp_directory, 'atmosphere', 'titles', '00FF0000636C6BFF'), os.path.join(temp_directory, 'atmosphere', 'contents', '00FF0000636C6BFF'))
     common.delete_path(os.path.join(temp_directory, 'atmosphere', 'titles'))
-    common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '00FF0000636C6BFF', 'flags', 'boot2.flag'))
+    if kosmos_build:
+        common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '00FF0000636C6BFF', 'flags', 'boot2.flag'))
     common.delete_path(os.path.join(temp_directory, 'README.md'))
     common.copy_module_file('sys-clk', 'toolbox.json', os.path.join(temp_directory, 'atmosphere', 'contents', '00FF0000636C6BFF', 'toolbox.json'))
 
     return release.tag_name
 
-def download_sys_con(module, temp_directory, kosmos_version):
+def download_sys_con(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -343,11 +358,12 @@ def download_sys_con(module, temp_directory, kosmos_version):
         zip_ref.extractall(temp_directory)
 
     common.delete_path(bundle_path)
-    common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '690000000000000D', 'flags', 'boot2.flag'))
+    if kosmos_build:
+        common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '690000000000000D', 'flags', 'boot2.flag'))
 
     return release.tag_name
 
-def download_sys_ftpd_light(module, temp_directory, kosmos_version):
+def download_sys_ftpd_light(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -357,12 +373,13 @@ def download_sys_ftpd_light(module, temp_directory, kosmos_version):
         zip_ref.extractall(temp_directory)
 
     common.delete_path(bundle_path)
-    common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '420000000000000E', 'flags', 'boot2.flag'))
+    if kosmos_build:
+        common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '420000000000000E', 'flags', 'boot2.flag'))
     common.copy_module_file('sys-ftpd-light', 'toolbox.json', os.path.join(temp_directory, 'atmosphere', 'contents', '420000000000000E', 'toolbox.json'))
 
     return release.tag_name
 
-def download_tesla_menu(module, temp_directory, kosmos_version):
+def download_tesla_menu(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
     if bundle_path is None:
@@ -392,7 +409,7 @@ def build(temp_directory, kosmos_version, kosmos_build, auto_build):
                 # Download the module.
                 print(f'Downloading {module["name"]}...')
                 download = globals()[module['download_function_name']]
-                version = download(module, temp_directory, kosmos_version)
+                version = download(module, temp_directory, kosmos_version, kosmos_build)
                 if version is None:
                     return None
                 results.append(f'  {module["name"]} - {version}')
@@ -403,19 +420,19 @@ def build(temp_directory, kosmos_version, kosmos_build, auto_build):
                 if not auto_build:
                     print(f'Downloading {module["name"]}...')
 
+                # Make sure module directory is created.
+                module_directory = os.path.join(temp_directory, sdsetup_opts['name'])
+                common.mkdir(module_directory)
+
                 # Download the module.
-                version = ''
-                if not auto_build or (auto_build and sdsetup_opts['included_with_auto_builds']):
-                    download = globals()[module['download_function_name']]
-                    version = download(module, temp_directory, kosmos_version)
-                    if version is None:
-                        return None
-                else:
-                    continue
+                download = globals()[module['download_function_name']]
+                version = download(module, module_directory, kosmos_version, kosmos_build)
+                if version is None:
+                    return None
 
                 # Auto builds have a different prompt at the end for parsing.
-                if auto_build and sdsetup_opts['included_with_auto_builds']:
-                    results.append(f'{sdsetup_opts["auto_build_name"]}:{version}')
+                if auto_build:
+                    results.append(f'{sdsetup_opts["name"]}:{version}')
                 else:
                     results.append(f'  {module["name"]} - {version}')
     

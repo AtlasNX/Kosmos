@@ -14,8 +14,7 @@
         },
         "sdsetup": {
             "included": true,
-            "included_with_auto_builds": true,
-            "folder": "must_have",
+            "name": "must_have",
             "auto_build_name": "must_have"
         }
     },
@@ -33,9 +32,7 @@
         },
         "sdsetup": {
             "included": true,
-            "included_with_auto_builds": true,
-            "folder": "must_have",
-            "auto_build_name": "hekate"
+            "name": "hekate"
         }
     },
     {
@@ -51,10 +48,8 @@
             "group": 0
         },
         "sdsetup": {
-            "included": true,
-            "included_with_auto_builds": false,
-            "folder": "appstore",
-            "auto_build_name": ""
+            "included": false,
+            "name": null
         }
     },
     {
@@ -70,10 +65,8 @@
             "group": null
         },
         "sdsetup": {
-            "included": true,
-            "included_with_auto_builds": false,
-            "folder": "edizon",
-            "auto_build_name": ""
+            "included": false,
+            "name": null
         }
     },
     {
@@ -90,9 +83,7 @@
         },
         "sdsetup": {
             "included": true,
-            "included_with_auto_builds": true,
-            "folder": "emuiibo",
-            "auto_build_name": "emuiibo"
+            "name": "emuiibo"
         }
     },
     {
@@ -108,10 +99,8 @@
             "group": null
         },
         "sdsetup": {
-            "included": true,
-            "included_with_auto_builds": false,
-            "folder": "goldleaf",
-            "auto_build_name": ""
+            "included": false,
+            "name": null
         }
     },
     {
@@ -128,9 +117,7 @@
         },
         "sdsetup": {
             "included": true,
-            "included_with_auto_builds": true,
-            "folder": "kosmos_toolbox",
-            "auto_build_name": "kosmos_toolbox"
+            "name": "kosmos_toolbox"
         }
     },
     {
@@ -147,9 +134,7 @@
         },
         "sdsetup": {
             "included": true,
-            "included_with_auto_builds": true,
-            "folder": "kosmos_updater",
-            "auto_build_name": "kosmos_updater"
+            "name": "kosmos_updater"
         }
     },
     {
@@ -166,9 +151,7 @@
         },
         "sdsetup": {
             "included": true,
-            "included_with_auto_builds": true,
-            "folder": "ldn_mitm",
-            "auto_build_name": "ldn_mitm"
+            "name": "ldn_mitm"
         }
     },
     {
@@ -184,10 +167,8 @@
             "group": null
         },
         "sdsetup": {
-            "included": true,
-            "included_with_auto_builds": false,
-            "folder": "lockpick",
-            "auto_build_name": ""
+            "included": false,
+            "name": null
         }
     },
     {
@@ -204,9 +185,7 @@
         },
         "sdsetup": {
             "included": true,
-            "included_with_auto_builds": true,
-            "folder": "lockpick_rcm",
-            "auto_build_name": "lockpick_rcm"
+            "name": "lockpick_rcm"
         }
     },
     {
@@ -223,9 +202,7 @@
         },
         "sdsetup": {
             "included": false,
-            "included_with_auto_builds": false,
-            "folder": "",
-            "auto_build_name": ""
+            "name": null
         }
     },
     {
@@ -241,10 +218,8 @@
             "group": null
         },
         "sdsetup": {
-            "included": false,
-            "included_with_auto_builds": false,
-            "folder": "",
-            "auto_build_name": ""
+            "included": true,
+            "name": "nx_ovlloader"
         }
     },
     {
@@ -260,10 +235,8 @@
             "group": null
         },
         "sdsetup": {
-            "included": false,
-            "included_with_auto_builds": false,
-            "folder": "",
-            "auto_build_name": ""
+            "included": true,
+            "name": "ovl_sysmodules"
         }
     },
     {
@@ -279,10 +252,8 @@
             "group": null
         },
         "sdsetup": {
-            "included": false,
-            "included_with_auto_builds": false,
-            "folder": "",
-            "auto_build_name": ""
+            "included": true,
+            "name": "status_monitor_overlay"
         }
     },
     {
@@ -299,9 +270,7 @@
         },
         "sdsetup": {
             "included": true,
-            "included_with_auto_builds": true,
-            "folder": "sys_clk",
-            "auto_build_name": "sys_clk"
+            "name": "sys_clk"
         }
     },
     {
@@ -318,9 +287,7 @@
         },
         "sdsetup": {
             "included": true,
-            "included_with_auto_builds": true,
-            "folder": "sys_con",
-            "auto_build_name": "sys_con"
+            "name": "sys_con"
         }
     },
     {
@@ -337,9 +304,7 @@
         },
         "sdsetup": {
             "included": true,
-            "included_with_auto_builds": true,
-            "folder": "sys_ftpd",
-            "auto_build_name": "sys_ftpd"
+            "name": "sys_ftpd"
         }
     },
     {
@@ -355,10 +320,8 @@
             "group": null
         },
         "sdsetup": {
-            "included": false,
-            "included_with_auto_builds": false,
-            "folder": "",
-            "auto_build_name": ""
+            "included": true,
+            "name": "tesla_menu"
         }
     }
 ]
