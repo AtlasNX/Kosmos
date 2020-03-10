@@ -14,8 +14,7 @@
         },
         "sdsetup": {
             "included": true,
-            "name": "must_have",
-            "auto_build_name": "must_have"
+            "name": "must_have"
         }
     },
     {
