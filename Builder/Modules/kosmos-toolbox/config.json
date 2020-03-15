@@ -1,0 +1,29 @@
+{
+	"sysmodules" : [
+		{
+			"name"  : "bootsoundnx",
+			"tid"   : "00FF0000000002AA",
+			"requires_reboot": true
+		},
+		{
+			"name"  : "hid-mitm",
+			"tid"   : "0100000000000FAF",
+			"requires_reboot": true
+		},
+		{
+			"name"  : "nxsh",
+			"tid"   : "43000000000000FF",
+			"requires_reboot": false
+		},
+		{
+			"name"  : "ojds-nx",
+			"tid"   : "0100000000000901",
+			"requires_reboot": false
+		},
+		{
+			"name"  : "sys-netcheat",
+			"tid"   : "430000000000000A",
+			"requires_reboot": false
+		}
+	]
+}
