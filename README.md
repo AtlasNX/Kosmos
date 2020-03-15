@@ -44,6 +44,7 @@ Follow this guide: https://guide.teamatlasnx.com
 * [nxdumptool](https://github.com/DarkMatterCore/nxdumptool)
 * [nx-ovlloader](https://github.com/WerWolv/nx-ovlloader)
 * [ovlSysmodules](https://github.com/WerWolv/ovl-sysmodules)
+* [Status Monitor Overlay](https://github.com/masagrator/Status-Monitor-Overlay)
 * [sys-clk](https://github.com/retronx-team/sys-clk)
 * [sys-con](https://github.com/cathery/sys-con)
 * [sys-ftpd-light](https://github.com/cathery/sys-ftpd-light)
