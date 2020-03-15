@@ -144,6 +144,7 @@ def download_hekate(module, temp_directory, kosmos_version, kosmos_build):
 
     common.delete_path(bundle_path)
     
+    common.copy_module_file('hekate', 'bootlogo.bmp', os.path.join(temp_directory, 'bootloader', 'bootlogo.bmp'))
     common.copy_module_file('hekate', 'hekate_ipl.ini', os.path.join(temp_directory, 'bootloader', 'hekate_ipl.ini'))
     common.sed('KOSMOS_VERSION', kosmos_version, os.path.join(temp_directory, 'bootloader', 'hekate_ipl.ini'))
 
