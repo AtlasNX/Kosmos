@@ -35,6 +35,7 @@ Follow this guide: https://guide.teamatlasnx.com
 * [Homebrew App Store](https://gitlab.com/4TU/hb-appstore)
 * [EdiZon](https://github.com/WerWolv/EdiZon)
 * [emuiibo](https://github.com/XorTroll/emuiibo)
+* [Gamecard Installer NX](https://github.com/ITotalJustice/Gamecard-Installer-NX)
 * [Goldleaf](https://github.com/XorTroll/Goldleaf)
 * [Kosmos Toolbox](https://github.com/AtlasNX/Kosmos-Toolbox)
 * [Kosmos Updater](https://github.com/AtlasNX/Kosmos-Updater)
