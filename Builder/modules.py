@@ -206,19 +206,6 @@ def download_emuiibo(module, temp_directory, kosmos_version, kosmos_build):
 
     return release.tag_name
 
-def download_gamecard_installer_nx(module, temp_directory, kosmos_version, kosmos_build):
-    release = get_latest_release(module)
-    bundle_path = download_asset(module, release, 0)
-    if bundle_path is None:
-        return None
-    
-    with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
-        zip_ref.extractall(temp_directory)
-
-    common.delete_path(bundle_path)
-    
-    return release.tag_name
-
 def download_goldleaf(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     app_path = download_asset(module, release, 0)

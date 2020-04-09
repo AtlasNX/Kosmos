@@ -86,23 +86,6 @@
         }
     },
     {
-        "name": "Gamecard Installer NX",
-        "download_function_name": "download_gamecard_installer_nx",
-        "git": {
-            "service": 0,
-            "org_name": "ITotalJustice",
-            "repo_name": "Gamecard-Installer-NX",
-            "asset_patterns": [
-                ".*gamecard_installer\\.zip"
-            ],
-            "group": null
-        },
-        "sdsetup": {
-            "included": false,
-            "name": null
-        }
-    },
-    {
         "name": "Goldleaf",
         "download_function_name": "download_goldleaf",
         "git": {
