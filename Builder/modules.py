@@ -353,9 +353,6 @@ def download_sys_clk(module, temp_directory, kosmos_version, kosmos_build):
         zip_ref.extractall(temp_directory)
 
     common.delete_path(bundle_path)
-    common.mkdir(os.path.join(temp_directory, 'atmosphere', 'contents'))
-    shutil.move(os.path.join(temp_directory, 'atmosphere', 'titles', '00FF0000636C6BFF'), os.path.join(temp_directory, 'atmosphere', 'contents', '00FF0000636C6BFF'))
-    common.delete_path(os.path.join(temp_directory, 'atmosphere', 'titles'))
     if kosmos_build:
         common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '00FF0000636C6BFF', 'flags', 'boot2.flag'))
     common.delete_path(os.path.join(temp_directory, 'README.md'))
