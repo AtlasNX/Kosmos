@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # Kosmos Builder
 # Copyright (C) 2020 Nichole Mattera
