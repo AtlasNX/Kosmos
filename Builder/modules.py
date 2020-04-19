@@ -199,8 +199,10 @@ def download_emuiibo(module, temp_directory, kosmos_version, kosmos_build):
 
     common.delete_path(bundle_path)
     common.mkdir(os.path.join(temp_directory, 'atmosphere', 'contents'))
-    shutil.move(os.path.join(temp_directory, 'contents', '0100000000000352'), os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352'))
-    common.delete_path(os.path.join(temp_directory, 'contents'))
+    shutil.move(os.path.join(temp_directory, 'SdOut', 'atmosphere', 'contents', '0100000000000352'), os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352'))
+    common.mkdir(os.path.join(temp_directory, 'switch', '.overlays'))
+    shutil.move(os.path.join(temp_directory, 'SdOut', 'switch', '.overlays', 'emuiibo.ovl'), os.path.join(temp_directory, 'switch', '.overlays', 'emuiibo.ovl'))  
+    common.delete_path(os.path.join(temp_directory, 'SdOut'))
     if kosmos_build:
         common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352', 'flags', 'boot2.flag'))
     common.copy_module_file('emuiibo', 'toolbox.json', os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352', 'toolbox.json'))
