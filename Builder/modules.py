@@ -128,7 +128,6 @@ def download_atmosphere(module, temp_directory, kosmos_version, kosmos_build):
     shutil.move(payload_path, os.path.join(temp_directory, 'bootloader', 'payloads', 'fusee-primary.bin'))
 
     common.copy_module_file('atmosphere', 'system_settings.ini', os.path.join(temp_directory, 'atmosphere', 'config', 'system_settings.ini'))
-    common.copy_module_folder('atmosphere', 'exefs_patches', os.path.join(temp_directory, 'atmosphere', 'exefs_patches'))
 
     if not kosmos_build:
         common.delete_path(os.path.join(temp_directory, 'hbmenu.nro'))
