@@ -46,6 +46,9 @@ def delete_path(path):
 def copy_module_file(module_name, file_name, destination):
     return shutil.copyfile(os.path.join(os.getcwd(), 'Modules', module_name, file_name), destination)
 
+def copy_module_folder(module_name, folder_name, destination):
+    return shutil.copytree(os.path.join(os.getcwd(), 'Modules', module_name, folder_name), destination)
+
 def find_file(pattern):
     return glob.glob(pattern, recursive=False)
 
