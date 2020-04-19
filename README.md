@@ -36,6 +36,7 @@ Follow this guide: https://guide.teamatlasnx.com
 * [EdiZon](https://github.com/WerWolv/EdiZon)
 * [emuiibo](https://github.com/XorTroll/emuiibo)
 * [Goldleaf](https://github.com/XorTroll/Goldleaf)
+* [Kosmos Cleaner](https://github.com/AtlasNX/Kosmos-Cleaner)
 * [Kosmos Toolbox](https://github.com/AtlasNX/Kosmos-Toolbox)
 * [Kosmos Updater](https://github.com/AtlasNX/Kosmos-Updater)
 * [ldn_mitm](https://github.com/spacemeowx2/ldn_mitm)
