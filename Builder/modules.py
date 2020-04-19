@@ -157,8 +157,9 @@ def download_hekate(module, temp_directory, kosmos_version, kosmos_build):
 
     if not kosmos_build:
         common.mkdir(os.path.join(temp_directory, '..', 'must_have'))
-        shutil.move(os.path.join(temp_directory, 'bootloader'), os.path.join(temp_directory, '..', 'must_have'))
-        shutil.move(os.path.join(temp_directory, 'atmosphere'), os.path.join(temp_directory, '..', 'must_have'))
+        shutil.move(os.path.join(temp_directory, 'bootloader'), os.path.join(temp_directory, '..', 'must_have', 'bootloader'))
+        shutil.move(os.path.join(temp_directory, 'atmosphere', 'reboot_payload.bin'), os.path.join(temp_directory, '..', 'must_have', 'atmosphere', 'reboot_payload.bin'))
+        common.delete_path(os.path.join(temp_directory, 'atmosphere'))
 
     return release.tag_name
 
