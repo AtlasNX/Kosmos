@@ -1,5 +1,7 @@
 config.py
 .vscode
+tmp/
+*.zip
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

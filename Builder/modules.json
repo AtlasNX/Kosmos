@@ -103,6 +103,23 @@
         }
     },
     {
+        "name": "Kosmos Cleaner",
+        "download_function_name": "download_kosmos_cleaner",
+        "git": {
+            "service": 0,
+            "org_name": "AtlasNX",
+            "repo_name": "Kosmos-Cleaner",
+            "asset_patterns": [
+                ".*\\.zip"
+            ],
+            "group": null
+        },
+        "sdsetup": {
+            "included": true,
+            "name": "kosmos_cleaner"
+        }
+    },
+    {
         "name": "Kosmos Toolbox",
         "download_function_name": "download_kosmos_toolbox",
         "git": {

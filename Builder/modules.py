@@ -128,7 +128,6 @@ def download_atmosphere(module, temp_directory, kosmos_version, kosmos_build):
     shutil.move(payload_path, os.path.join(temp_directory, 'bootloader', 'payloads', 'fusee-primary.bin'))
 
     common.copy_module_file('atmosphere', 'system_settings.ini', os.path.join(temp_directory, 'atmosphere', 'config', 'system_settings.ini'))
-    common.copy_module_folder('atmosphere', 'exefs_patches', os.path.join(temp_directory, 'atmosphere', 'exefs_patches'))
 
     if not kosmos_build:
         common.delete_path(os.path.join(temp_directory, 'hbmenu.nro'))
@@ -158,8 +157,9 @@ def download_hekate(module, temp_directory, kosmos_version, kosmos_build):
 
     if not kosmos_build:
         common.mkdir(os.path.join(temp_directory, '..', 'must_have'))
-        shutil.move(os.path.join(temp_directory, 'bootloader'), os.path.join(temp_directory, '..', 'must_have'))
-        shutil.move(os.path.join(temp_directory, 'atmosphere'), os.path.join(temp_directory, '..', 'must_have'))
+        shutil.move(os.path.join(temp_directory, 'bootloader'), os.path.join(temp_directory, '..', 'must_have', 'bootloader'))
+        shutil.move(os.path.join(temp_directory, 'atmosphere', 'reboot_payload.bin'), os.path.join(temp_directory, '..', 'must_have', 'atmosphere', 'reboot_payload.bin'))
+        common.delete_path(os.path.join(temp_directory, 'atmosphere'))
 
     return release.tag_name
 
@@ -200,8 +200,10 @@ def download_emuiibo(module, temp_directory, kosmos_version, kosmos_build):
 
     common.delete_path(bundle_path)
     common.mkdir(os.path.join(temp_directory, 'atmosphere', 'contents'))
-    shutil.move(os.path.join(temp_directory, 'contents', '0100000000000352'), os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352'))
-    common.delete_path(os.path.join(temp_directory, 'contents'))
+    shutil.move(os.path.join(temp_directory, 'SdOut', 'atmosphere', 'contents', '0100000000000352'), os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352'))
+    common.mkdir(os.path.join(temp_directory, 'switch', '.overlays'))
+    shutil.move(os.path.join(temp_directory, 'SdOut', 'switch', '.overlays', 'emuiibo.ovl'), os.path.join(temp_directory, 'switch', '.overlays', 'emuiibo.ovl'))  
+    common.delete_path(os.path.join(temp_directory, 'SdOut'))
     if kosmos_build:
         common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352', 'flags', 'boot2.flag'))
     common.copy_module_file('emuiibo', 'toolbox.json', os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352', 'toolbox.json'))
@@ -216,6 +218,17 @@ def download_goldleaf(module, temp_directory, kosmos_version, kosmos_build):
 
     common.mkdir(os.path.join(temp_directory, 'switch', 'Goldleaf'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', 'Goldleaf', 'Goldleaf.nro'))
+
+    return release.tag_name
+
+def download_kosmos_cleaner(module, temp_directory, kosmos_version, kosmos_build):
+    release = get_latest_release(module)
+    bundle_path = download_asset(module, release, 0)
+    if bundle_path is None:
+        return None
+    
+    with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_directory)
 
     return release.tag_name
 
@@ -341,9 +354,6 @@ def download_sys_clk(module, temp_directory, kosmos_version, kosmos_build):
         zip_ref.extractall(temp_directory)
 
     common.delete_path(bundle_path)
-    common.mkdir(os.path.join(temp_directory, 'atmosphere', 'contents'))
-    shutil.move(os.path.join(temp_directory, 'atmosphere', 'titles', '00FF0000636C6BFF'), os.path.join(temp_directory, 'atmosphere', 'contents', '00FF0000636C6BFF'))
-    common.delete_path(os.path.join(temp_directory, 'atmosphere', 'titles'))
     if kosmos_build:
         common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '00FF0000636C6BFF', 'flags', 'boot2.flag'))
     common.delete_path(os.path.join(temp_directory, 'README.md'))
