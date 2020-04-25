@@ -11,5 +11,5 @@ B. Create your own one
 4. Use some online converter to convert the .png to a .bmp
     - We need to use a online converter because GIMP currently has some issues with it
 5. Call it bootlogo.bmp if you want to use it as the standard one
-    - You can also choose a specific bootlogo for each launch option by writting ```logopath=LinkToBootimage.bmp``` into your hekate-ipl.ini ([Example](https://github.com/tumGER/SDFilesSwitch/blob/8653108d41096f60c43f5dab56b41024fa785c5d/Compiled/hekate_ipl.ini#L60))
+    - You can also choose a specific bootlogo for each launch option by writing ```logopath=LinkToBootimage.bmp``` into your hekate-ipl.ini ([Example](https://github.com/tumGER/SDFilesSwitch/blob/8653108d41096f60c43f5dab56b41024fa785c5d/Compiled/hekate_ipl.ini#L60))
 5. Put it on the root of your SD / root of "SDFilesSwitch/Compiled"
