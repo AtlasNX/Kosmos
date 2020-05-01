@@ -33,7 +33,7 @@ def parse_args():
         '-v', '--version',
         default=None,
         type=str,
-        help='Overides the Kosmos Version from the config file.',
+        help='Overrides the Kosmos Version from the config file.',
         metavar='KosmosVersion')
     subparsers = parser.add_subparsers()
 
