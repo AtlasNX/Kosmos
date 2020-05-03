@@ -1,0 +1,228 @@
+[
+    {
+        "name": "Atmosphère",
+        "download_function_name": "download_atmosphere",
+        "git": {
+            "service": 0,
+            "org_name": "Atmosphere-NX",
+            "repo_name": "Atmosphere",
+            "asset_patterns": [
+                ".*atmosphere.*\\.zip",
+                ".*fusee.*\\.bin"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "must_have"
+    },
+    {
+        "name": "Hekate",
+        "download_function_name": "download_hekate",
+        "git": {
+            "service": 0,
+            "org_name": "CTCaer",
+            "repo_name": "hekate",
+            "asset_patterns": [
+                ".*hekate.*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "hekate"
+    },
+    {
+        "name": "Emuiibo",
+        "download_function_name": "download_emuiibo",
+        "git": {
+            "service": 0,
+            "org_name": "XorTroll",
+            "repo_name": "emuiibo",
+            "asset_patterns": [
+                ".*emuiibo.*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "emuiibo"
+    },
+    {
+        "name": "Kosmos Cleaner",
+        "download_function_name": "download_kosmos_cleaner",
+        "git": {
+            "service": 0,
+            "org_name": "AtlasNX",
+            "repo_name": "Kosmos-Cleaner",
+            "asset_patterns": [
+                ".*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "kosmos_cleaner"
+    },
+    {
+        "name": "Kosmos Toolbox",
+        "download_function_name": "download_kosmos_toolbox",
+        "git": {
+            "service": 0,
+            "org_name": "AtlasNX",
+            "repo_name": "Kosmos-Toolbox",
+            "asset_patterns": [
+                ".*\\.nro"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "kosmos_toolbox"
+    },
+    {
+        "name": "Kosmos Updater",
+        "download_function_name": "download_kosmos_updater",
+        "git": {
+            "service": 0,
+            "org_name": "AtlasNX",
+            "repo_name": "Kosmos-Updater",
+            "asset_patterns": [
+                ".*\\.nro"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "kosmos_updater"
+    },
+    {
+        "name": "ldn_mitm",
+        "download_function_name": "download_ldn_mitm",
+        "git": {
+            "service": 0,
+            "org_name": "spacemeowx2",
+            "repo_name": "ldn_mitm",
+            "asset_patterns": [
+                ".*ldn_mitm.*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "ldn_mitm"
+    },
+    {
+        "name": "Lockpick_RCM",
+        "download_function_name": "download_lockpick_rcm",
+        "git": {
+            "service": 0,
+            "org_name": "shchmue",
+            "repo_name": "Lockpick_RCM",
+            "asset_patterns": [
+                ".*\\.bin"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "lockpick_rcm"
+    },
+    {
+        "name": "nx-ovlloader",
+        "download_function_name": "download_nx_ovlloader",
+        "git": {
+            "service": 0,
+            "org_name": "WerWolv",
+            "repo_name": "nx-ovlloader",
+            "asset_patterns": [
+                ".*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "nx_ovlloader"
+    },
+    {
+        "name": "ovlSysModules",
+        "download_function_name": "download_ovl_sysmodules",
+        "git": {
+            "service": 0,
+            "org_name": "WerWolv",
+            "repo_name": "ovl-sysmodules",
+            "asset_patterns": [
+                ".*\\.ovl"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "ovl_sysmodules"
+    },
+    {
+        "name": "Status Monitor Overlay",
+        "download_function_name": "download_status_monitor_overlay",
+        "git": {
+            "service": 0,
+            "org_name": "masagrator",
+            "repo_name": "Status-Monitor-Overlay",
+            "asset_patterns": [
+                ".*\\.ovl"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "status_monitor_overlay"
+    },
+    {
+        "name": "sys-clk",
+        "download_function_name": "download_sys_clk",
+        "git": {
+            "service": 0,
+            "org_name": "retronx-team",
+            "repo_name": "sys-clk",
+            "asset_patterns": [
+                ".*sys-clk-.*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "sys_clk"
+    },
+    {
+        "name": "sys-con",
+        "download_function_name": "download_sys_con",
+        "git": {
+            "service": 0,
+            "org_name": "cathery",
+            "repo_name": "sys-con",
+            "asset_patterns": [
+                ".*sys-con-.*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "sys_con"
+    },
+    {
+        "name": "sys-ftpd-light",
+        "download_function_name": "download_sys_ftpd_light",
+        "git": {
+            "service": 0,
+            "org_name": "cathery",
+            "repo_name": "sys-ftpd-light",
+            "asset_patterns": [
+                ".*sys-ftpd-light.*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "sys_ftpd"
+    },
+    {
+        "name": "Tesla-Menu",
+        "download_function_name": "download_tesla_menu",
+        "git": {
+            "service": 0,
+            "org_name": "WerWolv",
+            "repo_name": "Tesla-Menu",
+            "asset_patterns": [
+                ".*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": "tesla_menu"
+    }
+]

@@ -172,6 +172,7 @@ def download_atmosphere(module, temp_directory, kosmos_version, kosmos_build):
     
     common.delete_path(bundle_path)
     common.delete_path(os.path.join(temp_directory, 'switch', 'reboot_to_payload.nro'))
+    common.delete_path(os.path.join(temp_directory, 'switch'))
     common.delete_path(os.path.join(temp_directory, 'atmosphere', 'reboot_payload.bin'))
     
     payload_path = download_asset(module, release, 1)
@@ -209,6 +210,8 @@ def download_hekate(module, temp_directory, kosmos_version, kosmos_build):
         common.mkdir(os.path.join(temp_directory, 'atmosphere'))
         shutil.copyfile(payload[0], os.path.join(temp_directory, 'atmosphere', 'reboot_payload.bin'))
 
+    common.delete_path(os.path.join(temp_directory, 'nyx_usb_max_rate (run once per windows pc).reg'))
+    
     if not kosmos_build:
         common.mkdir(os.path.join(temp_directory, '..', 'must_have'))
         shutil.move(os.path.join(temp_directory, 'bootloader'), os.path.join(temp_directory, '..', 'must_have', 'bootloader'))
@@ -458,48 +461,52 @@ def download_tesla_menu(module, temp_directory, kosmos_version, kosmos_build):
 
     return get_version(module, release, 0)
 
-def build(temp_directory, kosmos_version, kosmos_build, auto_build):
+def build(temp_directory, kosmos_version, command, auto_build):
     results = []
 
+    modules_filename = 'kosmos.json'
+    if command == common.Command.KosmosMinimal:
+        modules_filename = 'kosmos-minimal.json'
+    elif command == common.Command.SDSetup:
+        modules_filename = 'sdsetup.json'
+
     # Open up modules.json
-    with open('modules.json') as json_file:
+    with open(modules_filename) as json_file:
         # Parse JSON
         data = json.load(json_file)
 
         # Loop through modules
         for module in data:
-            sdsetup_opts = module['sdsetup']
-
-            # Running a Kosmos Build
-            if kosmos_build:
-                # Download the module.
-                print(f'Downloading {module["name"]}...')
-                download = globals()[module['download_function_name']]
-                version = download(module, temp_directory, kosmos_version, kosmos_build)
-                if version is None:
-                    return None
-                results.append(f'  {module["name"]} - {version}')
-
             # Running a SDSetup Build
-            elif not kosmos_build and sdsetup_opts['included']:
+            if command == common.Command.SDSetup:
                 # Only show prompts when it's not an auto build.
                 if not auto_build:
                     print(f'Downloading {module["name"]}...')
 
                 # Make sure module directory is created.
-                module_directory = os.path.join(temp_directory, sdsetup_opts['name'])
+                module_directory = os.path.join(temp_directory, module['sdsetup_module_name'])
                 common.mkdir(module_directory)
 
                 # Download the module.
                 download = globals()[module['download_function_name']]
-                version = download(module, module_directory, kosmos_version, kosmos_build)
+                version = download(module, module_directory, kosmos_version, False)
                 if version is None:
                     return None
 
                 # Auto builds have a different prompt at the end for parsing.
                 if auto_build:
-                    results.append(f'{sdsetup_opts["name"]}:{version}')
+                    results.append(f'{module["sdsetup_module_name"]}:{version}')
                 else:
                     results.append(f'  {module["name"]} - {version}')
     
+            # Running a Kosmos Build
+            else:
+                # Download the module.
+                print(f'Downloading {module["name"]}...')
+                download = globals()[module['download_function_name']]
+                version = download(module, temp_directory, kosmos_version, True)
+                if version is None:
+                    return None
+                results.append(f'  {module["name"]} - {version}')
+
     return results

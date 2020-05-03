@@ -52,6 +52,11 @@ def parse_args():
         help='Perform an auto build.')
     parser_sdsetup.set_defaults(command=common.Command.SDSetup)
 
+    # Kosmos Minimal subcommands
+    parser_kosmos = subparsers.add_parser('kosmos-mini', help='Create a release build of Kosmos Minimal.')
+    parser_kosmos.add_argument('output', help='Zip file to create.')
+    parser_kosmos.set_defaults(command=common.Command.KosmosMinimal)
+
     # Parse arguments
     args = parser.parse_args()
 
@@ -71,6 +76,8 @@ def init_version_messages(args, kosmos_version):
         return [ f'Kosmos {kosmos_version} built with:' ]
     elif args.command == common.Command.SDSetup and not args.auto:
         return [ 'SDSetup Modules built with:' ]
+    elif args.command == common.Command.KosmosMinimal:
+        return [ f'Kosmos Minimal {kosmos_version} built with:' ]
     return []
 
 if __name__ == '__main__':
@@ -86,21 +93,20 @@ if __name__ == '__main__':
 
     version_messages = init_version_messages(args, kosmos_version)
 
-    is_kosmos_build = args.command == common.Command.Kosmos
-    build_messages = modules.build(temp_directory, kosmos_version, is_kosmos_build, auto_build)
+    build_messages = modules.build(temp_directory, kosmos_version, args.command, auto_build)
 
     common.delete_path(args.output)
 
     if build_messages is not None:
         version_messages += build_messages
         
-        if is_kosmos_build:
+        if args.command == common.Command.SDSetup:
+            shutil.move(temp_directory, args.output)
+        else:
             shutil.make_archive(
                 os.path.splitext(args.output)[0],
                 'zip',
                 temp_directory)
-        else:
-            shutil.move(temp_directory, args.output)
 
         common.delete_path(os.path.join(os.getcwd(), 'tmp'))
 
