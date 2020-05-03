@@ -32,6 +32,7 @@ class Command(enum.Enum):
 class GitService(enum.Enum):
     GitHub = 0
     GitLab = 1
+    SourceForge = 2
 
 def generate_temp_path():
     return os.path.join(os.getcwd(), 'tmp', str(uuid.uuid4()))

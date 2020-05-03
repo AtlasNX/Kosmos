@@ -28,13 +28,14 @@ import re
 import shutil
 import urllib.request
 import uuid
+import xmltodict
 import zipfile
 
 gh = Github(config.github_username, config.github_password)
 gl = Gitlab('https://gitlab.com', private_token=config.gitlab_private_access_token)
 gl.auth()
 
-def get_latest_release(module):
+def get_latest_release(module, include_prereleases = True):
     if common.GitService(module['git']['service']) == common.GitService.GitHub:
         try:
             repo = gh.get_repo(f'{module["git"]["org_name"]}/{module["git"]["repo_name"]}')
@@ -46,9 +47,16 @@ def get_latest_release(module):
         if releases.totalCount == 0:
             print(f'[Error] Unable to find any releases for repo: {module["git"]["org_name"]}/{module["git"]["repo_name"]}')
             return None
+
+        if include_prereleases:
+            return releases[0]
+
+        for release in releases:
+            if not release.prerelease:
+                return release
         
-        return releases[0]
-    else:
+        return None
+    elif common.GitService(module['git']['service']) == common.GitService.GitLab:
         try:
             project = gl.projects.get(f'{module["git"]["org_name"]}/{module["git"]["repo_name"]}')
         except:
@@ -62,6 +70,12 @@ def get_latest_release(module):
 
         print(f'[Error] Unable to find any releases for repo: {module["git"]["org_name"]}/{module["git"]["repo_name"]}')
         return None
+    else:
+        releases = None
+        with urllib.request.urlopen(f'https://sourceforge.net/projects/{module["git"]["repo_name"]}/rss?path=/') as fd:
+            releases = xmltodict.parse(fd.read().decode('utf-8'))
+
+        return releases
 
 def download_asset(module, release, index):
     pattern = module['git']['asset_patterns'][index]
@@ -84,7 +98,7 @@ def download_asset(module, release, index):
         urllib.request.urlretrieve(matched_asset.browser_download_url, download_path)
 
         return download_path
-    else:
+    elif common.GitService(module['git']['service']) == common.GitService.GitLab:
         group = module['git']['group']
 
         match = re.search(pattern, release.release['description'])
@@ -99,6 +113,21 @@ def download_asset(module, release, index):
         urllib.request.urlretrieve(f'https://gitlab.com/{module["git"]["org_name"]}/{module["git"]["repo_name"]}{groups[group]}', download_path)
 
         return download_path
+    else:
+        matched_item = None
+        for item in release['rss']['channel']['item']:
+            if re.search(pattern, item['title']):
+                matched_item = item
+                break
+
+        if matched_item is None:
+            print(f'[Error] Unable to find asset that match pattern: "{pattern}"')
+            return None
+
+        download_path = common.generate_temp_path()
+        urllib.request.urlretrieve(matched_item['link'], download_path)
+
+        return download_path
 
 def find_asset(release, pattern):
     for asset in release.get_assets():
@@ -106,6 +135,31 @@ def find_asset(release, pattern):
             return asset
 
     return None
+
+def get_version(module, release, index):
+    if common.GitService(module['git']['service']) == common.GitService.GitHub:
+        return release.tag_name
+    elif common.GitService(module['git']['service']) == common.GitService.GitLab:
+        return release.name
+    else:
+        matched_item = None
+        for item in release['rss']['channel']['item']:
+            if re.search(module['git']['asset_patterns'][index], item['title']):
+                matched_item = item
+                break
+
+        if matched_item is None:
+            return "Latest"
+
+        match = re.search(module['git']['version_pattern'], matched_item['title'])
+        if match is None:
+            return "Latest"
+
+        groups = match.groups()
+        if len(groups) == 0:
+            return "Latest"
+
+        return groups[0]
 
 def download_atmosphere(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -132,7 +186,7 @@ def download_atmosphere(module, temp_directory, kosmos_version, kosmos_build):
     if not kosmos_build:
         common.delete_path(os.path.join(temp_directory, 'hbmenu.nro'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_hekate(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -161,7 +215,7 @@ def download_hekate(module, temp_directory, kosmos_version, kosmos_build):
         shutil.move(os.path.join(temp_directory, 'atmosphere', 'reboot_payload.bin'), os.path.join(temp_directory, '..', 'must_have', 'atmosphere', 'reboot_payload.bin'))
         common.delete_path(os.path.join(temp_directory, 'atmosphere'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_appstore(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -176,7 +230,7 @@ def download_appstore(module, temp_directory, kosmos_version, kosmos_build):
     common.mkdir(os.path.join(temp_directory, 'switch', 'appstore'))
     shutil.move(os.path.join(temp_directory, 'appstore.nro'), os.path.join(temp_directory, 'switch', 'appstore', 'appstore.nro'))
 
-    return release.name
+    return get_version(module, release, 0)
 
 def download_edizon(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -187,7 +241,7 @@ def download_edizon(module, temp_directory, kosmos_version, kosmos_build):
     common.mkdir(os.path.join(temp_directory, 'switch', 'EdiZon'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', 'EdiZon', 'EdiZon.nro'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_emuiibo(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -208,7 +262,7 @@ def download_emuiibo(module, temp_directory, kosmos_version, kosmos_build):
         common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352', 'flags', 'boot2.flag'))
     common.copy_module_file('emuiibo', 'toolbox.json', os.path.join(temp_directory, 'atmosphere', 'contents', '0100000000000352', 'toolbox.json'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_goldleaf(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -219,7 +273,7 @@ def download_goldleaf(module, temp_directory, kosmos_version, kosmos_build):
     common.mkdir(os.path.join(temp_directory, 'switch', 'Goldleaf'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', 'Goldleaf', 'Goldleaf.nro'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_kosmos_cleaner(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -230,7 +284,7 @@ def download_kosmos_cleaner(module, temp_directory, kosmos_version, kosmos_build
     with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
         zip_ref.extractall(temp_directory)
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_kosmos_toolbox(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -242,7 +296,7 @@ def download_kosmos_toolbox(module, temp_directory, kosmos_version, kosmos_build
     shutil.move(app_path, os.path.join(temp_directory, 'switch', 'KosmosToolbox', 'KosmosToolbox.nro'))
     common.copy_module_file('kosmos-toolbox', 'config.json', os.path.join(temp_directory, 'switch', 'KosmosToolbox', 'config.json'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_kosmos_updater(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -255,7 +309,7 @@ def download_kosmos_updater(module, temp_directory, kosmos_version, kosmos_build
     common.copy_module_file('kosmos-updater', 'internal.db', os.path.join(temp_directory, 'switch', 'KosmosUpdater', 'internal.db'))
     common.sed('KOSMOS_VERSION', kosmos_version, os.path.join(temp_directory, 'switch', 'KosmosUpdater', 'internal.db'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_ldn_mitm(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -271,7 +325,7 @@ def download_ldn_mitm(module, temp_directory, kosmos_version, kosmos_build):
         common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '4200000000000010', 'flags', 'boot2.flag'))
     common.copy_module_file('ldn_mitm', 'toolbox.json', os.path.join(temp_directory, 'atmosphere', 'contents', '4200000000000010', 'toolbox.json'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_lockpick(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -282,7 +336,7 @@ def download_lockpick(module, temp_directory, kosmos_version, kosmos_build):
     common.mkdir(os.path.join(temp_directory, 'switch', 'Lockpick'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', 'Lockpick', 'Lockpick.nro'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_lockpick_rcm(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -296,7 +350,7 @@ def download_lockpick_rcm(module, temp_directory, kosmos_version, kosmos_build):
     else:
         shutil.move(payload_path, os.path.join(temp_directory, 'Lockpick_RCM.bin'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_nxdumptool(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -307,7 +361,7 @@ def download_nxdumptool(module, temp_directory, kosmos_version, kosmos_build):
     common.mkdir(os.path.join(temp_directory, 'switch', 'NXDumpTool'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', 'NXDumpTool', 'NXDumpTool.nro'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_nx_ovlloader(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -320,7 +374,7 @@ def download_nx_ovlloader(module, temp_directory, kosmos_version, kosmos_build):
     
     common.delete_path(bundle_path)
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_ovl_sysmodules(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -331,7 +385,7 @@ def download_ovl_sysmodules(module, temp_directory, kosmos_version, kosmos_build
     common.mkdir(os.path.join(temp_directory, 'switch', '.overlays'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', '.overlays', 'ovlSysmodules.ovl'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_status_monitor_overlay(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -342,7 +396,7 @@ def download_status_monitor_overlay(module, temp_directory, kosmos_version, kosm
     common.mkdir(os.path.join(temp_directory, 'switch', '.overlays'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', '.overlays', 'Status-Monitor-Overlay.ovl'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_sys_clk(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -359,7 +413,7 @@ def download_sys_clk(module, temp_directory, kosmos_version, kosmos_build):
     common.delete_path(os.path.join(temp_directory, 'README.md'))
     common.copy_module_file('sys-clk', 'toolbox.json', os.path.join(temp_directory, 'atmosphere', 'contents', '00FF0000636C6BFF', 'toolbox.json'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_sys_con(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -374,7 +428,7 @@ def download_sys_con(module, temp_directory, kosmos_version, kosmos_build):
     if kosmos_build:
         common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '690000000000000D', 'flags', 'boot2.flag'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_sys_ftpd_light(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -389,7 +443,7 @@ def download_sys_ftpd_light(module, temp_directory, kosmos_version, kosmos_build
     if kosmos_build:
         common.delete_path(os.path.join(temp_directory, 'atmosphere', 'contents', '420000000000000E', 'flags', 'boot2.flag'))
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def download_tesla_menu(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
@@ -402,7 +456,7 @@ def download_tesla_menu(module, temp_directory, kosmos_version, kosmos_build):
     
     common.delete_path(bundle_path)
 
-    return release.tag_name
+    return get_version(module, release, 0)
 
 def build(temp_directory, kosmos_version, kosmos_build, auto_build):
     results = []

@@ -1,2 +1,3 @@
 PyGithub
 python-gitlab
+xmltodict
