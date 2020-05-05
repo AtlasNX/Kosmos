@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Atmosphère",
+        "download_function_name": "download_atmosphere",
+        "git": {
+            "service": 0,
+            "org_name": "Atmosphere-NX",
+            "repo_name": "Atmosphere",
+            "asset_patterns": [
+                ".*atmosphere.*\\.zip",
+                ".*fusee.*\\.bin"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "Hekate",
+        "download_function_name": "download_hekate",
+        "git": {
+            "service": 0,
+            "org_name": "CTCaer",
+            "repo_name": "hekate",
+            "asset_patterns": [
+                ".*hekate.*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    }
+]

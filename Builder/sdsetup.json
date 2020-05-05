@@ -10,12 +10,10 @@
                 ".*atmosphere.*\\.zip",
                 ".*fusee.*\\.bin"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "must_have"
-        }
+        "sdsetup_module_name": "must_have"
     },
     {
         "name": "Hekate",
@@ -27,46 +25,25 @@
             "asset_patterns": [
                 ".*hekate.*\\.zip"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "hekate"
-        }
+        "sdsetup_module_name": "hekate"
     },
     {
-        "name": "Homebrew App Store",
-        "download_function_name": "download_appstore",
-        "git": {
-            "service": 1,
-            "org_name": "4TU",
-            "repo_name": "hb-appstore",
-            "asset_patterns": [
-                "\\[.*\\.nro\\.zip\\]\\((.*\\.nro\\.zip)\\)"
-            ],
-            "group": 0
-        },
-        "sdsetup": {
-            "included": false,
-            "name": null
-        }
-    },
-    {
-        "name": "EdiZon",
-        "download_function_name": "download_edizon",
+        "name": "Hekate Icons",
+        "download_function_name": "download_hekate_icons",
         "git": {
             "service": 0,
-            "org_name": "WerWolv",
-            "repo_name": "EdiZon",
+            "org_name": "NicholeMattera",
+            "repo_name": "Hekate-Icons",
             "asset_patterns": [
-                ".*\\.nro"
+                ".*\\.zip"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": false,
-            "name": null
-        }
+        "sdsetup_module_name": "hekate_icons"
     },
     {
         "name": "Emuiibo",
@@ -78,29 +55,10 @@
             "asset_patterns": [
                 ".*emuiibo.*\\.zip"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "emuiibo"
-        }
-    },
-    {
-        "name": "Goldleaf",
-        "download_function_name": "download_goldleaf",
-        "git": {
-            "service": 0,
-            "org_name": "XorTroll",
-            "repo_name": "Goldleaf",
-            "asset_patterns": [
-                ".*\\.nro"
-            ],
-            "group": null
-        },
-        "sdsetup": {
-            "included": false,
-            "name": null
-        }
+        "sdsetup_module_name": "emuiibo"
     },
     {
         "name": "Kosmos Cleaner",
@@ -112,12 +70,10 @@
             "asset_patterns": [
                 ".*\\.zip"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "kosmos_cleaner"
-        }
+        "sdsetup_module_name": "kosmos_cleaner"
     },
     {
         "name": "Kosmos Toolbox",
@@ -129,12 +85,10 @@
             "asset_patterns": [
                 ".*\\.nro"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "kosmos_toolbox"
-        }
+        "sdsetup_module_name": "kosmos_toolbox"
     },
     {
         "name": "Kosmos Updater",
@@ -146,12 +100,10 @@
             "asset_patterns": [
                 ".*\\.nro"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "kosmos_updater"
-        }
+        "sdsetup_module_name": "kosmos_updater"
     },
     {
         "name": "ldn_mitm",
@@ -163,29 +115,10 @@
             "asset_patterns": [
                 ".*ldn_mitm.*\\.zip"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "ldn_mitm"
-        }
-    },
-    {
-        "name": "Lockpick",
-        "download_function_name": "download_lockpick",
-        "git": {
-            "service": 0,
-            "org_name": "shchmue",
-            "repo_name": "Lockpick",
-            "asset_patterns": [
-                ".*\\.nro"
-            ],
-            "group": null
-        },
-        "sdsetup": {
-            "included": false,
-            "name": null
-        }
+        "sdsetup_module_name": "ldn_mitm"
     },
     {
         "name": "Lockpick_RCM",
@@ -197,29 +130,10 @@
             "asset_patterns": [
                 ".*\\.bin"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "lockpick_rcm"
-        }
-    },
-    {
-        "name": "nxdumptool",
-        "download_function_name": "download_nxdumptool",
-        "git": {
-            "service": 0,
-            "org_name": "DarkMatterCore",
-            "repo_name": "nxdumptool",
-            "asset_patterns": [
-                ".*nxdumptool.*\\.nro"
-            ],
-            "group": null
-        },
-        "sdsetup": {
-            "included": false,
-            "name": null
-        }
+        "sdsetup_module_name": "lockpick_rcm"
     },
     {
         "name": "nx-ovlloader",
@@ -231,12 +145,10 @@
             "asset_patterns": [
                 ".*\\.zip"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "nx_ovlloader"
-        }
+        "sdsetup_module_name": "nx_ovlloader"
     },
     {
         "name": "ovlSysModules",
@@ -248,12 +160,10 @@
             "asset_patterns": [
                 ".*\\.ovl"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "ovl_sysmodules"
-        }
+        "sdsetup_module_name": "ovl_sysmodules"
     },
     {
         "name": "Status Monitor Overlay",
@@ -265,12 +175,10 @@
             "asset_patterns": [
                 ".*\\.ovl"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "status_monitor_overlay"
-        }
+        "sdsetup_module_name": "status_monitor_overlay"
     },
     {
         "name": "sys-clk",
@@ -282,12 +190,10 @@
             "asset_patterns": [
                 ".*sys-clk-.*\\.zip"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "sys_clk"
-        }
+        "sdsetup_module_name": "sys_clk"
     },
     {
         "name": "sys-con",
@@ -299,12 +205,10 @@
             "asset_patterns": [
                 ".*sys-con-.*\\.zip"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "sys_con"
-        }
+        "sdsetup_module_name": "sys_con"
     },
     {
         "name": "sys-ftpd-light",
@@ -316,12 +220,10 @@
             "asset_patterns": [
                 ".*sys-ftpd-light.*\\.zip"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "sys_ftpd"
-        }
+        "sdsetup_module_name": "sys_ftpd"
     },
     {
         "name": "Tesla-Menu",
@@ -333,11 +235,9 @@
             "asset_patterns": [
                 ".*\\.zip"
             ],
-            "group": null
+            "group": null,
+            "version_pattern": null
         },
-        "sdsetup": {
-            "included": true,
-            "name": "tesla_menu"
-        }
+        "sdsetup_module_name": "tesla_menu"
     }
 ]

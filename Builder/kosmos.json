@@ -1,0 +1,319 @@
+[
+    {
+        "name": "Atmosphère",
+        "download_function_name": "download_atmosphere",
+        "git": {
+            "service": 0,
+            "org_name": "Atmosphere-NX",
+            "repo_name": "Atmosphere",
+            "asset_patterns": [
+                ".*atmosphere.*\\.zip",
+                ".*fusee.*\\.bin"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "Hekate",
+        "download_function_name": "download_hekate",
+        "git": {
+            "service": 0,
+            "org_name": "CTCaer",
+            "repo_name": "hekate",
+            "asset_patterns": [
+                ".*hekate.*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "Hekate Icons",
+        "download_function_name": "download_hekate_icons",
+        "git": {
+            "service": 0,
+            "org_name": "NicholeMattera",
+            "repo_name": "Hekate-Icons",
+            "asset_patterns": [
+                ".*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "Homebrew App Store",
+        "download_function_name": "download_appstore",
+        "git": {
+            "service": 1,
+            "org_name": "4TU",
+            "repo_name": "hb-appstore",
+            "asset_patterns": [
+                "\\[.*\\.nro\\.zip\\]\\((.*\\.nro\\.zip)\\)"
+            ],
+            "group": 0,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "EdiZon",
+        "download_function_name": "download_edizon",
+        "git": {
+            "service": 0,
+            "org_name": "WerWolv",
+            "repo_name": "EdiZon",
+            "asset_patterns": [
+                ".*\\.nro",
+                ".*\\.ovl"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "Emuiibo",
+        "download_function_name": "download_emuiibo",
+        "git": {
+            "service": 0,
+            "org_name": "XorTroll",
+            "repo_name": "emuiibo",
+            "asset_patterns": [
+                ".*emuiibo.*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "Goldleaf",
+        "download_function_name": "download_goldleaf",
+        "git": {
+            "service": 0,
+            "org_name": "XorTroll",
+            "repo_name": "Goldleaf",
+            "asset_patterns": [
+                ".*\\.nro"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "Kosmos Cleaner",
+        "download_function_name": "download_kosmos_cleaner",
+        "git": {
+            "service": 0,
+            "org_name": "AtlasNX",
+            "repo_name": "Kosmos-Cleaner",
+            "asset_patterns": [
+                ".*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "Kosmos Toolbox",
+        "download_function_name": "download_kosmos_toolbox",
+        "git": {
+            "service": 0,
+            "org_name": "AtlasNX",
+            "repo_name": "Kosmos-Toolbox",
+            "asset_patterns": [
+                ".*\\.nro"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "Kosmos Updater",
+        "download_function_name": "download_kosmos_updater",
+        "git": {
+            "service": 0,
+            "org_name": "AtlasNX",
+            "repo_name": "Kosmos-Updater",
+            "asset_patterns": [
+                ".*\\.nro"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "ldn_mitm",
+        "download_function_name": "download_ldn_mitm",
+        "git": {
+            "service": 0,
+            "org_name": "spacemeowx2",
+            "repo_name": "ldn_mitm",
+            "asset_patterns": [
+                ".*ldn_mitm.*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "Lockpick",
+        "download_function_name": "download_lockpick",
+        "git": {
+            "service": 0,
+            "org_name": "shchmue",
+            "repo_name": "Lockpick",
+            "asset_patterns": [
+                ".*\\.nro"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "Lockpick_RCM",
+        "download_function_name": "download_lockpick_rcm",
+        "git": {
+            "service": 0,
+            "org_name": "shchmue",
+            "repo_name": "Lockpick_RCM",
+            "asset_patterns": [
+                ".*\\.bin"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "nxdumptool",
+        "download_function_name": "download_nxdumptool",
+        "git": {
+            "service": 0,
+            "org_name": "DarkMatterCore",
+            "repo_name": "nxdumptool",
+            "asset_patterns": [
+                ".*nxdumptool.*\\.nro"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "nx-ovlloader",
+        "download_function_name": "download_nx_ovlloader",
+        "git": {
+            "service": 0,
+            "org_name": "WerWolv",
+            "repo_name": "nx-ovlloader",
+            "asset_patterns": [
+                ".*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "ovlSysModules",
+        "download_function_name": "download_ovl_sysmodules",
+        "git": {
+            "service": 0,
+            "org_name": "WerWolv",
+            "repo_name": "ovl-sysmodules",
+            "asset_patterns": [
+                ".*\\.ovl"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "Status Monitor Overlay",
+        "download_function_name": "download_status_monitor_overlay",
+        "git": {
+            "service": 0,
+            "org_name": "masagrator",
+            "repo_name": "Status-Monitor-Overlay",
+            "asset_patterns": [
+                ".*\\.ovl"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "sys-clk",
+        "download_function_name": "download_sys_clk",
+        "git": {
+            "service": 0,
+            "org_name": "retronx-team",
+            "repo_name": "sys-clk",
+            "asset_patterns": [
+                ".*sys-clk-.*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "sys-con",
+        "download_function_name": "download_sys_con",
+        "git": {
+            "service": 0,
+            "org_name": "cathery",
+            "repo_name": "sys-con",
+            "asset_patterns": [
+                ".*sys-con-.*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "sys-ftpd-light",
+        "download_function_name": "download_sys_ftpd_light",
+        "git": {
+            "service": 0,
+            "org_name": "cathery",
+            "repo_name": "sys-ftpd-light",
+            "asset_patterns": [
+                ".*sys-ftpd-light.*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
+        "name": "Tesla-Menu",
+        "download_function_name": "download_tesla_menu",
+        "git": {
+            "service": 0,
+            "org_name": "WerWolv",
+            "repo_name": "Tesla-Menu",
+            "asset_patterns": [
+                ".*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    }
+]
