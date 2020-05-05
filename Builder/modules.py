@@ -257,6 +257,13 @@ def download_edizon(module, temp_directory, kosmos_version, kosmos_build):
     common.mkdir(os.path.join(temp_directory, 'switch', 'EdiZon'))
     shutil.move(app_path, os.path.join(temp_directory, 'switch', 'EdiZon', 'EdiZon.nro'))
 
+    overlay_path = download_asset(module, release, 1)
+    if overlay_path is None:
+        return None
+
+    common.mkdir(os.path.join(temp_directory, 'switch', '.overlays'))
+    shutil.move(overlay_path, os.path.join(temp_directory, 'switch', '.overlays', 'ovlEdiZon.ovl'))
+
     return get_version(module, release, 0)
 
 def download_emuiibo(module, temp_directory, kosmos_version, kosmos_build):

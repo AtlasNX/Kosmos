@@ -68,7 +68,8 @@
             "org_name": "WerWolv",
             "repo_name": "EdiZon",
             "asset_patterns": [
-                ".*\\.nro"
+                ".*\\.nro",
+                ".*\\.ovl"
             ],
             "group": null,
             "version_pattern": null
