@@ -65,3 +65,12 @@ def sed(pattern, replace, file_path):
 def mkdir(path):
     if not os.path.exists(path):
         os.makedirs(path)
+
+def move_contents_of_folder(source, dest):
+    files = os.listdir(source)
+
+    for f in files:
+        if os.path.isdir(os.path.join(source, f)):
+            move_contents_of_folder(os.path.join(source, f), os.path.join(dest, f))
+        else:
+            shutil.move(os.path.join(source, f), dest)
