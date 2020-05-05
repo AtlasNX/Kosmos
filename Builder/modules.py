@@ -230,6 +230,10 @@ def download_hekate_icons(module, temp_directory, kosmos_version, kosmos_build):
         zip_ref.extractall(temp_directory)
     
     common.delete_path(bundle_path)
+    shutil.move(os.path.join(temp_directory, 'bootloader', 'res', 'icon_payload.bmp'), os.path.join(temp_directory, 'bootloader', 'res', 'icon_payload_hue.bmp'))
+    shutil.move(os.path.join(temp_directory, 'bootloader', 'res', 'icon_payload_custom.bmp'), os.path.join(temp_directory, 'bootloader', 'res', 'icon_payload.bmp'))
+    shutil.move(os.path.join(temp_directory, 'bootloader', 'res', 'icon_switch.bmp'), os.path.join(temp_directory, 'bootloader', 'res', 'icon_switch_hue.bmp'))
+    shutil.move(os.path.join(temp_directory, 'bootloader', 'res', 'icon_switch_custom.bmp'), os.path.join(temp_directory, 'bootloader', 'res', 'icon_switch.bmp'))
 
     return get_version(module, release, 0)
 
