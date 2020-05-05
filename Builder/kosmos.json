@@ -31,6 +31,21 @@
         "sdsetup_module_name": null
     },
     {
+        "name": "Hekate Icons",
+        "download_function_name": "download_hekate_icons",
+        "git": {
+            "service": 0,
+            "org_name": "NicholeMattera",
+            "repo_name": "Hekate-Icons",
+            "asset_patterns": [
+                ".*\\.zip"
+            ],
+            "group": null,
+            "version_pattern": null
+        },
+        "sdsetup_module_name": null
+    },
+    {
         "name": "Homebrew App Store",
         "download_function_name": "download_appstore",
         "git": {

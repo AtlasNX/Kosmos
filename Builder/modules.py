@@ -220,6 +220,19 @@ def download_hekate(module, temp_directory, kosmos_version, kosmos_build):
 
     return get_version(module, release, 0)
 
+def download_hekate_icons(module, temp_directory, kosmos_version, kosmos_build):
+    release = get_latest_release(module)
+    bundle_path = download_asset(module, release, 0)
+    if bundle_path is None:
+        return None
+
+    with zipfile.ZipFile(bundle_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_directory)
+    
+    common.delete_path(bundle_path)
+
+    return get_version(module, release, 0)
+
 def download_appstore(module, temp_directory, kosmos_version, kosmos_build):
     release = get_latest_release(module)
     bundle_path = download_asset(module, release, 0)
