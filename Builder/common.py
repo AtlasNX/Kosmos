@@ -71,6 +71,7 @@ def move_contents_of_folder(source, dest):
 
     for f in files:
         if os.path.isdir(os.path.join(source, f)):
+            mkdir(os.path.join(dest, f))
             move_contents_of_folder(os.path.join(source, f), os.path.join(dest, f))
         else:
             shutil.move(os.path.join(source, f), dest)
